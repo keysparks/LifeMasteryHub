@@ -1,0 +1,218 @@
+/* ---------------breadcrumbs-------------- */
+.courses_breadcrumbs {
+    padding: 10px 48px;
+    width: fit-content;
+  }
+  
+  .courses_breadcrumbs ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    gap: 8px;
+  }
+  
+  .courses_breadcrumbs ul i {
+    vertical-align: middle;
+    font-weight: 600;
+  }
+  
+  .courses_breadcrumbs ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: 200;
+  }
+  
+  .courses_breadcrumbs ul li a:hover {
+    color: #0984e3;
+  }
+  
+  .courses_breadcrumbs ul li:last-child a {
+    font-weight: 400;
+  }
+  
+  .courses_breadcrumbs ul li.course_breadcrumbs_arrow i {
+    width: 18px;
+  }
+  
+  /* 
+  ---------------------------------------------
+  Real time experience content
+  --------------------------------------------- 
+  */
+  
+  .experience-time .experience-img {
+    padding: 40px;
+    width: 60%;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  .experience-time {
+    text-align: left;
+    /* padding-left: 50px; */
+    font-weight: 600;
+    font-size: 22px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    border-top: 1px solid #eee;
+  }
+  .experience-time-content{
+    padding-top: 50px;
+  }
+  
+  .experience-time i {
+    color: #03a4ed;
+    font-size: 20px;
+  }
+  
+  .experience-time span {
+    margin-bottom: 20px !important;
+    font-weight: 500;
+    color: #ff695f;
+    font-size: 24px;
+  }
+  
+  .experience-time p {
+    text-align: justify;
+    padding: 20px 0px 20px 0px;
+    font-weight: 400;
+    font-size: 16px;
+    color: black;
+  }
+  
+  .experience-time i{
+    color:#03a4ed;
+    font-size: 30px;
+  }
+  .experience-time ul{
+    font-size: 15px;
+    font-weight: normal;
+    padding: 10px 0px 10px 70px;
+  }
+  .experience-time ul li{
+    list-style-type: disc;
+    padding-bottom: 10px;
+    font-size: 16px
+  }
+  .experience-time h5{
+    color: #03a4ed;
+    padding: 20px 0;
+  }
+  .experience-time h5 i{
+    color: #ff695f;
+  }
+  .experience-content .experience-right-dec img {
+    width: 305px;
+    height: 305px;
+    right: -100px;
+    bottom: -150px;
+    position: absolute;
+    z-index: 1;
+  }
+  
+  .experience-content .experience-left-dec img {
+    width: auto;
+    height: auto;
+    left: -270px;
+    top: 20 0px;
+    position: absolute;
+  }
+  
+  .experience-content .container {
+    position: relative;
+  }
+  
+  .experience-content {
+    position: relative;
+    margin-top: 100px;
+    margin-bottom: 20vh;
+  }
+  
+  .experience-content .item {
+    padding-top: 50px;
+    text-align: justify;
+    font-weight: 600;
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+  
+  
+  .experience-content .section-title h1 {
+    color: #03a4ed;
+    text-align: center;
+   margin: 40px;
+  }
+  
+  .experience-content .section-title h1 .experience-icon {
+    width: 45px;
+    margin-right: 20px;
+  }
+  
+  .content_status {
+    text-align: center;
+    margin: auto;
+    padding-left: 0px;
+    width: 50%;
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+  
+  .experience_breadcrumbs {
+    padding-left: 0px;
+    margin-bottom: 30px;
+  }
+  
+  .page_button button {
+    margin: 10px 0;
+    width: 25%;
+    display: inline-block;
+    text-align: center;
+    background-color: #ff695f;
+    font-size: 16px;
+    font-weight: 400;
+    color: #fff;
+    text-transform: capitalize;
+    padding: 12px 25px;
+    border-radius: 23px;
+    letter-spacing: 0.25px;
+    transition: all .1s;
+    border: none;
+  }
+  
+  
+  .page_button button:hover {
+    font-weight: bold;
+    border: 2px solid #03a4ed;
+  }
+  
+  .page_button i {
+    font-size: 18px;
+  }
+  
+  .page_button a {
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  .experience_page_button {
+    text-align: center;
+  }
+  .experience-content .protips-left-dec img {
+    width: 487px;
+    height: 738px;
+    left: -300px;
+    top: -70px;
+    position: absolute;
+    z-index: 1;
+  }
+  
+  .experience-content .protips-right-dec img {
+    width: 487px;
+    height: 738px;
+    right: -300px;
+    bottom: -70px;
+    position: absolute;
+    z-index: 1;
+  }

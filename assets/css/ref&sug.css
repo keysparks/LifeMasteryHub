@@ -1,0 +1,216 @@
+.reference_suggestion{
+  padding-bottom: 20px;
+  margin-top: 100px;
+}
+.reference_suggestion_section{
+  border-bottom: 1px solid #eee;
+  padding: 20px;
+}
+.ref_sug_page_button{
+  padding-top: 20px;
+  text-align: center;
+}
+.reference_suggestion .reference_suggestion-left-dec img {
+  width: 487px;
+  height: 738px;
+  left: -50px;
+  top: -70px;
+  position: absolute;
+  z-index: 1;
+}
+
+.reference_suggestion .reference_suggestion-right-dec img {
+  width: 487px;
+  height: 738px;
+  right: -70px;
+  bottom: -40px;
+  position: absolute;
+  z-index: 1;
+}
+.reference_suggestion_breadscrumbs{
+padding: 0px;
+padding-top: 30px;
+ 
+}
+.ref_sug_content_status{
+  margin-top: 10vh !important;
+}
+/* 
+---------------------------------------------
+reference page
+--------------------------------------------- 
+*/
+.reference {
+    margin-top: 30px;
+    padding-bottom: 10px;
+    background-color: #fff;
+    /* border: 1px solid rgba(255, 144, 104, 1); */
+    color: black;
+    font-weight: 400;
+    font-size: 1em;
+    text-align: center;
+  }
+.rfheader{
+    margin: 0 auto;
+    padding: 2em;
+    text-align: center;
+    color: #03a4ed;
+    font-weight: 600;
+    border-bottom: 1px solid #eee;
+}
+.reference_content{
+   text-align: justify; 
+   /* padding: 30px ; */
+   margin-bottom: 30px;
+}
+.reference_content_book_title{
+  color: #ff695f;
+  font-size: 24px;
+  text-align: center;
+  padding: 30px;
+}
+.reference_content ul li{
+  /* list-style: disc; */
+  padding-top: 20px;
+  font-size: 16px;
+  text-align: justify;
+}
+.reference_content ul li span{
+  color: #03a4ed;
+  font-size: 20px;
+}
+.reference_content ul li i{
+  color: #ff695f;
+  font-size: 25px;
+}
+.reference_content ul li p{
+  font-size: 16px;
+  padding-left: 32px;
+}
+.reference_links_title{
+  color:rgba(255, 104, 95, 1);
+  font-size: 24px;
+  font-weight: 600;
+  padding: 20px;
+}
+.reference_links_title i{
+  font-size: 30px;
+}
+.reference_links_list {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+  gap: 0px;
+}
+.reference_links_list i{
+  color: #ff695f;
+}
+.reference_links_list button {
+  margin: 10px 0;
+  padding: 10px;
+  background-color: #f2f2f2;
+  border: none;
+  border-radius: 5px;
+  color: #333;
+  font-size: 16px;
+  width: 100%;
+  text-align: center;
+  height: 20%;
+}
+
+.reference_links_list button a {
+  color: black;
+}
+.reference_links_list button a:hover{
+  font-weight: 600;
+}
+
+/* 
+---------------------------------------------
+suggestion page
+--------------------------------------------- 
+*/
+.suggestion_form {
+    margin-top: 20vh;
+    padding-bottom: 10px;
+    background-color: #fff;
+    /* border: 1px solid rgba(255, 144, 104, 1); */
+    color: #fff;
+    font-weight: 400;
+    font-size: 1em;
+  }
+  
+  .suggestion_form_start {
+    padding-top: 40px;
+    padding-bottom: 20px;
+    /* background: #fff; */
+    width: 100%;
+  }
+  
+  .sgheader {
+    margin: 0 auto;
+    padding: 2em;
+    text-align: center;
+    color: #03a4ed;
+    font-weight: 600;
+    border-bottom: 1px solid #eee;
+  }
+  
+  /* Form CSS*/
+  .sgform {
+    margin: 0 auto;
+    width: 70%;
+  }
+  
+  .sgfield-prepend {
+    margin-bottom: 10px;
+  }
+  
+  .sgform-addon {
+    color: #03a4ed;
+    border-top: 1px solid rgba(0, 0, 0, 0.125);
+    border-left: 1px solid rgba(0, 0, 0, 0.125);
+    border-right: 1px solid rgba(0, 0, 0, 0.125);
+    padding: 20px;
+    width: 8%;
+    background: #FFFFFF;
+    text-align: center;
+    padding-bottom: 3px;
+  }
+  .sgform-addon2{
+    margin-left: 5px;
+  }
+  .sgformfield {
+    color: #000000;
+    background: #FFFFFF;
+    border: none;
+    padding: 15.5px;
+    width: 100%;
+    display: block;
+    font-size: 14px;
+    margin-bottom: 30px;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    margin-top: 0px;
+  }
+  .suggestion_input_lastname{
+    padding-top: 35px;
+    margin-right: 0px;
+  }
+  
+  .sgbtn {
+    display: block;
+    border: none;
+    background: linear-gradient(105deg, rgba(255, 104, 95, 1) 0%, rgba(255, 144, 104, 1) 100%);
+    border: 1px solid salmon;
+    border-radius: 30px;
+    color:#fff;
+    padding: 12px 25px;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  
+  .sgbtn:hover {
+    border: 1px solid skyblue;
+    font-weight: 600;
+  }

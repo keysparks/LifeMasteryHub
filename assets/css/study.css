@@ -1,0 +1,180 @@
+/* ---------------breadcrumbs-------------- */
+.courses_breadcrumbs {
+  padding: 10px 48px;
+  /* box-shadow: 0 4px 30px -10px rgba(0,0,0,0.2); */
+  width: fit-content;
+}
+
+.courses_breadcrumbs ul {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  gap: 8px;
+}
+
+.courses_breadcrumbs ul i {
+  vertical-align: middle;
+  font-weight: 600;
+}
+
+.courses_breadcrumbs ul li a {
+  text-decoration: none;
+  color: black;
+  font-weight: 200;
+}
+
+.courses_breadcrumbs ul li a:hover {
+  color: #0984e3;
+}
+
+.courses_breadcrumbs ul li:last-child a {
+  font-weight: 400;
+}
+
+.courses_breadcrumbs ul li.course_breadcrumbs_arrow i {
+  width: 18px;
+}
+
+
+/* 
+---------------------------------------------
+Real time experience content
+--------------------------------------------- 
+*/
+
+
+.study-time .study-img {
+  padding: 30px;
+  width: 60%;
+  display: block;
+  margin: 0 auto;
+
+}
+.study-time{
+  text-align: left;
+  font-weight: 600;
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+.study-time i{
+  color:#03a4ed;
+    font-size: 20px;
+}
+
+.study-time span  {
+  margin-bottom: 20px !important;
+  font-weight: 500;
+  color:#ff695f
+}
+
+.study-time p {
+  text-align: justify;
+  padding: 10px 0px 20px 0px;
+  font-weight: 400;
+  
+  color: black;
+}
+
+.study .study-right-dec img{
+  width: 305px;
+  height: 305px;
+  right: -50px;
+  bottom: 70px;
+  position: absolute;
+  z-index: 1;
+  
+}
+
+.study .study-left-dec img {
+  width: auto;
+  height: auto;
+  left: -270px;
+  top: 320px;
+  position: absolute;
+}
+
+.study .container {
+  position: relative;
+}
+
+.study {
+  position: relative;
+  margin-top: 0px;
+  padding-top: 30px;
+  margin-bottom: 20vh;
+}
+.item{
+  margin-bottom: 50px;
+}
+.study .item {
+  text-align: left;
+  font-weight: 600;
+  font-size: 22px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #eee;
+  border-top: 1px solid #eee;
+  margin-top: 30px;
+}
+.study-time-content{
+  padding-top: 40px;
+}
+.study .section-title h1 {
+  color: #03a4ed;
+  text-align: center;
+}
+
+.study .section-title h1 .study-icon {
+  width: 45px;
+  margin-right: 20px;
+}
+.study-content-last{
+  margin-bottom: 10vh;
+}
+.content_status{
+  text-align: center;
+  margin: auto;
+  padding-left: 0px;
+  width: 50%;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.study_breadcrumbs{
+  padding-left: 0px;
+  margin-bottom: 30px;
+}
+
+.page_button button {
+  margin: 10px 0;
+  width: 25%;
+  display: inline-block;
+  text-align: center;
+  background-color: #ff695f;
+  font-size: 16px;
+  font-weight: 400;
+  color: #fff;
+  text-transform: capitalize;
+  padding: 12px 25px;
+  border-radius: 23px;
+  letter-spacing: 0.25px;
+  transition: all .1s;
+  border: none;
+}
+.study_page_button{
+  text-align: center;
+}
+
+
+.page_button button:hover {
+  font-weight: bold;
+  border: 2px solid #03a4ed;
+}
+.page_button i{
+font-size: 18px;
+}
+.page_button a{
+text-decoration: none;
+color: #fff;
+}
