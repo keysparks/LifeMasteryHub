@@ -301,6 +301,11 @@ header
   color: #ff685f!important;
 }
 
+.header-area .main-nav .nav li:last-child a.cactive{
+  background-color: #03a4ed !important;
+  color: #fff !important;
+}
+
 .header-area {
   background-color: #fafafa;
   position: absolute;
@@ -1530,8 +1535,8 @@ Video
 */
 .video_container {
   padding: 80px 0px 0px 40px;
-  padding: 10px 0px 0px 40px;
-  padding: 80px 0px 0px 40px;
+  padding: 0px 0px 0px 40px;
+ 
 
 }
 
@@ -1779,11 +1784,12 @@ quiz section
 */
 .quiz_que {
   /* text-align: center; */
-  margin: 20px;
+  margin: 10px;
   background: rgba(255, 144, 104, 1);
   border: 10px solid transparent;
   border-top-left-radius: 30px;
   border-bottom-right-radius: 30px;
+  height: 20vh;
 }
 
 .quiz_box {
@@ -1894,7 +1900,7 @@ quiz section
   background: white;
      max-width: 800px;
      width: 90%;
-    
+    height:90%;
      padding: 15px 20px;
      margin: 50px auto;
      border-radius: 10px;

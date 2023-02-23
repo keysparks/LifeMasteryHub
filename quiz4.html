@@ -30,6 +30,139 @@
         #form-container {
             display: none;
         }
+
+        * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.start-screen,
+.score-container {
+  
+  top: 40%;
+  width: 100%;
+  height: 100%;
+left: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+#start-button,
+#restart {
+  font-size: 1.3em;
+  padding: 0.5em 1.8em;
+  border-radius: 0.2em;
+}
+#restart {
+  margin-top: 0.9em;
+}
+
+.header {
+  margin-bottom: 1.8em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 0.6em;
+  border-bottom: 0.1em solid #c0bfd2;
+}
+.timer-div {
+  background-color: #e1f5fe;
+  width: 7.5em;
+  border-radius: 1.8em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.7em 1.8em;
+}
+.question {
+  margin-bottom: 1.25em;
+  font-weight: 600;
+}
+.option-div {
+  font-size: 0.9em;
+  width: 100%;
+  padding: 1em;
+  margin: 0.3em 0;
+  text-align: left;
+  outline: none;
+  background: transparent;
+  border: 1px solid #c0bfd2;
+  border-radius: 0.3em;
+}
+.option-div:disabled {
+  color: #000000;
+  cursor: not-allowed;
+}
+#next-button {
+  font-size: 1em;
+  margin-top: 1.5em;
+  background-color: #0a69ed;
+  color: #ffffff;
+  padding: 0.7em 1.8em;
+  border-radius: 0.3em;
+  float: right;
+}
+.hide {
+  display: none;
+}
+.incorrect {
+  background-color: #ffdde0;
+  color: #d32f2f;
+  border-color: #d32f2f;
+}
+.correct {
+  background-color: #e7f6d5;
+  color: #689f38;
+  border-color: #689f38;
+}
+#user-score {
+  font-size: 1.5em;
+  color: #ffffff;
+}
+
+.quiz_frame {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.question-box {
+  width: 60%;
+  height: 90%;
+  background-color: rgb(246, 175, 149);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin: 0 auto;
+}
+  
+  #display-container {
+    background-color: #ffffff;
+    padding: 3.1em 1.8em;
+    width: 80%;
+    max-width: 37.5em;
+    margin:1.5em auto;
+    border-radius: 0.6em;
+    height: 80%;
+  }
+  .question_page_button {
+    text-align: center;
+    padding-top: 30px;
+    border-top: 1px solid #eee;
+    /* width: 60%; */
+    margin: auto;
+}  
     </style>
 </head>
 
@@ -48,9 +181,9 @@
                         <!-- ***** Logo End ***** -->
                         <!-- ***** Menu Start ***** -->
                         <ul class="nav">
-                            <li class="scroll-to-section"><a href="index.html" class="active">Home</a></li>
+                            <li class="scroll-to-section"><a href="index.html" >Home</a></li>
                             <div class="dropdown">
-                                <li class="scroll-to-section"><a href="courses.html">Training Module</a></li>
+                                <li class="scroll-to-section"><a href="courses.html" class="active">Training Module</a></li>
                                 <div>
                                     <ul class="dropdown-menu">
                                         <li><a href="#">Self-Journey</a></li>
@@ -64,7 +197,7 @@
                             <li class="scroll-to-section"><a href="about.html">About Us</a></li>
                             <!-- <li class="scroll-to-section"><a href="#">Contact Us </a></li> -->
                             <li class="scroll-to-section">
-                                <div class="main-red-button-hover"><a href="contact.html">Contact Us Now</a></div>
+                                <div class="main-red-button-hover"><a href="contact.html">Contact Us</a></div>
                             </li>
                         </ul>
                         <a class='menu-trigger'>
@@ -98,7 +231,7 @@
             </ul>
         </div>
         <div class="question_mainheading">
-            <h1>Quiz</h1>
+            <h1>Conflict Management Quiz</h1>
         </div>
         <div class="question_content">
             <h3>Instructions</h3>
@@ -129,68 +262,33 @@
         </div>
       
       
-        <div class="quiz section">
-          <div class="container quiz_que_container col-lg-12 align-self-center">
-            <div class="quiz_que">
-              <form id="quiz-form">
-                <div class="start-button-container"> <button class="start-button">Start Quiz</button>
-                </div>
-                <div class="question-container">
-      
-                  <div class="question" id="question-1">
-                    <label>1. Which of the following is an example of interpersonal conflict? </label>
-                    <br>
-                    <input type="radio" name="q1" value="a">A disagreement over office supplies <br>
-                    <input type="radio" name="q1" value="b" data-correct> A misunderstanding with a customer <br>
-                    <input type="radio" name="q1" value="c"> A dispute with a supplier
+        <div class="quiz_frame">
+            <div class="container quiz_que_container col-lg-12 align-self-center">
+              <div class="question-box" >
+                  
+                  <div class="start-screen">
+                    <button id="start-button">Start</button>
                   </div>
-                  <div class="question" id="question-2">
-                    <label>2. Which of the following is an example of intrapersonal conflict? </label>
-                    <br>
-                    <input type="radio" name="q2" value="a"> A disagreement with a colleague over a project <br>
-                    <input type="radio" name="q2" value="b" data-correct> A feeling of uncertainty about a decision <br>
-                    <input type="radio" name="q2" value="c">A negotiation with a vendor over pricing
-                  </div>
-                  <div class="question" id="question-3">
-                    <label>3. Which of the following is an example of organizational conflict? </label>
-                    <br>
-                    <input type="radio" name="q3" value="a">A disagreement between two employees <br>
-                    <input type="radio" name="q3" value="b" data-correct>A power struggle between managers <br>
-                    <input type="radio" name="q3" value="c"> A conflict between a customer and an employee
-                  </div>
-                  <div class="question" id="question-4">
-                    <label>4. Which of the following is an example of community conflict?
-                    </label>
-                    <br>
-                    <input type="radio" name="q4" value="a" data-correct>A disagreement over a proposed development project
-                    <br>
-                    <input type="radio" name="q4" value="b"> A dispute between neighbours over a fence <br>
-                    <input type="radio" name="q4" value="c">A conflict between a customer and a business owner
-                  </div>
-                  <div class="question" id="question-5">
-                    <label>5. Which of the following is an example of cross-cultural conflict? </label>
-                    <br>
-                    <input type="radio" name="q5" value="a"> A disagreement between two employees from different departments
-                    <br>
-                    <input type="radio" name="q5" value="b">A dispute between colleagues over office space <br>
-                    <input type="radio" name="q5" value="c" data-correct> A conflict between two employees from different
-                    cultural backgrounds
-                  </div>
-                  <div class="btnframe">
-                    <div class="btn-group">
-                        <button type="button" class="previous-button" disabled>Previous</button>
-                        <button type="button" class="next-button">Next</button>
-                        <button type="button" class="reset-button">Reset</button>
-                        <input type="submit" class="submit-button" value="Submit" />
+                 
+                  <div id="display-container">
+                    <div class="header">
+                      <div class="number-of-count">
+                        <span class="number-of-question">1 of 5 questions</span>
+                      </div>
+                      
                     </div>
-                </div>
-                </div>
-      
-                <div id="result" style="display: none;"></div>
-              </form>
-              <br>
+                    <div id="container">
+                      <!-- questions and options will be displayed here -->
+                    </div>
+                    <button id="next-button">Next</button>
+                  </div>
+                
+                  <div class="score-container hide">
+                    <div id="user-score">Demo Score</div>
+                    <button id="restart">Restart</button>
+                  </div>
+              </div>
             </div>
-          </div>
           <div class="progress content_status question_content_status">
             <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75"
               aria-valuemin="0" aria-valuemax="100" style="width: 36%"></div>
@@ -277,107 +375,217 @@
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <!-- <script src="assets/js/owl-carousel.js"></script>
   <script src="assets/js/custom.js"></script> -->
-    <script>
-        //quiz 
-        const quizForm = document.querySelector('#quiz-form');
-        const resultContainer = document.querySelector('#result');
-        const questions = document.querySelectorAll('.question');
-        const previousButton = document.querySelector('.previous-button');
-        const nextButton = document.querySelector('.next-button');
-        const submitButton = document.querySelector('.submit-button');
-        const resetButton = document.querySelector('.reset-button');
-        
-        let currentQuestionIndex = 0; 
-        function startQuiz() {
-            // Code to display the first question and answer options     
-            document.getElementById("quiz-form").style.display = "block";
-            //document.getElementById("button-area").style.display = "block";  
-            document.getElementById("start-btn").style.display = "none";
-             document.getElementById("result").style.display = "none";
-            resultContainer.innerHTML = ''; 
-            currentQuestionIndex = 0;
-        }
-        function showQuestion(questionIndex) {
-            questions.forEach((question) => {
-                question.style.display = 'none';
-            });
-            questions[questionIndex].style.display = 'block';
-        }
-        function updateButtons() {
-            if (currentQuestionIndex === 0) {
-                previousButton.disabled = true;
-                submitButton.style.display = 'none';
-                nextButton.disabled = false;
-                nextButton.style.display = 'block';
-                resetButton.style.display = 'none';
-                submitButton.style.display = 'none';
-            }
-            else {
-                previousButton.disabled = false;
-                previousButton.style.display = 'block';
-                nextButton.style.display = 'block';
-                nextButton.disabled = false;
-            }
-            if (currentQuestionIndex === questions.length - 1) {
-                nextButton.disabled = true;
-                nextButton.style.display = 'none';
-                submitButton.style.display = 'block';
-            } else {
-                nextButton.disabled = false;
-                nextButton.style.display = 'block'
-                submitButton.style.display = 'none';
-                resetButton.style.display = 'none';
-            }
-        } showQuestion(currentQuestionIndex);
-        updateButtons();
-        previousButton.addEventListener('click', () => {
-            currentQuestionIndex -= 1;
-            showQuestion(currentQuestionIndex);
-            updateButtons();
-        });
-        nextButton.addEventListener('click', () => {
-            currentQuestionIndex += 1;
-            showQuestion(currentQuestionIndex);
-            updateButtons();
-        });
-        quizForm.addEventListener('submit', (event) => {
-            event.preventDefault();
-            let score = 0;
-            questions.forEach((question) => {
-                const selectedOption = question.querySelector(`input[name=q${question.id.split('-')[1]}]:checked`);
-                const correctOption = question.querySelector(`input[name=q${question.id.split('-')[1]}][data-correct]`);
-                if (selectedOption && selectedOption === correctOption) { score += 1; }
-            });
-            resultContainer.style.display = "block";
-            resultContainer.innerHTML = `You scored ${score} out of ${questions.length}`;
-            resetButton.style.display = 'block';
-            submitButton.style.display = 'none';
-            previousButton.style.display = 'none';
-        });
-        resetButton.addEventListener('click', () => {
-            quizForm.reset();
-            showQuestion(0);
-            updateButtons();
-            resetButton.style.display = 'none';
-            submitButton.style.display = 'none';
-            nextButton.style.display = 'block';
-            startButton.style.display = 'block';
-            resultContainer.style.display = "none";
-            questionContainer.style.display = 'none';
-            previousButton.disabled = true;
-            nextButton.disabled = false;
-            currentQuestionIndex = 0;
-        });
-        const startButton = document.querySelector('.start-button');
-        const questionContainer = document.querySelector('.question-container');
-        startButton.addEventListener('click', () => {
-            startButton.style.display = 'none';
-            resultContainer.style.display = "none";
-            questionContainer.style.display = 'block';
-        });
+  <script>
+    //quiz 
+    //References
+//let timeLeft = document.querySelector(".time-left");
+let quizContainer = document.getElementById("container");
+let nextBtn = document.getElementById("next-button");
+let countOfQuestion = document.querySelector(".number-of-question");
+let displayContainer = document.getElementById("display-container");
+let scoreContainer = document.querySelector(".score-container");
+let restart = document.getElementById("restart");
+let userScore = document.getElementById("user-score");
+let startScreen = document.querySelector(".start-screen");
+let startButton = document.getElementById("start-button");
+let questionCount;
+let scoreCount = 0;
+let count = 11;
+let countdown;
+
+//Questions and Options array
+
+const quizArray = [
+{id: "1",
+
+question: "Which of the following is an example of interpersonal conflict? ",
+
+options: ["A disagreement over office supplies ", "A misunderstanding with a customer", "A dispute with a supplier "],
+
+correct: "A misunderstanding with a customer",},
+
+{id: "2",
+
+question: "Which of the following is an example of intrapersonal conflict? ",
+
+options: ["A disagreement with a colleague over a project ", "A feeling of uncertainty about a decision", "A negotiation with a vendor over pricing "],
+
+correct: "A feeling of uncertainty about a decision",},
+
+{id: "3",
+
+question: "Which of the following is an example of organizational conflict? ",
+
+options: ["A disagreement between two employees ", "A power struggle between managers", "A conflict between a customer and an employee "],
+
+correct: "A power struggle between managers",},
+
+{id: "4",
+
+question: "Which of the following is an example of community conflict? ",
+
+options: ["A disagreement over a proposed development project", "A dispute between neighbours over a fence  ", "A conflict between a customer and a business owner "],
+
+correct: "A disagreement over a proposed development project",},
+
+{id: "5",
+
+question: "Which of the following is an example of cross-cultural conflict? ",
+
+options:  ["A disagreement between two employees from different departments", "A dispute between colleagues over office space  ", "A conflict between two employees from different cultural backgrounds",],
+
+correct: "A conflict between two employees from different cultural backgrounds",},
+
+];
+
+//Restart Quiz
+restart.addEventListener("click", () => {
+initial();
+displayContainer.classList.remove("hide");
+scoreContainer.classList.add("hide");
+});
+
+//Next Button
+nextBtn.addEventListener(
+"click",
+(displayNext = () => {
+//increment questionCount
+nextBtn.disabled =true;
+questionCount += 1;
+//if last question
+if (questionCount == quizArray.length) {
+  //hide question container and display score
+  displayContainer.classList.add("hide");
+  scoreContainer.classList.remove("hide");
+  //user score
+  userScore.innerHTML =
+    "Your score is " + scoreCount + " out of " + questionCount;
+} else {
+  //display questionCount
+  countOfQuestion.innerHTML =
+    questionCount + 1 + " of " + quizArray.length + " Question";
+  //display quiz
+  quizDisplay(questionCount);
+  count = 11;
+  clearInterval(countdown);
+  timerDisplay();
+}
+})
+);
+
+//Timer
+const timerDisplay = () => {
+countdown = setInterval(() => {
+count--;
+timeLeft.innerHTML = `${count}s`;
+if (count == 0) {
+  clearInterval(countdown);
+  displayNext();
+}
+}, 1000);
+};
+
+//Display quiz
+const quizDisplay = (questionCount) => {
+let quizCards = document.querySelectorAll(".container-mid");
+//Hide other cards
+quizCards.forEach((card) => {
+card.classList.add("hide");
+});
+//display current question card
+quizCards[questionCount].classList.remove("hide");
+};
+
+//Quiz Creation
+function quizCreator() {
+//randomly sort questions
+quizArray.sort(() => Math.random() - 0.5);
+//generate quiz
+for (let i of quizArray) {
+//randomly sort options
+i.options.sort(() => Math.random() - 0.5);
+//quiz card creation
+let div = document.createElement("div");
+div.classList.add("container-mid", "hide");
+//question number
+countOfQuestion.innerHTML = 1 + " of " + quizArray.length + " Question";
+//question
+let question_DIV = document.createElement("p");
+question_DIV.classList.add("question");
+question_DIV.innerHTML = i.question;
+div.appendChild(question_DIV);
+//options
+div.innerHTML += `
+<button class="option-div" onclick="checker(this)">${i.options[0]}</button>
+ <button class="option-div" onclick="checker(this)">${i.options[1]}</button>
+  <button class="option-div" onclick="checker(this)">${i.options[2]}</button>
+   <button class="option-div" onclick="checker(this)">${i.options[3]}</button>
+`;
+quizContainer.appendChild(div);
+}
+}
+
+//Checker Function to check if option is correct or not
+function checker(userOption) {
+let userSolution = userOption.innerText;
+let question =
+document.getElementsByClassName("container-mid")[questionCount];
+let options = question.querySelectorAll(".option-div");
+
+//if user clicked answer == correct option stored in object
+if (userSolution === quizArray[questionCount].correct) {
+userOption.classList.add("correct");
+scoreCount++;
+
+} else {
+
+userOption.classList.add("incorrect");
+//For marking the correct option
+options.forEach((element) => {
+  if (element.innerText == quizArray[questionCount].correct) {
+    element.classList.add("correct");
+  }
+});
+}
+
+//clear interval(stop timer)
+clearInterval(countdown);
+//disable all options
+options.forEach((element) => {
+element.disabled = true;
+nextBtn.disabled =false;
+});
+}
+
+//initial setup
+function initial() {
+quizContainer.innerHTML = "";
+questionCount = 0;
+scoreCount = 0;
+count = 11;
+clearInterval(countdown);
+nextBtn.disabled =true;
+quizCreator();
+quizDisplay(questionCount);
+}
+
+//when user click on start button
+startButton.addEventListener("click", () => {
+startScreen.classList.add("hide");
+displayContainer.classList.remove("hide");
+initial();
+});
+
+//hide quiz and display start screen
+window.onload = () => {
+startScreen.classList.remove("hide");
+displayContainer.classList.add("hide");
+};
 
 
-    </script>
+
+
+</script>
 </body>
 
 </html>

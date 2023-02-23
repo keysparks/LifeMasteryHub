@@ -39,7 +39,7 @@
             <!-- ***** Logo End ***** -->
             <!-- ***** Menu Start ***** -->
             <ul class="nav">
-              <li class="scroll-to-section"><a href="index.html" class="active">Home</a></li>
+              <li class="scroll-to-section"><a href="index.html" >Home</a></li>
               <div class="dropdown">
                 <li class="scroll-to-section"><a href="#">Training Module</a></li>
                 <ul class="dropdown-menu">
@@ -51,7 +51,7 @@
               </div>
               <li class="scroll-to-section"><a href="about.html">About Us</a></li>
               <li class="scroll-to-section">
-                <div class="main-red-button-hover"><a href="contact.html">Contact Us Now</a></div>
+                <div class="main-red-button-hover"><a href="contact.html" class="cactive">Contact Us</a></div>
               </li>
             </ul>
             <a class='menu-trigger'>
@@ -129,7 +129,7 @@
         <div class="ccfield-prepend">
           <div class="row">
             <div class="col-lg-6">
-              <span class="ccform-addon"><i class="fa fa-user fa-2x"></i></span>
+              <span class="ccform-addon ccform-addon2"><i class="fa fa-user fa-2x"></i></span>
               <input class="ccformfield" type="text" placeholder="Full Name" required>
             </div>
             <div class="col-lg-6 input_lastname">
@@ -138,12 +138,18 @@
           </div>
         </div>
         <div class="ccfield-prepend">
-          <span class="ccform-addon"><i class="fa fa-envelope fa-2x"></i></span>
+          <span class="ccform-addon ccform-addon2"><i class="fa fa-envelope fa-2x"></i></span>
           <input class="ccformfield" type="text" placeholder="Email" required>
         </div>
         <div class="ccfield-prepend">
-          <span class="ccform-addon"><i class="fa fa-info fa-2x"></i></span>
-          <input class="ccformfield" type="text" placeholder="Area of interest" required>
+          <span class="ccform-addon ccform-addon2"><i class="fa fa-info fa-2x"></i></span>
+          <!-- <input class="ccformfield" type="text" placeholder="Your Expertise" required> -->
+          <select name="your expertise" id="yourexpertise"  class="ccformfield ccformselect" required>
+            <option value="#">Your Expertise</option>
+            <option value="#">option 1</option>
+            <option value="#">option 2</option>
+            <option value="#">option 3</option>
+          </select>
         </div>
         <div class="ccfield-prepend">
           <span class="ccform-addon"><i class="fa fa-comment fa-2x"></i></span>
@@ -151,11 +157,11 @@
         </div>
         <div>
           <div class="row">
-            <div class="col-lg-6 ccfield-prepend">
-              <input class="ccbtn" type="submit" value="Submit">
+            <div class="col-lg-6 col-md-6 col-12 ccfield-prepend">
+              <input class="ccbtn" type="reset" value="Clear">
             </div>
-            <div class="col-lg-6 ccfield-prepend">
-              <input class="ccbtn" type="submit" value="Clear">
+            <div class="col-lg-6 col-md-6 col-12 ccfield-prepend">
+              <input class="ccbtn" type="submit" value="Submit">
             </div>
           </div>
         </div>
