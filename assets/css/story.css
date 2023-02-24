@@ -45,11 +45,12 @@ story content
 */
 
 .story-time .story-img {
-  padding: 40px;
-  width: 60%;
+  /* padding: 40px; */
+  width: 100%;
   display: block;
   margin: 0 auto;
-
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .story-time {

@@ -20,7 +20,7 @@
 
 
   <!-- Additional CSS Files -->
-  <link rel="stylesheet" href="assets/css/Style.css">
+  <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/contact.css">
   <link rel="stylesheet" href="assets/css/courses.css">
   <link rel="stylesheet" href="assets/css/ref&sug.css">
@@ -138,7 +138,7 @@ button {
 .question-box {
   width: 60%;
   height: 90%;
-  background-color: rgb(246, 175, 149);
+  background-color: #ff695f;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -166,6 +166,31 @@ button {
     /* width: 60%; */
     margin: auto;
 }  
+#user-score {
+  font-size: 1em;
+  color: #ffffff;
+  text-align: center;
+  margin: auto;
+  animation: none; /* remove any animation applied previously */
+}
+
+#blink {
+  animation: blinker 1.5s linear infinite;
+  color: rgb(255, 255, 255);
+  font-family: sans-serif;
+  font-size: larger;
+  font-weight: bolder;
+  text-align: center;
+  margin: auto;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+
   </style>
 </head>
 
@@ -189,9 +214,9 @@ button {
                 <li class="scroll-to-section"><a href="courses.html" class="active">Training Module</a></li>
                 <div>
                   <ul class="dropdown-menu">
-                    <li><a href="#">Self-journey</a></li>
+                    <li><a href="courses1.html">Self-journey</a></li>
                     <li><a href="courses.html">Problem Solving</a></li>
-                    <li><a href="#">Decision making</a></li>
+                    <li><a href="courses3.html">Decision making</a></li>
                     <li><a href="courses4.html">Conflict management</a></li>
 
                   </ul>
@@ -267,7 +292,9 @@ button {
             </div>
           
             <div class="score-container hide">
+              <div>
               <div id="user-score">Demo Score</div>
+            </div>
               <button id="restart">Restart</button>
             </div>
         </div>
@@ -551,9 +578,31 @@ if (questionCount == quizArray.length) {
   scoreContainer.classList.remove("hide");
   //user score
   userScore.innerHTML =
-    "Your score is " + scoreCount + " out of " + questionCount;
-} else {
-  //display questionCount
+  "Your score is " + scoreCount + " out of " + questionCount;
+  //Display result
+  let averageScore = scoreCount / questionCount;
+      let result = "";
+
+     
+      if (averageScore > 0 && averageScore <= 0.4) {
+        result = "<span id='blink' style='text-align: center;'>Beginner</span><br><span id='rdes'>Good work, while you may not have a strong foundation in problem-solving techniques yet, don't worry! This is a great opportunity for growth and learning. By taking courses, reading books, and seeking guidance from mentors or coaches, you can build a solid understanding of different problem-solving methods and practice applying them to real-life situations. With some dedication and effort, you can improve your problem-solving skills and become more confident in your abilities.</span>";
+      } else if (averageScore > 0.4 && averageScore <= 0.7) {
+        result = "<span id='blink' style='text-align: center;'>Intermediate</span><br><span id='rdes'>Great effort, you have a good foundation in problem-solving techniques, and with some effort, you can improve your understanding and application of them. Consider reviewing the methods you are less familiar with and collaborating with others who have more experience in problem-solving. By practicing in different scenarios and seeking feedback from others, you can build on your existing skills and become more proficient in problem-solving.</span>";
+      } else if (averageScore > 0.7 && averageScore <= 0.9) {
+        result = "<span id='blink' style='text-align: center;'>Advanced</span><br><span id='rdes'>Good job, you have a solid level of knowledge and skill in problem-solving techniques, which is a great accomplishment! To continue to improve your problem-solving ability, focus on expanding your knowledge of different methods and refining your application of them. Seeking feedback from others and continuing to practice in a variety of situations will help you further develop your problem-solving skills and become even more effective.</span>";
+      }
+    else if (averageScore > 0.9 && averageScore <= 1) {
+        result = "<span id='blink' style='text-align: center;'>Expert</span><br><span id='rdes'>Congratulations! You have a strong foundation in problem-solving techniques and can apply them effectively in many situations. Your skills in problem-solving are a great asset, and you can continue to excel by seeking out more challenging and complex problems to solve and exploring new and innovative problem-solving techniques. Remember to also share your knowledge and skills with others to help them develop their problem-solving abilities. Keep up the great work!</span>";
+      }
+
+
+
+      userScore.innerHTML  = "" +result;
+
+    }
+
+    else {
+
   countOfQuestion.innerHTML =
     questionCount + 1 + " of " + quizArray.length + " Question";
   //display quiz

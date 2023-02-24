@@ -20,7 +20,7 @@
 
 
     <!-- Additional CSS Files -->
-    <link rel="stylesheet" href="assets/css/Style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/contact.css">
     <link rel="stylesheet" href="assets/css/courses.css">
     <link rel="stylesheet" href="assets/css/ref&sug.css">
@@ -137,7 +137,7 @@ button {
 .question-box {
   width: 60%;
   height: 90%;
-  background-color: rgb(246, 175, 149);
+  background-color: #ff695f;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -164,6 +164,31 @@ button {
     /* width: 60%; */
     margin: auto;
 }  
+#user-score {
+  font-size: 1em;
+  color: #ffffff;
+  text-align: center;
+  margin: auto;
+  animation: none; /* remove any animation applied previously */
+}
+
+#blink {
+  animation: blinker 1.5s linear infinite;
+  color: rgb(255, 255, 255);
+  font-family: sans-serif;
+  font-size: larger;
+  font-weight: bolder;
+  text-align: center;
+  margin: auto;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+
     </style>
 </head>
 
@@ -187,9 +212,9 @@ button {
                                 <li class="scroll-to-section"><a href="courses.html" class="active">Training Module</a></li>
                                 <div>
                                     <ul class="dropdown-menu">
-                                        <li><a href="#">Self-Journey</a></li>
+                                        <li><a href="course1.html">Self-Journey</a></li>
                             <li><a href="courses.html">Problem-Solving</a></li>
-                            <li><a href="#">Decision Making</a></li>
+                            <li><a href="courses3.html">Decision Making</a></li>
                             <li><a href="courses4.html">Conflict Management</a></li>
 
                                     </ul>
@@ -279,7 +304,9 @@ button {
                   </div>
                 
                   <div class="score-container hide">
+                    <div>
                     <div id="user-score">Demo Score</div>
+                  </div>
                     <button id="restart">Restart</button>
                   </div>
               </div>
@@ -344,9 +371,9 @@ button {
                     <div class="subscribe-newsletters footer-item">
                         <h4>Courses</h4>
                         <ul>
-                            <li><a href="#">Self-Journey</a></li>
+                            <li><a href="courses1.html">Self-Journey</a></li>
                             <li><a href="courses.html">Problem-Solving</a></li>
-                            <li><a href="#">Decision Making</a></li>
+                            <li><a href="courses3.html">Decision Making</a></li>
                             <li><a href="courses4.html">Conflict Management</a></li>
                         </ul>
                     </div>
@@ -454,9 +481,33 @@ if (questionCount == quizArray.length) {
   scoreContainer.classList.remove("hide");
   //user score
   userScore.innerHTML =
-    "Your score is " + scoreCount + " out of " + questionCount;
-} else {
-  //display questionCount
+  "Your score is " + scoreCount + " out of " + questionCount;
+  //Display result
+  let averageScore = scoreCount / questionCount;
+      let result = "";
+
+     
+      if (averageScore >= 0 && averageScore <= .3) {
+        result = "<span id='blink' style='text-align: center;'>Amateur</span><br><span id='rdes'>Good work, it's important to remember that everyone has strengths and weaknesses. Let's work together to identify areas where you can improve and come up with a plan to help you succeed. It's important to remember that everyone has room for improvement. Consider seeking out resources such as online courses or workshops to develop soft skills such as communication, time management, and problem-solving. Focusing on these skills can lead to personal growth and increased success in both personal and professional settings.</span>";
+      }  else if (averageScore > 0.3 && averageScore <= 0.5) {
+        result = "<span id='blink' style='text-align: center;'>Beginner</span><br><span id='rdes'>Great job, you’ve done a solid job and have demonstrated a good understanding of the life skills. Let's review the areas where you lost marks and see if there are any gaps in your knowledge that we can address. It's important to remember that everyone has room for improvement. Consider seeking out resources such as online courses or workshops to develop soft skills such as communication, time management, and problem-solving. Focusing on these skills can lead to personal growth and increased success in both personal and professional settings.</span>";
+
+      }  else if (averageScore > 0.5 && averageScore <= 0.7) {
+        result = "<span id='blink' style='text-align: center;'>Intermediate</span><br><span id='rdes'>Great job, you’ve done a solid job and have demonstrated a good understanding of the life skills. Let's review the areas where you lost marks and see if there are any gaps in your knowledge that we can address. It's important to remember that everyone has room for improvement. Consider seeking out resources such as online courses or workshops to develop soft skills such as communication, time management, and problem-solving. Focusing on these skills can lead to personal growth and increased success in both personal and professional settings.</span>";
+      } else if (averageScore > 0.7 && averageScore <= 0.9) {
+        result = "<span id='blink' style='text-align: center;'>Advanced</span><br><span id='rdes'>Congratulations, your mark shows that you have a strong grasp of the essential skills and have put in a lot of effort. Let's go over the areas where you did well and see if there are any opportunities for further improvement. There is always room for improvement. Continue to refine and develop these skills through consistent practice and seeking out new learning opportunities. Consider working on areas such as leadership, adaptability, and critical thinking, which are highly valued in today's job market.</span>";
+      } else if (averageScore > 0.9 && averageScore <= 1) {
+        result = "<span id='blink' style='text-align: center;'>Expert</span><br><span id='rdes'>Fantastic work, you should be proud of yourself! You have a deep understanding on life skill and have put in a lot of hard work. Let's discuss ways to build on this success and continue to challenge yourself. Keep up the good work and continue to seek out opportunities to improve and refine these skills. Consider mentoring others or volunteering in leadership roles to help develop these skills further and make a positive impact in the community.</span>";
+      }
+
+
+
+
+      userScore.innerHTML  = "" +result;
+
+    }else {
+//display questionCount
+
   countOfQuestion.innerHTML =
     questionCount + 1 + " of " + quizArray.length + " Question";
   //display quiz

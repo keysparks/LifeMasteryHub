@@ -44,10 +44,12 @@ Psychological facts content
 */
 
 .facts-time .facts-img {
-  padding: 30px;
-  width: 60%;
+  /*   padding: 30px; */
+  width: 100%;
   display: block;
   margin: 0 auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .facts-time {
@@ -64,9 +66,11 @@ Psychological facts content
 .facts-time-content ul {
   margin-top: 60px;
 }
-.facts-time-content ul li i{
+
+.facts-time-content ul li i {
   color: #ff695f;
 }
+
 .facts-time i {
   color: #03a4ed;
   font-size: 20px;
@@ -101,6 +105,7 @@ Psychological facts content
   padding-bottom: 40px;
   text-align: justify;
 }
+
 .facts .facts-left-dec img {
   width: auto;
   height: auto;

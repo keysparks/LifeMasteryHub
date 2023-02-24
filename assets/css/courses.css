@@ -237,13 +237,17 @@
     text-align: center;
     color: #03a4ed;
 }
-
+.intro_content_title h3 {
+    text-align: center;
+    color: #03a4ed;
+    padding-top: 30px;
+}
 .intro_content_title p {
-    padding-top: 60px;
-    padding-top: 40px;
+    padding-top: 30px;
+    
     text-align:justify;
     font-size: 18px;
-    padding-bottom: 40px;
+    
 }
 .course_content_status{
     padding-left: 0px;
@@ -255,8 +259,9 @@
     padding: 40px;
 }
 .content-img{
-    padding: 30px;
-    width: 60%;
+padding-top: 10px;  
+padding-bottom: 10px; 
+    width: 100%;
     display: block;
     margin: 0 auto;
 }
@@ -266,9 +271,3 @@
     display: block;
     margin: 0 auto;
 }   
-.content-img{
-    padding: 30px;
-    width: 70%;
-    display: block;
-    margin: 0 auto;
-}

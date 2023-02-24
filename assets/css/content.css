@@ -43,8 +43,10 @@
   */
   
   .experience-time .experience-img {
-    padding: 40px;
-    width: 60%;
+    Padding-top:10px;
+
+    Padding-bottom: 10px;
+    width: 100%;
     display: block;
     margin: 0 auto;
   }
@@ -58,9 +60,7 @@
     border-bottom: 1px solid #eee;
     border-top: 1px solid #eee;
   }
-  .experience-time-content{
-    padding-top: 50px;
-  }
+  
   
   .experience-time i {
     color: #03a4ed;
@@ -73,10 +73,13 @@
     color: #ff695f;
     font-size: 24px;
   }
-  
+  .experience-time h5 span i  {
+
+color: #03a4ed 
+} 
   .experience-time p {
     text-align: justify;
-    padding: 20px 0px 20px 0px;
+    padding-bottom: 20px ;
     font-weight: 400;
     font-size: 16px;
     color: black;
@@ -126,7 +129,7 @@
   
   .experience-content {
     position: relative;
-    margin-top: 100px;
+    margin-top: 30px;
     margin-bottom: 20vh;
   }
   
@@ -211,7 +214,7 @@
   .experience-content .protips-right-dec img {
     width: 487px;
     height: 738px;
-    right: -300px;
+    right: -290px;
     bottom: -70px;
     position: absolute;
     z-index: 1;

@@ -4,38 +4,47 @@ protips
 --------------------------------------------- 
 */
 .protips_content .protips-img {
-  padding: 30px;
-  width: 60%;
+  /* padding: 30px; */
+  width: 100%;
   display: block;
   margin: 0 auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
+
 .protips {
   text-align: center;
   position: relative;
   margin-top: 30px;
   margin-bottom: 20vh;
 }
+
 .protips_mainheading {
   text-align: center;
   margin: 40px;
   color: #03a4ed;
 
 }
-.protips-section-title h3{
+
+.protips-section-title h3 {
   color: #ff695f;
   font-size: 24px;
-  padding-top:40px;
+  padding-top: 40px;
 }
-.protips_content ul span{
+
+.protips_content ul span {
   color: #03a4ed;
   font-size: 20px;
 }
-.protips_content ul span i{
+
+.protips_content ul span i {
   color: #ff695f;
 }
-.protips_content ul li p{
+
+.protips_content ul li p {
   padding-left: 30px;
 }
+
 .protips p {
   text-align: justify;
   font-size: 16px;
@@ -54,19 +63,23 @@ protips
   border-bottom: 1px solid #eee;
   border-top: 1px solid #eee;
 }
-.protips_sub i{
-  color:#03a4ed;
+
+.protips_sub i {
+  color: #03a4ed;
   font-size: 30px;
 }
-.protips_sub ul{
+
+.protips_sub ul {
   font-size: 17px;
   font-weight: normal;
   /* padding: 10px 0px 10px 70px; */
 }
-.protips_sub ul li{
+
+.protips_sub ul li {
   padding-bottom: 20px;
   text-align: justify;
 }
+
 .protips .protips-left-dec img {
   width: 487px;
   height: 738px;
@@ -79,22 +92,25 @@ protips
 .protips .protips-right-dec img {
   width: 487px;
   height: 738px;
-  right: -300px;
+  right: -290px;
   bottom: -70px;
   position: absolute;
   z-index: 1;
 }
-.protips_breadcrumbs{
+
+.protips_breadcrumbs {
   padding-left: 0px;
 }
-.content_status{
+
+.content_status {
   text-align: center;
   margin: auto;
   padding-left: 0px;
   width: 50%;
   margin-top: 30px;
-  margin-bottom: 20px;
+
 }
+
 .page_button button {
   margin: 10px 0;
   width: 25%;
@@ -115,10 +131,12 @@ protips
   font-weight: bold;
   border: 2px solid #03a4ed;
 }
-.page_button i{
-font-size: 18px;
+
+.page_button i {
+  font-size: 18px;
 }
-.page_button a{
-text-decoration: none;
-color: #fff;
+
+.page_button a {
+  text-decoration: none;
+  color: #fff;
 }

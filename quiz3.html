@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- Mirrored from keysparks.github.io/LifeMasteryHub/quiz4.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 24 Feb 2023 04:28:36 GMT -->
+<!-- Added by HTTrack -->
+<meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="preconnect" href="https://fonts.gstatic.com/">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+        rel="stylesheet">
+
+    <title>Life Skill Portal</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/contact.css">
+    <link rel="stylesheet" href="assets/css/courses.css">
+    <link rel="stylesheet" href="assets/css/ref%26sug.css">
+    <link rel="stylesheet" href="assets/css/protips.css">
+    <link rel="stylesheet" href="assets/css/quiz.css">
+    <style>
+        #form-container {
+            display: none;
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        .start-screen,
+        .score-container {
+
+            top: 40%;
+            width: 100%;
+            height: 100%;
+            left: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        button {
+            border: none;
+            outline: none;
+            cursor: pointer;
+        }
+
+        #start-button,
+        #restart {
+            font-size: 1.3em;
+            padding: 0.5em 1.8em;
+            border-radius: 0.2em;
+        }
+
+        #restart {
+            margin-top: 0.9em;
+        }
+
+        .header {
+            margin-bottom: 1.8em;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 0.6em;
+            border-bottom: 0.1em solid #c0bfd2;
+        }
+
+        .timer-div {
+            background-color: #e1f5fe;
+            width: 7.5em;
+            border-radius: 1.8em;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.7em 1.8em;
+        }
+
+        .question {
+            margin-bottom: 1.25em;
+            font-weight: 600;
+        }
+
+        .option-div {
+            font-size: 0.9em;
+            width: 100%;
+            padding: 1em;
+            margin: 0.3em 0;
+            text-align: left;
+            outline: none;
+            background: transparent;
+            border: 1px solid #c0bfd2;
+            border-radius: 0.3em;
+        }
+
+        .option-div:disabled {
+            color: #000000;
+            cursor: not-allowed;
+        }
+
+        #next-button {
+            font-size: 1em;
+            margin-top: 1.5em;
+            background-color: #0a69ed;
+            color: #ffffff;
+            padding: 0.7em 1.8em;
+            border-radius: 0.3em;
+            float: right;
+        }
+
+        .hide {
+            display: none;
+        }
+
+        .incorrect {
+            background-color: #ffdde0;
+            color: #d32f2f;
+            border-color: #d32f2f;
+        }
+
+        .correct {
+            background-color: #e7f6d5;
+            color: #689f38;
+            border-color: #689f38;
+        }
+
+        #user-score {
+            font-size: 1.5em;
+            color: #ffffff;
+        }
+
+        .quiz_frame {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .question-box {
+            width: 60%;
+            height: 90%;
+            background-color: #d32f2f;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-top-left-radius: 30px;
+            border-bottom-right-radius: 30px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            margin: 0 auto;
+        }
+
+        #display-container {
+            background-color: #ffffff;
+            padding: 3.1em 1.8em;
+            width: 80%;
+            max-width: 37.5em;
+            margin: 1.5em auto;
+            border-radius: 0.6em;
+            height: 80%;
+        }
+
+        .question_page_button {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid #eee;
+            /* width: 60%; */
+            margin: auto;
+        }
+        #resultDisplay {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+#user-score {
+  font-size: 1em;
+  color: #ffffff;
+  text-align: center;
+  margin: auto;
+  animation: none; /* remove any animation applied previously */
+}
+
+#blink {
+  animation: blinker 1.5s linear infinite;
+  color: rgb(255, 255, 255);
+  font-family: sans-serif;
+  font-size: larger;
+  font-weight: bolder;
+  text-align: center;
+  margin: auto;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+    </style>
+</head>
+
+<body>
+
+    <!-- ***** Header Area Start ***** -->
+    <header class="header-area header-sticky wow slideInDown" data-wow-duration="0.75s" data-wow-delay="0s">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+                        <!-- ***** Logo Start ***** -->
+                        <a href="index.html" class="logo">
+                            <img src="assets/images/logo.png">
+                        </a>
+                        <!-- ***** Logo End ***** -->
+                        <!-- ***** Menu Start ***** -->
+                        <ul class="nav">
+                            <li class="scroll-to-section"><a href="index.html">Home</a></li>
+                            <div class="dropdown">
+                                <li class="scroll-to-section"><a href="courses.html" class="active">Training Module</a>
+                                </li>
+                                <div>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="courses1.html">Self-journey</a></li>
+                                        <li><a href="courses.html">Problem Solving</a></li>
+                                        <li><a href="courses3.html">Decision making</a></li>
+                                        <li><a href="courses4.html">Conflict management</a></li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                            <li class="scroll-to-section"><a href="about.html">About Us</a></li>
+                            <!-- <li class="scroll-to-section"><a href="#">Contact Us </a></li> -->
+                            <li class="scroll-to-section">
+                                <div class="main-red-button-hover"><a href="contact.html">Contact Us</a></div>
+                            </li>
+                        </ul>
+                        <a class='menu-trigger'>
+                            <span>Menu</span>
+                        </a>
+                        <!-- ***** Menu End ***** -->
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ***** Header Area End ***** -->
+    <div class="container question">
+        <div class="courses_breadcrumbs reference_suggestion_breadscrumbs">
+            <ul>
+                <li>
+                    <a href="index.html">Training modules</a>
+                </li>
+                <li class="courses_breadcrumbs_arrow">
+                    <i class="bi bi-chevron-right"></i>
+                </li>
+                <li>
+                    <a href="courses3.html">Decision Making</a>
+                </li>
+                <li class="courses_breadcrumbs_arrow">
+                    <i class="bi bi-chevron-right"></i>
+                </li>
+                <li>
+                    <a href="#">Quiz</a>
+                </li>
+            </ul>
+        </div>
+        <div class="question_mainheading">
+            <h1><i class="bi bi-question-circle"></i> Decision Making Quiz</h1>
+        </div>
+        <div class="question_content">
+            <h3>Instructions</h3>
+            <p>Read each question carefully and select the best answer from the options provided. Once you have
+                completed all the questions, submit your responses to receive your score and feedback on your
+                understanding of decision making.</p>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="quiz_frame">
+        <div class="container quiz_que_container col-lg-12 align-self-center">
+            <div class="question-box">
+
+                <div class="start-screen">
+                    <button id="start-button">Start</button>
+                </div>
+
+                <div id="display-container">
+                    <div class="header">
+                        <div class="number-of-count">
+                            <span class="number-of-question">1 of 10 questions</span>
+                        </div>
+
+                    </div>
+                    <div id="container">
+                        <!-- questions and options will be displayed here -->
+                    </div>
+                    <button id="next-button">Next</button>
+                </div>
+
+                <div class="score-container hide">
+                    <div>
+                    <div id="user-score">Demo Score</div>
+                </div>
+                    <button id="restart">Restart</button>
+                </div>
+            </div>
+        </div>
+        <div class="progress content_status question_content_status">
+            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75"
+                aria-valuemin="0" aria-valuemax="100" style="width: 36%"></div>
+        </div>
+    </div>
+
+
+    <div class="row page_button question_page_button">
+        <div class="col-lg-6 col-md-6 col-12">
+            <a href="ref&sug3.html"><button><i class="bi bi-arrow-left"></i> back</button></a>
+        </div>
+        <!-- <div class="col-lg-6 col-md-6 col-12">
+      <a href="consequences4.html"><button>next <i class="bi bi-arrow-right"></i></button></a>
+    </div> -->
+    </div>
+
+    <!-- -----------------------footer------------------------ -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="about footer-item">
+                        <div class="logo">
+                            <a href="#"><img src="assets/images/logo.png" alt="Onix Digital TemplateMo"></a>
+                        </div>
+                        <a href="#">info@company.com</a>
+                        <ul>
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="services footer-item">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="#">Training Module</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="contact.html">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="community footer-item">
+                        <h4>Policies</h4>
+                        <ul>
+                            <li><a href="#">Terms</a></li>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Disclamier</a></li>
+                            <li><a href="#">Privacy</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="subscribe-newsletters footer-item">
+                        <h4>Courses</h4>
+                        <ul>
+                            <li><a href="courses1.html">Self-journey</a></li>
+                            <li><a href="courses.html">Problem Solving</a></li>
+                            <li><a href="courses3.html">Decision making</a></li>
+                            <li><a href="courses4.html">Conflict management</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="copyright">
+                        <p>Copyright © 2023 rqlik. All Rights Reserved.
+                            <br>
+                            Designed by <a rel="nofollow" href="https://keysparks.com/"
+                                title="KeySparks Technologies">KeySparks
+                                Technologies</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    </div>
+
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- <script src="assets/js/owl-carousel.js"></script>
+  <script src="assets/js/custom.js"></script> -->
+    <script>
+        //quiz 
+        //References
+        //let timeLeft = document.querySelector(".time-left");
+        let quizContainer = document.getElementById("container");
+        let nextBtn = document.getElementById("next-button");
+        let countOfQuestion = document.querySelector(".number-of-question");
+        let displayContainer = document.getElementById("display-container");
+        let scoreContainer = document.querySelector(".score-container");
+        let restart = document.getElementById("restart");
+        let userScore = document.getElementById("user-score");
+        let startScreen = document.querySelector(".start-screen");
+        let startButton = document.getElementById("start-button");
+        let questionCount;
+        let scoreCount = 0;
+        let count = 11;
+        let countdown;
+
+        //Questions and Options array
+
+        const quizArray = [
+            {
+                id: "1",
+                question: " What is the first step in the decision-making process? ",
+                options: ["Identifying alternatives ", " Conducting a need analysis ", " Evaluating evidence ", " Assessing risks"],
+                correct: " Conducting a need analysis ",
+            },
+            {
+                id: "2",
+                question: " What is an important consideration when identifying potential alternatives in the decision-making process?",
+                options: ["Personal values ", " Stakeholder perspectives ", " Time constraints ", " Objectives "],
+                correct: " Objectives ",
+            },
+            {
+                id: "3",
+                question: " What is an example of a cognitive bias that can impact decision making?",
+                options: ["Availability bias ", " Need for closure bias ", " Confirmation bias ", " All of the above "],
+                correct: " All of the above ",
+            },
+
+            {
+                id: "4",
+                question: " What is the purpose of a decision matrix? ",
+                options: ["To evaluate and compare alternatives based on specific criteria ", " To identify potential risks associated with each alternative ", " To gather and evaluate evidence ", " To conduct a need analysis"],
+                correct: " To evaluate and compare alternatives based on specific criteria ",
+            },
+            {
+                id: "5",
+                question: " What is an important skill for effective decision making?",
+                options: ["Time management ", " Active listening ", " Creativity ", " All of the above "],
+                correct: " All of the above ",
+            },
+            {
+                id: "6",
+                question: " What is the difference between a programmed decision and a non-programmed decision? ",
+                options: ["A programmed decision is routine and repetitive, while a non-programmed decision is complex and unique ", " A programmed decision is made by a group, while a non-programmed decision is made by an individual ", " A programmed decision is based on intuition, while a non-programmed decision is based on data ", " A programmed decision is made quickly, while a non-programmed decision takes a long time to make"],
+                correct: " A programmed decision is routine and repetitive, while a non-programmed decision is complex and unique ",
+            },
+            {
+                id: "7",
+                question: " What is a technique for evaluating alternatives in the decision-making process? ",
+                options: ["Pareto analysis ", " Mind mapping ", " SWOT analysis ", " Brainstorming "],
+                correct: " SWOT analysis ",
+            },
+            {
+                id: "8",
+                question: " What is an important factor to consider when identifying stakeholders in the decision-making process? ",
+                options: ["Their level of education ", " Their job title ", " Their level of influence ", " Their personal values "],
+                correct: " Their personal values ",
+            },
+            {
+                id: "9",
+                question: " What is a strategy for managing personal biases in the decision-making process?",
+                options: ["Seeking feedback from others ", " Avoiding conflicting opinions ", " Trusting your instincts ", " Focusing only on the facts "],
+                correct: " Seeking feedback from others ",
+            },
+
+            {
+                id: "10",
+                question: " What is an important skill for effective communication in the decision-making process? ",
+                options: ["Active listening ", " Interrupting others ", " Speaking loudly ", " Ignoring feedback "],
+                correct: " Active listening ",
+            },
+        ];
+
+        //Restart Quiz
+        restart.addEventListener("click", () => {
+            initial();
+            displayContainer.classList.remove("hide");
+            scoreContainer.classList.add("hide");
+        });
+
+        //Next Button
+        nextBtn.addEventListener(
+            "click",
+            (displayNext = () => {
+                //increment questionCount
+                nextBtn.disabled = true;
+                questionCount += 1;
+                //if last question
+                if (questionCount == quizArray.length) {
+                    //hide question container and display score
+                    displayContainer.classList.add("hide");
+                    scoreContainer.classList.remove("hide");
+                    //user score
+userScore.innerHTML =
+  "Your score is " + scoreCount + " out of " + questionCount;
+  //Display result
+  let averageScore = scoreCount / questionCount;
+      let result = "";
+
+     
+      if (averageScore >= 0 && averageScore <= 0.4) {
+        result = "<span id='blink' style='text-align: center;'>Beginner</span><br><span id='rdes'>Good work, you have a basic understanding of decision-making, but there is still room for improvement. To enhance your skills, consider practicing decision-making exercises, seeking feedback from others, and analysing your past decisions to identify areas for growth. To improve your skills, you could start by reading books and articles on the subject or taking a course to gain a better understanding of the decision-making process.</span>";
+
+
+}  else if (averageScore > 0.4 && averageScore <= 0.7) {
+        result = "<span id='blink' style='text-align: center;'>Intermediate</span><br><span id='rdes'>Good job, you have a decent understanding of decision-making, but there is still room for improvement. To strengthen your skills, try taking on more decision-making responsibilities, seeking out diverse perspectives, and honing your critical thinking and analytical skills.</span>";
+      } else if (averageScore > 0.7 && averageScore <= 0.9) {
+        result = "<span id='blink' style='text-align: center;'>Advanced</span><br><span id='rdes'>Great job, you have a good grasp of decision-making concepts and techniques. To further improve your skills, consider seeking out challenging decision-making situations, practicing risk management strategies, and continuing to seek feedback and learn from your mistakes.</span>";
+      } else if (averageScore > 0.9 && averageScore <= 1) {
+        result = "<span id='blink' style='text-align: center;'>Expert</span><br><span id='rdes'>Congratulations! Your results indicate that you have a strong understanding of decision-making and have likely developed effective decision-making skills. To continue improving, consider taking on leadership roles that require advanced decision-making skills, mentoring others in decision-making, and staying up to date on the latest research and trends in the field.</span>";
+      }
+
+
+
+
+
+      userScore.innerHTML  = "" +result;
+
+    }else {
+//display questionCount
+                    countOfQuestion.innerHTML =
+                        questionCount + 1 + " of " + quizArray.length + " Question";
+                    //display quiz
+                    quizDisplay(questionCount);
+                    count = 11;
+                    clearInterval(countdown);
+                    timerDisplay();
+                }
+            })
+        );
+
+        //Timer
+        const timerDisplay = () => {
+            countdown = setInterval(() => {
+                count--;
+                timeLeft.innerHTML = `${count}s`;
+                if (count == 0) {
+                    clearInterval(countdown);
+                    displayNext();
+                }
+            }, 1000);
+        };
+
+        //Display quiz
+        const quizDisplay = (questionCount) => {
+            let quizCards = document.querySelectorAll(".container-mid");
+            //Hide other cards
+            quizCards.forEach((card) => {
+                card.classList.add("hide");
+            });
+            //display current question card
+            quizCards[questionCount].classList.remove("hide");
+        };
+
+        //Quiz Creation
+        function quizCreator() {
+            //randomly sort questions
+            quizArray.sort(() => Math.random() - 0.5);
+            //generate quiz
+            for (let i of quizArray) {
+                //randomly sort options
+                i.options.sort(() => Math.random() - 0.5);
+                //quiz card creation
+                let div = document.createElement("div");
+                div.classList.add("container-mid", "hide");
+                //question number
+                countOfQuestion.innerHTML = 1 + " of " + quizArray.length + " Question";
+                //question
+                let question_DIV = document.createElement("p");
+                question_DIV.classList.add("question");
+                question_DIV.innerHTML = i.question;
+                div.appendChild(question_DIV);
+                //options
+                div.innerHTML += `
+<button class="option-div" onclick="checker(this)">${i.options[0]}</button>
+ <button class="option-div" onclick="checker(this)">${i.options[1]}</button>
+  <button class="option-div" onclick="checker(this)">${i.options[2]}</button>
+   <button class="option-div" onclick="checker(this)">${i.options[3]}</button>
+`;
+                quizContainer.appendChild(div);
+            }
+        }
+
+        //Checker Function to check if option is correct or not
+        function checker(userOption) {
+            let userSolution = userOption.innerText;
+            let question =
+                document.getElementsByClassName("container-mid")[questionCount];
+            let options = question.querySelectorAll(".option-div");
+
+            //if user clicked answer == correct option stored in object
+            if (userSolution === quizArray[questionCount].correct) {
+                userOption.classList.add("correct");
+                scoreCount++;
+
+            } else {
+
+                userOption.classList.add("incorrect");
+                //For marking the correct option
+                options.forEach((element) => {
+                    if (element.innerText == quizArray[questionCount].correct) {
+                        element.classList.add("correct");
+                    }
+                });
+            }
+
+            //clear interval(stop timer)
+            clearInterval(countdown);
+            //disable all options
+            options.forEach((element) => {
+                element.disabled = true;
+                nextBtn.disabled = false;
+            });
+        }
+
+        //initial setup
+        function initial() {
+            quizContainer.innerHTML = "";
+            questionCount = 0;
+            scoreCount = 0;
+            count = 11;
+            clearInterval(countdown);
+            nextBtn.disabled = true;
+            quizCreator();
+            quizDisplay(questionCount);
+        }
+
+        //when user click on start button
+        startButton.addEventListener("click", () => {
+            startScreen.classList.add("hide");
+            displayContainer.classList.remove("hide");
+            initial();
+        });
+
+        //hide quiz and display start screen
+        window.onload = () => {
+            startScreen.classList.remove("hide");
+            displayContainer.classList.add("hide");
+        };
+
+
+
+
+    </script>
+</body>
+
+
+
+
+</html>

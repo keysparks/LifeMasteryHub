@@ -20,7 +20,7 @@
 
 
     <!-- Additional CSS Files -->
-    <link rel="stylesheet" href="assets/css/Style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/contact.css">
     <link rel="stylesheet" href="assets/css/courses.css">
     <link rel="stylesheet" href="assets/css/ref&sug.css">
@@ -137,7 +137,7 @@ button {
 .question-box {
   width: 60%;
   height: 90%;
-  background-color: rgb(246, 175, 149);
+  background-color: #ff695f;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -165,6 +165,32 @@ button {
     /* width: 60%; */
     margin: auto;
 }  
+
+#user-score {
+  font-size: 1em;
+  color: #ffffff;
+  text-align: center;
+  margin: auto;
+  animation: none; /* remove any animation applied previously */
+}
+
+#blink {
+  animation: blinker 1.5s linear infinite;
+  color: rgb(255, 255, 255);
+  font-family: sans-serif;
+  font-size: larger;
+  font-weight: bolder;
+  text-align: center;
+  margin: auto;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+
 
 
 
@@ -195,9 +221,9 @@ button {
                                 <li class="scroll-to-section"><a href="courses.html">Training Module</a></li>
                                 <div>
                                     <ul class="dropdown-menu">
-                                        <li><a href="#">Self-journey</a></li>
+                                        <li><a href="courses1.html">Self-journey</a></li>
                                         <li><a href="courses.html">Problem Solving</a></li>
-                                        <li><a href="#">Decision making</a></li>
+                                        <li><a href="courses3.html">Decision making</a></li>
                                         <li><a href="courses4.html">Conflict management</a></li>
 
                                     </ul>
@@ -275,7 +301,9 @@ button {
               </div>
             
               <div class="score-container hide">
+                <div>
                 <div id="user-score">Demo Score</div>
+              </div>
                 <button id="restart">Restart</button>
               </div>
           </div>
@@ -341,9 +369,9 @@ button {
                     <div class="subscribe-newsletters footer-item">
                         <h4>Courses</h4>
                         <ul>
-                            <li><a href="#">Self Journey</a></li>
+                            <li><a href="courses1.html">Self Journey</a></li>
                             <li><a href="courses.html">Problem-Solving</a></li>
-                            <li><a href="#">Decision Making</a></li>
+                            <li><a href="courses3.html">Decision Making</a></li>
                             <li><a href="courses4.html">Conflict Management</a></li>
                         </ul>
                     </div>
@@ -504,9 +532,30 @@ nextBtn.addEventListener(
       scoreContainer.classList.remove("hide");
       //user score
       userScore.innerHTML =
-        "Your score is " + scoreCount + " out of " + questionCount;
-    } else {
-      //display questionCount
+      "Your score is " + scoreCount + " out of " + questionCount;
+  //Display result
+  let averageScore = scoreCount / questionCount;
+      let result = "";
+
+     
+        if (averageScore > 0 && averageScore <= 0.4) {
+        result = "<span id='blink' style='text-align: center;'>Beginner</span><br><span id='rdes'>Great job on taking the quiz and identifying areas where you may need to improve your critical thinking and problem-solving skills. It takes courage to acknowledge where we need to grow and develop, and you're on the right track! To improve your problem-solving skills, try to focus on practicing critical thinking, analysing information, questioning assumptions, and evaluating evidence. Remember, problem-solving is a skill that can be developed with practice and dedication, and every effort you make to improve will help you become a better problem solver.</span>";
+      }  else if (averageScore > 0.5 && averageScore <= 0.7) {
+        result = "<span id='blink' style='text-align: center;'>Intermediate</span><br><span id='rdes'>Good effort, you have a good foundation of problem-solving skills and a desire to improve. To continue developing your skills, it's recommended that you focus on building your knowledge and expanding your creativity. You can do this by exposing yourself to new and different ideas and looking for opportunities to learn new things. Additionally, you can work on developing your creativity by practicing brainstorming and generating new ideas. Remember, problem-solving requires both knowledge and creativity, so it's important to work on both aspects to improve your skills.</span>";
+      } else if (averageScore > 0.7 && averageScore <= 0.9) {
+        result = "<span id='blink' style='text-align: center;'>Advanced</span><br><span id='rdes'>Great job, You have a solid understanding of problem-solving techniques and can apply them effectively in many situations. To continue improving your problem-solving skills, it's recommended that you focus on developing your communication and collaboration abilities. These skills will help you work effectively with others to solve complex problems. Additionally, you can work on developing your resilience, so that you can persevere in the face of challenges and setbacks. Remember, problem-solving is a team effort, so it's important to work on building strong relationships with others.</span>";
+      } else if (averageScore > 0.9 && averageScore <= 1) {
+        result = "<span id='blink' style='text-align: center;'>Expert</span><br><span id='rdes'>Congratulations! You have strong problem-solving skills and can effectively apply a variety of techniques to solve complex problems. To continue developing your skills, it's recommended that you focus on developing your leadership abilities. As a problem solver, you can take on a leadership role in your organization or team and help guide others through the problem-solving process. Additionally, you can work on developing your adaptability, so that you can adjust to changing circumstances and handle unexpected challenges. Remember, problem-solving is a lifelong journey, and there is always room for growth and improvement. Keep up the great work!</span>";
+      }
+
+
+
+
+      userScore.innerHTML  = "" +result;
+
+    }else {
+//display questionCount
+
       countOfQuestion.innerHTML =
         questionCount + 1 + " of " + quizArray.length + " Question";
       //display quiz

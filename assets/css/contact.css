@@ -697,6 +697,11 @@ header
     text-align: center;
     padding-bottom: 3px;
 }
+.ccform-addon2{
+    margin-left: 5px; 
+
+padding-bottom: 12px; 
+}
 
 .ccformfield {
     color: #000000;
@@ -709,6 +714,14 @@ header
     margin-bottom: 30px;
     border: 1px solid rgba(0, 0, 0, 0.125);
 }
+ccformselect {
+
+margin-left: 5px; 
+margin-top: 10px; 
+font-size: 14px; 
+color: rgba (0, 0, 0, 0.655); 
+}
+
 
 .ccbtn {
     display: block;
