@@ -48,13 +48,13 @@
 }
 
 
-.question_page_button {
+/* .question_page_button {
     text-align: center;
     padding-top: 30px;
     border-top: 1px solid #eee;
     width: 60%;
     margin: auto;
-}
+} */
 
 .quiz_que {
     margin-bottom: 20vh;
@@ -308,8 +308,7 @@ input {
         max-width: none;
         padding: 0 20px;
     }
-    width: 60%;
-    margin: auto;
+   
 
 }
 

@@ -4,7 +4,7 @@
 }
 .reference_suggestion_section{
   border-bottom: 1px solid #eee;
-  padding: 20px;
+  /* padding: 20px; */
 }
 .ref_sug_page_button{
   padding-top: 20px;
@@ -30,7 +30,7 @@
 }
 .reference_suggestion_breadscrumbs{
 padding: 0px;
-padding-top: 30px;
+padding-top: 13vh;
  
 }
 .ref_sug_content_status{

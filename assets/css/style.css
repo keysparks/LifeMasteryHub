@@ -119,7 +119,7 @@ ul {
 }
 
 p {
-  font-size: 15px;
+  font-size: 16px;
   line-height: 30px;
   color: #2a2a2a;
 }
@@ -323,6 +323,11 @@ header
 .header-area .main-nav {
   min-height: 80px;
   background: transparent;
+}
+
+.logo{
+  width: 18vh;
+  min-width: 80px;
 }
 
 .header-area .main-nav .logo {
@@ -927,11 +932,11 @@ Banner Style
 
 .main-banner:before {
   content: '';
-  background-image: url(../images/banner-right-image.png);
+  background-image: url(../images/1-home-introduction.png);
   background-repeat: no-repeat;
   background-size: cover;
   position: absolute;
-  right: 0;
+  right: 10px;
   top: 100px;
   width: 819px;
   height: 674px;

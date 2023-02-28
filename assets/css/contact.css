@@ -96,10 +96,10 @@ header
     padding: 0px 20px;
 }
 
-.header-area .main-nav .nav li:last-child .main-red-button-hover a:hover,
+/* .header-area .main-nav .nav li:last-child .main-red-button-hover a:hover,
 .background-header .main-nav .nav li:last-child .main-red-button-hover a:hover {
     background-color: #03a4ed !important;
-}
+} */
 
 .header-area .main-nav .nav li a {
     display: block;
@@ -564,12 +564,19 @@ header
 }
 
 .contact_page_content p {
-    padding: 10px 0px 20px 0px;
+    /* padding: 10px 0px 20px 0px; */
+    text-align: justify;
     font-weight: 400;
     color: black;
-    font-size: 20px;
+    font-size: 16px;
     margin-bottom: 20px;
 }
+.contact_page_content p span{
+    color: #ff685f;
+    font-weight: 600;
+    font-size: 24px;
+} 
+
 
 .contact_page_contact_details {
     text-align: center;
@@ -685,7 +692,10 @@ header
 .ccfield-prepend {
     margin-bottom: 10px;
 }
-
+.ccfield-prepend2{
+    padding-right: 75px;
+ }
+ 
 .ccform-addon {
     color: #03a4ed;
     border-top: 1px solid rgba(0, 0, 0, 0.125);
@@ -714,7 +724,7 @@ padding-bottom: 12px;
     margin-bottom: 30px;
     border: 1px solid rgba(0, 0, 0, 0.125);
 }
-ccformselect {
+.ccformselect {
 
 margin-left: 5px; 
 margin-top: 10px; 

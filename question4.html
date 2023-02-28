@@ -33,138 +33,150 @@
 
 
     * {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-}
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
 
-.start-screen,
-.score-container {
-  
-  top: 40%;
-  width: 100%;
-  height: 100%;
-left: 50%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-button {
-  border: none;
-  outline: none;
-  cursor: pointer;
-}
-#start-button,
-#restart {
-  font-size: 1.3em;
-  padding: 0.5em 1.8em;
-  border-radius: 0.2em;
-}
-#restart {
-  margin-top: 0.9em;
-}
+    .start-screen,
+    .score-container {
 
-.header {
-  margin-bottom: 1.8em;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-bottom: 0.6em;
-  border-bottom: 0.1em solid #c0bfd2;
-}
-.timer-div {
-  background-color: #e1f5fe;
-  width: 7.5em;
-  border-radius: 1.8em;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0.7em 1.8em;
-}
-.question {
-  margin-bottom: 1.25em;
-  font-weight: 600;
-}
-.option-div {
-  font-size: 0.9em;
-  width: 100%;
-  padding: 1em;
-  margin: 0.3em 0;
-  text-align: left;
-  outline: none;
-  background: transparent;
-  border: 1px solid #c0bfd2;
-  border-radius: 0.3em;
-}
-.option-div:disabled {
-  color: #000000;
-  cursor: not-allowed;
-}
-#next-button {
-  font-size: 1em;
-  margin-top: 1.5em;
-  background-color: #0a69ed;
-  color: #ffffff;
-  padding: 0.7em 1.8em;
-  border-radius: 0.3em;
-  float: right;
-}
-.hide {
-  display: none;
-}
-.incorrect {
-  background-color: #ffdde0;
-  color: #d32f2f;
-  border-color: #d32f2f;
-}
-.correct {
-  background-color: #e7f6d5;
-  color: #689f38;
-  border-color: #689f38;
-}
-#user-score {
-  font-size: 1.5em;
-  color: #ffffff;
-}
+      top: 40%;
+      width: 100%;
+      height: 100%;
+      left: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
 
-.quiz_frame {
-  display: flex;
-  flex-wrap: wrap;
-}
+    button {
+      border: none;
+      outline: none;
+      cursor: pointer;
+    }
 
-.question-box {
-  width: 60%;
-  height: 90%;
-  background-color: rgb(246, 175, 149);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-top-left-radius: 30px;
-  border-bottom-right-radius: 30px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  margin: 0 auto;
-}
-  
-  #display-container {
-    background-color: #ffffff;
-    padding: 3.1em 1.8em;
-    width: 80%;
-    max-width: 37.5em;
-    margin:1.5em auto;
-    border-radius: 0.6em;
-    height: 80%;
-  }
+    #start-button,
+    #restart {
+      font-size: 1.3em;
+      padding: 0.5em 1.8em;
+      border-radius: 0.2em;
+    }
 
-  .question_page_button {
-    text-align: center;
-    padding-top: 30px;
-    border-top: 1px solid #eee;
-    /* width: 60%; */
-    margin: auto;
-}  
+    #restart {
+      margin-top: 0.9em;
+    }
+
+    .header {
+      margin-bottom: 1.8em;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 0.6em;
+      border-bottom: 0.1em solid #c0bfd2;
+    }
+
+    .timer-div {
+      background-color: #e1f5fe;
+      width: 7.5em;
+      border-radius: 1.8em;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.7em 1.8em;
+    }
+
+    .question {
+      margin-bottom: 1.25em;
+      font-weight: 600;
+    }
+
+    .option-div {
+      font-size: 0.9em;
+      width: 100%;
+      padding: 1em;
+      margin: 0.3em 0;
+      text-align: left;
+      outline: none;
+      background: transparent;
+      border: 1px solid #c0bfd2;
+      border-radius: 0.3em;
+    }
+
+    .option-div:disabled {
+      color: #000000;
+      cursor: not-allowed;
+    }
+
+    #next-button {
+      font-size: 1em;
+      margin-top: 1.5em;
+      background-color: #0a69ed;
+      color: #ffffff;
+      padding: 0.7em 1.8em;
+      border-radius: 0.3em;
+      float: right;
+    }
+
+    .hide {
+      display: none;
+    }
+
+    .incorrect {
+      background-color: #ffdde0;
+      color: #d32f2f;
+      border-color: #d32f2f;
+    }
+
+    .correct {
+      background-color: #e7f6d5;
+      color: #689f38;
+      border-color: #689f38;
+    }
+
+    #user-score {
+      font-size: 1.5em;
+      color: #ffffff;
+    }
+
+    .quiz_frame {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .question-box {
+      width: 60%;
+      height: 90%;
+      background-color: #ff695f;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-top-left-radius: 30px;
+      border-bottom-right-radius: 30px;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      margin: 0 auto;
+    }
+
+    #display-container {
+      background-color: #ffffff;
+      padding: 3.1em 1.8em;
+      width: 80%;
+      max-width: 37.5em;
+      margin: 1.5em auto;
+      border-radius: 0.6em;
+      height: 80%;
+    }
+
+    .question_page_button {
+      text-align: center;
+      padding-top: 30px;
+      border-top: 1px solid #eee;
+      /* width: 60%; */
+      margin: auto;
+    }
   </style>
 </head>
 
@@ -178,20 +190,20 @@ button {
           <nav class="main-nav">
             <!-- ***** Logo Start ***** -->
             <a href="index.html" class="logo">
-              <img src="assets/images/logo.png">
+              <img src="./assets/images/fulllogo.png">
             </a>
             <!-- ***** Logo End ***** -->
             <!-- ***** Menu Start ***** -->
             <ul class="nav">
-              <li class="scroll-to-section"><a href="index.html" >Home</a></li>
+              <li class="scroll-to-section"><a href="index.html">Home</a></li>
               <div class="dropdown">
-                <li class="scroll-to-section"><a href="courses.html" class="active">Training Module</a></li>
+                <li class="scroll-to-section"><a href="#" class="active">Training Module</a></li>
                 <div>
                   <ul class="dropdown-menu">
                     <li><a href="courses1.html">Self-Journey</a></li>
-                            <li><a href="courses.html">Problem-Solving</a></li>
-                            <li><a href="courses3.html">Decision Making</a></li>
-                            <li><a href="courses4.html">Conflict Management</a></li>
+                    <li><a href="courses.html">Problem-Solving</a></li>
+                    <li><a href="courses3.html">Decision Making</a></li>
+                    <li><a href="courses4.html">Conflict Management</a></li>
 
                   </ul>
                 </div>
@@ -237,32 +249,14 @@ button {
     </div>
     <div class="question_content">
       <h3>Instructions</h3>
-      <p>Forcing others to accept your view is an example of the competing conflict management style, which is not
-        effective in managing conflicts as it can lead to resentment and hostility. </p>
-      <p>Avoiding the issue altogether is an example of the avoiding conflict management style, which is not effective
-        in managing conflicts as it does not address the underlying issues and can lead to more significant problems in
-        the future.</p>
-      <p>Focusing solely on your own goals is an example of the competing conflict management style, which is not
-        effective in managing conflicts as it does not take into account the needs and perspectives of others. </p>
-      <p>Focusing on the other person's goals is an example of the accommodating conflict management style, which is not
-        effective in managing conflicts as it can lead to one-sided compromises that may not fully address the
-        underlying issues. </p>
-      <p>Confronting the issue head-on is an example of the competing conflict management style, which may not be
-        effective in managing conflicts as it can lead to hostility and resentment. </p>
-      <p>Finding a middle ground to resolve the conflict is an example of the compromising conflict management style,
-        which may not be effective in managing conflicts as it may not fully address the needs and perspectives of both
-        parties. </p>
-      <p>Forcing others to accept your view is an example of the competing conflict management style, which is not
-        effective in managing conflicts as it can lead to hostility and resentment. </p>
-      <p>Focusing on your own goals is an example of the competing conflict management style, which may not be effective
-        in managing conflicts as it does not take into account the needs and perspectives of others. </p>
-      <p>Collaborating with others to find a solution is an example of the collaborating conflict management style,
-        which is an effective way to manage conflicts by finding a solution that meets the needs of both parties. </p>
-      <p>Accommodating the other person's goals is an example of the accommodating conflict management style, which may
-        not be effective in managing conflicts as it can lead to one-sided compromises that may not fully address the
-        underlying issues.</p>
+      <p>Please read each question carefully and select the best answer from the options provided. You will have to
+        answer all the question to complete the test. The questionnaire is designed to test you understanding, be true
+        to yourself to evaluate your current level (Level are Beginner, Intermediate, Advance, Expert).</p>
 
-        <p><span>Note:</span> There is no one-size-fits-all solution to conflict management. The appropriate style to use will depend on the specific situation, the individuals involved, and the outcomes desired. Effective conflict management requires being able to recognize the various styles, and being able to use them appropriately and flexibly to achieve the best possible outcome. </p>
+      <p><span>Note:</span> There is no one-size-fits-all solution to conflict management. The appropriate style to use
+        will depend on the specific situation, the individuals involved, and the outcomes desired. Effective conflict
+        management requires being able to recognize the various styles, and being able to use them appropriately and
+        flexibly to achieve the best possible outcome. </p>
     </div>
 
 
@@ -271,31 +265,31 @@ button {
 
   <div class="quiz_frame">
     <div class="container quiz_que_container col-lg-12 align-self-center">
-      <div class="question-box" >
-              
+      <div class="question-box">
+
         <div class="start-screen">
           <button id="start-button">Start</button>
         </div>
-       
+
         <div id="display-container">
           <div class="header">
             <div class="number-of-count">
               <span class="number-of-question">1 of 5 questions</span>
             </div>
-            
+
           </div>
           <div id="container">
             <!-- questions and options will be displayed here -->
           </div>
           <button id="next-button">Next</button>
         </div>
-      
+
         <div class="score-container hide">
           <div id="user-score">Demo Score</div>
           <button id="restart">Restart</button>
         </div>
+      </div>
     </div>
-  </div>
     <div class="progress content_status question_content_status">
       <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75"
         aria-valuemin="0" aria-valuemax="100" style="width: 54%"></div>
@@ -318,7 +312,7 @@ button {
         <div class="col-lg-3">
           <div class="about footer-item">
             <div class="logo">
-              <a href="#"><img src="assets/images/logo.png" alt="Onix Digital TemplateMo"></a>
+              <a href="#"><img src="./assets/images/fulllogo.png" alt="Onix Digital TemplateMo"></a>
             </div>
             <a href="#">info@company.com</a>
             <ul>
@@ -359,7 +353,7 @@ button {
               <li><a href="courses.html">Problem-Solving</a></li>
               <li><a href="courses3.html">Decision Making</a></li>
               <li><a href="courses4.html">Conflict Management</a></li>
-          </ul>
+            </ul>
           </div>
         </div>
         <div class="col-lg-12">
@@ -381,211 +375,221 @@ button {
   <script>
     //quiz 
     //References
-//let timeLeft = document.querySelector(".time-left");
-let quizContainer = document.getElementById("container");
-let nextBtn = document.getElementById("next-button");
-let countOfQuestion = document.querySelector(".number-of-question");
-let displayContainer = document.getElementById("display-container");
-let scoreContainer = document.querySelector(".score-container");
-let restart = document.getElementById("restart");
-let userScore = document.getElementById("user-score");
-let startScreen = document.querySelector(".start-screen");
-let startButton = document.getElementById("start-button");
-let questionCount;
-let scoreCount = 0;
-let count = 11;
-let countdown;
+    //let timeLeft = document.querySelector(".time-left");
+    let quizContainer = document.getElementById("container");
+    let nextBtn = document.getElementById("next-button");
+    let countOfQuestion = document.querySelector(".number-of-question");
+    let displayContainer = document.getElementById("display-container");
+    let scoreContainer = document.querySelector(".score-container");
+    let restart = document.getElementById("restart");
+    let userScore = document.getElementById("user-score");
+    let startScreen = document.querySelector(".start-screen");
+    let startButton = document.getElementById("start-button");
+    let questionCount;
+    let scoreCount = 0;
+    let count = 11;
+    let countdown;
 
-//Questions and Options array
+    //Questions and Options array
 
-const quizArray = [
-{id: "1",
+    const quizArray = [
+      {
+        id: "1",
 
-question: "What is the compromising conflict management style? ",
+        question: "What is the compromising conflict management style? ",
 
-options: ["Forcing others to accept your view ", "Finding a middle ground to resolve conflict", "Avoiding the issue altogether  "],
+        options: ["Forcing others to accept your view ", "Finding a middle ground to resolve conflict", "Avoiding the issue altogether  "],
 
-correct: "Finding a middle ground to resolve conflict",},
+        correct: "Finding a middle ground to resolve conflict",
+      },
 
-{id: "2",
+      {
+        id: "2",
 
-question: "What is the collaborating conflict management style? ",
+        question: "What is the collaborating conflict management style? ",
 
-options: ["Focusing solely on your own goals  ", "Focusing on the other person's goals", "Finding a solution that meets both party's goals"],
+        options: ["Focusing solely on your own goals  ", "Focusing on the other person's goals", "Finding a solution that meets both party's goals"],
 
-correct: "Finding a solution that meets both party's goals",},
+        correct: "Finding a solution that meets both party's goals",
+      },
 
-{id: "3",
+      {
+        id: "3",
 
-question: "What is the avoiding conflict management style? ",
+        question: "What is the avoiding conflict management style? ",
 
-options: ["Confronting the issue head-on ", "Ignoring the issue and hoping it will go away", "Finding a middle ground to resolve the conflict "],
+        options: ["Confronting the issue head-on ", "Ignoring the issue and hoping it will go away", "Finding a middle ground to resolve the conflict "],
 
-correct: "Ignoring the issue and hoping it will go away",},
+        correct: "Ignoring the issue and hoping it will go away",
+      },
 
-{id: "4",
+      {
+        id: "4",
 
-question: "What is the accommodating conflict management style? ",
+        question: "What is the accommodating conflict management style? ",
 
-options: ["Forcing others to accept your view ", "Focusing on your own goals ", "Giving in to the other person's goals"],
+        options: ["Forcing others to accept your view ", "Focusing on your own goals ", "Giving in to the other person's goals"],
 
-correct: "Giving in to the other person's goals",},
+        correct: "Giving in to the other person's goals",
+      },
 
-{id: "5",
+      {
+        id: "5",
 
-question: "What is the competing conflict management style? ",
+        question: "What is the competing conflict management style? ",
 
-options:  ["Collaborating with others to find a solution ", "Accommodating the other person's goals", "Focusing solely on your own goals"],
+        options: ["Collaborating with others to find a solution ", "Accommodating the other person's goals", "Focusing solely on your own goals"],
 
-correct: "Focusing solely on your own goals",},
-];
+        correct: "Focusing solely on your own goals",
+      },
+    ];
 
-//Restart Quiz
-restart.addEventListener("click", () => {
-initial();
-displayContainer.classList.remove("hide");
-scoreContainer.classList.add("hide");
-});
+    //Restart Quiz
+    restart.addEventListener("click", () => {
+      initial();
+      displayContainer.classList.remove("hide");
+      scoreContainer.classList.add("hide");
+    });
 
-//Next Button
-nextBtn.addEventListener(
-"click",
-(displayNext = () => {
-//increment questionCount
-nextBtn.disabled =true;
-questionCount += 1;
-//if last question
-if (questionCount == quizArray.length) {
-  //hide question container and display score
-  displayContainer.classList.add("hide");
-  scoreContainer.classList.remove("hide");
-  //user score
-  userScore.innerHTML =
-    "Your score is " + scoreCount + " out of " + questionCount;
-} else {
-  //display questionCount
-  countOfQuestion.innerHTML =
-    questionCount + 1 + " of " + quizArray.length + " Question";
-  //display quiz
-  quizDisplay(questionCount);
-  count = 11;
-  clearInterval(countdown);
-  timerDisplay();
-}
-})
-);
+    //Next Button
+    nextBtn.addEventListener(
+      "click",
+      (displayNext = () => {
+        //increment questionCount
+        nextBtn.disabled = true;
+        questionCount += 1;
+        //if last question
+        if (questionCount == quizArray.length) {
+          //hide question container and display score
+          displayContainer.classList.add("hide");
+          scoreContainer.classList.remove("hide");
+          //user score
+          userScore.innerHTML =
+            "Your score is " + scoreCount + " out of " + questionCount;
+        } else {
+          //display questionCount
+          countOfQuestion.innerHTML =
+            questionCount + 1 + " of " + quizArray.length + " Question";
+          //display quiz
+          quizDisplay(questionCount);
+          count = 11;
+          clearInterval(countdown);
+          timerDisplay();
+        }
+      })
+    );
 
-//Timer
-const timerDisplay = () => {
-countdown = setInterval(() => {
-count--;
-timeLeft.innerHTML = `${count}s`;
-if (count == 0) {
-  clearInterval(countdown);
-  displayNext();
-}
-}, 1000);
-};
+    //Timer
+    const timerDisplay = () => {
+      countdown = setInterval(() => {
+        count--;
+        timeLeft.innerHTML = `${count}s`;
+        if (count == 0) {
+          clearInterval(countdown);
+          displayNext();
+        }
+      }, 1000);
+    };
 
-//Display quiz
-const quizDisplay = (questionCount) => {
-let quizCards = document.querySelectorAll(".container-mid");
-//Hide other cards
-quizCards.forEach((card) => {
-card.classList.add("hide");
-});
-//display current question card
-quizCards[questionCount].classList.remove("hide");
-};
+    //Display quiz
+    const quizDisplay = (questionCount) => {
+      let quizCards = document.querySelectorAll(".container-mid");
+      //Hide other cards
+      quizCards.forEach((card) => {
+        card.classList.add("hide");
+      });
+      //display current question card
+      quizCards[questionCount].classList.remove("hide");
+    };
 
-//Quiz Creation
-function quizCreator() {
-//randomly sort questions
-quizArray.sort(() => Math.random() - 0.5);
-//generate quiz
-for (let i of quizArray) {
-//randomly sort options
-i.options.sort(() => Math.random() - 0.5);
-//quiz card creation
-let div = document.createElement("div");
-div.classList.add("container-mid", "hide");
-//question number
-countOfQuestion.innerHTML = 1 + " of " + quizArray.length + " Question";
-//question
-let question_DIV = document.createElement("p");
-question_DIV.classList.add("question");
-question_DIV.innerHTML = i.question;
-div.appendChild(question_DIV);
-//options
-div.innerHTML += `
+    //Quiz Creation
+    function quizCreator() {
+      //randomly sort questions
+      quizArray.sort(() => Math.random() - 0.5);
+      //generate quiz
+      for (let i of quizArray) {
+        //randomly sort options
+        i.options.sort(() => Math.random() - 0.5);
+        //quiz card creation
+        let div = document.createElement("div");
+        div.classList.add("container-mid", "hide");
+        //question number
+        countOfQuestion.innerHTML = 1 + " of " + quizArray.length + " Question";
+        //question
+        let question_DIV = document.createElement("p");
+        question_DIV.classList.add("question");
+        question_DIV.innerHTML = i.question;
+        div.appendChild(question_DIV);
+        //options
+        div.innerHTML += `
 <button class="option-div" onclick="checker(this)">${i.options[0]}</button>
  <button class="option-div" onclick="checker(this)">${i.options[1]}</button>
   <button class="option-div" onclick="checker(this)">${i.options[2]}</button>
    <button class="option-div" onclick="checker(this)">${i.options[3]}</button>
 `;
-quizContainer.appendChild(div);
-}
-}
+        quizContainer.appendChild(div);
+      }
+    }
 
-//Checker Function to check if option is correct or not
-function checker(userOption) {
-let userSolution = userOption.innerText;
-let question =
-document.getElementsByClassName("container-mid")[questionCount];
-let options = question.querySelectorAll(".option-div");
+    //Checker Function to check if option is correct or not
+    function checker(userOption) {
+      let userSolution = userOption.innerText;
+      let question =
+        document.getElementsByClassName("container-mid")[questionCount];
+      let options = question.querySelectorAll(".option-div");
 
-//if user clicked answer == correct option stored in object
-if (userSolution === quizArray[questionCount].correct) {
-userOption.classList.add("correct");
-scoreCount++;
+      //if user clicked answer == correct option stored in object
+      if (userSolution === quizArray[questionCount].correct) {
+        userOption.classList.add("correct");
+        scoreCount++;
 
-} else {
+      } else {
 
-userOption.classList.add("incorrect");
-//For marking the correct option
-options.forEach((element) => {
-  if (element.innerText == quizArray[questionCount].correct) {
-    element.classList.add("correct");
-  }
-});
-}
+        userOption.classList.add("incorrect");
+        //For marking the correct option
+        options.forEach((element) => {
+          if (element.innerText == quizArray[questionCount].correct) {
+            element.classList.add("correct");
+          }
+        });
+      }
 
-//clear interval(stop timer)
-clearInterval(countdown);
-//disable all options
-options.forEach((element) => {
-element.disabled = true;
-nextBtn.disabled =false;
-});
-}
+      //clear interval(stop timer)
+      clearInterval(countdown);
+      //disable all options
+      options.forEach((element) => {
+        element.disabled = true;
+        nextBtn.disabled = false;
+      });
+    }
 
-//initial setup
-function initial() {
-quizContainer.innerHTML = "";
-questionCount = 0;
-scoreCount = 0;
-count = 11;
-clearInterval(countdown);
-nextBtn.disabled =true;
-quizCreator();
-quizDisplay(questionCount);
-}
+    //initial setup
+    function initial() {
+      quizContainer.innerHTML = "";
+      questionCount = 0;
+      scoreCount = 0;
+      count = 11;
+      clearInterval(countdown);
+      nextBtn.disabled = true;
+      quizCreator();
+      quizDisplay(questionCount);
+    }
 
-//when user click on start button
-startButton.addEventListener("click", () => {
-startScreen.classList.add("hide");
-displayContainer.classList.remove("hide");
-initial();
-});
+    //when user click on start button
+    startButton.addEventListener("click", () => {
+      startScreen.classList.add("hide");
+      displayContainer.classList.remove("hide");
+      initial();
+    });
 
-//hide quiz and display start screen
-window.onload = () => {
-startScreen.classList.remove("hide");
-displayContainer.classList.add("hide");
-};
-
-
+    //hide quiz and display start screen
+    window.onload = () => {
+      startScreen.classList.remove("hide");
+      displayContainer.classList.add("hide");
+    };
 
 
-</script>
+
+
+  </script>
 </body>
