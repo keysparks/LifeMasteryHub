@@ -11,6 +11,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+
+  <link rel="icon" type="icon"  href="./assets/images/new-mini-logo.png">
   <title>Life Skill Portal</title>
 
   <!-- Bootstrap core CSS -->
@@ -114,13 +116,26 @@
       padding: 0.7em 1.8em;
       border-radius: 0.3em;
       float: right;
+      width: 20%;
     }
+
+    #pre-button {
+      font-size: 1em;
+      margin-top: 1.5em;
+      background-color: #0a69ed;
+      color: #ffffff;
+      padding: 0.7em 1.8em;
+      border-radius: 0.3em;
+      float: left;
+      width: 20%;
+    }
+
 
     .hide {
       display: none;
     }
 
-    .incorrect {
+    /* .incorrect {
       background-color: #ffdde0;
       color: #d32f2f;
       border-color: #d32f2f;
@@ -130,36 +145,37 @@
       background-color: #e7f6d5;
       color: #689f38;
       border-color: #689f38;
-    }
+    } */
 
 
     .quiz_frame {
       display: flex;
       flex-wrap: wrap;
+      padding: 60px 0px 20px 0px;
     }
 
     .question-box {
-      width: 70%;
-      height: 90%;
+      width: auto;
+      height: 730px;
       background-color: #ff695f;
       display: flex;
       justify-content: center;
       align-items: center;
-      border-top-left-radius: 30px;
-      border-bottom-right-radius: 30px;
-      padding-top: 30px;
-      padding-bottom: 20px;
-
+      border-radius: 5px;
+      /* border-bottom-right-radius: 30px; */
+      padding: 5px;
+      margin-top: 60px;
     }
+
 
     #display-container {
       background-color: #ffffff;
       padding: 3.1em 1.8em;
-      width: 80%;
-      max-width: 37.5em;
+      width: 100%;
+      /* max-width: 37.5em; */
       margin: 1.5em auto;
-      border-radius: 0.6em;
-      height: 80%;
+      border-radius: 5px;
+      height: 100%;
     }
 
     #resultDisplay {
@@ -171,6 +187,7 @@
       font-size: 1em;
       color: #ffffff;
       text-align: center;
+      padding: 30px;
       margin: auto;
       animation: none;
       /* remove any animation applied previously */
@@ -228,9 +245,10 @@
     /* The Close Button */
     .close {
       color: #aaaaaa;
-      float: right;
+      /* float: right; */
       font-size: 28px;
       font-weight: bold;
+      text-align: right;
     }
 
     .close:hover,
@@ -252,6 +270,7 @@
 
     <!-- Modal content -->
     <div class="modal-content">
+      <div class="row">
       <span class="close close_multi">×</span>
       <h3 style="text-align:center;">Life Mastery Hub-Terms & Conditions</h3>
       <br>
@@ -286,12 +305,12 @@
         terms and conditions shall be governed by and construed in accordance with the laws of the country in which the
         website is based, without giving effect to any principles of conflicts of law. </p>
       </p> <br>
-      <p>for any of your questions, please contact us at info@lifemasteryhub.com
+      <p>for any of your questions, please contact us at <a href="./index.html">info@lifemasteryhub.com</a>
       </p>
 
       </p>
       </p>
-
+    </div>
     </div>
   </div>
 
@@ -400,7 +419,7 @@
   <div id="myModal" class="modal">
     <!-- Modal content -->
     <div class="modal-content">
-      <span class="close">x</span>
+      <span class="close">×</span>
       <p>
       <h4 style="text-align:center;"><b> Life Mastery Hub - Privacy Policy </b></h4>
       <br>
@@ -476,21 +495,21 @@
 
 
   <!-- ***** Header Area Start ***** -->
-  <header class="header-area header-sticky wow slideInDown" data-wow-duration="0.75s" data-wow-delay="0s">
+  <header class="header-area header-sticky " data-wow-duration="0.75s" data-wow-delay="0s">
     <div class="container">
       <div class="row">
         <div class="col-12">
           <nav class="main-nav">
             <!-- ***** Logo Start ***** -->
             <a href="index.html" class="logo">
-              <img src="./assets/images/fulllogo.png">
+              <img src="./assets/images/new-Logo.png">
             </a>
             <!-- ***** Logo End ***** -->
             <!-- ***** Menu Start ***** -->
             <ul class="nav">
               <li class="scroll-to-section"><a href="index.html" class="active">Home</a></li>
               <div class="dropdown">
-                <li class="scroll-to-section"><a href="#">Training Module</a></li>
+                <li class="scroll-to-section"><a href="#services">Training Module</a></li>
                 <div>
                   <ul class="dropdown-menu">
                     <li><a href="courses1.html">Self-journey</a></li>
@@ -504,7 +523,7 @@
               <li class="scroll-to-section"><a href="about.html">About Us</a></li>
               <!-- <li class="scroll-to-section"><a href="#">Contact Us </a></li> -->
               <li class="scroll-to-section">
-                <div class="main-red-button-hover"><a href="contact.html">Contact Us</a></div>
+                <div><a href="contact.html">Contact Us</a></div>
               </li>
             </ul>
             <a class='menu-trigger'>
@@ -520,36 +539,41 @@
 
   <div class="main-banner" id="top">
     <div class="container">
-      <div class="row">
+      
         <div class="col-lg-12">
           <div class="row">
             <div class="col-lg-6 align-self-center">
-              <div class="owl-carousel owl-banner">
-                <div class="item header-text">
-                  <h6>Welcome to the Life Mastery Hub! </h6>
+              <!-- <div class="owl-carousel owl-banner"> -->
+              <div class="item header-text">
+                <h6>Welcome to Life Mastery Hub! </h6>
 
-                  <p> Life is a journey filled with endless opportunities, challenges, and experiences. The path we
-                    choose to take and the way we navigate through these experiences shapes our future and determines
-                    our level of success and happiness. In today's fast-paced world, having strong life skills has
-                    become essential for leading a fulfilling life. These skills equip us with the tools to handle
-                    difficult situations, make informed decisions, communicate effectively, and build meaningful
-                    relationships.  </p>
-                  <p> Enhancing our life skills is not a one-time task but a continuous process. It requires effort,
-                    dedication, and a commitment to self-improvement. By developing these skills, we can increase our
-                    self-awareness, develop resilience, and foster positive relationships with those around us. It is a
-                    path that leads to personal growth, professional success, and a sense of fulfilment in all areas of
-                    our lives. </p>
-                  <p>So, let us embrace the challenge of enhancing our life skills and take control of our journey. By
-                    doing so, we can unlock our full potential, realize our dreams, and create a life that is truly
-                    worth living. </p>
-                </div>
+                <p> Life is a journey filled with endless opportunities, challenges, and experiences. The path we
+                  choose to take and the way we navigate through these experiences shapes our future and determines
+                  our level of success and happiness. In today's fast-paced world, having strong life skills has
+                  become essential for leading a fulfilling life. These skills equip us with the tools to handle
+                  difficult situations, make informed decisions, communicate effectively, and build meaningful
+                  relationships.</p>
+                <p> Enhancing our life skills is not a one-time task but a continuous process. It requires effort,
+                  dedication, and a commitment to self-improvement. By developing these skills, we can increase our
+                  self-awareness, develop resilience, and foster positive relationships with those around us. It is a
+                  path that leads to personal growth, professional success, and a sense of fulfilment in all areas of
+                  our lives. </p>
+                <p>So, let us embrace the challenge of enhancing our life skills and take control of our journey. By
+                  doing so, we can unlock our full potential, realize our dreams, and create a life that is truly
+                  worth living. </p>
+              </div>
 
 
+              <!-- </div> -->
+            </div>
+            <div class="col-lg-6 col-md-6 col-6">
+              <div class="home_page_image">
+                <img src="./assets/images/1-home-introduction.png">
               </div>
             </div>
           </div>
         </div>
-      </div>
+     
     </div>
   </div>
   <div id="video" class="our-videos section">
@@ -561,10 +585,10 @@
     </div>
     <div class="container">
       <div class="video_section_title">
-        <h1><span>Study with us <i class="bi bi-camera-reels"></i></span></h1>
+        <h1><span>Empower Yourself with Essential Life Skills! <i class="bi bi-camera-reels"></i></span></h1>
       </div>
       <div class="row">
-        <div class="col-lg-12">
+        <div class=" overall_video_container col-lg-12">
           <div class="naccs">
             <div class="grid">
               <div class="row">
@@ -577,7 +601,7 @@
 
 
                         <div class="inner-content">
-                          <h4>Empower Yourself with Essential Life Skills! </h4>
+                          <!-- <h4>Empower Yourself with Essential Life Skills! </h4> -->
                           <div class="active active_box">
                             <span>
                               <p> Enhancing life skills is crucial in today's fast-paced and dynamic world as it helps
@@ -638,7 +662,7 @@
         <img src="./assets/images/services-left-dec.png" alt="">
       </div>
       <div>
-        <h1 class="brief_content_mainheading"><i class="bi bi-text-left"></i> Motivation Factor </h1>
+        <h1 class="brief_content_mainheading"><i class="bi bi-text-left"></i> Attention Users</h1>
       </div>
       <div class="brief_content_sub">
         <span></span>
@@ -654,47 +678,67 @@
           the, enhance their life skills and achieve their goals. </p>
 
         <div class="home_activity">
-          <span><i class="bi bi-activity"></i> Activity: </span>
-          <p>Add Values to your Daily routine: </p>
-          <div>
-            <img class="home_activity_img" src="./assets/images/2-home-dailyroutine.png">
+          <span><i class="bi bi-activity"></i> Pro Tips: <span
+              style="color:black; font-weight: normal; font-size: 16px;">Add Values to your Daily routine:</span>
+          </span>
+        </div>
+        <div class="img_box">
+          <img class="home_activity_img" src="./assets/images/2-home-dailyroutine.png">
+        </div>
+        <div class="home_activity">
+          <div class="subheading2_indent">
+
+            <p><span><i class="bi bi-check-all"></i> Mindful morning routine: </span>Start your day with
+              mindfulness practices, such as meditation or deep breathing, to cultivate a calm and
+
+              centred mindset.</p>
+
+
+
+            <p><span><i class="bi bi-check-all"></i> Physical activity: </span>Incorporate physical activity
+              into your morning routine, such as yoga, running, or a workout, to boost
+              energy, improve mood, and promote overall health. </p>
+
+
+            <p><span><i class="bi bi-check-all"></i> Learning time: </span>Set aside time every day to learn
+              something new, such as reading a book, watching talk show, listening to
+              podcast, or taking an online course, to cultivate curiosity and stimulate personal growth.
+            </p>
+
+
+            <p><span><i class="bi bi-check-all"></i> Gratitude practice: </span>Practice gratitude by
+              writing down three things you're thankful for every morning to cultivate a positive
+
+              mindset and appreciation for the good things in life. </p>
+
+
+
+            <p><span><i class="bi bi-check-all"></i> Connection time: </span>Spend time connecting with
+              loved ones, colleagues, or community members to cultivate social skills, empathy, and a sense of
+              belonging. </p>
+
+            <p><span><i class="bi bi-check-all"></i> Time management: </span>Prioritize and plan your tasks
+              for the day to stay organized, focused, and productive, while also allowing for flexibility and self-care.
+            </p>
+            <p><span><i class="bi bi-check-all"></i> Creativity time: </span>Set aside time for creative
+              activities, such as painting, writing, or playing music, to cultivate creativity, self-expression, and a
+              sense of purpose.</p>
+            <p><span><i class="bi bi-check-all"></i> Wind down routine: </span>Establish a relaxing bedtime
+              routine, such as reading a book, taking a bath, or listening to calming music, to promote restful sleep
+              and overall well-being.</p><br>
+
+
+
+            <p>By incorporating these practices into your daily routine, you can develop and strengthen
+              important life
+
+              skills, including mindfulness, physical fitness, learning, gratitude, social skills, time
+              management,
+
+              creativity, and self-care. This unique daily routine can help you thrive, grow, and live a
+              more fulfilling life. </p>
+
           </div>
-          <h5><i class="bi bi-check-all"></i> Mindful morning routine: </h5>
-          <p>Start your day with mindfulness practices, such as meditation or deep breathing, to cultivate a calm and
-            centred mindset.</p>
-
-          <h5><i class="bi bi-check-all"></i> Physical activity:</h5>
-          <p>Incorporate physical activity into your morning routine, such as yoga, running, or a workout, to boost
-            energy, improve mood, and promote overall health. </p>
-
-          <h5><i class="bi bi-check-all"></i> Learning time:</h5>
-          <p>Set aside time every day to learn something new, such as reading a book, watching talk show, listening to
-            podcast, or taking an online course, to cultivate curiosity and stimulate personal growth. </p>
-
-          <h5><i class="bi bi-check-all"></i> Gratitude practice:</h5>
-          <p> Practice gratitude by writing down three things you're thankful for every morning to cultivate a positive
-            mindset and appreciation for the good things in life. </p>
-
-          <h5><i class="bi bi-check-all"></i> Connection time:</h5>
-          <p>Spend time connecting with loved ones, colleagues, or community members to cultivate social skills,
-            empathy, and a sense of belonging. </p>
-
-          <h5><i class="bi bi-check-all"></i> Time management:</h5>
-          <p>Prioritize and plan your tasks for the day to stay organized, focused, and productive, while also allowing
-            for flexibility and self-care.</p>
-
-          <h5><i class="bi bi-check-all"></i> Creativity time:</h5>
-          <p>Set aside time for creative activities, such as painting, writing, or playing music, to cultivate
-            creativity, self-expression, and a sense of purpose.</p>
-
-          <h5><i class="bi bi-check-all"></i> Wind down routine:</h5>
-          <p>Establish a relaxing bedtime routine, such as reading a book, taking a bath, or listening to calming
-            music, to promote restful sleep and overall well-being.</p><br>
-
-          <p>By incorporating these practices into your daily routine, you can develop and strengthen important life
-            skills, including mindfulness, physical fitness, learning, gratitude, social skills, time management,
-            creativity, and self-care. This unique daily routine can help you thrive, grow, and live a more fulfilling
-            life. </p>
         </div>
       </div>
     </div>
@@ -705,9 +749,20 @@
   <div class="quiz_frame">
     <div class="container">
       <div class="row">
+        <div class="col-lg-5">
+          <div class="section-heading quiz_intro_content ">
+            <h1><i class="bi bi-question-circle"></i> Quiz Instruction</h1>
+          </div>
+          <div class="quiz_intro_content">
+            <p>Please read each question carefully and select the best answer from the options provided. You will have
+              to answer all the question to complete the test. The questionnaire is designed to test you understanding,
+              be true to yourself to evaluate your current level (Level are Beginner, Intermediate, Advance, Expert).
+            </p>
+          </div>
+        </div>
         <div class="col-lg-7 align-self-center">
 
-          <div class="question-box">
+          <div class="container question-box">
 
 
 
@@ -726,7 +781,9 @@
               <div id="container">
                 <!-- questions and options will be displayed here -->
               </div>
+              <button id="pre-button" hidden>Previous</button>
               <button id="next-button">Next</button>
+
             </div>
 
             <div class="score-container hide">
@@ -752,16 +809,7 @@
 
 
 
-        <div class="col-lg-5">
-          <div class="section-heading quiz_intro_content">
-            <h2><em><i class="bi bi-question-circle"></i> Quiz Introduction</em></h2>
-            <br>
-            <p>Please read each question carefully and select the best answer from the options provided. You will have
-              to answer all the question to complete the test. The questionnaire is designed to test you understanding,
-              be true to yourself to evaluate your current level (Level are Beginner, Intermediate, Advance, Expert).
-            </p>
-          </div>
-        </div>
+
       </div>
     </div>
   </div>
@@ -776,10 +824,10 @@
         <img src="./assets/images/services-left-dec.png" alt="">
       </div>
       <div class="row">
-        <div class="col-lg-6 offset-lg-3">
-          <div class="section-heading">
-            <h2>We <em>Provide</em> The Best Courses With <span>Our Techniques</span></h2>
-            <span>Courses</span>
+        <div class="col-lg-6">
+          <div class="section-heading quiz_intro_content">
+            <h1>Training Module</h1>
+
           </div>
         </div>
       </div>
@@ -789,33 +837,41 @@
           <div class="owl-carousel owl-services">
 
             <div class="item">
-              <h4><a href="courses1.html">Self-journey</a></h4>
-              <div class="icon"><a href="courses1.html"><img src="./assets/images/service-icon-01.png" alt=""></a></div>
-              <p>A course designed to guide individuals through a journey of self-understand, providing practical tools
-                and exercises to gain greater insight into personal identity and life path. </p>
+              <a href="courses1.html">
+                <h4>Self-journey</h4>
+                <div class="icon"><img src="./assets/images/service-icon-01.png" alt=""></div>
+                <p>A course designed to guide individuals through a journey of self-understand, providing practical
+                  tools
+                  and exercises to gain greater insight into personal identity and life path. </p>
+              </a>
             </div>
 
             <div class="item">
-              <h4><a href="courses.html">Problem Solving</a></h4>
-              <div class="icon"><a href="courses.html"><img src="./assets/images/service-icon-02.png" alt=""></a></div>
-              <p>Learn practical strategies, tools, and techniques to effectively identify and solve problems in all
-                areas of your life.</p>
+              <a href="courses.html">
+                <h4>Problem Solving</h4>
+                <div class="icon"><img src="./assets/images/service-icon-02.png" alt=""></div>
+                <p>Learn practical strategies, tools, and techniques to effectively identify and solve problems in all
+                  areas of your life.</p>
+              </a>
             </div>
 
             <div class="item">
-
-              <h4><a href="courses3.html">Decision making</a></h4>
-              <div class="icon"><a href="cources3.html"><img src="./assets/images/service-icon-03.png" alt=""></a></div>
-              <p>You will learn practical tools and techniques to improve your ability to make effective and informed
-                decisions, empowering you to achieve your goals and succeed in all areas of life."</p>
+              <a href="courses3.html">
+                <h4>Decision making</h4>
+                <div class="icon"><img src="./assets/images/service-icon-03.png" alt=""></div>
+                <p>You will learn practical tools and techniques to improve your ability to make effective and informed
+                  decisions, empowering you to achieve your goals and succeed in all areas of life."</p>
+              </a>
 
             </div>
 
             <div class="item">
-              <h4><a href="courses4.html"> Conflict management</h4></a>
-              <div class="icon"><a href="courses4.html"><img src="./assets/images/service-icon-04.png" alt=""></div></a>
-              <p>Course to develop essential skills and strategies to effectively manage and resolve conflicts in your
-                personal and professional life</p>
+              <a href="courses4.html">
+                <h4> Conflict management</h4>
+                <div class="icon"><img src="./assets/images/service-icon-04.png" alt=""></div>
+                <p>Course to develop essential skills and strategies to effectively manage and resolve conflicts in your
+                  personal and professional life</p>
+              </a>
             </div>
 
 
@@ -835,7 +891,7 @@
         <div class="col-lg-3">
           <div class="about footer-item">
             <div class="logo">
-              <a href="#"><img src="./assets/images/fulllogo.png" alt="lifemasteryhub"></a>
+              <a href="#"><img src="./assets/images/new-Logo.png" alt="lifemasteryhub"></a>
             </div>
             <a href="#">info@lifemasteryhub.com</a>
             <ul>
@@ -851,7 +907,7 @@
             <h4>Company</h4>
             <ul>
               <li><a href="index.html">Home</a></li>
-              <li><a href="#">Training Module</a></li>
+              <li><a href="#services">Training Module</a></li>
               <li><a href="about.html">About Us</a></li>
               <li><a href="contact.html">Contact Us</a></li>
             </ul>
@@ -930,6 +986,8 @@
     //let timeLeft = document.querySelector(".time-left");
     let quizContainer = document.getElementById("container");
     let nextBtn = document.getElementById("next-button");
+    let preBtn = document.getElementById("pre-button");
+    // let sumbitBtn = document.getElementById("sumbit-button");
     let countOfQuestion = document.querySelector(".number-of-question");
     let displayContainer = document.getElementById("display-container");
     let scoreContainer = document.querySelector(".score-container");
@@ -948,106 +1006,106 @@
     const quizArray = [
       {
         id: "1",
-        question: "What is the definition of financial literacy?   ",
-        options: ["The ability to manage personal finances effectively  ", "The ability to analyse financial statements and make investment decisions  ", "The ability to market financial products and services  ", "The ability to negotiate contracts and agreements"],
-        correct: "The ability to negotiate contracts and agreements",
+        question: "What is the definition of financial literacy?",
+        options: ['<input type="radio" name="q1" value="option1"> The ability to manage personal finances effectively', '<input type="radio" name="q1" value="option2"> The ability to analyse financial statements and make investment decisions', '<input type="radio" name="q1" value="option3"> The ability to market financial products and services', '<input type="radio" name="q1" value="option4"> The ability to negotiate contracts and agreements'],
+        correct: "The ability to negotiate contracts and agreements"
       },
 
       {
         id: "2",
-        question: "Which of the following is an essential leadership skill?  ",
-        options: ["Time Management ", "Conflict Resolution", "Emotional Intelligence  ", "Project Management "],
-        correct: "Conflict Resolution",
+        question: "What are some common barriers to active listening?",
+        options: ['<input type="radio" name="q2" value="option1">Multitasking, distractions, and preconceptions', '<input type="radio" name="q2" value="option2">Nodding, eye contact, and verbal affirmations', '<input type="radio" name="q2" value="option3">Interrupting, finishing sentences, and jumping to conclusions', '<input type="radio" name="q2" value="option1"> "Reflecting, paraphrasing, and summarizing'],
+        correct: "Multitasking, distractions, and preconceptions"
       },
 
       {
         id: "3",
-        question: "What does critical thinking refer to?  ",
-        options: ["The ability to think creatively and outside the box  ", "The ability to solve complex problems using logic and reasoning", "The ability to communicate ideas effectively  ", "The ability to work collaboratively with others  "],
-        correct: "The ability to solve complex problems using logic and reasoning",
+        question: "What is reflective listening?",
+        options: ['<input type="radio" name="q3" value="option1">Repeating what the speaker says word-for-word', '<input type="radio" name="q3" value="option2">Summarizing the speaker points in your own words', '<input type="radio" name="q3" value="option3">Interrupting the speaker to offer advice', '<input type="radio" name="q3" value="option4">Ignoring the speaker emotions'],
+        correct: "Summarizing the speaker's points in your own words"
       },
 
       {
         id: "4",
-        question: "What is the definition of adaptability? ",
-        options: ["The ability to work with others to achieve a common goal ", "The ability to learn quickly and apply new information effectively  ", "The ability to change one's approach in response to changing circumstances", "The ability to manage stress and maintain a positive attitude "],
-        correct: "The ability to change one's approach in response to changing circumstances",
+        question: "Why is active listening important?",
+        options: ['<input type="radio" name="q4" value="option1">It helps you dominate the conversation', '<input type="radio" name="q4" value="option1">It ensures that you dont miss any important details', '<input type="radio" name="q4" value="option1">It shows respect for the speaker and can improve relationships', '<input type="radio" name="q4" value="option1">It is a way to avoid conflict entirely'],
+        correct: "It shows respect for the speaker and can improve relationships"
       },
 
       {
         id: "5",
-        question: "In 2010, a 16-year-old girl named Abby Sunderland attempted to sail solo around the world, but her journey was cut short due to a storm. Which life skill did she display during this experience?  ",
-        options: ["Time management   ", "Resilience", "Cooking", "Technical writing  "],
-        correct: "Resilience",
+        question: "What are some active listening techniques you can use?",
+        options: ['<input type="radio" name="q5" value="option1">Interrupting the speaker, offering advice, and finishing their sentences', '<input type="radio" name="q5" value="option1">Nodding your head, looking away, and using filler words like uh-huh', '<input type="radio" name="q5" value="option1">Reflecting, paraphrasing, and summarizing', '<input type="radio" name="q5" value="option1">Ignoring the speaker and focusing on something else'],
+        correct: "Reflecting, paraphrasing, and summarizing"
       },
 
       {
         id: "6",
         question: "In 2020, during the COVID-19 pandemic, many individuals had to adapt to working from home. Which life skill was most essential for successfully working from home? ",
-        options: ["Active listening  ", "Time management", "Drawing   ", "Cooking "],
+        options: ['<input type="radio" name="q6" value="option1">Active listening', '<input type="radio" name="q6" value="option1">Time management', '<input type="radio" name="q6" value="option1">Drawing ', '<input type="radio" name="q6" value="option1">Cooking '],
         correct: "Time management",
       },
 
       {
         id: "7",
         question: "In 2018, a group of Thai soccer players and their coach were trapped in a cave for over two weeks. Which life skill did they display during this experience?  ",
-        options: ["Critical thinking", "Public speaking   ", "Graphic design  ", "Empathy  "],
+        options: ['<input type="radio" name="q7" value="option1">Critical thinking', '<input type="radio" name="q7" value="option1">Public speaking', '<input type="radio" name="q7" value="option1">Graphic design', '<input type="radio" name="q7" value="option1">Empathy'],
         correct: "Critical thinking",
       },
 
       {
         id: "8",
         question: "In 2013, a man named Antoinette Tuff prevented a school shooting by using her life skills. What life skill did she display during this experience?  ",
-        options: ["Empathy", "Technical writing  ", "Cooking  ", "Graphic design  "],
+        options: ['<input type="radio" name="q8" value="option1">Empathy', '<input type="radio" name="q8" value="option1">Technical writing', '<input type="radio" name="q8" value="option1">Cooking', '<input type="radio" name="q8" value="option1">Graphic design'],
         correct: "Empathy",
       },
 
       {
         id: "9",
         question: "In 2014, Malala Yousafzai, a young activist for girls' education, won the Nobel Peace Prize. Which life skill did she display during her activism?  ",
-        options: ["Leadership", "Knitting ", "Time management  ", "Drawing"],
+        options: ['<input type="radio" name="q9" value="option1">Leadership', '<input type="radio" name="q9" value="option1">Knitting', '<input type="radio" name="q9" value="option1">Time management', '<input type="radio" name="q9" value="option1">Drawing'],
         correct: "Leadership",
       },
 
       {
         id: "10",
         question: "How do you respond to criticism or negative feedback? ",
-        options: ["Get defensive and argue with the person giving the feedback ", "Listen to the feedback and try to understand the other person's perspective", "Ignore the feedback and continue doing things your own way ", "Respond negatively to the person giving the feedback"],
+        options: ['<input type="radio" name="q10" value="option1">Get defensive and argue with the person giving the feedback', '<input type="radio" name="q10" value="option1">Listen to the feedback and try to understand the other persons perspective', '<input type="radio" name="q10" value="option1">Ignore the feedback and continue doing things your own way', '<input type="radio" name="q10" value="option1">Respond negatively to the person giving the feedback'],
         correct: "Listen to the feedback and try to understand the other person's perspective",
       },
 
       {
         id: "11",
         question: "How do you handle a situation where you don't have all the information you need to make a decision?",
-        options: ["Make a decision based on your intuition", "Delay the decision until you have all the information", "Make a decision based on the information you have available", "Ask someone else to make the decision for you"],
+        options: ['<input type="radio" name="q11" value="option1">Make a decision based on your intuition', '<input type="radio" name="q11" value="option1">Delay the decision until you have all the information', '<input type="radio" name="q11" value="option1">Make a decision based on the information you have available', '<input type="radio" name="q11" value="option1">Ask someone else to make the decision for you'],
         correct: "Delay the decision until you have all the information",
       },
 
       {
         id: "12",
         question: "How do you approach a new project or task that you have never done before? ",
-        options: ["Research and gather information before starting the project", "Jump right in and learn as you go", "Ask for help from someone who has experience with the task", "Ignore the project or task until you're more comfortable"],
+        options: ['<input type="radio" name="q12" value="option1">Research and gather information before starting the project', '<input type="radio" name="q12" value="option1">Jump right in and learn as you go', '<input type="radio" name="q12" value="option1">Ask for help from someone who has experience with the task', '<input type="radio" name="q12" value="option1">Ignore the project or task until you are more comfortable'],
         correct: "Research and gather information before starting the project",
       },
 
       {
         id: "13",
         question: "How do you handle a situation where a team member is consistently not meeting deadlines?",
-        options: ["Confront the team member in front of everyone and demand they improve", "Talk to the team member privately and ask if they need any help or support", "Ignore the situation and hope it resolves itself ", "Blame the team member for the project's failure"],
+        options: ['<input type="radio" name="q13" value="option1">Confront the team member in front of everyone and demand they improve', '<input type="radio" name="q13" value="option1">Talk to the team member privately and ask if they need any help or support', '<input type="radio" name="q13" value="option1">Ignore the situation and hope it resolves itself', '<input type="radio" name="q13" value="option1">Blame the team member for the projects failure'],
         correct: "Talk to the team member privately and ask if they need any help or support",
       },
 
       {
         id: "14",
         question: "How do you manage your time effectively when working on multiple projects or tasks?",
-        options: ["Focus on one task at a time until it is complete", "Prioritize tasks based on urgency and importance", "Work on multiple tasks simultaneously to save time ", "Delay starting any tasks until there's enough time to focus on all of them at once"],
+        options: ['<input type="radio" name="q14" value="option1">Focus on one task at a time until it is complete', '<input type="radio" name="q14" value="option1">Prioritize tasks based on urgency and importance', '<input type="radio" name="q14" value="option1">Work on multiple tasks simultaneously to save time', '<input type="radio" name="q14" value="option1">Delay starting any tasks until there enough time to focus on all of them at once'],
         correct: "Prioritize tasks based on urgency and importance",
       },
 
       {
         id: "15",
         question: "How do you handle a situation where a team member is not communicating effectively? ",
-        options: ["Ignore the situation and hope it resolves itself", "Confront the team member in front of everyone and demand they improve", "Talk to the team member privately and ask if there is anything you can do to help them communicate better", "Avoid working with the team member altogether"],
+        options: ['<input type="radio" name="q15" value="option1">Ignore the situation and hope it resolves itself', '<input type="radio" name="q15" value="option1">Confront the team member in front of everyone and demand they improve', '<input type="radio" name="q15" value="option1">Talk to the team member privately and ask if there is anything you can do to help them communicate better', '<input type="radio" name="q15" value="option1">Avoid working with the team member altogether'],
         correct: "Talk to the team member privately and ask if there is anything you can do to help them communicate better",
       },
 
@@ -1059,13 +1117,46 @@
       scoreContainer.classList.add("hide");
     });
 
+    //Previous Button
+    preBtn.addEventListener("click", () => {
+      preBtn.disabled = false;
+      questionCount -= 1;
+      nextBtn.disabled=false;
+      // check if user is going back to the first question
+      if (questionCount === 0) {
+        preBtn.hidden = true; // hide the pre-button again
+      }
+
+      if (questionCount == quizArray.length) {
+        //hide question container and display score
+        displayContainer.classList.add("hide");
+        scoreContainer.classList.remove("hide");
+      } else {
+        //display questionCount
+
+        countOfQuestion.innerHTML =
+          questionCount + 1 + " of " + quizArray.length + " Question";
+        //display quiz
+        quizDisplay(questionCount);
+        count = 11;
+        clearInterval(countdown);
+        timerDisplay();
+      }
+    });
+
     //Next Button
     nextBtn.addEventListener(
       "click",
       (displayNext = () => {
         //increment questionCount
-        nextBtn.disabled = true;
+        nextBtn.disabled = false;
         questionCount += 1;
+        // check if user is on the second question 
+        if (questionCount === 1) {
+          preBtn.hidden = false; // show the pre-button 
+        }
+
+
         //if last question
         if (questionCount == quizArray.length) {
           //hide question container and display score
@@ -1153,10 +1244,10 @@
         div.appendChild(question_DIV);
         //options
         div.innerHTML += `
-<button class="option-div" onclick="checker(this)">${i.options[0]}</button>
-<button class="option-div" onclick="checker(this)">${i.options[1]}</button>
-<button class="option-div" onclick="checker(this)">${i.options[2]}</button>
- <button class="option-div" onclick="checker(this)">${i.options[3]}</button>
+<button  class="option-div" onclick="checker(this)">${i.options[0]}</button>
+<button  class="option-div" onclick="checker(this)">${i.options[1]}</button>
+<button  class="option-div" onclick="checker(this)">${i.options[2]}</button>
+<button  class="option-div" onclick="checker(this)">${i.options[3]}</button>
 `;
         quizContainer.appendChild(div);
       }
@@ -1179,7 +1270,7 @@
         userOption.classList.add("incorrect");
         //For marking the correct option
         options.forEach((element) => {
-          if (element.innerText == quizArray[questionCount].correct) {
+          if (element.innerText == quizArray[questionCount]) {
             element.classList.add("correct");
           }
         });
@@ -1191,6 +1282,8 @@
       options.forEach((element) => {
         element.disabled = true;
         nextBtn.disabled = false;
+        preBtn.disabled = false;
+        // sumbitBtn.disabled=true;
       });
     }
 
@@ -1202,9 +1295,12 @@
       count = 11;
       clearInterval(countdown);
       nextBtn.disabled = true;
+      // preBtn.disabled = true;
       quizCreator();
       quizDisplay(questionCount);
+      preBtn.hidden = true;
     }
+
 
     //when user click on start button
     startButton.addEventListener("click", () => {

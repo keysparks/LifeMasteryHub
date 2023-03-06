@@ -44,7 +44,8 @@ Real time experience content
 
 .story-time .story-img {
   /* padding: 40px; */
-  width: 100%;
+  width: 80%;
+  height: 500px;
   display: block;
   margin: 0 auto;
   padding-top: 20px;
@@ -71,6 +72,7 @@ Real time experience content
 }
 
 .experience-time span {
+  padding-top:20px;
   margin-bottom: 20px !important;
   font-weight: 500;
   color: #ff695f;
@@ -79,10 +81,19 @@ Real time experience content
 
 .experience-time p {
   text-align: justify;
-  padding: 20px 0px 20px 0px;
+  padding-top: 20px;
   font-weight: 400;
   font-size: 16px;
   color: black;
+}
+.experience-img{
+  padding-top: 10px;
+  padding-bottom: 10px;
+ 
+  width: 80%;
+  height: 500px;
+  display: block;
+  margin: 0 auto;
 }
 
 .experience-time i {
@@ -104,8 +115,21 @@ Real time experience content
 
 .experience-time h5 {
   color: #03a4ed;
+  padding-top: 20px;
+  font-size: 18px;
+  font-weight: 500;
+
 }
 
+.experience-time p span {
+  color: #03a4ed;
+  padding-top: 20px;
+  font-size: 18px;
+  font-weight: 500;
+}
+.experience-time p span i{
+  color: #ff695f;
+}
 .experience-time h5 i {
   color: #ff695f;
 }
@@ -133,12 +157,12 @@ Real time experience content
 
 .experience-content {
   position: relative;
-  margin-top: 100px;
+  margin-top: 5vh;
   margin-bottom: 20vh;
 }
 
 .experience-content .item {
-  padding-top: 50px;
+  padding-top: 20px;
   text-align: justify;
   font-weight: 600;
   font-size: 22px;
@@ -147,9 +171,9 @@ Real time experience content
 
 
 .experience-content .section-title h1 {
-  color: #03a4ed;
-  text-align: center;
-  margin: 40px;
+  color: #0f3e7b;
+  /* text-align: center; */
+  margin: 40px 0 40px 0;
 }
 
 .experience-content .section-title h1 .experience-icon {
@@ -173,7 +197,7 @@ Real time experience content
 
 .page_button button {
   margin: 10px 0;
-  width: 25%;
+  /* width: 25%; */
   display: inline-block;
   text-align: center;
   background-color: #ff695f;

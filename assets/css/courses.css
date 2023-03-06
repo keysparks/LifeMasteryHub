@@ -1,12 +1,12 @@
 .courses {
-    margin-top: 15vh;
-   
+    margin-top: 5vh;
+
 }
 
-.courses_content {
+/* .courses_content {
    
     margin-bottom: 60px;
-}
+} */
 
 .courses .courses-left-dec img {
     width: 387px;
@@ -20,19 +20,19 @@
 .courses .courses-right-dec img {
     width: 305px;
     height: 205px;
-    right: -120px;
+    right: -0px;
     bottom: 560px;
     position: absolute;
     z-index: 1;
 }
 
 /* ---------------breadcrumbs-------------- */
-.course_breadcrumb1{
+.course_breadcrumb1 {
     margin-left: 30vh;
 }
 
 .courses_breadcrumbs {
-    padding: 10px 0px;
+    /* padding: 10px 0px; */
     /* box-shadow: 0 4px 30px -10px rgba(0,0,0,0.2); */
     width: fit-content;
 }
@@ -72,20 +72,33 @@
 
 
 .courses_content_title {
-    text-align: center;
-    color: #03a4ed;
+    /* text-align: center; */
+    color: #0f3e7b;
+
+}
+
+.courses_content_title .section-title {
+    margin: 40px 0 20px 0;
+
+
+}
+
+.courses_content_title .section-title-content {
+    border-top: 1px solid #eee;
 }
 
 .courses_content_title p {
-    padding-top: 40px;
+    padding-top: 20px;
     text-align: justify;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 .courses_feature_videosection {
     text-align: center;
-    margin-top: 30px;
-    margin-bottom: 10vh;
+    padding: 60px 0px 0px 0px;
+    /* margin-top: 30px; */
+    /* margin-bottom: 10vh; */
+    /* background-color: #fafafa; */
 }
 
 /* .courses_feature{
@@ -93,7 +106,7 @@
    
 } */
 .courses_feature h3 {
-    color: #03a4ed;
+    color: #0f3e7b;
 }
 
 .courses_feature_border {
@@ -108,9 +121,11 @@
     padding-top: 10px;
     gap: 0px;
 }
-.courses_feature_list i{
+
+.courses_feature_list i {
     color: #ff695f;
 }
+
 .courses_feature_list button {
     /* display: block; */
     margin: 10px 0;
@@ -128,14 +143,16 @@
 .courses_feature_list button a {
     color: black;
 }
-.courses_feature_list button a:hover{
+
+.courses_feature_list button a:hover {
     font-weight: 600;
 }
+
 .courses_video {
     width: 100%;
-    height: 30vh;
+    height: 20rem;
     border-radius: 30px;
-    margin-top: 80px;
+    margin-top: 35px;
 }
 
 .courses_feature h3,
@@ -152,7 +169,7 @@
 }
 
 .courses_video_options {
-    padding: 60px;
+    padding: 20px;
     /* margin-left: 130px; */
 }
 
@@ -168,15 +185,16 @@
 .courses_video_options_content {
     text-align: left;
     border-top: 1px solid #eee;
+    padding-bottom: 20px;
 }
 
 .courses_video_options_content p {
-    margin: 20px 20px;
+    padding: 20px 20px;
     text-align: center;
 }
 
 .courses_video_options button {
-    margin: 10px 0;
+    /* margin: 10px 0; */
     /* padding: 10px;
     background-color: #f2f2f2;
     border: none;
@@ -201,23 +219,26 @@
     font-weight: bold;
     border: 2px solid #03a4ed;
 }
-.courses_video_options button a{
+
+.courses_video_options button a {
     color: #fff;
 }
-.courses_video_options button a{
+
+.courses_video_options button a {
     color: #fff;
 }
 
 .courses .courses-left-dec img {
-    width: 387px;
+    width: 300px;
     height: 760px;
     left: -200px;
     top: -140px;
     position: absolute;
     z-index: 1;
 }
+
 .courses .courses-left-dec2 img {
-    width: 487px;
+    width: 300px;
     height: 500px;
     left: -200px;
     bottom: -550px;
@@ -228,46 +249,66 @@
 .courses .courses-right-dec img {
     width: 305px;
     height: 205px;
-    right: -120px;
-    bottom: 560px;
+    right: 0px;
+    bottom: -557px;
     position: absolute;
     z-index: 1;
 }
+
 .intro_content_title {
-    text-align: center;
+    /* text-align: center; */
     color: #03a4ed;
+    padding: 30px 0px 15px 0px;
 }
+
 .intro_content_title h3 {
-    text-align: center;
-    color: #03a4ed;
-    padding-top: 30px;
+    /* text-align: center; */
+    color: #0f3e7b;
+    /* padding-top: 30px; */
 }
+
 .intro_content_title p {
-    padding-top: 30px;
-    
-    text-align:justify;
-    font-size: 18px;
-    
+    padding-top: 20px;
+    text-align: justify;
+    font-size: 16px;
+
 }
-.course_content_status{
+
+.course_content_status {
     padding-left: 0px;
 }
-.course_page_button{
+
+.course_page_button {
     text-align: center;
     margin: auto;
     border-top: 1px solid #eee;
     padding: 40px;
 }
-.content-img{
-padding-top: 10px;  
-padding-bottom: 10px; 
-    width: 100%;
+
+.content-img {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 80%;
+    height: 500px;
     display: block;
     margin: 0 auto;
 }
-.intro_content{
+
+.intro_content {
     padding: 30px;
     width: 60%;
     display: block;
     margin: 0 auto;
-}   
+}
+
+@media (max-width:1200px) {
+    .courses .courses-left-dec img {
+        display: none;
+    }
+}
+@media (max-width:991px){
+    .courses .courses-right-dec img{
+        display: none;
+    }
+}
+

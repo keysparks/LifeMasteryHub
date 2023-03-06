@@ -45,11 +45,12 @@ Psychological facts content
 
 .facts-time .facts-img {
   /*   padding: 30px; */
-  width: 100%;
+  width: 80%;
+  height: 500px;
   display: block;
   margin: 0 auto;
   padding-top: 20px;
-  padding-bottom: 20px;
+  /* padding-bottom: 20px; */
 }
 
 .facts-time {
@@ -60,7 +61,7 @@ Psychological facts content
 }
 
 .facts-time-content {
-  margin-bottom: 100px;
+  margin-bottom: 50px;
 }
 
 .facts-time-content ul {
@@ -85,9 +86,18 @@ Psychological facts content
 .facts-time p {
   text-align: justify;
   font-size: 16px;
-  padding: 30px 0px 20px 0px;
+  padding-top:20px;
   font-weight: 400;
   color: black;
+}
+.facts-time p span {
+  color: #03a4ed;
+  padding-top: 20px;
+  font-size: 18px;
+  font-weight: 500;
+}
+.facts-time p span i{
+  color: #ff695f;
 }
 
 .facts-time i {
@@ -136,9 +146,9 @@ Psychological facts content
 
 
 .facts .section-title h1 {
-  color: #03a4ed;
-  text-align: center;
-  margin: 40px;
+  color: #0f3e7b;
+  /* text-align: center; */
+  margin: 40px 0 20px 0;
 }
 
 .facts .section-title h1 .facts-icon {
@@ -162,7 +172,7 @@ Psychological facts content
 
 .page_button button {
   margin: 10px 0;
-  width: 25%;
+  /* width: 25%; */
   display: inline-block;
   text-align: center;
   background-color: #ff695f;

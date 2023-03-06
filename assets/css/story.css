@@ -46,11 +46,12 @@ story content
 
 .story-time .story-img {
   /* padding: 40px; */
-  width: 100%;
+  width: 80%;
+  height: 500px;
   display: block;
   margin: 0 auto;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .story-time {
@@ -65,20 +66,23 @@ story content
 }
 
 .story-time_storyline {
-  text-align: center;
-  padding-bottom: 30px;
+  /* text-align: center; */
+  /* padding-bottom: 30px; */
+  padding-top: 20px;
   font-size: 24px;
 }
 
 .story-time-steps h4 {
-  padding-top: 30px;
-  padding-bottom: 20px;
+  padding-top: 20px;
+  /* padding-bottom: 20px; */
   color: #ff695f;
 }
 
 .story-time-steps span {
-  color: #03a4ed !important;
+  color: #ff695f !important;
+font-size:24px;
 }
+
 
 .story-time i {
   color: #03a4ed;
@@ -88,7 +92,12 @@ story content
 .story-time span {
   font-weight: 500;
   color: #ff695f;
-  text-align: left;
+  /* text-align: left; */
+}
+.story-time p span {
+  color: #03a4ed !important;
+  font-size: 18px;
+  font-weight: 500;
 }
 
 .story-time_storyline_span {
@@ -99,13 +108,13 @@ story content
 .story-time p {
   text-align: justify;
   /* padding: 10px ; */
-  padding-top: 10px;
+  padding-top: 20px;
   font-weight: 400;
   color: black;
   font-size: 16px;
   /* padding-left: 60px; */
   width: 100%;
-  padding-bottom: 30px;
+  /* padding-bottom: 30px; */
 }
 
 .story-content .story-right-dec img {
@@ -140,7 +149,7 @@ story content
   position: relative;
   /* padding: 70px; */
   text-align: justify;
-  padding-top: 50px;
+  /* padding-top: 50px; */
   font-weight: 600;
   font-size: 22px;
   margin-bottom: 20px;
@@ -163,15 +172,15 @@ story content
 .story-time ul li {
   /* list-style-type:disc; */
   /* padding-bottom: 10px; */
-  font-size: 20px;
+  font-size: 18px;
   text-decoration: none;
-  padding-top: 30px;
+  padding-top: 20px;
 }
 
 .story-content .section-title h1 {
-  color: #03a4ed;
-  text-align: center;
-  margin: 40px;
+  color: #0f3e7b;
+  /* text-align: center; */
+  margin: 40px 0 20px 0;
 }
 
 .story-content .section-title h1 .story-icon {
@@ -195,7 +204,7 @@ story content
 
 .page_button button {
   margin: 10px 0;
-  width: 25%;
+  /* width: 25%; */
   display: inline-block;
   text-align: center;
   background-color: #ff695f;

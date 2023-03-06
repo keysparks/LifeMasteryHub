@@ -12,7 +12,7 @@
   margin-bottom: 100px;
 }
 .reference_suggestion .reference_suggestion-left-dec img {
-  width: 487px;
+  width: 300px;
   height: 738px;
   left: -50px;
   top: -70px;
@@ -21,7 +21,7 @@
 }
 
 .reference_suggestion .reference_suggestion-right-dec img {
-  width: 487px;
+  width: 200px;
   height: 738px;
   right: 0px;
   bottom: -40px;
@@ -30,32 +30,33 @@
 }
 .reference_suggestion_breadscrumbs{
 padding: 0px;
-padding-top: 13vh;
+/* padding-top: 13vh; */
  
 }
-.ref_sug_content_status{
+/* .ref_sug_content_status{
   margin-top: 10vh !important;
-}
+} */
 /* 
 ---------------------------------------------
 reference page
 --------------------------------------------- 
 */
 .reference {
-    margin-top: 30px;
+    /* margin-top: 30px; */
     padding-bottom: 10px;
     background-color: #fff;
     /* border: 1px solid rgba(255, 144, 104, 1); */
     color: black;
     font-weight: 400;
     font-size: 1em;
-    text-align: center;
+    /* text-align: center; */
   }
 .rfheader{
     margin: 0 auto;
-    padding: 2em;
-    text-align: center;
-    color: #03a4ed;
+    padding: 40px 0px 20px 0px;
+    /* text-align: center; */
+    color: #0f3e7b;
+    /* font-size: 40px; */
     font-weight: 600;
     border-bottom: 1px solid #eee;
 }
@@ -92,7 +93,8 @@ reference page
   color:rgba(255, 104, 95, 1);
   font-size: 24px;
   font-weight: 600;
-  padding: 20px;
+  padding-top: 20px;
+  text-align: center;
 }
 .reference_links_title i{
   font-size: 30px;
@@ -107,23 +109,31 @@ reference page
 .reference_links_list i{
   color: #ff695f;
 }
+.reference_links_list em{
+  /* color: #ff695f; */
+  color: #03a4ed;
+  font-weight: normal;
+}
 .reference_links_list button {
   margin: 10px 0;
   padding: 10px;
   background-color: #f2f2f2;
   border: none;
   border-radius: 5px;
-  color: #333;
-  font-size: 16px;
+  /* color: #333; */
+  color: black;
+  font-weight: 500;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 20px;
   width: 100%;
-  text-align: center;
+  text-align: justify;
   height: 20%;
 }
 
 .reference_links_list button a {
   color: black;
 }
-.reference_links_list button a:hover{
+.reference_links_list button:hover{
   font-weight: 600;
 }
 
@@ -133,7 +143,7 @@ suggestion page
 --------------------------------------------- 
 */
 .suggestion_form {
-    margin-top: 20vh;
+    /* margin-top: 5vh; */
     padding-bottom: 10px;
     background-color: #fff;
     /* border: 1px solid rgba(255, 144, 104, 1); */
@@ -151,9 +161,9 @@ suggestion page
   
   .sgheader {
     margin: 0 auto;
-    padding: 2em;
-    text-align: center;
-    color: #03a4ed;
+    padding:60px 0px 20px 0px;
+    /* text-align: center; */
+    color: #0f3e7b;
     font-weight: 600;
     border-bottom: 1px solid #eee;
   }
