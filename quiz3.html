@@ -17,8 +17,8 @@
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
         rel="stylesheet">
 
-        <link rel="icon" type="icon"  href="./assets/images/new-mini-logo.png">
-        <title>Life Skill Portal</title>
+    <link rel="icon" type="icon" href="./assets/images/new-mini-logo.png">
+    <title>Life Skill Portal</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -76,7 +76,7 @@
         }
 
         .header {
-            margin-bottom: 1.8em;
+            /* margin-bottom: 1.8em; */
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -95,14 +95,14 @@
         }
 
         .question {
-            /* margin-bottom: 1.25em; */
+            margin-bottom: 1.25em;
             font-weight: 600;
         }
 
         .option-div {
             font-size: 0.9em;
             width: 100%;
-            padding: 1em;
+            padding: 7px;
             margin: 0.3em 0;
             text-align: left;
             outline: none;
@@ -143,16 +143,16 @@
         }
 
         /* .incorrect {
-            background-color: #ffdde0;
-            color: #d32f2f;
-            border-color: #d32f2f;
-        }
+      background-color: #ffdde0;
+      color: #d32f2f;
+      border-color: #d32f2f;
+    }
 
-        .correct {
-            background-color: #e7f6d5;
-            color: #689f38;
-            border-color: #689f38;
-        } */
+    .correct {
+      background-color: #e7f6d5;
+      color: #689f38;
+      border-color: #689f38;
+    } */
 
         #user-score {
             font-size: 1.5em;
@@ -167,7 +167,7 @@
 
         .question-box {
             width: 80%;
-            height: 35rem;
+            height: 39rem;
             background-color: #ff695f;
             display: flex;
             justify-content: center;
@@ -185,7 +185,7 @@
             padding: 3.1em 1.8em;
             width: 100%;
             /* max-width: 37.5em; */
-            margin: 1.5em auto;
+            /* margin: 1.5em auto; */
             border-radius: 5px;
             height: 100%;
         }
@@ -196,11 +196,6 @@
             border-top: 1px solid #eee;
             /* width: 60%; */
             margin: auto;
-        }
-
-        #resultDisplay {
-            font-weight: bold;
-            margin-bottom: 10px;
         }
 
         #user-score {
@@ -227,6 +222,34 @@
             50% {
                 opacity: 0;
             }
+        }
+
+        @media (min-width:1500px) {
+            .question-box {
+                width: 80%;
+                height: 32rem;
+            }
+
+        }
+
+        @media (max-width:767px) {
+            .question-box {
+                width: auto;
+                height: 39rem;
+            }
+
+            #next-button,
+            #pre-button {
+                width: 30%;
+            }
+        }
+
+        @media (max-width:500px) {
+            .question-box {
+                width: auto;
+                height: 46rem;
+            }
+
         }
 
         /* The Modal (background) */
@@ -634,14 +657,12 @@
                     <div class="community footer-item">
                         <h4>Policies</h4>
                         <ul>
-                            <li><a style="cursor: -webkit-grab; cursor: grab;" class=" myBtn_multi button button1">Terms
+                            <li><a style="cursor:pointer;" class=" myBtn_multi button button1">Terms
                                     &
                                     Conditions</a></li>
-                            <li><a style="cursor: -webkit-grab; cursor: grab;"
-                                    class=" myBtn_multi button button1">FAQ</a></li>
-                            <li><a style="cursor: -webkit-grab; cursor: grab;"
-                                    class="myBtn_multi  button button1">Disclamier</a></li>
-                            <li><a style="cursor: -webkit-grab; cursor: grab;" id="myBtn" class="button button1">Privacy
+                            <li><a style="cursor:pointer;" class=" myBtn_multi button button1">FAQ</a></li>
+                            <li><a style="cursor:pointer;" class="myBtn_multi  button button1">Disclamier</a></li>
+                            <li><a style="cursor:pointer;" id="myBtn" class="button button1">Privacy
                                     Policy</a>
                             </li>
 
@@ -777,11 +798,11 @@
         preBtn.addEventListener("click", () => {
             preBtn.disabled = false;
             questionCount -= 1;
-            nextBtn.disabled=false;
-      // check if user is going back to the first question
-      if (questionCount === 0) {
-        preBtn.hidden = true; // hide the pre-button again
-      }
+            nextBtn.disabled = false;
+            // check if user is going back to the first question
+            if (questionCount === 0) {
+                preBtn.hidden = true; // hide the pre-button again
+            }
             if (questionCount == quizArray.length) {
                 //hide question container and display score
                 displayContainer.classList.add("hide");
@@ -804,12 +825,12 @@
             "click",
             (displayNext = () => {
                 //increment questionCount
-                nextBtn.disabled = false;
-        questionCount += 1;
-        // check if user is on the second question 
-        if (questionCount === 1) {
-          preBtn.hidden = false; // show the pre-button 
-        }
+                nextBtn.disabled = true;
+                questionCount += 1;
+                // check if user is on the second question 
+                if (questionCount === 1) {
+                    preBtn.hidden = false; // show the pre-button 
+                }
                 //if last question
                 if (questionCount == quizArray.length) {
                     //hide question container and display score
@@ -939,19 +960,19 @@
             });
         }
 
-      //initial setup
-    function initial() {
-      quizContainer.innerHTML = "";
-      questionCount = 0;
-      scoreCount = 0;
-      count = 11;
-      clearInterval(countdown);
-      nextBtn.disabled = true;
-      // preBtn.disabled = true;
-      quizCreator();
-      quizDisplay(questionCount);
-      preBtn.hidden = true;
-    }
+        //initial setup
+        function initial() {
+            quizContainer.innerHTML = "";
+            questionCount = 0;
+            scoreCount = 0;
+            count = 11;
+            clearInterval(countdown);
+            nextBtn.disabled = true;
+            // preBtn.disabled = true;
+            quizCreator();
+            quizDisplay(questionCount);
+            preBtn.hidden = true;
+        }
 
         //when user click on start button
         startButton.addEventListener("click", () => {

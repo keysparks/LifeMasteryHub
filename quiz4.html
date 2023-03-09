@@ -70,7 +70,7 @@
     }
 
     .header {
-      margin-bottom: 1.8em;
+      /* margin-bottom: 1.8em; */
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -89,14 +89,14 @@
     }
 
     .question {
-      /* margin-bottom: 1.25em; */
+      margin-bottom: 1.25em;
       font-weight: 600;
     }
 
     .option-div {
       font-size: 0.9em;
       width: 100%;
-      padding: 1em;
+      padding: 7px;
       margin: 0.3em 0;
       text-align: left;
       outline: none;
@@ -179,7 +179,7 @@
       padding: 3.1em 1.8em;
       width: 100%;
       /* max-width: 37.5em; */
-      margin: 1.5em auto;
+      /* margin: 1.5em auto; */
       border-radius: 5px;
       height: 100%;
     }
@@ -193,15 +193,15 @@
     }
 
     #user-score {
-      font-size: 8px;
-      text-align: left;
+      font-size: 1em;
+      color: #ffffff;
+      text-align: center;
       padding: 30px;
       margin: auto;
       animation: none;
+      overflow: auto;
       /* remove any animation applied previously */
     }
-
-
 
     #blink {
       animation: blinker 1.5s linear infinite;
@@ -217,6 +217,29 @@
       50% {
         opacity: 0;
       }
+    }
+    @media (min-width:1500px) {
+      .question-box{
+        width:80%;
+        height: 33rem;
+      }
+     
+    }
+    @media (max-width:767px) {
+      .question-box{
+        width:auto;
+        height: 39rem;
+      }
+      #next-button, #pre-button{
+        width:30%;
+      }
+    }
+    @media (max-width:500px) {
+      .question-box{
+        width:auto;
+        height: 40rem;
+      }
+     
     }
 
     /* The Modal (background) */
@@ -614,11 +637,11 @@
           <div class="community footer-item">
             <h4>Policies</h4>
             <ul>
-              <li><a style="cursor: -webkit-grab; cursor: grab;" class=" myBtn_multi button button1">Terms &
+              <li><a style="cursor:pointer;" class=" myBtn_multi button button1">Terms &
                   Conditions</a></li>
-              <li><a style="cursor: -webkit-grab; cursor: grab;" class=" myBtn_multi button button1">FAQ</a></li>
-              <li><a style="cursor: -webkit-grab; cursor: grab;" class="myBtn_multi  button button1">Disclamier</a></li>
-              <li><a style="cursor: -webkit-grab; cursor: grab;" id="myBtn" class="button button1">Privacy Policy</a>
+              <li><a style="cursor:pointer;" class=" myBtn_multi button button1">FAQ</a></li>
+              <li><a style="cursor:pointer;" class="myBtn_multi  button button1">Disclamier</a></li>
+              <li><a style="cursor:pointer;" id="myBtn" class="button button1">Privacy Policy</a>
               </li>
 
             </ul>
@@ -767,7 +790,7 @@
       "click",
       (displayNext = () => {
         //increment questionCount
-        nextBtn.disabled = false;
+        nextBtn.disabled = true;        
         questionCount += 1;
         // check if user is on the second question 
         if (questionCount === 1) {

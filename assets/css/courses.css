@@ -95,10 +95,11 @@
 
 .courses_feature_videosection {
     text-align: center;
-    padding: 60px 0px 0px 0px;
-    /* margin-top: 30px; */
+    padding: 40px 0px 0px 0px;
+    margin-top: 30px;
     /* margin-bottom: 10vh; */
     /* background-color: #fafafa; */
+    background-color: #fafafa;
 }
 
 /* .courses_feature{
@@ -153,6 +154,7 @@
     height: 20rem;
     border-radius: 30px;
     margin-top: 35px;
+    box-shadow: 0px 0px 15px #ff695f;
 }
 
 .courses_feature h3,
@@ -201,14 +203,15 @@
     border-radius: 5px;
     color: #333;    
     font-size: 16px; */
-    width: fit-content;
+    /* width: fit-content; */
+    width: 50%;
     display: inline-block;
     background-color: #ff695f;
     font-size: 16px;
     font-weight: 400;
     color: #fff;
     text-transform: capitalize;
-    padding: 12px 25px;
+    padding: 12px 12px;
     border-radius: 23px;
     letter-spacing: 0.25px;
     transition: all .1s;
@@ -286,12 +289,20 @@
 }
 
 .content-img {
-    padding-top: 10px;
-    padding-bottom: 10px;
+    margin-top: 20px !important;
+    /* padding-top: 20px;
+    padding-bottom: 20px; */
     width: 80%;
     height: 500px;
     display: block;
     margin: 0 auto;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    transition: 0.5s;
+}
+.content-img:hover{
+    transform: scale(1.08);
 }
 
 .intro_content {
@@ -305,10 +316,40 @@
     .courses .courses-left-dec img {
         display: none;
     }
-}
-@media (max-width:991px){
-    .courses .courses-right-dec img{
-        display: none;
+    .courses_video_options button{
+        width: 65%;
+        font-size: 14px;
+        margin-top: 10px;
+    }
+    .content-img{
+        height: 400px ;
     }
 }
 
+@media (max-width:991px) {
+    .courses .courses-right-dec img {
+        display: none;
+    }
+    .courses_video_options button{
+        width: 80%;
+        font-size: 12px;
+        margin-top: 10px;
+    }
+    .content-img{
+        height: 300px ;
+    }
+}
+@media (max-width:767px){
+    .courses .courses-right-dec img {
+        display: none;
+    }
+    .courses_video_options button{
+        width: 30%;
+        font-size: 12px;
+        margin-top: 10px;
+    }
+    .content-img{
+        width: 80%;
+        height: 280px ;
+    }
+}

@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
     rel="stylesheet">
-   <link rel="icon" type="icon"  href="./assets/images/new-mini-logo.png">
+  <link rel="icon" type="icon" href="./assets/images/new-mini-logo.png">
   <title>Life Skill Portal</title>
 
   <!-- Bootstrap core CSS -->
@@ -71,7 +71,7 @@
     }
 
     .header {
-      margin-bottom: 1.8em;
+      /* margin-bottom: 1.8em; */
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -97,7 +97,7 @@
     .option-div {
       font-size: 0.9em;
       width: 100%;
-      padding: 1em;
+      padding: 7px;
       margin: 0.3em 0;
       text-align: left;
       outline: none;
@@ -170,7 +170,7 @@
       border-radius: 10px;
       /* border-bottom-right-radius: 30px; */
       padding: 5px;
-      
+
       margin-top: 60px;
 
     }
@@ -180,7 +180,7 @@
       padding: 3.1em 1.8em;
       width: 100%;
       /* max-width: 37.5em; */
-      margin: 1.5em auto;
+      /* margin: 1.5em auto; */
       border-radius: 5px;
       height: 100%;
     }
@@ -218,7 +218,29 @@
         opacity: 0;
       }
     }
-
+    @media (min-width:1500px) {
+      .question-box{
+        width:80%;
+        height: 33rem;
+      }
+     
+    }
+    @media (max-width:767px) {
+      .question-box{
+        width:auto;
+        height: 39rem;
+      }
+      #next-button, #pre-button{
+        width:30%;
+      }
+    }
+    @media (max-width:500px) {
+      .question-box{
+        width:auto;
+        height: 40rem;
+      }
+     
+    }
     /* The Modal (background) */
     .modal {
       display: none;
@@ -563,13 +585,13 @@
               <button id="restart">Restart</button>
             </div>
           </div>
-        
-        <div class=" container progress content_status question_content_status">
-          <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75"
-            aria-valuemin="0" aria-valuemax="100" style="width: 55.55%"></div>
+
+          <div class=" container progress content_status question_content_status">
+            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75"
+              aria-valuemin="0" aria-valuemax="100" style="width: 55.55%"></div>
+          </div>
         </div>
       </div>
-    </div>
 
       <div class=" container row page_button question_page_button">
         <div class="col-lg-6 col-md-6 col-12">
@@ -615,10 +637,10 @@
           <div class="community footer-item">
             <h4>Policies</h4>
             <ul>
-              <li><a style="cursor: -webkit-grab; cursor: grab;" class=" myBtn_multi button button1">Terms &
+              <li><a style="cursor:pointer;" class=" myBtn_multi button button1">Terms &
                   Conditions</a></li>
-              <li><a style="cursor: -webkit-grab; cursor: grab;" class=" myBtn_multi button button1">FAQ</a></li>
-              <li><a style="cursor: -webkit-grab; cursor: grab;" class="myBtn_multi  button button1">Disclamier</a></li>
+              <li><a style="cursor:pointer;" class=" myBtn_multi button button1">FAQ</a></li>
+              <li><a style="cursor:pointer;" class="myBtn_multi  button button1">Disclamier</a></li>
               <li><a style="cursor: -webkit-grab; cursor: grab;" id="myBtn" class="button button1">Privacy Policy</a>
               </li>
 
@@ -840,7 +862,7 @@
     preBtn.addEventListener("click", () => {
       preBtn.disabled = false;
       questionCount -= 1;
-      nextBtn.disabled=false;
+      nextBtn.disabled = false;
       // check if user is going back to the first question
       if (questionCount === 0) {
         preBtn.hidden = true; // hide the pre-button again
@@ -866,7 +888,7 @@
       "click",
       (displayNext = () => {
         //increment questionCount
-        nextBtn.disabled = false;
+        nextBtn.disabled = true;
         questionCount += 1;
         // check if user is on the second question 
         if (questionCount === 1) {
@@ -1000,8 +1022,8 @@
       });
     }
 
-     //initial setup
-     function initial() {
+    //initial setup
+    function initial() {
       quizContainer.innerHTML = "";
       questionCount = 0;
       scoreCount = 0;
@@ -1050,7 +1072,7 @@
         span_close_multi[i].setAttribute('data-index', i);
       }
     }
-    
+
 
 
 

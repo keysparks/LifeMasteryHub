@@ -50,10 +50,19 @@ story content
   height: 500px;
   display: block;
   margin: 0 auto;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  /* padding-top: 10px;
+  padding-bottom: 10px; */
+  transition: 0.5s;
+  border: 2px solid rgba(0, 0, 0, 0.153);
+  border-radius: 4px;
+  padding: 5px;
 }
-
+.story-img:hover{
+  transform: scale(1.08);
+}
+.story_img_content{
+  padding-top: 20px;
+}
 .story-time {
   text-align: left;
   /* padding-left: 50px; */
@@ -80,7 +89,7 @@ story content
 
 .story-time-steps span {
   color: #ff695f !important;
-font-size:24px;
+  font-size: 24px;
 }
 
 
@@ -94,6 +103,7 @@ font-size:24px;
   color: #ff695f;
   /* text-align: left; */
 }
+
 .story-time p span {
   color: #03a4ed !important;
   font-size: 18px;
@@ -235,4 +245,20 @@ font-size:24px;
 .page_button a {
   text-decoration: none;
   color: #fff;
+}
+@media (max-width:1200px) {
+  .story-time .story-img{
+    height: 400px;
+  }
+}
+
+@media (max-width:991px) {
+  .story-time .story-img{
+    height: 300px;
+  }
+}
+@media (max-width:767px){
+  .story-time .story-img{
+    height: 280px;
+  }
 }

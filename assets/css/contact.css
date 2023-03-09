@@ -148,7 +148,8 @@
 /* Form CSS*/
 .ccform {
     margin: 0 auto;
-    width: 800px;
+    width: 70%;
+    /* width:800px; */
     /* height: 90vh; */
 }
 
@@ -172,8 +173,7 @@
 }
 .ccform-addon2{
     margin-left: 5px; 
-
-padding-bottom: 12px; 
+padding-bottom: 13px; 
 }
 
 .ccformfield {
@@ -335,4 +335,10 @@ footer .copyright p {
     margin-top: 50px;
     padding: 20px 0px;
     font-weight: 300;
+}
+@media (max-width:570px){
+    .ccform {
+        margin: 0 auto;
+        width: auto;
+      }
 }

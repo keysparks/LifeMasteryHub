@@ -11,8 +11,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
     rel="stylesheet">
 
-    <link rel="icon" type="icon"  href="./assets/images/new-mini-logo.png">
-    <title>Life Skill Portal</title>
+  <link rel="icon" type="icon" href="./assets/images/new-mini-logo.png">
+  <title>Life Skill Portal</title>
 
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -70,7 +70,7 @@
     }
 
     .header {
-      margin-bottom: 1.8em;
+      /* margin-bottom: 1.8em; */
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -96,7 +96,7 @@
     .option-div {
       font-size: 0.9em;
       width: 100%;
-      padding: 1em;
+      padding: 7px;
       margin: 0.3em 0;
       text-align: left;
       outline: none;
@@ -128,7 +128,7 @@
       color: #ffffff;
       padding: 0.7em 1.8em;
       border-radius: 0.3em;
-      float: left;      
+      float: left;
       width: 20%;
     }
 
@@ -153,11 +153,10 @@
       color: #ffffff;
     }
 
-
     .quiz_frame {
       display: flex;
       flex-wrap: wrap;
-      padding-top: 10px;
+      padding-top: 30px;
     }
 
     .question-box {
@@ -180,7 +179,7 @@
       padding: 3.1em 1.8em;
       width: 100%;
       /* max-width: 37.5em; */
-      margin: 1.5em auto;
+      /* margin: 1.5em auto; */
       border-radius: 5px;
       height: 100%;
     }
@@ -194,12 +193,14 @@
     }
 
     #user-score {
-      font-size: 8px; 
+      font-size: 1em;
       color: #ffffff;
-      text-align: left; 
+      text-align: center;
       padding: 30px;
       margin: auto;
       animation: none;
+      /* height: 30%; */
+      overflow: auto;
       /* remove any animation applied previously */
     }
 
@@ -217,6 +218,29 @@
       50% {
         opacity: 0;
       }
+    }
+    @media (min-width:1500px) {
+      .question-box{
+        width:80%;
+        height: 33rem;
+      }
+     
+    }
+    @media (max-width:767px) {
+      .question-box{
+        width:auto;
+        height: 39rem;
+      }
+      #next-button, #pre-button{
+        width:30%;
+      }
+    }
+    @media (max-width:500px) {
+      .question-box{
+        width:auto;
+        height: 40rem;
+      }
+     
     }
 
     /* The Modal (background) */
@@ -478,7 +502,7 @@
                 <li class="scroll-to-section"><a href="index.html#services" class="active">Training Module</a></li>
                 <div>
                   <ul class="dropdown-menu">
-                    <li><a href="course1.html">Self-Journey</a></li>
+                    <li><a href="courses1.html">Self-Journey</a></li>
                     <li><a href="courses.html">Problem-Solving</a></li>
                     <li><a href="courses3.html">Decision Making</a></li>
                     <li><a href="courses4.html">Conflict Management</a></li>
@@ -538,7 +562,7 @@
 
   <div class=" quiz_frame">
     <div class="container quiz_que_container col-lg-12 align-self-center">
-      <div class=" container question-box">
+      <div class="container question-box">
 
         <div class="start-screen">
           <button id="start-button">Start</button>
@@ -559,19 +583,17 @@
         </div>
 
         <div class="score-container hide">
-          <div>
-            <div id="user-score">Demo Score</div>
-          </div>
+          <div id="user-score">Demo Score</div>
           <button id="restart">Restart</button>
         </div>
       </div>
-
-      <div class="container progress content_status question_content_status">
-        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75"
-          aria-valuemin="0" aria-valuemax="100" style="width: 36%"></div>
-      </div>
+    
+    <div class=" container progress content_status question_content_status">
+      <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75"
+        aria-valuemin="0" aria-valuemax="100" style="width: 54%"></div>
     </div>
   </div>
+</div>
 
 
   <div class=" container row page_button question_page_button">
@@ -616,11 +638,11 @@
           <div class="community footer-item">
             <h4>Policies</h4>
             <ul>
-              <li><a style="cursor: -webkit-grab; cursor: grab;" class=" myBtn_multi button button1">Terms &
+              <li><a style="cursor:pointer;" class=" myBtn_multi button button1">Terms &
                   Conditions</a></li>
-              <li><a style="cursor: -webkit-grab; cursor: grab;" class=" myBtn_multi button button1">FAQ</a></li>
-              <li><a style="cursor: -webkit-grab; cursor: grab;" class="myBtn_multi  button button1">Disclamier</a></li>
-              <li><a style="cursor: -webkit-grab; cursor: grab;" id="myBtn" class="button button1">Privacy Policy</a>
+              <li><a style="cursor:pointer;" class=" myBtn_multi button button1">FAQ</a></li>
+              <li><a style="cursor:pointer;" class="myBtn_multi  button button1">Disclamier</a></li>
+              <li><a style="cursor:pointer;" id="myBtn" class="button button1">Privacy Policy</a>
               </li>
 
             </ul>
@@ -741,7 +763,7 @@
     preBtn.addEventListener("click", () => {
       preBtn.disabled = false;
       questionCount -= 1;
-      nextBtn.disabled=false;
+      nextBtn.disabled = false;
       // check if user is going back to the first question
       if (questionCount === 0) {
         preBtn.hidden = true; // hide the pre-button again
@@ -768,7 +790,7 @@
       "click",
       (displayNext = () => {
         //increment questionCount
-        nextBtn.disabled = false;
+        nextBtn.disabled = true;
         questionCount += 1;
         // check if user is on the second question 
         if (questionCount === 1) {
@@ -787,18 +809,17 @@
           let result = "";
 
 
-          if (averageScore >= 0 && averageScore <= .3) {
-            result = "<span id='blink' style='text-align: center;'>Amateur</span><br><span id='rdes'>Good work, it's important to remember that everyone has strengths and weaknesses. Let's work together to identify areas where you can improve and come up with a plan to help you succeed. It's important to remember that everyone has room for improvement. Consider seeking out resources such as online courses or workshops to develop soft skills such as communication, time management, and problem-solving. Focusing on these skills can lead to personal growth and increased success in both personal and professional settings.</span>";
-          } else if (averageScore > 0.3 && averageScore <= 0.5) {
-            result = "<span id='blink' style='text-align: center;'>Beginner</span><br><span id='rdes'>Great job, you’ve done a solid job and have demonstrated a good understanding of the life skills. Let's review the areas where you lost marks and see if there are any gaps in your knowledge that we can address. It's important to remember that everyone has room for improvement. Consider seeking out resources such as online courses or workshops to develop soft skills such as communication, time management, and problem-solving. Focusing on these skills can lead to personal growth and increased success in both personal and professional settings.</span>";
+          if (averageScore > 0 && averageScore <= 0.4) {
+      result = "<span id='blink' style='text-align: center;'>Beginner</span><br><span id='rdes'>Nice start, it may mean that you are not yet familiar with the concept of active listening or the importance it plays in effective communication. It's important to remember that active listening is a critical skill in many areas of life, including personal relationships, work environments, and in social situations. Improving your active listening skills can help you to better understand the needs and perspectives of others and can help you to build stronger relationships. Consider reviewing the material and practicing the techniques to develop your understanding of active listening and build your skills.Active listening involves being fully present and engaged in the conversation, with the intention of understanding the speakers perspective.To improve your active listening skills, focus on being present in the moment, maintaining eye contact, and avoiding distractions.To overcome these barriers, try to focus your attention solely on the speaker, eliminate distractions, and let go of preconceptions or assumptions.Engage in active listening by paying attention to what the speaker is saying, summarizing their points, and asking clarifying questions.Reflective listening involves summarizing what the speaker has said in your own words to demonstrate that you understand and have been actively listening.Its important to avoid interrupting the speaker or offering advice until they have finished speaking. Active listening is an important skill to develop, as it shows the speaker that you value their perspective and are interested in understanding their point of view.This can help build trust, strengthen relationships, and minimize the potential for conflicts.Reflecting, paraphrasing, and summarizing are all techniques that can help demonstrate active listening and show the speaker that you are engaged and interested in what they have to say.Avoid interrupting or finishing their sentences, as this can be disrespectful and disruptive. </span > ";
+    } else if (averageScore > 0.4 && averageScore <= 0.7) {
+      result = "<span id='blink' style='text-align: center;'>Intermediate</span><br><span id='rdes'>Great job, you have a basic understanding of active listening concepts and techniques, but there may be room for improvement. Active listening is a skill that takes practice, so consider looking for opportunities to put your knowledge into practice. With continued effort and practice, you can become even more skilled at active listening, which can help you to build better relationships, reduce misunderstandings, and improve your overall communication skills.Active listening involves being fully present and engaged in the conversation, with the intention of understanding the speaker's perspective. To improve your active listening skills, focus on being present in the moment, maintaining eye contact, and avoiding distractions. To overcome these barriers, try to focus your attention solely on the speaker, eliminate distractions, and let go of preconceptions or assumptions. Engage in active listening by paying attention to what the speaker is saying, summarizing their points, and asking clarifying questions. Reflective listening involves summarizing what the speaker has said in your own words to demonstrate that you understand and have been actively listening. It's important to avoid interrupting the speaker or offering advice until they have finished speaking. Active listening is an important skill to develop, as it shows the speaker that you value their perspective and are interested in understanding their point of view. This can help build trust, strengthen relationships, and minimize the potential for conflicts. Reflecting, paraphrasing, and summarizing are all techniques that can help demonstrate active listening and show the speaker that you are engaged and interested in what they have to say. Avoid interrupting or finishing their sentences, as this can be disrespectful and disruptive.</span>";
+    } else if (averageScore > 0.7 && averageScore <= 0.9) {
+      result = "<span id='blink' style='text-align: center;'>Advanced</span><br><span id='rdes'>Congratulations! You have a strong foundation in active listening concepts and techniques. You likely understand how active listening can help improve communication and foster stronger relationships with others. Keep practicing and refining your skills, and don't be afraid to experiment with new techniques or approaches to improve your listening abilities even further.Active listening involves being fully present and engaged in the conversation, with the intention of understanding the speaker's perspective. To improve your active listening skills, focus on being present in the moment, maintaining eye contact, and avoiding distractions. To overcome these barriers, try to focus your attention solely on the speaker, eliminate distractions, and let go of preconceptions or assumptions. Engage in active listening by paying attention to what the speaker is saying, summarizing their points, and asking clarifying questions. Reflective listening involves summarizing what the speaker has said in your own words to demonstrate that you understand and have been actively listening. It's important to avoid interrupting the speaker or offering advice until they have finished speaking. Active listening is an important skill to develop, as it shows the speaker that you value their perspective and are interested in understanding their point of view. This can help build trust, strengthen relationships, and minimize the potential for conflicts. Reflecting, paraphrasing, and summarizing are all techniques that can help demonstrate active listening and show the speaker that you are engaged and interested in what they have to say. Avoid interrupting or finishing their sentences, as this can be disrespectful and disruptive. </span>";
+    }
+    else if (averageScore > 0.9 && averageScore <= 1) {
+      result = "<span id='blink' style='text-align: center;'>Expert</span><br><span id='rdes'>Congratulations on an excellent performance! You clearly understand the importance of active listening and have developed a strong foundation in the techniques and concepts that underpin effective listening. You are well positioned to build stronger relationships with others, improve your communication skills, and contribute positively to your personal and professional life. Keep up the good work!Active listening involves being fully present and engaged in the conversation, with the intention of understanding the speaker's perspective. To improve your active listening skills, focus on being present in the moment, maintaining eye contact, and avoiding distractions. To overcome these barriers, try to focus your attention solely on the speaker, eliminate distractions, and let go of preconceptions or assumptions. Engage in active listening by paying attention to what the speaker is saying, summarizing their points, and asking clarifying questions. Reflective listening involves summarizing what the speaker has said in your own words to demonstrate that you understand and have been actively listening. It's important to avoid interrupting the speaker or offering advice until they have finished speaking. Active listening is an important skill to develop, as it shows the speaker that you value their perspective and are interested in understanding their point of view. This can help build trust, strengthen relationships, and minimize the potential for conflicts. Reflecting, paraphrasing, and summarizing are all techniques that can help demonstrate active listening and show the speaker that you are engaged and interested in what they have to say. Avoid interrupting or finishing their sentences, as this can be disrespectful and disruptive. </span>";
+    }
 
-          } else if (averageScore > 0.5 && averageScore <= 0.7) {
-            result = "<span id='blink' style='text-align: center;'>Intermediate</span><br><span id='rdes'>Great job, you’ve done a solid job and have demonstrated a good understanding of the life skills. Let's review the areas where you lost marks and see if there are any gaps in your knowledge that we can address. It's important to remember that everyone has room for improvement. Consider seeking out resources such as online courses or workshops to develop soft skills such as communication, time management, and problem-solving. Focusing on these skills can lead to personal growth and increased success in both personal and professional settings.</span>";
-          } else if (averageScore > 0.7 && averageScore <= 0.9) {
-            result = "<span id='blink' style='text-align: center;'>Advanced</span><br><span id='rdes'>Congratulations, your mark shows that you have a strong grasp of the essential skills and have put in a lot of effort. Let's go over the areas where you did well and see if there are any opportunities for further improvement. There is always room for improvement. Continue to refine and develop these skills through consistent practice and seeking out new learning opportunities. Consider working on areas such as leadership, adaptability, and critical thinking, which are highly valued in today's job market.</span>";
-          } else if (averageScore > 0.9 && averageScore <= 1) {
-            result = "<span id='blink' style='text-align: center;'>Expert</span><br><span id='rdes'>Fantastic work, you should be proud of yourself! You have a deep understanding on life skill and have put in a lot of hard work. Let's discuss ways to build on this success and continue to challenge yourself. Keep up the good work and continue to seek out opportunities to improve and refine these skills. Consider mentoring others or volunteering in leadership roles to help develop these skills further and make a positive impact in the community.</span>";
-          }
 
 
 
@@ -842,16 +863,8 @@
       quizCards[questionCount].classList.remove("hide");
     };
 
-    if (averageScore > 0 && averageScore <= 0.4) {
-      result = "<span id='blink' style='text-align: center;'>Beginner</span><br><span id='rdes'>Nice start, it may mean that you are not yet familiar with the concept of active listening or the importance it plays in effective communication. It's important to remember that active listening is a critical skill in many areas of life, including personal relationships, work environments, and in social situations. Improving your active listening skills can help you to better understand the needs and perspectives of others and can help you to build stronger relationships. Consider reviewing the material and practicing the techniques to develop your understanding of active listening and build your skills.Active listening involves being fully present and engaged in the conversation, with the intention of understanding the speakers perspective.To improve your active listening skills, focus on being present in the moment, maintaining eye contact, and avoiding distractions.To overcome these barriers, try to focus your attention solely on the speaker, eliminate distractions, and let go of preconceptions or assumptions.Engage in active listening by paying attention to what the speaker is saying, summarizing their points, and asking clarifying questions.Reflective listening involves summarizing what the speaker has said in your own words to demonstrate that you understand and have been actively listening.Its important to avoid interrupting the speaker or offering advice until they have finished speaking. Active listening is an important skill to develop, as it shows the speaker that you value their perspective and are interested in understanding their point of view.This can help build trust, strengthen relationships, and minimize the potential for conflicts.Reflecting, paraphrasing, and summarizing are all techniques that can help demonstrate active listening and show the speaker that you are engaged and interested in what they have to say.Avoid interrupting or finishing their sentences, as this can be disrespectful and disruptive. </span > ";
-    } else if (averageScore > 0.4 && averageScore <= 0.7) {
-      result = "<span id='blink' style='text-align: center;'>Intermediate</span><br><span id='rdes'>Great job, you have a basic understanding of active listening concepts and techniques, but there may be room for improvement. Active listening is a skill that takes practice, so consider looking for opportunities to put your knowledge into practice. With continued effort and practice, you can become even more skilled at active listening, which can help you to build better relationships, reduce misunderstandings, and improve your overall communication skills.Active listening involves being fully present and engaged in the conversation, with the intention of understanding the speaker's perspective. To improve your active listening skills, focus on being present in the moment, maintaining eye contact, and avoiding distractions. To overcome these barriers, try to focus your attention solely on the speaker, eliminate distractions, and let go of preconceptions or assumptions. Engage in active listening by paying attention to what the speaker is saying, summarizing their points, and asking clarifying questions. Reflective listening involves summarizing what the speaker has said in your own words to demonstrate that you understand and have been actively listening. It's important to avoid interrupting the speaker or offering advice until they have finished speaking. Active listening is an important skill to develop, as it shows the speaker that you value their perspective and are interested in understanding their point of view. This can help build trust, strengthen relationships, and minimize the potential for conflicts. Reflecting, paraphrasing, and summarizing are all techniques that can help demonstrate active listening and show the speaker that you are engaged and interested in what they have to say. Avoid interrupting or finishing their sentences, as this can be disrespectful and disruptive.</span>";
-    } else if (averageScore > 0.7 && averageScore <= 0.9) {
-      result = "<span id='blink' style='text-align: center;'>Advanced</span><br><span id='rdes'>Congratulations! You have a strong foundation in active listening concepts and techniques. You likely understand how active listening can help improve communication and foster stronger relationships with others. Keep practicing and refining your skills, and don't be afraid to experiment with new techniques or approaches to improve your listening abilities even further.Active listening involves being fully present and engaged in the conversation, with the intention of understanding the speaker's perspective. To improve your active listening skills, focus on being present in the moment, maintaining eye contact, and avoiding distractions. To overcome these barriers, try to focus your attention solely on the speaker, eliminate distractions, and let go of preconceptions or assumptions. Engage in active listening by paying attention to what the speaker is saying, summarizing their points, and asking clarifying questions. Reflective listening involves summarizing what the speaker has said in your own words to demonstrate that you understand and have been actively listening. It's important to avoid interrupting the speaker or offering advice until they have finished speaking. Active listening is an important skill to develop, as it shows the speaker that you value their perspective and are interested in understanding their point of view. This can help build trust, strengthen relationships, and minimize the potential for conflicts. Reflecting, paraphrasing, and summarizing are all techniques that can help demonstrate active listening and show the speaker that you are engaged and interested in what they have to say. Avoid interrupting or finishing their sentences, as this can be disrespectful and disruptive. </span>";
-    }
-    else if (averageScore > 0.9 && averageScore <= 1) {
-      result = "<span id='blink' style='text-align: center;'>Expert</span><br><span id='rdes'>Congratulations on an excellent performance! You clearly understand the importance of active listening and have developed a strong foundation in the techniques and concepts that underpin effective listening. You are well positioned to build stronger relationships with others, improve your communication skills, and contribute positively to your personal and professional life. Keep up the good work!Active listening involves being fully present and engaged in the conversation, with the intention of understanding the speaker's perspective. To improve your active listening skills, focus on being present in the moment, maintaining eye contact, and avoiding distractions. To overcome these barriers, try to focus your attention solely on the speaker, eliminate distractions, and let go of preconceptions or assumptions. Engage in active listening by paying attention to what the speaker is saying, summarizing their points, and asking clarifying questions. Reflective listening involves summarizing what the speaker has said in your own words to demonstrate that you understand and have been actively listening. It's important to avoid interrupting the speaker or offering advice until they have finished speaking. Active listening is an important skill to develop, as it shows the speaker that you value their perspective and are interested in understanding their point of view. This can help build trust, strengthen relationships, and minimize the potential for conflicts. Reflecting, paraphrasing, and summarizing are all techniques that can help demonstrate active listening and show the speaker that you are engaged and interested in what they have to say. Avoid interrupting or finishing their sentences, as this can be disrespectful and disruptive. </span>";
-    }
+   
+
 
     //Quiz Creation
     function quizCreator() {
@@ -965,7 +978,7 @@
         span_close_multi[i].setAttribute('data-index', i);
       }
     }
-   
+
 
 
 

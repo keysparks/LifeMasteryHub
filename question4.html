@@ -65,13 +65,13 @@
       padding: 0.5em 1.8em;
       border-radius: 0.2em;
     }
-
+/* 
     #restart {
       margin-top: 0.9em;
-    }
+    } */
 
     .header {
-      margin-bottom: 1.8em;
+      /* margin-bottom: 1.8em; */
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -90,14 +90,14 @@
     }
 
     .question {
-      /* margin-bottom: 1.25em; */
+      margin-bottom: 1.25em;
       font-weight: 600;
     }
 
     .option-div {
       font-size: 0.9em;
       width: 100%;
-      padding: 1em;
+      padding: 7px;
       margin: 0.3em 0;
       text-align: left;
       outline: none;
@@ -121,6 +121,7 @@
       float: right;
       width: 20%;
     }
+
     #pre-button {
       font-size: 1em;
       margin-top: 1.5em;
@@ -131,6 +132,7 @@
       float: left;
       width: 20%;
     }
+
     .hide {
       display: none;
     }
@@ -155,7 +157,7 @@
     .quiz_frame {
       display: flex;
       flex-wrap: wrap;
-      padding-top:30px;
+      padding-top: 30px;
     }
 
     .question-box {
@@ -168,7 +170,7 @@
       border-radius: 10px;
       /* border-bottom-right-radius: 30px; */
       padding: 5px;
-      
+
       margin-top: 60px;
 
     }
@@ -178,7 +180,7 @@
       padding: 3.1em 1.8em;
       width: 100%;
       /* max-width: 37.5em; */
-      margin: 1.5em auto;
+      /* margin: 1.5em auto; */
       border-radius: 5px;
       height: 100%;
     }
@@ -198,6 +200,7 @@
       padding: 30px;
       margin: auto;
       animation: none;
+      overflow: auto;
       /* remove any animation applied previously */
     }
 
@@ -210,11 +213,33 @@
       text-align: center;
       margin: auto;
     }
-
     @keyframes blinker {
       50% {
         opacity: 0;
       }
+    }
+    @media (min-width:1500px) {
+      .question-box{
+        width:80%;
+        height: 33rem;
+      }
+     
+    }
+    @media (max-width:767px) {
+      .question-box{
+        width:auto;
+        height: 39rem;
+      }
+      #next-button, #pre-button{
+        width:30%;
+      }
+    }
+    @media (max-width:500px) {
+      .question-box{
+        width:auto;
+        height: 40rem;
+      }
+     
     }
 
     /* The Modal (background) */
@@ -558,11 +583,11 @@
           <div class="community footer-item">
             <h4>Policies</h4>
             <ul>
-              <li><a style="cursor: -webkit-grab; cursor: grab;" class=" myBtn_multi button button1">Terms &
+              <li><a style="cursor:pointer;" class=" myBtn_multi button button1">Terms &
                   Conditions</a></li>
-              <li><a style="cursor: -webkit-grab; cursor: grab;" class=" myBtn_multi button button1">FAQ</a></li>
-              <li><a style="cursor: -webkit-grab; cursor: grab;" class="myBtn_multi  button button1">Disclamier</a></li>
-              <li><a style="cursor: -webkit-grab; cursor: grab;" id="myBtn" class="button button1">Privacy Policy</a>
+              <li><a style="cursor:pointer;" class=" myBtn_multi button button1">FAQ</a></li>
+              <li><a style="cursor:pointer;" class="myBtn_multi  button button1">Disclamier</a></li>
+              <li><a style="cursor:pointer;" id="myBtn" class="button button1">Privacy Policy</a>
               </li>
 
             </ul>
@@ -708,7 +733,7 @@ preBtn.addEventListener("click", () => {
       "click",
       (displayNext = () => {
         //increment questionCount
-        nextBtn.disabled = false;
+        nextBtn.disabled = true;        
         questionCount += 1;
         // check if user is on the second question 
         if (questionCount === 1) {

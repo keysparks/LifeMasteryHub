@@ -68,7 +68,7 @@
     }
 
     .header {
-      margin-bottom: 1.8em;
+      /* margin-bottom: 1.8em; */
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -94,7 +94,7 @@
     .option-div {
       font-size: 0.9em;
       width: 100%;
-      padding: 1em;
+      padding: 7px;
       margin: 0.3em 0;
       text-align: left;
       outline: none;
@@ -130,6 +130,146 @@
       width: 20%;
     }
 
+    .hide {
+      display: none;
+    }
+
+    /* .incorrect {
+      background-color: #ffdde0;
+      color: #d32f2f;
+      border-color: #d32f2f;
+    }
+
+    .correct {
+      background-color: #e7f6d5;
+      color: #689f38;
+      border-color: #689f38;
+    } */
+
+    #user-score {
+      font-size: 1.5em;
+      color: #ffffff;
+    }
+
+    .quiz_frame {
+      display: flex;
+      flex-wrap: wrap;
+      padding-top: 30px;
+    }
+
+    .question-box {
+      width: 80%;
+      height: 35rem;
+      background-color: #ff695f;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 10px;
+      /* border-bottom-right-radius: 30px; */
+      padding: 5px;
+
+      margin-top: 60px;
+
+    }
+
+    #display-container {
+      background-color: #ffffff;
+      padding: 3.1em 1.8em;
+      width: 100%;
+      /* max-width: 37.5em; */
+      /* margin: 1.5em auto; */
+      border-radius: 5px;
+      height: 100%;
+    }
+
+    .question_page_button {
+      text-align: center;
+      padding-top: 30px;
+      border-top: 1px solid #eee;
+      /* width: 60%; */
+      margin: auto;
+    }
+
+    #user-score {
+      font-size: 1em;
+      color: #ffffff;
+      text-align: center;
+      padding: 30px;
+      margin: auto;
+      animation: none;
+      /* remove any animation applied previously */
+    }
+
+    #blink {
+      animation: blinker 1.5s linear infinite;
+      color: rgb(255, 255, 255);
+      font-family: sans-serif;
+      font-size: larger;
+      font-weight: bolder;
+      text-align: center;
+      margin: auto;
+    }.header {
+      /* margin-bottom: 1.8em; */
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 0.6em;
+      border-bottom: 0.1em solid #c0bfd2;
+    }
+
+    .timer-div {
+      background-color: #e1f5fe;
+      width: 7.5em;
+      border-radius: 1.8em;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.7em 1.8em;
+    }
+
+    .question {
+      margin-bottom: 1.25em;
+      font-weight: 600;
+    }
+
+    .option-div {
+      font-size: 0.9em;
+      width: 100%;
+      padding: 7px;
+      margin: 0.3em 0;
+      text-align: left;
+      outline: none;
+      background: transparent;
+      border: 1px solid #c0bfd2;
+      border-radius: 0.3em;
+    }
+
+    .option-div:disabled {
+      color: #000000;
+      cursor: not-allowed;
+    }
+
+    #next-button {
+      font-size: 1em;
+      margin-top: 1.5em;
+      background-color: #0a69ed;
+      color: #ffffff;
+      padding: 0.7em 1.8em;
+      border-radius: 0.3em;
+      float: right;
+      width: 20%;
+    }
+
+    #pre-button {
+      font-size: 1em;
+      margin-top: 1.5em;
+      background-color: #0a69ed;
+      color: #ffffff;
+      padding: 0.7em 1.8em;
+      border-radius: 0.3em;
+      float: left;
+      width: 20%;
+    }
 
     .hide {
       display: none;
@@ -147,40 +287,48 @@
       border-color: #689f38;
     } */
 
+    #user-score {
+      font-size: 1.5em;
+      color: #ffffff;
+    }
 
     .quiz_frame {
       display: flex;
       flex-wrap: wrap;
-      padding: 60px 0px 20px 0px;
+      padding-top: 30px;
     }
 
     .question-box {
-      width: auto;
-      height: 730px;
+      width: 80%;
+      height: 35rem;
       background-color: #ff695f;
       display: flex;
       justify-content: center;
       align-items: center;
-      border-radius: 5px;
+      border-radius: 10px;
       /* border-bottom-right-radius: 30px; */
       padding: 5px;
-      margin-top: 60px;
-    }
 
+      margin-top: 60px;
+
+    }
 
     #display-container {
       background-color: #ffffff;
       padding: 3.1em 1.8em;
       width: 100%;
       /* max-width: 37.5em; */
-      margin: 1.5em auto;
+      /* margin: 1.5em auto; */
       border-radius: 5px;
       height: 100%;
     }
 
-    #resultDisplay {
-      font-weight: bold;
-      margin-bottom: 10px;
+    .question_page_button {
+      text-align: center;
+      padding-top: 30px;
+      border-top: 1px solid #eee;
+      /* width: 60%; */
+      margin: auto;
     }
 
     #user-score {
@@ -207,6 +355,29 @@
       50% {
         opacity: 0;
       }
+    }
+     @media (min-width:1500px) {
+      .question-box{
+        width:80%;
+        height: 33rem;
+      }
+     
+    }
+    @media (max-width:767px) {
+      .question-box{
+        width:auto;
+        height: 39rem;
+      }
+      #next-button, #pre-button{
+        width:30%;
+      }
+    }
+    @media (max-width:500px) {
+      .question-box{
+        width:auto;
+        height: 40rem;
+      }
+     
     }
 
     /* The Modal (background) */
@@ -305,7 +476,7 @@
         terms and conditions shall be governed by and construed in accordance with the laws of the country in which the
         website is based, without giving effect to any principles of conflicts of law. </p>
       </p> <br>
-      <p>for any of your questions, please contact us at <a href="./index.html">info@lifemasteryhub.com</a>
+      <p>for any of your questions, please contact us at info@lifemasteryhub.com
       </p>
 
       </p>
@@ -322,9 +493,6 @@
       <span class="close close_multi">×</span>
       <h3 style="text-align:center;">Life Mastery Hub - Frequently Asked Questions (FAQs) </h3>
       <br>
-      <p>
-
-
       <p style="font-weight: bolder;">Q1: What is Life Mastery Hub? </P>
 
       <p>A: Life Mastery Hub is a website that provides resources, tools, and programs to help individuals achieve
@@ -369,16 +537,9 @@
       <p>A: It's up to you and your individual needs and goals. Some people may find it helpful to use Life Mastery Hub
         on a daily basis, while others may only need to access it periodically. The key is to incorporate the resources
         and tools you gain into your daily life and continue to practice and refine them over time. </p>
-
       <br>
-
-
-
-
     </div>
   </div>
-
-
 
   <div class="modal modal_multi">
 
@@ -387,9 +548,7 @@
       <span class="close close_multi">×</span>
       <h3 style="text-align:center;">Life Mastery Hub - Disclaimer</h3>
       <br>
-      <p>
-
-
+    
       <p>The information and materials provided on this website are intended for general informational purposes only and
         are not a substitute for professional advice. While every effort has been made to provide accurate and
         up-to-date information, the website and its creators make no representation or warranties of any kind, express
@@ -405,16 +564,8 @@
       <br>
       <p>By using this website, you agree to the terms and conditions outlined in this disclaimer
       </P>
-
-
-
     </div>
   </div>
-
-
-
-
-
 
   <div id="myModal" class="modal">
     <!-- Modal content -->
@@ -433,65 +584,20 @@
         We may collect personal information from you, including your name, email address, and other contact information
         when you create an account, purchase a course, or subscribe to our newsletter. We may also collect information
         about your use of the Website, such as the pages you visit and the actions you take on the Website.
-
       </p>
       <br>
       <p>
-
         We may use the personal information we collect to provide you with the services and information you request, to
         improve the Website, to send you promotional materials and updates, and to contact you with important
         information about your account. We may also use the information we collect to personalize your experience on the
         Website, to improve our products and services, and to conduct research and analysis.
-
-
       </p><br>
-
-      <p>We may share your personal information with third parties who provide services to us, such as payment
+     <p>We may share your personal information with third parties who provide services to us, such as payment
         processors and email service providers. We may also share your information if required to do so by law or if we
         believe in good faith that such disclosure is necessary to protect our rights.
       </p>
-
     </div>
-
   </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
   <!-- ***** Header Area Start ***** -->
@@ -516,7 +622,6 @@
                     <li><a href="courses.html">Problem Solving</a></li>
                     <li><a href="courses3.html">Decision making</a></li>
                     <li><a href="courses4.html">Conflict management</a></li>
-
                   </ul>
                 </div>
               </div>
@@ -539,14 +644,12 @@
 
   <div class="main-banner" id="top">
     <div class="container">
-      
         <div class="col-lg-12">
           <div class="row">
-            <div class="col-lg-6 align-self-center">
+            <div class="col-lg-6 col-md-12 col-12 align-self-center">
               <!-- <div class="owl-carousel owl-banner"> -->
               <div class="item header-text">
                 <h6>Welcome to Life Mastery Hub! </h6>
-
                 <p> Life is a journey filled with endless opportunities, challenges, and experiences. The path we
                   choose to take and the way we navigate through these experiences shapes our future and determines
                   our level of success and happiness. In today's fast-paced world, having strong life skills has
@@ -562,12 +665,10 @@
                   doing so, we can unlock our full potential, realize our dreams, and create a life that is truly
                   worth living. </p>
               </div>
-
-
               <!-- </div> -->
             </div>
-            <div class="col-lg-6 col-md-6 col-6">
-              <div class="home_page_image">
+            <div class="container col-lg-6 col-md-12 col-12">            
+                <div class="home_page_image">
                 <img src="./assets/images/1-home-introduction.png">
               </div>
             </div>
@@ -577,9 +678,9 @@
     </div>
   </div>
   <div id="video" class="our-videos section">
-    <div class="videos-left-dec">
+    <!-- <div class="videos-left-dec">
       <img src="./assets/images/videos-left-dec.png" alt="">
-    </div>
+    </div> -->
     <div class="videos-right-dec">
       <img src="./assets/images/videos-right-dec.png" alt="">
     </div>
@@ -592,14 +693,10 @@
           <div class="naccs">
             <div class="grid">
               <div class="row">
-
-
                 <div class="col-lg-6">
                   <div class="menu">
                     <div class="active">
                       <div class="thumb">
-
-
                         <div class="inner-content">
                           <!-- <h4>Empower Yourself with Essential Life Skills! </h4> -->
                           <div class="active active_box">
@@ -609,19 +706,13 @@
                                 in personal and professional endeavours, maintain healthy relationships, and overall
                                 well-being, while empowering individuals to navigate through the challenges of life and
                                 live a fulfilling and meaningful life. </p>
-
                             </span>
                           </div>
                         </div>
                       </div>
                     </div>
-
-
-
                   </div>
                 </div>
-
-
                 <div class="col-lg-6">
                   <ul class="nacc">
                     <li class="active">
@@ -639,9 +730,6 @@
                         </div>
                       </div>
                     </li>
-
-
-
                   </ul>
                 </div>
 
@@ -725,20 +813,13 @@
               sense of purpose.</p>
             <p><span><i class="bi bi-check-all"></i> Wind down routine: </span>Establish a relaxing bedtime
               routine, such as reading a book, taking a bath, or listening to calming music, to promote restful sleep
-              and overall well-being.</p><br>
+              and overall well-being.</p>
 
-
-
+            </div>
             <p>By incorporating these practices into your daily routine, you can develop and strengthen
-              important life
-
-              skills, including mindfulness, physical fitness, learning, gratitude, social skills, time
-              management,
-
-              creativity, and self-care. This unique daily routine can help you thrive, grow, and live a
+              important life skills, including mindfulness, physical fitness, learning, gratitude, social skills, time
+              management, creativity, and self-care. This unique daily routine can help you thrive, grow, and live a
               more fulfilling life. </p>
-
-          </div>
         </div>
       </div>
     </div>
@@ -748,8 +829,8 @@
 
   <div class="quiz_frame">
     <div class="container">
-      <div class="row">
-        <div class="col-lg-5">
+      <!-- <div class="row"> -->
+        <!-- <div class="col-lg-5"> -->
           <div class="section-heading quiz_intro_content ">
             <h1><i class="bi bi-question-circle"></i> Quiz Instruction</h1>
           </div>
@@ -759,14 +840,9 @@
               be true to yourself to evaluate your current level (Level are Beginner, Intermediate, Advance, Expert).
             </p>
           </div>
-        </div>
-        <div class="col-lg-7 align-self-center">
-
+        <!-- </div> -->
+        <!-- <div class="col-lg-7 align-self-center"> -->
           <div class="container question-box">
-
-
-
-
             <div class="start-screen">
               <button id="start-button">Start</button>
             </div>
@@ -783,9 +859,7 @@
               </div>
               <button id="pre-button" hidden>Previous</button>
               <button id="next-button">Next</button>
-
             </div>
-
             <div class="score-container hide">
               <div>
                 <div id="user-score">Demo Score</div>
@@ -793,24 +867,9 @@
               <!--  <div id="resultDisplay"></div>-->
               <button id="restart">Restart</button>
             </div>
-
-
-
-
-
-
-
-
-
-
-
           </div>
-        </div>
-
-
-
-
-      </div>
+        <!-- </div> -->
+      <!-- </div> -->
     </div>
   </div>
   <!-- --------------------------End of quiz section--------------------------------------- -->
@@ -820,9 +879,9 @@
       <img src="./assets/images/services-right-dec.png" alt="">
     </div>
     <div class="container">
-      <div class="services-left-dec">
+      <!-- <div class="services-left-dec">
         <img src="./assets/images/services-left-dec.png" alt="">
-      </div>
+      </div> -->
       <div class="row">
         <div class="col-lg-6">
           <div class="section-heading quiz_intro_content">
@@ -873,8 +932,6 @@
                   personal and professional life</p>
               </a>
             </div>
-
-
           </div>
         </div>
       </div>
@@ -917,11 +974,11 @@
           <div class="community footer-item">
             <h4>Policies</h4>
             <ul>
-              <li><a style="cursor: -webkit-grab; cursor: grab;" class=" myBtn_multi button button1">Terms &
+              <li><a style=" cursor: pointer;" class=" myBtn_multi button button1">Terms &
                   Conditions</a></li>
-              <li><a style="cursor: -webkit-grab; cursor: grab;" class=" myBtn_multi button button1">FAQ</a></li>
-              <li><a style="cursor: -webkit-grab; cursor: grab;" class="myBtn_multi  button button1">Disclamier</a></li>
-              <li><a style="cursor: -webkit-grab; cursor: grab;" id="myBtn" class="button button1">Privacy Policy</a>
+              <li><a style=" cursor: pointer;" class=" myBtn_multi button button1">FAQ</a></li>
+              <li><a style=" cursor: pointer;" class="myBtn_multi  button button1">Disclamier</a></li>
+              <li><a style=" cursor: pointer;" id="myBtn" class="button button1">Privacy Policy</a>
               </li>
 
             </ul>
@@ -1149,7 +1206,7 @@
       "click",
       (displayNext = () => {
         //increment questionCount
-        nextBtn.disabled = false;
+        nextBtn.disabled = true;
         questionCount += 1;
         // check if user is on the second question 
         if (questionCount === 1) {

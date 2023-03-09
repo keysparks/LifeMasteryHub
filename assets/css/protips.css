@@ -6,11 +6,23 @@ protips
 .protips_content .protips-img {
   /* padding: 30px; */
   width: 80%;
-  height: 500px;
+  /* height: 500px; */
   display: block;
   margin: 0 auto;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  /* padding-top: 10px;
+  padding-bottom: 10px; */
+  transition: 0.5s;
+  border: 2px solid rgba(0, 0, 0, 0.153);
+  border-radius: 4px;
+  padding: 5px;
+}
+
+.protips_img_content {
+  padding-top: 20px;
+}
+
+.protips-img:hover {
+  transform: scale(1.08);
 }
 
 .protips {
@@ -36,19 +48,20 @@ protips
 .protips_content ul span {
   color: #03a4ed;
   font-size: 18px;
-  font-weight:500;
+  font-weight: 500;
 }
 
-.protips_content  span  {
+.protips_content span {
   color: #03a4ed;
   font-size: 18px;
   font-weight: 500;
 }
-.protips_content  span i{
-  color:#ff695f;
+
+.protips_content span i {
+  color: #ff695f;
 }
 
-.protips_content  p {
+.protips_content p {
   padding-left: 30px;
   text-align: justify;
 }
@@ -56,7 +69,7 @@ protips
 .protips p {
   text-align: justify;
   font-size: 16px;
-  padding-top:20px;
+  padding-top: 20px;
   font-weight: 400;
   color: black;
 }
@@ -149,6 +162,7 @@ protips
   text-decoration: none;
   color: #fff;
 }
-.protips_button_page{
+
+.protips_button_page {
   text-align: center;
 }

@@ -49,10 +49,19 @@ Psychological facts content
   height: 500px;
   display: block;
   margin: 0 auto;
-  padding-top: 20px;
+  /* padding-top: 20px; */
   /* padding-bottom: 20px; */
+  transition: 0.5s;
+  border: 2px solid rgba(0, 0, 0, 0.153);
+  border-radius: 4px;
+  padding: 5px;
 }
-
+.summary_img_content{
+  padding-top: 20px;
+}
+.facts-img:hover{
+  transform: scale(1.08);
+}
 .facts-time {
   text-align: left;
   font-weight: 600;
@@ -204,4 +213,20 @@ Psychological facts content
 
 .facts_page_button {
   text-align: center;
+}
+@media (max-width:1200px) {
+  .facts-time .facts-img {
+    height: 400px;
+  }
+}
+
+@media (max-width:991px) {
+  .facts-time .facts-img {
+    height: 300px;
+  }
+}
+@media (max-width:767px){
+  .facts-time .facts-img{
+    height: 280px;
+  }
 }
