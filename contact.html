@@ -11,7 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
     rel="stylesheet">
 
-    <link rel="icon" type="icon"  href="./assets/images/new-mini-logo.png">
+  <link rel="icon" type="icon" href="./assets/images/new-mini-logo.png">
   <title>Life Skill Portal</title>
 
   <!-- Bootstrap core CSS -->
@@ -300,11 +300,13 @@
                   <li><a href="courses.html">Problem-Solving</a></li>
                   <li><a href="courses3.html">Decision Making</a></li>
                   <li><a href="courses4.html">Conflict Management</a></li>
+                  <li><a href="courses5.html">Communication</a></li>
+                  <li><a href="courses6.html">Performance optimization</a></li>
                 </ul>
               </div>
               <li class="scroll-to-section"><a href="about.html">About Us</a></li>
               <li class="scroll-to-section">
-                <div ><a href="contact.html" class="active">Contact Us</a></div>
+                <div><a href="contact.html" class="active">Contact Us</a></div>
               </li>
             </ul>
             <a class='menu-trigger'>
@@ -335,7 +337,8 @@
       </div>
       <div class="contact_page_content">
 
-        <p><span>Life Mastery Hub</span> enquiry form is open to everyone who needs any information or details about our services. We
+        <p><span>Life Mastery Hub</span> enquiry form is open to everyone who needs any information or details about our
+          services. We
           believe that providing clear and transparent communication is the key to building strong relationships with
           unprecedented trust. Our team is always ready to assist you with any services related queries. By reaching out
           to us through our enquiry form, you can expect a prompt and personalized response from our experienced
@@ -409,7 +412,7 @@
           <!-- <input class="ccformfield" type="text" placeholder="Your Expertise" required> -->
           <select name="your expertise" id="yourexpertise" class="ccformfield ccformselect" required>
 
-             <option value="#">Your Expertise</option>
+            <option value="#">Your Expertise</option>
 
             <option value="#">Accounting and Finance</option>
 
@@ -449,9 +452,9 @@
 
             <option value="#">Student and Youth services</option>
 
-             <option value="#">Others</option>
+            <option value="#">Others</option>
 
-            </select>
+          </select>
         </div>
         <div class="ccfield-prepend">
           <span class="ccform-addon"><i class="fa fa-comment fa-2x"></i></span>
@@ -526,6 +529,8 @@
               <li><a href="courses.html">Problem-Solving</a></li>
               <li><a href="courses3.html">Decision Making</a></li>
               <li><a href="courses4.html">Conflict Management</a></li>
+              <li><a href="courses5.html">Communication</a></li>
+              <li><a href="courses6.html">Performance optimization</a></li>
             </ul>
           </div>
         </div>
@@ -533,7 +538,7 @@
           <div class="copyright">
             <p>Copyright © 2023 rqlik. All Rights Reserved.
               <br>
-              Designed by <a rel="nofollow" href="https://keysparks.com" title="KeySparks Technologies">KeySparks
+              Designed by <a rel="nofollow" href="https://keysparks.com" title="Key Sparks Technologies">Key Sparks
                 Technologies</a>
             </p>
           </div>
@@ -637,27 +642,27 @@
 
 
     // Acc
- $(document).on("click", ".naccs .menu div", function() {
+    $(document).on("click", ".naccs .menu div", function () {
       var numberIndex = $(this).index();
 
       if (!$(this).is("active")) {
-          $(".naccs .menu div").removeClass("active");
-          $(".naccs ul li").removeClass("active");
+        $(".naccs .menu div").removeClass("active");
+        $(".naccs ul li").removeClass("active");
 
-          $(this).addClass("active");
-          $(".naccs ul").find("li:eq(" + numberIndex + ")").addClass("active");
+        $(this).addClass("active");
+        $(".naccs ul").find("li:eq(" + numberIndex + ")").addClass("active");
 
-          var listItemHeight = $(".naccs ul")
-            .find("li:eq(" + numberIndex + ")")
-            .innerHeight();
-          $(".naccs ul").height(listItemHeight + "px");
-        }
+        var listItemHeight = $(".naccs ul")
+          .find("li:eq(" + numberIndex + ")")
+          .innerHeight();
+        $(".naccs ul").height(listItemHeight + "px");
+      }
     });
 
 
- 
-    
-    
+
+
+
 
   </script>
 </body>

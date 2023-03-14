@@ -269,6 +269,14 @@
     color: #0f3e7b;
     /* padding-top: 30px; */
 }
+.intro_content_title ul{
+    padding: 10px 0px 10px 70px;
+}
+.intro_content_title ul li{
+    color: black;
+    list-style:disc;
+    padding-bottom: 10px;
+}
 
 .intro_content_title p {
     padding-top: 20px;

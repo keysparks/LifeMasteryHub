@@ -104,6 +104,11 @@ story content
   /* text-align: left; */
 }
 
+.story-time-steps li i{
+  color: #ff695f;
+}
+
+
 .story-time p span {
   color: #03a4ed !important;
   font-size: 18px;
@@ -185,6 +190,9 @@ story content
   font-size: 18px;
   text-decoration: none;
   padding-top: 20px;
+  color: #03a4ed;
+  font-weight: 500;
+
 }
 
 .story-content .section-title h1 {

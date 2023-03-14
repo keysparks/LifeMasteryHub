@@ -195,6 +195,13 @@ p {
 img {
   width: 100%;
   overflow: hidden;
+  -webkit-user-drag: none;
+    /* user-drag: none; */
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
 }
 
 /* 
@@ -399,7 +406,7 @@ header
 }
 
 .logo {
-  width: 20vh;
+  width: 18vh;
   /* min-width: 80px; */
 }
 
@@ -1756,13 +1763,17 @@ Video
 
 .overall_video_container {
   padding-top: 30px;
+  width: 90%;
+ margin:auto;
+
 }
 
 .our-videos {
   position: relative;
   /* margin-bottom: -30px; */
-  padding: 60px 0px 20px 0px;
+  padding: 40px 0px 20px 0px;
   margin-top: 0px;
+  background-color: #fafafa;
 }
 
 .our-videos .naccs {
@@ -1790,7 +1801,7 @@ Video
   color: #000000;
   background: #ffffff;
   /* background-color: #fafafa; */
-  padding: 30px 20px;
+  padding: 10px 20px;
 }
 
 .our-videos .naccs .menu div.active .thumb .inner-content h4 {
@@ -1893,7 +1904,7 @@ Video
   top: 0;
   padding: 5px;
   transition: all 0.3s;
-  margin-top: 40px;
+  margin-top: 35px;
   /* margin-bottom: 30vh; */
 }
 
@@ -2450,7 +2461,7 @@ footer .copyright p {
 }
 
 footer .copyright p a {
-  color: #ff695f;
+   color: #03a4ed;
 }
 
 /* 
@@ -2468,6 +2479,7 @@ responsive
   .our-videos .menu .thumb .inner-content{
     margin-top: 10px;
   }
+ 
 
 }
 
@@ -2557,7 +2569,6 @@ responsive
   }
   .home_page_image{
     width:130%;
-    margin-top: 0px;
   }
   .home_activity_img {
     height: 20ch;
@@ -2793,6 +2804,16 @@ padding-bottom: 20px !important; */
   text-align: justify;
 
 }
+.subheading2_indent ul{
+  text-indent: 5%;
+  text-align: justify;
+ 
+}
+.subheading2_indent ul li{
+  text-indent: 5%;
+  text-align: justify;
+ 
+}
 
 .about_end{
   border-top: 1px solid #eee;
@@ -2805,18 +2826,7 @@ padding-bottom: 20px !important; */
   color: #0f3e7b;
   padding: 0px;
 }
-@media (min-width:1900px){
-  /* html,
-  body {
-    overflow-x: hidden;
-  } */
-}
-@media (max-width:1900px){
-  /* html,
-  body {
-    overflow-x: hidden;
-  } */
-}
+
 @media (max-width:768px){
   .our-services .item{
     height:580px;
@@ -2831,12 +2841,23 @@ padding-bottom: 20px !important; */
     width:100%;
   }
 }
+@media (max-width:1200px){
+  .home_page_image{
+    width:130%;
+   padding-top: 150px;
+  }
+}
 @media (max-width:1399px){
   .home_page_image{
     width:130%;
-    margin-top: 250px;
+   padding-top: 150px;
   }
 }
-
+@media (max-width:992px){
+  .home_page_image{
+    width:130%;
+   padding-top: 0px;
+  }
+}
 
 

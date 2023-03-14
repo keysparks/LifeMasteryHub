@@ -35,272 +35,512 @@
     <link rel="stylesheet" href="assets/css/quiz.css">
     <style>
         #form-container {
-            display: none;
+          display: none;
         }
-
+    
         * {
-            padding: 0;
-            margin: 0;
-            box-sizing: border-box;
-            font-family: "Poppins", sans-serif;
+          padding: 0;
+          margin: 0;
+          box-sizing: border-box;
+          font-family: "Poppins", sans-serif;
         }
-
-        .start-screen,
+    
+        .start-screen {
+    
+          top: 40%;
+          width: 100%;
+          height: 100%;
+          left: 50%;
+          display: flex;
+          flex-direction: column;
+          text-align: center;
+          align-items: center;
+          justify-content: center;
+        }
+    
         .score-container {
-
-            top: 40%;
-            width: 100%;
-            height: 100%;
-            left: 50%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
+          background-color: #fff;
+          top: 40%;
+          width: 100%;
+          height: 100%;
+          left: 50%;
+          /* display: flex; */
+          flex-direction: column;
+          text-align: center;
+          align-items: center;
+          justify-content: center;
+          border-radius: 20px;
+    
         }
-
+    
         button {
-            border: none;
-            outline: none;
-            cursor: pointer;
+          border: none;
+          outline: none;
+          cursor: pointer;
         }
-
+    
         #start-button,
         #restart {
-            font-size: 1.3em;
-            padding: 0.5em 1.8em;
-            border-radius: 0.2em;
+          font-size: 1.3em;
+          padding: 0.5em 0.8em;
+          border-radius: 0.2em;
+          background-color: #ff695f;
+          color: #fff;
         }
-
+    
+    
         #restart {
-            margin-top: 0.9em;
+          margin-top: 15px;
+          margin-bottom: 10px;
         }
-
+    
         .header {
-            /* margin-bottom: 1.8em; */
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding-bottom: 0.6em;
-            border-bottom: 0.1em solid #c0bfd2;
+          /* margin-bottom: 1.8em; */
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding-bottom: 0.6em;
+          border-bottom: 0.1em solid #c0bfd2;
         }
-
+    
         .timer-div {
-            background-color: #e1f5fe;
-            width: 7.5em;
-            border-radius: 1.8em;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 0.7em 1.8em;
+          background-color: #e1f5fe;
+          width: 7.5em;
+          border-radius: 1.8em;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 0.7em 1.8em;
         }
-
+    
         .question {
-            margin-bottom: 1.25em;
-            font-weight: 600;
+          margin-bottom: 1.25em;
+          font-weight: 600;
         }
-
+    
         .option-div {
-            font-size: 0.9em;
-            width: 100%;
-            padding: 7px;
-            margin: 0.3em 0;
-            text-align: left;
-            outline: none;
-            background: transparent;
-            border: 1px solid #c0bfd2;
-            border-radius: 0.3em;
+          font-size: 0.9em;
+          width: 100%;
+          padding: 7px;
+          margin: 0.3em 0;
+          text-align: left;
+          outline: none;
+          background: transparent;
+          border: 1px solid #c0bfd2;
+          border-radius: 0.3em;
+          font-weight: normal;
+          cursor: pointer;
         }
-
+    
         .option-div:disabled {
-            color: #000000;
-            cursor: not-allowed;
+          color: #000000;
+          /* cursor: not-allowed; */
         }
-
+    
         #next-button {
-            font-size: 1em;
-            margin-top: 1.5em;
-            background-color: #0a69ed;
-            color: #ffffff;
-            padding: 0.7em 1.8em;
-            border-radius: 0.3em;
-            float: right;
-            width: 20%;
+          font-size: 1em;
+          margin-top: 1.5em;
+          background-color: #0a69ed;
+          color: #ffffff;
+          padding: 0.7em 1.8em;
+          border-radius: 0.3em;
+          float: right;
+          width: 15%;
         }
-
+    
         #pre-button {
-            font-size: 1em;
-            margin-top: 1.5em;
-            background-color: #0a69ed;
-            color: #ffffff;
-            padding: 0.7em 1.8em;
-            border-radius: 0.3em;
-            float: left;
-            width: 20%;
+          font-size: 1em;
+          margin-top: 1.5em;
+          background-color: #0a69ed;
+          color: #ffffff;
+          padding: 0.7em 1.8em;
+          border-radius: 0.3em;
+          float: left;
+          width: 15%;
         }
-
+    
         .hide {
-            display: none;
+          display: none;
         }
-
-        /* .incorrect {
-      background-color: #ffdde0;
-      color: #d32f2f;
-      border-color: #d32f2f;
-    }
-
-    .correct {
-      background-color: #e7f6d5;
-      color: #689f38;
-      border-color: #689f38;
-    } */
-
+    
         #user-score {
-            font-size: 1.5em;
-            color: #ffffff;
+          font-size: 1.5em;
+          color: #ffffff;
         }
-
+    
         .quiz_frame {
-            display: flex;
-            flex-wrap: wrap;
-            padding-top: 30px;
+          display: flex;
+          flex-wrap: wrap;
+          padding-top: 30px;
         }
-
+    
         .question-box {
-            width: 80%;
-            height: 39rem;
-            background-color: #ff695f;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 10px;
-            /* border-bottom-right-radius: 30px; */
-            padding: 5px;
-
-            margin-top: 60px;
-
+          background-image: url(./assets/images/quizStart.png);
+          background-repeat: no-repeat;
+          background-size: cover;
+          box-shadow: 0px 0px 15px #ff695f;
+          width: 80%;
+          height: 40rem;
+          /* background-color: #ff695f; */
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 10px;
+          /* border-bottom-right-radius: 30px; */
+          padding: 0px;
+    
+          margin-top: 60px;
+    
         }
-
+    
         #display-container {
-            background-color: #ffffff;
-            padding: 3.1em 1.8em;
-            width: 100%;
-            /* max-width: 37.5em; */
-            /* margin: 1.5em auto; */
-            border-radius: 5px;
-            height: 100%;
+          background-color: #ffffff;
+          padding: 3.1em 1.8em;
+          width: 100%;
+          /* max-width: 37.5em; */
+          /* margin: 1.5em auto; */
+          border-radius: 5px;
+          height: 100%;
         }
-
+    
         .question_page_button {
-            text-align: center;
-            padding-top: 30px;
-            border-top: 1px solid #eee;
-            /* width: 60%; */
-            margin: auto;
+          text-align: center;
+          padding-top: 30px;
+          border-top: 1px solid #eee;
+          /* width: 60%; */
+          margin: auto;
         }
-
+    
         #user-score {
-            font-size: 1em;
-            color: #ffffff;
-            text-align: center;
-            padding: 30px;
-            margin: auto;
-            animation: none;
-            /* remove any animation applied previously */
+    
+          font-size: 1em;
+          color: black;
+          /* text-align: center; */
+          /* padding: 30px; */
+          /* margin: auto; */
+          animation: none;
         }
-
+    
         #blink {
-            animation: blinker 1.5s linear infinite;
-            color: rgb(255, 255, 255);
-            font-family: sans-serif;
-            font-size: larger;
-            font-weight: bolder;
-            text-align: center;
-            margin: auto;
+          animation: blinker 1.5s linear infinite;
+          /* color: yellowgreen; */
+          font-family: sans-serif;
+          font-size: 28px;
+          font-weight: bolder;
+          text-align: center;
+          margin: auto;
+          -webkit-text-stroke: 0.5px black;
         }
-
+    
+        .blink1 {
+          position: relative;
+          isolation: isolate;
+          padding:50px 20px 170px 20px ;
+        }
+    
+        .blink1::after {
+          background-image: url(./assets/images/quizScore.jpg);
+          background-repeat: no-repeat;
+          background-size: cover;
+          opacity: 0.2;
+          content: '';
+          position: absolute;
+          z-index: -1;
+          inset: 0;
+    
+    
+        }
+    
+        .blink2 {
+          position: relative;
+          isolation: isolate;
+          padding:50px 20px 170px 20px ;
+        }
+    
+        .blink2::after {
+          background-image: url(./assets/images/intermidiate-quiz.png);
+          background-repeat: no-repeat;
+          background-size: cover;
+    
+          opacity: 0.2;
+          content: '';
+          position: absolute;
+          z-index: -1;
+          inset: 0;
+    
+        }
+    
+        .blink3 {
+          position: relative;
+          isolation: isolate;
+          padding:50px 20px 170px 20px ;
+        }
+    
+        .blink3::after {
+          background-image: url(./assets/images/advance-levelQuiz.jfif);
+          background-repeat: no-repeat;
+          background-size: cover;
+    
+          opacity: 0.2;
+          content: '';
+          position: absolute;
+          z-index: -1;
+          inset: 0;
+    
+        }
+    
+        .blink4 {
+          position: relative;
+          isolation: isolate;
+          padding:50px 20px 170px 20px ;
+        }
+    
+        .blink4::after {
+          background-image: url(./assets/images/expert-blue-quiz.jpg);
+          background-repeat: no-repeat;
+          background-size: cover;
+    
+          opacity: 0.2;
+          content: '';
+          position: absolute;
+          z-index: -1;
+          inset: 0;
+    
+        }
+    
+        .blink1,
+        .blink2,
+        .blink3,
+        .blink4 {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          /* padding: 10px 20px; */
+          font-weight: 500;
+        }
+    
+        .blink1 #rdes,
+        .blink2 #rdes,
+        .blink3 #rdes,
+        .blink4 #rdes {
+          text-align: left;
+          margin-top: 20px;
+        }
+    
+    
+    
         @keyframes blinker {
-            50% {
-                opacity: 0;
-            }
+          50% {
+            opacity: 0;
+          }
         }
-
+    
         @media (min-width:1500px) {
-            .question-box {
-                width: 80%;
-                height: 32rem;
-            }
-
+          .question-box {
+            width: 80%;
+            height: 33rem;
+          }
+    
+    
         }
+    
+        @media (max-width:1500px) {
+    
+          .blink1 {
+            padding:50px 20px 170px 20px ;
+          }
+    
+          .blink2 {
+            padding:50px 20px 170px 20px;
+          }
+    
+          .blink3 {
+            padding:50px 20px 170px 20px;
+          }
+    
+          .blink4 {
+            padding:50px 20px 170px 20px;
+          }
+    
+        }
+        
+    @media (max-width:1200px) {
 
+.blink1 {
+  padding: 50px 20px 140px 20px;
+}
+
+.blink2 {
+  padding: 50px 20px 140px 20px;
+}
+
+.blink3 {
+  padding: 50px 20px 140px 20px;
+}
+
+.blink4 {
+  padding: 50px 20px 140px 20px;
+}
+
+}
+    
+        @media (max-width:1399px) {
+    
+          .blink1 {
+            padding:50px 20px 170px 20px;
+          }
+    
+          .blink2 {
+            padding:50px 20px 170px 20px;
+          }
+    
+          .blink3 {
+            padding:50px 20px 170px 20px;
+          }
+    
+          .blink4 {
+            padding:50px 20px 170px 20px;
+          }
+    
+        }
+    
         @media (max-width:767px) {
-            .question-box {
-                width: auto;
-                height: 39rem;
-            }
-
-            #next-button,
-            #pre-button {
-                width: 30%;
-            }
+          .question-box {
+            width: auto;
+            height: 40rem;
+          }
+    
+          #next-button,
+          #pre-button {
+            width: 30%;
+          }
+    
+          .blink1 {
+            padding: 100px 20px ;
+          }
+    
+          .blink2 {
+            padding: 100px 20px ;
+          }
+    
+          .blink3 {
+            padding: 100px 20px ;
+          }
+    
+          .blink4 {
+            padding: 100px 20px ;
+          }
         }
-
-        @media (max-width:500px) {
-            .question-box {
-                width: auto;
-                height: 46rem;
-            }
-
+    
+        @media (max-width:992px) {
+    
+          #next-button,
+          #pre-button {
+            width: 25%;
+          }
+    
+          /* .restart {
+            margin-bottom: 40px;
+          } */
+    
+          .blink1 {
+            padding: 65px 20px;
+          }
+    
+          .blink2 {
+            padding: 65px 20px;
+          }
+    
+          .blink3 {
+            padding: 65px 20px;
+          }
+    
+          .blink4 {
+            padding: 65px 20px;
+          }
+    
         }
-
+    
+        @media (max-width:568px) {
+          .question-box {
+            width: auto;
+            height: 45rem;
+          }
+    
+          #next-button,
+          #pre-button {
+            width: 30%;
+          }
+    
+          .blink1 {
+            padding: 60px 20px ;
+          }
+    
+          .blink2 {
+            padding: 60px 20px ;
+          }
+    
+          .blink3 {
+            padding: 60px 20px ;
+          }
+    
+          .blink4 {
+            padding: 60px 20px ;
+          }
+    
+        }
+    
         /* The Modal (background) */
         .modal {
-            display: none;
-            /* Hidden by default */
-            position: fixed;
-            /* Stay in place */
-            z-index: 9999;
-            /* Sit on top */
-            padding-top: 100px;
-            /* Location of the box */
-            left: 0;
-            top: 0;
-            width: 100%;
-            /* Full width */
-            height: 100%;
-            /* Full height */
-            overflow: auto;
-            /* Enable scroll if needed */
-            background-color: rgb(0, 0, 0);
-            /* Fallback color */
-            background-color: rgba(0, 0, 0, 0.4);
-            /* Black w/ opacity */
+          display: none;
+          /* Hidden by default */
+          position: fixed;
+          /* Stay in place */
+          z-index: 9999;
+          /* Sit on top */
+          padding-top: 100px;
+          /* Location of the box */
+          left: 0;
+          top: 0;
+          width: 100%;
+          /* Full width */
+          height: 100%;
+          /* Full height */
+          overflow: auto;
+          /* Enable scroll if needed */
+          background-color: rgb(0, 0, 0);
+          /* Fallback color */
+          background-color: rgba(0, 0, 0, 0.4);
+          /* Black w/ opacity */
         }
-
+    
         /* Modal Content */
         .modal-content {
-            background-color: #fefefe;
-            margin: auto;
-            padding: 20px;
-            border: 1px solid #888;
-            width: 80%;
+          background-color: #fefefe;
+          margin: auto;
+          padding: 20px;
+          border: 1px solid #888;
+          width: 80%;
         }
-
+    
         /* The Close Button */
         .close {
-            color: #aaaaaa;
-            /* float: right; */
-            font-size: 28px;
-            font-weight: bold;
-            text-align: right;
+          color: #aaaaaa;
+          /* float: right; */
+          font-size: 28px;
+          font-weight: bold;
+          text-align: right;
         }
-
+    
         .close:hover,
         .close:focus {
-            color: #000;
-            text-decoration: none;
-            cursor: pointer;
+          color: #000;
+          text-decoration: none;
+          cursor: pointer;
         }
-    </style>
+      </style>
 </head>
 
 <body>
@@ -521,6 +761,8 @@
                                         <li><a href="courses.html">Problem Solving</a></li>
                                         <li><a href="courses3.html">Decision making</a></li>
                                         <li><a href="courses4.html">Conflict management</a></li>
+                                        <li><a href="courses5.html">Communication</a></li>
+                                        <li><a href="courses6.html">Performance optimization</a></li>
 
                                     </ul>
                                 </div>
@@ -677,6 +919,8 @@
                             <li><a href="courses.html">Problem Solving</a></li>
                             <li><a href="courses3.html">Decision making</a></li>
                             <li><a href="courses4.html">Conflict management</a></li>
+                            <li><a href="courses5.html">Communication</a></li>
+                            <li><a href="courses6.html">Performance optimization</a></li>
                         </ul>
                     </div>
                 </div>
@@ -685,7 +929,7 @@
                         <p>Copyright © 2023 rqlik. All Rights Reserved.
                             <br>
                             Designed by <a rel="nofollow" href="https://keysparks.com/"
-                                title="KeySparks Technologies">KeySparks
+                                title="Key Sparks Technologies">Key Sparks
                                 Technologies</a>
                         </p>
                     </div>
@@ -726,63 +970,63 @@
             {
                 id: "1",
                 question: " What is the first step in the decision-making process? ",
-                options: ["<input type='radio' name='q1' value='option1'>Identifying alternatives ", "<input type='radio' name='q1' value='option1'> Conducting a need analysis ", "<input type='radio' name='q1' value='option1'> Evaluating evidence ", " <input type='radio' name='q1' value='option1'>Assessing risks"],
+                options: ["<label><input type='radio' name='q1' value='option1'>Identifying alternatives </label>", "<label><input type='radio' name='q1' value='option1'> Conducting a need analysis </label>", "<label><input type='radio' name='q1' value='option1'> Evaluating evidence </label>", "<label> <input type='radio' name='q1' value='option1'>Assessing risks</label>"],
                 correct: " Conducting a need analysis ",
             },
             {
                 id: "2",
                 question: " What is an important consideration when identifying potential alternatives in the decision-making process?",
-                options: ["<input type='radio' name='q2' value='option1'>Personal values ", "<input type='radio' name='q2' value='option1'> Stakeholder perspectives ", "<input type='radio' name='q2' value='option1'> Time constraints ", " <input type='radio' name='q2' value='option1'>Objectives "],
+                options: ["<label><input type='radio' name='q2' value='option1'>Personal values </label>", "<label><input type='radio' name='q2' value='option1'> Stakeholder perspectives </label>", "<label><input type='radio' name='q2' value='option1'> Time constraints </label>", " <label><input type='radio' name='q2' value='option1'>Objectives</label> "],
                 correct: " Objectives ",
             },
             {
                 id: "3",
                 question: " What is an example of a cognitive bias that can impact decision making?",
-                options: ["<input type='radio' name='q3' value='option1'>Availability bias ", "<input type='radio' name='q3' value='option1'> Need for closure bias ", "<input type='radio' name='q3' value='option1'> Confirmation bias ", "<input type='radio' name='q3' value='option1'> All of the above "],
+                options: ["<label><input type='radio' name='q3' value='option1'>Availability bias </label>", "<label><input type='radio' name='q3' value='option1'> Need for closure bias</label> ", "<label><input type='radio' name='q3' value='option1'> Confirmation bias</label> ", "<label><input type='radio' name='q3' value='option1'> All of the above</label> "],
                 correct: " All of the above ",
             },
 
             {
                 id: "4",
                 question: " What is the purpose of a decision matrix? ",
-                options: ["<input type='radio' name='q4' value='option1'>To evaluate and compare alternatives based on specific criteria ", " <input type='radio' name='q4' value='option1'>To identify potential risks associated with each alternative ", " <input type='radio' name='q4' value='option1'>To gather and evaluate evidence ", "<input type='radio' name='q4' value='option1'>  To conduct a need analysis"],
+                options: ["<label><input type='radio' name='q4' value='option1'>To evaluate and compare alternatives based on specific criteria</label> ", "<label> <input type='radio' name='q4' value='option1'>To identify potential risks associated with each alternative </label>", " <label><input type='radio' name='q4' value='option1'>To gather and evaluate evidence </label>", "<label><input type='radio' name='q4' value='option1'>  To conduct a need analysis</label>"],
                 correct: " To evaluate and compare alternatives based on specific criteria ",
             },
             {
                 id: "5",
                 question: " What is an important skill for effective decision making?",
-                options: ["<input type='radio' name='q5' value='option1'> Time management ", "<input type='radio' name='q5' value='option1'>  Active listening ", "<input type='radio' name='q5' value='option1'>  Creativity ", "<input type='radio' name='q5' value='option1'> All of the above "],
+                options: ["<label><input type='radio' name='q5' value='option1'> Time management </label>", "<label><input type='radio' name='q5' value='option1'>  Active listening</label> ", "<label><input type='radio' name='q5' value='option1'>  Creativity</label> ", "<label><input type='radio' name='q5' value='option1'> All of the above</label> "],
                 correct: " All of the above ",
             },
             {
                 id: "6",
                 question: " What is the difference between a programmed decision and a non-programmed decision? ",
-                options: ["<input type='radio' name='q6' value='option1'>A programmed decision is routine and repetitive, while a non-programmed decision is complex and unique ", "<input type='radio' name='q6' value='option1'> A programmed decision is made by a group, while a non-programmed decision is made by an individual ", "<input type='radio' name='q6' value='option1'> A programmed decision is based on intuition, while a non-programmed decision is based on data ", "<input type='radio' name='q6' value='option1'> A programmed decision is made quickly, while a non-programmed decision takes a long time to make"],
+                options: ["<label><input type='radio' name='q6' value='option1'>A programmed decision is routine and repetitive, while a non-programmed decision is complex and unique </label>", "<label><input type='radio' name='q6' value='option1'> A programmed decision is made by a group, while a non-programmed decision is made by an individual</label> ", "<label><input type='radio' name='q6' value='option1'> A programmed decision is based on intuition, while a non-programmed decision is based on data </label>", "<label><input type='radio' name='q6' value='option1'> A programmed decision is made quickly, while a non-programmed decision takes a long time to make</label>"],
                 correct: " A programmed decision is routine and repetitive, while a non-programmed decision is complex and unique ",
             },
             {
                 id: "7",
                 question: " What is a technique for evaluating alternatives in the decision-making process? ",
-                options: ["<input type='radio' name='q7' value='option1'>Pareto analysis ", "<input type='radio' name='q7' value='option1'> Mind mapping ", "<input type='radio' name='q7' value='option1'> SWOT analysis ", "<input type='radio' name='q7' value='option1'> Brainstorming "],
+                options: ["<label><input type='radio' name='q7' value='option1'>Pareto analysis </label>", "<label><input type='radio' name='q7' value='option1'> Mind mapping </label>", "<label><input type='radio' name='q7' value='option1'> SWOT analysis</label> ", "<label><input type='radio' name='q7' value='option1'> Brainstorming </label>"],
                 correct: " SWOT analysis ",
             },
             {
                 id: "8",
                 question: " What is an important factor to consider when identifying stakeholders in the decision-making process? ",
-                options: ["<input type='radio' name='q8' value='option1'>Their level of education ", " <input type='radio' name='q8' value='option1'>Their job title ", "<input type='radio' name='q8' value='option1'> Their level of influence ", "  <input type='radio' name='q8' value='option1'>Their personal values "],
+                options: ["<label><input type='radio' name='q8' value='option1'>Their level of education </label>", " <label><input type='radio' name='q8' value='option1'>Their job title </label>", "<label><input type='radio' name='q8' value='option1'> Their level of influence</label> ", " <label> <input type='radio' name='q8' value='option1'>Their personal values</label>"],
                 correct: " Their personal values ",
             },
             {
                 id: "9",
                 question: " What is a strategy for managing personal biases in the decision-making process?",
-                options: [" <input type='radio' name='q9' value='option1'>Seeking feedback from others ", "  <input type='radio' name='q9' value='option1'>Avoiding conflicting opinions ", " <input type='radio' name='q9' value='option1'> Trusting your instincts ", " <input type='radio' name='q9' value='option1'>Focusing only on the facts "],
+                options: [" <label><input type='radio' name='q9' value='option1'>Seeking feedback from others</label> ", " <label> <input type='radio' name='q9' value='option1'>Avoiding conflicting opinions </label>", "<label> <input type='radio' name='q9' value='option1'> Trusting your instincts</label> ", "<label> <input type='radio' name='q9' value='option1'>Focusing only on the facts</label> "],
                 correct: " Seeking feedback from others ",
             },
 
             {
                 id: "10",
                 question: " What is an important skill for effective communication in the decision-making process? ",
-                options: ["<input type='radio' name='q10' value='option1'>Active listening ", " <input type='radio' name='q10' value='option1'>Interrupting others ", "<input type='radio' name='q10' value='option1'> Speaking loudly ", "<input type='radio' name='q10' value='option1'> Ignoring feedback "],
+                options: ["<label><input type='radio' name='q10' value='option1'>Active listening </label>", " <label><input type='radio' name='q10' value='option1'>Interrupting others </label>", "<label><input type='radio' name='q10' value='option1'> Speaking loudly </label>", "<label><input type='radio' name='q10' value='option1'> Ignoring feedback </label>"],
                 correct: " Active listening ",
             },
         ];
@@ -845,15 +1089,13 @@
 
 
                     if (averageScore >= 0 && averageScore <= 0.4) {
-                        result = "<span id='blink' style='text-align: center;'>Beginner</span><br><span id='rdes'>Good work, you have a basic understanding of decision-making, but there is still room for improvement. To enhance your skills, consider practicing decision-making exercises, seeking feedback from others, and analysing your past decisions to identify areas for growth. To improve your skills, you could start by reading books and articles on the subject or taking a course to gain a better understanding of the decision-making process.</span>";
-
-
+                        result = "<p class='blink1'><span id='blink' style='color:#66FF66;'>Beginner</span><br><span id='rdes'>Good work, you have a basic understanding of decision-making, but there is still room for improvement. To enhance your skills, consider practicing decision-making exercises, seeking feedback from others, and analysing your past decisions to identify areas for growth. To improve your skills, you could start by reading books and articles on the subject or taking a course to gain a better understanding of the decision-making process.</span></p>";
                     } else if (averageScore > 0.4 && averageScore <= 0.7) {
-                        result = "<span id='blink' style='text-align: center;'>Intermediate</span><br><span id='rdes'>Good job, you have a decent understanding of decision-making, but there is still room for improvement. To strengthen your skills, try taking on more decision-making responsibilities, seeking out diverse perspectives, and honing your critical thinking and analytical skills.</span>";
+                        result = "<p class='blink2'><span id='blink' style='color:#00CC00;'>Intermediate</span><br><span id='rdes'>Good job, you have a decent understanding of decision-making, but there is still room for improvement. To strengthen your skills, try taking on more decision-making responsibilities, seeking out diverse perspectives, and honing your critical thinking and analytical skills.</span></p>";
                     } else if (averageScore > 0.7 && averageScore <= 0.9) {
-                        result = "<span id='blink' style='text-align: center;'>Advanced</span><br><span id='rdes'>Great job, you have a good grasp of decision-making concepts and techniques. To further improve your skills, consider seeking out challenging decision-making situations, practicing risk management strategies, and continuing to seek feedback and learn from your mistakes.</span>";
+                        result = "<p class='blink3'><span id='blink' style='color:#009900;'>Advanced</span><br><span id='rdes'>Great job, you have a good grasp of decision-making concepts and techniques. To further improve your skills, consider seeking out challenging decision-making situations, practicing risk management strategies, and continuing to seek feedback and learn from your mistakes.</span></p>";
                     } else if (averageScore > 0.9 && averageScore <= 1) {
-                        result = "<span id='blink' style='text-align: center;'>Expert</span><br><span id='rdes'>Congratulations! Your results indicate that you have a strong understanding of decision-making and have likely developed effective decision-making skills. To continue improving, consider taking on leadership roles that require advanced decision-making skills, mentoring others in decision-making, and staying up to date on the latest research and trends in the field.</span>";
+                        result = "<p class='blink4'><span id='blink' style='color: #006600;'>Expert</span><br><span id='rdes'>Congratulations! Your results indicate that you have a strong understanding of decision-making and have likely developed effective decision-making skills. To continue improving, consider taking on leadership roles that require advanced decision-making skills, mentoring others in decision-making, and staying up to date on the latest research and trends in the field.</span></p>";
                     }
 
 
@@ -918,10 +1160,10 @@
                 div.appendChild(question_DIV);
                 //options
                 div.innerHTML += `
-<button class="option-div" onclick="checker(this)">${i.options[0]}</button>
- <button class="option-div" onclick="checker(this)">${i.options[1]}</button>
-  <button class="option-div" onclick="checker(this)">${i.options[2]}</button>
-   <button class="option-div" onclick="checker(this)">${i.options[3]}</button>
+<label class="option-div" onclick="checker(this)">${i.options[0]}</label>
+<label class="option-div" onclick="checker(this)">${i.options[1]}</label>
+<label class="option-div" onclick="checker(this)">${i.options[2]}</label>
+<label class="option-div" onclick="checker(this)">${i.options[3]}</label>
 `;
                 quizContainer.appendChild(div);
             }

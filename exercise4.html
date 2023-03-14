@@ -39,8 +39,7 @@
       font-family: "Poppins", sans-serif;
     }
 
-    .start-screen,
-    .score-container {
+    .start-screen {
 
       top: 40%;
       width: 100%;
@@ -48,8 +47,24 @@
       left: 50%;
       display: flex;
       flex-direction: column;
+      text-align: center;
       align-items: center;
       justify-content: center;
+    }
+
+    .score-container {
+      background-color: #fff;
+      top: 40%;
+      width: 100%;
+      height: 100%;
+      left: 50%;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+      border-radius: 20px;
+
     }
 
     button {
@@ -61,12 +76,16 @@
     #start-button,
     #restart {
       font-size: 1.3em;
-      padding: 0.5em 1.8em;
+      padding: 0.5em 0.8em;
       border-radius: 0.2em;
+      background-color: #ff695f;
+      color: #fff;
     }
 
+
     #restart {
-      margin-top: 0.9em;
+      margin-top: 15px;
+      margin-bottom: 10px;
     }
 
     .header {
@@ -103,11 +122,13 @@
       background: transparent;
       border: 1px solid #c0bfd2;
       border-radius: 0.3em;
+      font-weight: normal;
+      cursor: pointer;
     }
 
     .option-div:disabled {
       color: #000000;
-      cursor: not-allowed;
+      /* cursor: not-allowed; */
     }
 
     #next-button {
@@ -118,7 +139,7 @@
       padding: 0.7em 1.8em;
       border-radius: 0.3em;
       float: right;
-      width: 20%;
+      width: 15%;
     }
 
     #pre-button {
@@ -129,24 +150,12 @@
       padding: 0.7em 1.8em;
       border-radius: 0.3em;
       float: left;
-      width: 20%;
+      width: 15%;
     }
 
     .hide {
       display: none;
     }
-
-    /* .incorrect {
-      background-color: #ffdde0;
-      color: #d32f2f;
-      border-color: #d32f2f;
-    }
-
-    .correct {
-      background-color: #e7f6d5;
-      color: #689f38;
-      border-color: #689f38;
-    } */
 
     #user-score {
       font-size: 1.5em;
@@ -160,15 +169,19 @@
     }
 
     .question-box {
+      background-image: url(./assets/images/quizStart.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      box-shadow: 0px 0px 15px #ff695f;
       width: 80%;
       height: 35rem;
-      background-color: #ff695f;
+      /* background-color: #ff695f; */
       display: flex;
       justify-content: center;
       align-items: center;
       border-radius: 10px;
       /* border-bottom-right-radius: 30px; */
-      padding: 5px;
+      padding: 0px;
 
       margin-top: 60px;
 
@@ -193,54 +206,287 @@
     }
 
     #user-score {
+
       font-size: 1em;
-      color: #ffffff;
-      text-align: center;
-      padding: 30px;
-      margin: auto;
+      color: black;
+      /* text-align: center; */
+      /* padding: 30px; */
+      /* margin: auto; */
       animation: none;
-      /* height: 30%; */
-      overflow: auto;
-      /* remove any animation applied previously */
+      overflow-y: scroll;
     }
+
+
 
     #blink {
       animation: blinker 1.5s linear infinite;
-      color: rgb(255, 255, 255);
-      font-family: sans-serif;
-      font-size: larger;
+      /* color: yellowgreen; */
+      font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS';
+      font-size: 28px;
       font-weight: bolder;
       text-align: center;
       margin: auto;
+      -webkit-text-stroke: 0.5px black;
     }
+
+    .blink1 {
+      position: relative;
+      isolation: isolate;
+      padding:50px 20px 170px 20px;
+    }
+
+    .blink1::after {
+      background-image: url(./assets/images/quizScore.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      opacity: 0.2;
+      content: '';
+      position: absolute;
+      z-index: -1;
+      inset: 0;
+
+
+    }
+
+    .blink2 {
+      position: relative;
+      isolation: isolate;
+      padding:50px 20px 170px 20px;
+    }
+
+    .blink2::after {
+      background-image: url(./assets/images/intermidiate-quiz.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      opacity: 0.2;
+      content: '';
+      position: absolute;
+      z-index: -1;
+      inset: 0;
+
+    }
+
+    .blink3 {
+      position: relative;
+      isolation: isolate;
+      padding:50px 20px 170px 20px;
+    }
+
+    .blink3::after {
+      background-image: url(./assets/images/advance-levelQuiz.jfif);
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      opacity: 0.2;
+      content: '';
+      position: absolute;
+      z-index: -1;
+      inset: 0;
+
+    }
+
+    .blink4 {
+      position: relative;
+      isolation: isolate;
+      padding:50px 20px 170px 20px;
+    }
+
+    .blink4::after {
+      background-image: url(./assets/images/expert-blue-quiz.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      opacity: 0.2;
+      content: '';
+      position: absolute;
+      z-index: -1;
+      inset: 0;
+
+    }
+
+    .blink1,
+    .blink2,
+    .blink3,
+    .blink4 {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      /* padding: 10px 20px; */
+      font-weight: 500;
+    }
+
+    .blink1 #rdes,
+    .blink2 #rdes,
+    .blink3 #rdes,
+    .blink4 #rdes {
+      text-align: left;
+      margin-top: 20px;
+    }
+
+
 
     @keyframes blinker {
       50% {
         opacity: 0;
       }
     }
+
     @media (min-width:1500px) {
-      .question-box{
-        width:80%;
+      .question-box {
+        width: 80%;
         height: 33rem;
       }
-     
+
+
     }
+
+    @media (max-width:1500px) {
+
+      .blink1 {
+        padding:50px 20px 170px 20px;
+      }
+
+      .blink2 {
+        padding:50px 20px 170px 20px;
+      }
+
+      .blink3 {
+        padding:50px 20px 170px 20px;
+      }
+
+      .blink4 {
+        padding:50px 20px 170px 20px;
+      }
+
+    }
+
+    @media (max-width:1399px) {
+
+      .blink1 {
+        padding:50px 20px 170px 20px;
+      }
+
+      .blink2 {
+        padding:50px 20px 170px 20px;
+      }
+
+      .blink3 {
+        padding:50px 20px 170px 20px;
+      }
+
+      .blink4 {
+        padding:50px 20px 170px 20px;
+      }
+
+    }
+
     @media (max-width:767px) {
-      .question-box{
-        width:auto;
+      .question-box {
+        width: auto;
         height: 39rem;
       }
-      #next-button, #pre-button{
-        width:30%;
+
+      #next-button,
+      #pre-button {
+        width: 30%;
+      }
+
+      .blink1 {
+        padding: 100px 20px;
+      }
+
+      .blink2 {
+        padding: 100px 20px;
+      }
+
+      .blink3 {
+        padding: 100px 20px;
+      }
+
+      .blink4 {
+        padding: 100px 20px;
       }
     }
-    @media (max-width:500px) {
-      .question-box{
-        width:auto;
+
+    
+    @media (max-width:1200px) {
+
+.blink1 {
+  padding: 50px 20px 140px 20px;
+}
+
+.blink2 {
+  padding: 50px 20px 140px 20px;
+}
+
+.blink3 {
+  padding: 50px 20px 140px 20px;
+}
+
+.blink4 {
+  padding: 50px 20px 140px 20px;
+}
+
+}
+    @media (max-width:992px) {
+
+      #next-button,
+      #pre-button {
+        width: 25%;
+      }
+
+      /* .restart {
+        margin-bottom: 40px;
+      } */
+
+      .blink1 {
+        padding: 65px 20px;
+      }
+
+      .blink2 {
+        padding: 65px 20px;
+      }
+
+      .blink3 {
+        padding: 65px 20px;
+      }
+
+      .blink4 {
+        padding: 65px 20px;
+      }
+
+    }
+
+    @media (max-width:568px) {
+      .question-box {
+        width: auto;
         height: 40rem;
       }
-     
+
+      #next-button,
+      #pre-button {
+        width: 30%;
+      }
+
+      .blink1 {
+        padding: 60px 20px;
+      }
+
+      .blink2 {
+        padding: 60px 20px;
+      }
+
+      .blink3 {
+        padding: 60px 20px;
+      }
+
+      .blink4 {
+        padding: 60px 20px;
+      }
+
     }
 
     /* The Modal (background) */
@@ -506,6 +752,8 @@
                     <li><a href="courses.html">Problem-Solving</a></li>
                     <li><a href="courses3.html">Decision Making</a></li>
                     <li><a href="courses4.html">Conflict Management</a></li>
+                    <li><a href="courses5.html">Communication</a></li>
+                    <li><a href="courses6.html">Performance optimization</a></li>
 
                   </ul>
                 </div>
@@ -587,13 +835,13 @@
           <button id="restart">Restart</button>
         </div>
       </div>
-    
-    <div class=" container progress content_status question_content_status">
-      <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75"
-        aria-valuemin="0" aria-valuemax="100" style="width: 54%"></div>
+
+      <div class=" container progress content_status question_content_status">
+        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75"
+          aria-valuemin="0" aria-valuemax="100" style="width: 54%"></div>
+      </div>
     </div>
   </div>
-</div>
 
 
   <div class=" container row page_button question_page_button">
@@ -656,6 +904,8 @@
               <li><a href="courses.html">Problem-Solving</a></li>
               <li><a href="courses3.html">Decision Making</a></li>
               <li><a href="courses4.html">Conflict Management</a></li>
+              <li><a href="courses5.html">Communication</a></li>
+              <li><a href="courses6.html">Performance optimization</a></li>
             </ul>
           </div>
         </div>
@@ -663,7 +913,7 @@
           <div class="copyright">
             <p>Copyright © 2023 rqlik. All Rights Reserved.
               <br>
-              Designed by <a rel="nofollow" href="https://keysparks.com" title="KeySparks Technologies">KeySparks
+              Designed by <a rel="nofollow" href="https://keysparks.com" title="Key Sparks Technologies">Key Sparks
                 Technologies</a>
             </p>
           </div>
@@ -705,7 +955,7 @@
 
         question: "What is active listening?  ",
 
-        options: ['<input type="radio" name="q1" value="option1">Listening while actively doing something else', '<input type="radio" name="q1" value="option1">Listening with the intent to respond', '<input type="radio" name="q1" value="option1">Listening with the intent to understand', '<input type="radio" name="q1" value="option1"> Ignoring what the speaker is saying'],
+        options: ['<label><input type="radio" name="q1" value="option1">Listening while actively doing something else</label>', '<label><input type="radio" name="q1" value="option1">Listening with the intent to respond</label>', '<label><input type="radio" name="q1" value="option1">Listening with the intent to understand</label>', '<label><input type="radio" name="q1" value="option1"> Ignoring what the speaker is saying</label>'],
 
         correct: "Listening with the intent to understand",
       },
@@ -715,7 +965,7 @@
 
         question: "What are some common barriers to active listening?",
 
-        options: ['<input type="radio" name="q2" value="option1">Multitasking, distractions, and preconceptions', '<input type="radio" name="q2" value="option1">Nodding, eye contact, and verbal affirmations', '<input type="radio" name="q2" value="option1">Interrupting, finishing sentences, and jumping to conclusions', '<input type="radio" name="q2" value="option1">Reflecting, paraphrasing, and summarizing'],
+        options: ['<label><input type="radio" name="q2" value="option1">Multitasking, distractions, and preconceptions</label>', '<label><input type="radio" name="q2" value="option1">Nodding, eye contact, and verbal affirmations</label>', '<label><input type="radio" name="q2" value="option1">Interrupting, finishing sentences, and jumping to conclusions</label>', '<label><input type="radio" name="q2" value="option1">Reflecting, paraphrasing, and summarizing</label>'],
 
         correct: "Multitasking, distractions, and preconceptions",
       },
@@ -725,7 +975,7 @@
 
         question: "What is reflective listening?  ",
 
-        options: ['<input type="radio" name="q3" value="option1">Repeating what the speaker says word-for-word', '<input type="radio" name="q3" value="option1">Summarizing the speakers points in your own words', '<input type="radio" name="q3" value="option1">Interrupting the speaker to offer advice', '<input type="radio" name="q3" value="option1">Ignoring the speakers emotions'],
+        options: ['<label><input type="radio" name="q3" value="option1">Repeating what the speaker says word-for-word</label>', '<label><input type="radio" name="q3" value="option1">Summarizing the speakers points in your own words</label>', '<label><input type="radio" name="q3" value="option1">Interrupting the speaker to offer advice</label>', '<label><input type="radio" name="q3" value="option1">Ignoring the speakers emotions</label>'],
 
         correct: "Summarizing the speaker's points in your own words",
       },
@@ -735,7 +985,7 @@
 
         question: "Why is active listening important?  ",
 
-        options: ['<input type="radio" name="q4" value="option1">It helps you dominate the conversation', '<input type="radio" name="q4" value="option1">It ensures that you do not miss any important details', '<input type="radio" name="q4" value="option1">It shows respect for the speaker and can improve relationships', '<input type="radio" name="q4" value="option1">It is a way to avoid conflict entirely'],
+        options: ['<label><input type="radio" name="q4" value="option1">It helps you dominate the conversation</label>', '<label><input type="radio" name="q4" value="option1">It ensures that you do not miss any important details</label>', '<label><input type="radio" name="q4" value="option1">It shows respect for the speaker and can improve relationships</label>', '<label><input type="radio" name="q4" value="option1">It is a way to avoid conflict entirely</label>'],
 
         correct: "It shows respect for the speaker and can improve relationships",
       },
@@ -745,7 +995,7 @@
 
         question: "What are some active listening techniques you can use?  ",
 
-        options: ['<input type="radio" name="q5" value="option1">Interrupting the speaker, offering advice, and finishing their sentences', '<input type="radio" name="q5" value="option1">Nodding your head, looking away, and using filler words like uh-huh', '<input type="radio" name="q5" value="option1">Reflecting, paraphrasing, and summarizing', '<input type="radio" name="q5" value="option1">Ignoring the speaker and focusing on something else'],
+        options: ['<label><input type="radio" name="q5" value="option1">Interrupting the speaker, offering advice, and finishing their sentences</label>', '<label><input type="radio" name="q5" value="option1">Nodding your head, looking away, and using filler words like uh-huh</label>', '<label><input type="radio" name="q5" value="option1">Reflecting, paraphrasing, and summarizing</label>', '<label><input type="radio" name="q5" value="option1">Ignoring the speaker and focusing on something else</label>'],
 
         correct: "Reflecting, paraphrasing, and summarizing",
       },
@@ -810,15 +1060,15 @@
 
 
           if (averageScore > 0 && averageScore <= 0.4) {
-      result = "<span id='blink' style='text-align: center;'>Beginner</span><br><span id='rdes'>Nice start, it may mean that you are not yet familiar with the concept of active listening or the importance it plays in effective communication. It's important to remember that active listening is a critical skill in many areas of life, including personal relationships, work environments, and in social situations. Improving your active listening skills can help you to better understand the needs and perspectives of others and can help you to build stronger relationships. Consider reviewing the material and practicing the techniques to develop your understanding of active listening and build your skills.Active listening involves being fully present and engaged in the conversation, with the intention of understanding the speakers perspective.To improve your active listening skills, focus on being present in the moment, maintaining eye contact, and avoiding distractions.To overcome these barriers, try to focus your attention solely on the speaker, eliminate distractions, and let go of preconceptions or assumptions.Engage in active listening by paying attention to what the speaker is saying, summarizing their points, and asking clarifying questions.Reflective listening involves summarizing what the speaker has said in your own words to demonstrate that you understand and have been actively listening.Its important to avoid interrupting the speaker or offering advice until they have finished speaking. Active listening is an important skill to develop, as it shows the speaker that you value their perspective and are interested in understanding their point of view.This can help build trust, strengthen relationships, and minimize the potential for conflicts.Reflecting, paraphrasing, and summarizing are all techniques that can help demonstrate active listening and show the speaker that you are engaged and interested in what they have to say.Avoid interrupting or finishing their sentences, as this can be disrespectful and disruptive. </span > ";
-    } else if (averageScore > 0.4 && averageScore <= 0.7) {
-      result = "<span id='blink' style='text-align: center;'>Intermediate</span><br><span id='rdes'>Great job, you have a basic understanding of active listening concepts and techniques, but there may be room for improvement. Active listening is a skill that takes practice, so consider looking for opportunities to put your knowledge into practice. With continued effort and practice, you can become even more skilled at active listening, which can help you to build better relationships, reduce misunderstandings, and improve your overall communication skills.Active listening involves being fully present and engaged in the conversation, with the intention of understanding the speaker's perspective. To improve your active listening skills, focus on being present in the moment, maintaining eye contact, and avoiding distractions. To overcome these barriers, try to focus your attention solely on the speaker, eliminate distractions, and let go of preconceptions or assumptions. Engage in active listening by paying attention to what the speaker is saying, summarizing their points, and asking clarifying questions. Reflective listening involves summarizing what the speaker has said in your own words to demonstrate that you understand and have been actively listening. It's important to avoid interrupting the speaker or offering advice until they have finished speaking. Active listening is an important skill to develop, as it shows the speaker that you value their perspective and are interested in understanding their point of view. This can help build trust, strengthen relationships, and minimize the potential for conflicts. Reflecting, paraphrasing, and summarizing are all techniques that can help demonstrate active listening and show the speaker that you are engaged and interested in what they have to say. Avoid interrupting or finishing their sentences, as this can be disrespectful and disruptive.</span>";
-    } else if (averageScore > 0.7 && averageScore <= 0.9) {
-      result = "<span id='blink' style='text-align: center;'>Advanced</span><br><span id='rdes'>Congratulations! You have a strong foundation in active listening concepts and techniques. You likely understand how active listening can help improve communication and foster stronger relationships with others. Keep practicing and refining your skills, and don't be afraid to experiment with new techniques or approaches to improve your listening abilities even further.Active listening involves being fully present and engaged in the conversation, with the intention of understanding the speaker's perspective. To improve your active listening skills, focus on being present in the moment, maintaining eye contact, and avoiding distractions. To overcome these barriers, try to focus your attention solely on the speaker, eliminate distractions, and let go of preconceptions or assumptions. Engage in active listening by paying attention to what the speaker is saying, summarizing their points, and asking clarifying questions. Reflective listening involves summarizing what the speaker has said in your own words to demonstrate that you understand and have been actively listening. It's important to avoid interrupting the speaker or offering advice until they have finished speaking. Active listening is an important skill to develop, as it shows the speaker that you value their perspective and are interested in understanding their point of view. This can help build trust, strengthen relationships, and minimize the potential for conflicts. Reflecting, paraphrasing, and summarizing are all techniques that can help demonstrate active listening and show the speaker that you are engaged and interested in what they have to say. Avoid interrupting or finishing their sentences, as this can be disrespectful and disruptive. </span>";
-    }
-    else if (averageScore > 0.9 && averageScore <= 1) {
-      result = "<span id='blink' style='text-align: center;'>Expert</span><br><span id='rdes'>Congratulations on an excellent performance! You clearly understand the importance of active listening and have developed a strong foundation in the techniques and concepts that underpin effective listening. You are well positioned to build stronger relationships with others, improve your communication skills, and contribute positively to your personal and professional life. Keep up the good work!Active listening involves being fully present and engaged in the conversation, with the intention of understanding the speaker's perspective. To improve your active listening skills, focus on being present in the moment, maintaining eye contact, and avoiding distractions. To overcome these barriers, try to focus your attention solely on the speaker, eliminate distractions, and let go of preconceptions or assumptions. Engage in active listening by paying attention to what the speaker is saying, summarizing their points, and asking clarifying questions. Reflective listening involves summarizing what the speaker has said in your own words to demonstrate that you understand and have been actively listening. It's important to avoid interrupting the speaker or offering advice until they have finished speaking. Active listening is an important skill to develop, as it shows the speaker that you value their perspective and are interested in understanding their point of view. This can help build trust, strengthen relationships, and minimize the potential for conflicts. Reflecting, paraphrasing, and summarizing are all techniques that can help demonstrate active listening and show the speaker that you are engaged and interested in what they have to say. Avoid interrupting or finishing their sentences, as this can be disrespectful and disruptive. </span>";
-    }
+            result = "<p class='blink1'><span id='blink' style='color:#66FF66;'>Beginner</span><br><span id='rdes'>Nice start, it may mean that you are not yet familiar with the concept of active listening or the importance it plays in effective communication. It's important to remember that active listening is a critical skill in many areas of life, including personal relationships, work environments, and in social situations. Improving your active listening skills can help you to better understand the needs and perspectives of others and can help you to build stronger relationships. Consider reviewing the material and practicing the techniques to develop your understanding of active listening and build your skills.Active listening involves being fully present and engaged in the conversation, with the intention of understanding the speakers perspective.To improve your active listening skills, focus on being present in the moment, maintaining eye contact, and avoiding distractions.To overcome these barriers, try to focus your attention solely on the speaker, eliminate distractions, and let go of preconceptions or assumptions.Engage in active listening by paying attention to what the speaker is saying, summarizing their points, and asking clarifying questions.Reflective listening involves summarizing what the speaker has said in your own words to demonstrate that you understand and have been actively listening.Its important to avoid interrupting the speaker or offering advice until they have finished speaking. Active listening is an important skill to develop, as it shows the speaker that you value their perspective and are interested in understanding their point of view.This can help build trust, strengthen relationships, and minimize the potential for conflicts.Reflecting, paraphrasing, and summarizing are all techniques that can help demonstrate active listening and show the speaker that you are engaged and interested in what they have to say.Avoid interrupting or finishing their sentences, as this can be disrespectful and disruptive. </span > </p>";
+          } else if (averageScore > 0.4 && averageScore <= 0.7) {
+            result = "<p class='blink2'><span id='blink' style='color:#00CC00;'>Intermediate</span><br><span id='rdes'>Great job, you have a basic understanding of active listening concepts and techniques, but there may be room for improvement. Active listening is a skill that takes practice, so consider looking for opportunities to put your knowledge into practice. With continued effort and practice, you can become even more skilled at active listening, which can help you to build better relationships, reduce misunderstandings, and improve your overall communication skills.Active listening involves being fully present and engaged in the conversation, with the intention of understanding the speaker's perspective. To improve your active listening skills, focus on being present in the moment, maintaining eye contact, and avoiding distractions. To overcome these barriers, try to focus your attention solely on the speaker, eliminate distractions, and let go of preconceptions or assumptions. Engage in active listening by paying attention to what the speaker is saying, summarizing their points, and asking clarifying questions. Reflective listening involves summarizing what the speaker has said in your own words to demonstrate that you understand and have been actively listening. It's important to avoid interrupting the speaker or offering advice until they have finished speaking. Active listening is an important skill to develop, as it shows the speaker that you value their perspective and are interested in understanding their point of view. This can help build trust, strengthen relationships, and minimize the potential for conflicts. Reflecting, paraphrasing, and summarizing are all techniques that can help demonstrate active listening and show the speaker that you are engaged and interested in what they have to say. Avoid interrupting or finishing their sentences, as this can be disrespectful and disruptive.</span></p>";
+          } else if (averageScore > 0.7 && averageScore <= 0.9) {
+            result = "<p class='blink3'><span id='blink' style='color:#009900;'>Advanced</span><br><span id='rdes'>Congratulations! You have a strong foundation in active listening concepts and techniques. You likely understand how active listening can help improve communication and foster stronger relationships with others. Keep practicing and refining your skills, and don't be afraid to experiment with new techniques or approaches to improve your listening abilities even further.Active listening involves being fully present and engaged in the conversation, with the intention of understanding the speaker's perspective. To improve your active listening skills, focus on being present in the moment, maintaining eye contact, and avoiding distractions. To overcome these barriers, try to focus your attention solely on the speaker, eliminate distractions, and let go of preconceptions or assumptions. Engage in active listening by paying attention to what the speaker is saying, summarizing their points, and asking clarifying questions. Reflective listening involves summarizing what the speaker has said in your own words to demonstrate that you understand and have been actively listening. It's important to avoid interrupting the speaker or offering advice until they have finished speaking. Active listening is an important skill to develop, as it shows the speaker that you value their perspective and are interested in understanding their point of view. This can help build trust, strengthen relationships, and minimize the potential for conflicts. Reflecting, paraphrasing, and summarizing are all techniques that can help demonstrate active listening and show the speaker that you are engaged and interested in what they have to say. Avoid interrupting or finishing their sentences, as this can be disrespectful and disruptive. </span></p>";
+          }
+          else if (averageScore > 0.9 && averageScore <= 1) {
+            result = "<p class='blink4'><span id='blink' style='color: #006600;'>Expert</span><br><span id='rdes'>Congratulations on an excellent performance! You clearly understand the importance of active listening and have developed a strong foundation in the techniques and concepts that underpin effective listening. You are well positioned to build stronger relationships with others, improve your communication skills, and contribute positively to your personal and professional life. Keep up the good work!Active listening involves being fully present and engaged in the conversation, with the intention of understanding the speaker's perspective. To improve your active listening skills, focus on being present in the moment, maintaining eye contact, and avoiding distractions. To overcome these barriers, try to focus your attention solely on the speaker, eliminate distractions, and let go of preconceptions or assumptions. Engage in active listening by paying attention to what the speaker is saying, summarizing their points, and asking clarifying questions. Reflective listening involves summarizing what the speaker has said in your own words to demonstrate that you understand and have been actively listening. It's important to avoid interrupting the speaker or offering advice until they have finished speaking. Active listening is an important skill to develop, as it shows the speaker that you value their perspective and are interested in understanding their point of view. This can help build trust, strengthen relationships, and minimize the potential for conflicts. Reflecting, paraphrasing, and summarizing are all techniques that can help demonstrate active listening and show the speaker that you are engaged and interested in what they have to say. Avoid interrupting or finishing their sentences, as this can be disrespectful and disruptive. </span></p>";
+          }
 
 
 
@@ -863,7 +1113,7 @@
       quizCards[questionCount].classList.remove("hide");
     };
 
-   
+
 
 
     //Quiz Creation
@@ -886,10 +1136,10 @@
         div.appendChild(question_DIV);
         //options
         div.innerHTML += `
-<button class="option-div" onclick="checker(this)">${i.options[0]}</button>
- <button class="option-div" onclick="checker(this)">${i.options[1]}</button>
-  <button class="option-div" onclick="checker(this)">${i.options[2]}</button>
-   <button class="option-div" onclick="checker(this)">${i.options[3]}</button>
+<label class="option-div" onclick="checker(this)">${i.options[0]}</label>
+<label class="option-div" onclick="checker(this)">${i.options[1]}</label>
+<label class="option-div" onclick="checker(this)">${i.options[2]}</label>
+<label class="option-div" onclick="checker(this)">${i.options[3]}</label>
 `;
         quizContainer.appendChild(div);
       }

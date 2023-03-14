@@ -11,7 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
     rel="stylesheet">
 
-    <link rel="icon" type="icon"  href="./assets/images/new-mini-logo.png">
+  <link rel="icon" type="icon" href="./assets/images/new-mini-logo.png">
   <title>Life Skill Portal</title>
 
   <!-- Bootstrap core CSS -->
@@ -39,8 +39,7 @@
       font-family: "Poppins", sans-serif;
     }
 
-    .start-screen,
-    .score-container {
+    .start-screen {
 
       top: 40%;
       width: 100%;
@@ -48,8 +47,24 @@
       left: 50%;
       display: flex;
       flex-direction: column;
+      text-align: center;
       align-items: center;
       justify-content: center;
+    }
+
+    .score-container {
+      background-color: #fff;
+      top: 40%;
+      width: 100%;
+      height: 100%;
+      left: 50%;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+      border-radius: 20px;
+
     }
 
     button {
@@ -61,12 +76,16 @@
     #start-button,
     #restart {
       font-size: 1.3em;
-      padding: 0.5em 1.8em;
+      padding: 0.5em 0.8em;
       border-radius: 0.2em;
+      background-color: #ff695f;
+      color: #fff;
     }
 
+
     #restart {
-      margin-top: 0.9em;
+      margin-top: 15px;
+      margin-bottom: 10px;
     }
 
     .header {
@@ -103,11 +122,13 @@
       background: transparent;
       border: 1px solid #c0bfd2;
       border-radius: 0.3em;
+      font-weight: normal;
+      cursor: pointer;
     }
 
     .option-div:disabled {
       color: #000000;
-      cursor: not-allowed;
+      /* cursor: not-allowed; */
     }
 
     #next-button {
@@ -118,7 +139,7 @@
       padding: 0.7em 1.8em;
       border-radius: 0.3em;
       float: right;
-      width: 20%;
+      width: 15%;
     }
 
     #pre-button {
@@ -129,24 +150,12 @@
       padding: 0.7em 1.8em;
       border-radius: 0.3em;
       float: left;
-      width: 20%;
+      width: 15%;
     }
 
     .hide {
       display: none;
     }
-
-    /* .incorrect {
-      background-color: #ffdde0;
-      color: #d32f2f;
-      border-color: #d32f2f;
-    }
-
-    .correct {
-      background-color: #e7f6d5;
-      color: #689f38;
-      border-color: #689f38;
-    } */
 
     #user-score {
       font-size: 1.5em;
@@ -160,15 +169,19 @@
     }
 
     .question-box {
+      background-image: url(./assets/images/quizStart.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      box-shadow: 0px 0px 15px #ff695f;
       width: 80%;
       height: 35rem;
-      background-color: #ff695f;
+      /* background-color: #ff695f; */
       display: flex;
       justify-content: center;
       align-items: center;
       border-radius: 10px;
       /* border-bottom-right-radius: 30px; */
-      padding: 5px;
+      padding: 0px;
 
       margin-top: 60px;
 
@@ -193,53 +206,286 @@
     }
 
     #user-score {
+
       font-size: 1em;
-      color: #ffffff;
-      text-align: center;
-      padding: 30px;
-      margin: auto;
+      color: black;
+      /* text-align: center; */
+      /* padding: 30px; */
+      /* margin: auto; */
       animation: none;
-      overflow: auto;
-      /* remove any animation applied previously */
+      overflow-y: scroll;
     }
+
+
 
     #blink {
       animation: blinker 1.5s linear infinite;
-      color: rgb(255, 255, 255);
+      /* color: yellowgreen; */
       font-family: sans-serif;
-      font-size: larger;
+      font-size: 28px;
       font-weight: bolder;
       text-align: center;
       margin: auto;
+      -webkit-text-stroke: 0.5px black;
     }
+
+    .blink1 {
+      position: relative;
+      isolation: isolate;
+      padding:50px 20px 170px 20px;
+    }
+
+    .blink1::after {
+      background-image: url(./assets/images/quizScore.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      opacity: 0.2;
+      content: '';
+      position: absolute;
+      z-index: -1;
+      inset: 0;
+
+
+    }
+
+    .blink2 {
+      position: relative;
+      isolation: isolate;
+      padding:50px 20px 170px 20px;
+    }
+
+    .blink2::after {
+      background-image: url(./assets/images/intermidiate-quiz.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      opacity: 0.2;
+      content: '';
+      position: absolute;
+      z-index: -1;
+      inset: 0;
+
+    }
+
+    .blink3 {
+      position: relative;
+      isolation: isolate;
+      padding:50px 20px 170px 20px;
+    }
+
+    .blink3::after {
+      background-image: url(./assets/images/advance-levelQuiz.jfif);
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      opacity: 0.2;
+      content: '';
+      position: absolute;
+      z-index: -1;
+      inset: 0;
+
+    }
+
+    .blink4 {
+      position: relative;
+      isolation: isolate;
+      padding:50px 20px 170px 20px;
+    }
+
+    .blink4::after {
+      background-image: url(./assets/images/expert-blue-quiz.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      opacity: 0.2;
+      content: '';
+      position: absolute;
+      z-index: -1;
+      inset: 0;
+
+    }
+
+    .blink1,
+    .blink2,
+    .blink3,
+    .blink4 {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      /* padding: 10px 20px; */
+      font-weight: 500;
+    }
+
+    .blink1 #rdes,
+    .blink2 #rdes,
+    .blink3 #rdes,
+    .blink4 #rdes {
+      text-align: left;
+      margin-top: 20px;
+    }
+
+
 
     @keyframes blinker {
       50% {
         opacity: 0;
       }
     }
+
     @media (min-width:1500px) {
-      .question-box{
-        width:80%;
+      .question-box {
+        width: 80%;
         height: 33rem;
       }
-     
+
+
     }
+
+    @media (max-width:1500px) {
+
+      .blink1 {
+        padding:50px 20px 170px 20px;
+      }
+
+      .blink2 {
+        padding:50px 20px 170px 20px;
+      }
+
+      .blink3 {
+        padding:50px 20px 170px 20px;
+      }
+
+      .blink4 {
+        padding:50px 20px 170px 20px;
+      }
+
+    }
+
+    @media (max-width:1399px) {
+
+      .blink1 {
+        padding:50px 20px 170px 20px;
+      }
+
+      .blink2 {
+        padding:50px 20px 170px 20px;
+      }
+
+      .blink3 {
+        padding:50px 20px 170px 20px;
+      }
+
+      .blink4 {
+        padding:50px 20px 170px 20px;
+      }
+
+    }
+
+    @media (max-width:1200px) {
+
+.blink1 {
+  padding: 50px 20px 140px 20px;
+}
+
+.blink2 {
+  padding: 50px 20px 140px 20px;
+}
+
+.blink3 {
+  padding: 50px 20px 140px 20px;
+}
+
+.blink4 {
+  padding: 50px 20px 140px 20px;
+}
+
+}
     @media (max-width:767px) {
-      .question-box{
-        width:auto;
+      .question-box {
+        width: auto;
         height: 39rem;
       }
-      #next-button, #pre-button{
-        width:30%;
+
+      #next-button,
+      #pre-button {
+        width: 30%;
+      }
+
+      .blink1 {
+        padding: 100px 20px;
+      }
+
+      .blink2 {
+        padding: 100px 20px;
+      }
+
+      .blink3 {
+        padding: 100px 20px;
+      }
+
+      .blink4 {
+        padding: 100px 20px;
       }
     }
-    @media (max-width:500px) {
-      .question-box{
-        width:auto;
+
+    @media (max-width:992px) {
+
+      #next-button,
+      #pre-button {
+        width: 25%;
+      }
+
+      /* .restart {
+        margin-bottom: 40px;
+      } */
+
+      .blink1 {
+        padding: 65px 20px;
+      }
+
+      .blink2 {
+        padding: 65px 20px;
+      }
+
+      .blink3 {
+        padding: 65px 20px;
+      }
+
+      .blink4 {
+        padding: 65px 20px;
+      }
+
+    }
+
+    @media (max-width:568px) {
+      .question-box {
+        width: auto;
         height: 40rem;
       }
-     
+
+      #next-button,
+      #pre-button {
+        width: 30%;
+      }
+
+      .blink1 {
+        padding: 60px 20px;
+      }
+
+      .blink2 {
+        padding: 60px 20px;
+      }
+
+      .blink3 {
+        padding: 60px 20px;
+      }
+
+      .blink4 {
+        padding: 60px 20px;
+      }
+
     }
 
     /* The Modal (background) */
@@ -505,6 +751,8 @@
                     <li><a href="courses.html">Problem-Solving</a></li>
                     <li><a href="courses3.html">Decision Making</a></li>
                     <li><a href="courses4.html">Conflict Management</a></li>
+                    <li><a href="courses5.html">Communication</a></li>
+                    <li><a href="courses6.html">Performance optimization</a></li>
 
                   </ul>
                 </div>
@@ -572,6 +820,7 @@
             <div class="number-of-count">
               <span class="number-of-question">1 of 5 questions</span>
             </div>
+
 
           </div>
           <div id="container">
@@ -655,6 +904,8 @@
               <li><a href="courses.html">Problem-Solving</a></li>
               <li><a href="courses3.html">Decision Making</a></li>
               <li><a href="courses4.html">Conflict Management</a></li>
+              <li><a href="courses5.html">Communication</a></li>
+              <li><a href="courses6.html">Performance optimization</a></li>
             </ul>
           </div>
         </div>
@@ -662,7 +913,7 @@
           <div class="copyright">
             <p>Copyright © 2023 rqlik. All Rights Reserved.
               <br>
-              Designed by <a rel="nofollow" href="https://keysparks.com" title="KeySparks Technologies">KeySparks
+              Designed by <a rel="nofollow" href="https://keysparks.com" title="Key Sparks Technologies">Key Sparks
                 Technologies</a>
             </p>
           </div>
@@ -702,54 +953,34 @@
     const quizArray = [
       {
         id: "1",
-
         question: "Which of the following is an example of interpersonal conflict? ",
-
-        options: ["<input type='radio' name='q1' value='option1'>A disagreement over office supplies ", "<input type='radio' name='q1' value='option1'>A misunderstanding with a customer", "<input type='radio' name='q1' value='option1'>A dispute with a supplier "],
-
+        options: ["<label><input type='radio' name='q1' value='option1'>A disagreement over office supplies</label> ", "<label><input type='radio' name='q1' value='option1'>A misunderstanding with a customer</label>", "<label><input type='radio' name='q1' value='option1'>A dispute with a supplier </label>"],
         correct: "A misunderstanding with a customer",
       },
-
       {
         id: "2",
-
         question: "Which of the following is an example of intrapersonal conflict? ",
-
-        options: ["<input type='radio' name='q2' value='option1'>A disagreement with a colleague over a project ", "<input type='radio' name='q2' value='option1'>A feeling of uncertainty about a decision", "<input type='radio' name='q2' value='option1'>A negotiation with a vendor over pricing "],
-
+        options: ["<label><input type='radio' name='q2' value='option1'>A disagreement with a colleague over a project</label> ", "<label><input type='radio' name='q2' value='option1'>A feeling of uncertainty about a decision</label>", "<label><input type='radio' name='q2' value='option1'>A negotiation with a vendor over pricing</label> "],
         correct: "A feeling of uncertainty about a decision",
       },
-
       {
         id: "3",
-
         question: "Which of the following is an example of organizational conflict? ",
-
-        options: ["<input type='radio' name='q3' value='option1'>A disagreement between two employees ", "<input type='radio' name='q3' value='option1'>A power struggle between managers", "<input type='radio' name='q3' value='option1'>A conflict between a customer and an employee "],
-
+        options: ["<label><input type='radio' name='q3' value='option1'>A disagreement between two employees</label> ", "<label><input type='radio' name='q3' value='option1'>A power struggle between managers</label>", "<label><input type='radio' name='q3' value='option1'>A conflict between a customer and an employee </label>"],
         correct: "A power struggle between managers",
       },
-
       {
         id: "4",
-
         question: "Which of the following is an example of community conflict? ",
-
-        options: ["<input type='radio' name='q4' value='option1'>A disagreement over a proposed development project", "<input type='radio' name='q4' value='option1'>A dispute between neighbours over a fence  ", "<input type='radio' name='q4' value='option1'>A conflict between a customer and a business owner "],
-
+        options: ["<label><input type='radio' name='q4' value='option1'>A disagreement over a proposed development project </label>", "<label><input type='radio' name='q4' value='option1'>A dispute between neighbours over a fence </label> ", "<label><input type='radio' name='q4' value='option1'>A conflict between a customer and a business owner</label> "],
         correct: "A disagreement over a proposed development project",
       },
-
       {
         id: "5",
-
         question: "Which of the following is an example of cross-cultural conflict? ",
-
-        options: ["<input type='radio' name='q5' value='option1'>A disagreement between two employees from different departments", "<input type='radio' name='q5' value='option1'>A dispute between colleagues over office space  ", "<input type='radio' name='q5' value='option1'>A conflict between two employees from different cultural backgrounds",],
-
+        options: ["<label><input type='radio' name='q5' value='option1'>A disagreement between two employees from different departments</label>", "<label><input type='radio' name='q5' value='option1'>A dispute between colleagues over office space </label> ", "<label><input type='radio' name='q5' value='option1'>A conflict between two employees from different cultural backgrounds</label>",],
         correct: "A conflict between two employees from different cultural backgrounds",
       },
-
     ];
 
     //Restart Quiz
@@ -790,7 +1021,7 @@
       "click",
       (displayNext = () => {
         //increment questionCount
-        nextBtn.disabled = true;        
+        nextBtn.disabled = true;
         questionCount += 1;
         // check if user is on the second question 
         if (questionCount === 1) {
@@ -808,17 +1039,15 @@
           let result = "";
 
           if (averageScore > 0 && averageScore <= 0.4) {
-            result = "<span id='blink' style='text-align: center;'>Beginner</span><br><span id='rdes'>Good effort, but it is important to recognize that conflicts can be complex and challenging to navigate. By continuing to learn about conflict resolution strategies and practicing them in real-world situations, you can build the skills necessary to achieve success. Remember that progress takes time, and with persistence and a willingness to learn and adapt, you can achieve your goals.<br>When facing an interpersonal conflict, it's important to listen actively, remain calm, and try to see the situation from the other person's perspective. Finding common ground and compromising on a solution can also be helpful. When dealing with intrapersonal conflict, it's important to take the time to reflect on your thoughts and feelings. Writing down your concerns and speaking to a trusted colleague or mentor can also help. Consider seeking professional support if the conflict is affecting your mental health. <br>When dealing with organizational conflict, it's important to involve all relevant parties in the conflict resolution process. Seeking the help of a neutral third-party mediator can also be helpful. Addressing the underlying issues that led to the conflict and implementing changes to prevent similar conflicts in the future is also important. When dealing with community conflict, it's important to listen to all sides and work towards finding a solution that benefits everyone. Building relationships and trust between community members and stakeholders can also be helpful. Consider seeking the help of a neutral third-party mediator to facilitate the resolution process. <br>When dealing with cross-cultural conflict, it's important to be respectful of cultural differences and to avoid making assumptions or stereotypes. Taking the time to learn about different cultures and communication styles can also be helpful. Building relationships and trust between individuals from different cultural backgrounds can also be beneficial. </span > ";
+            result = "<p class='blink1'><span id='blink' style='color:#66FF66;'>Beginner</span><br><span id='rdes'>Good effort, but it is important to recognize that conflicts can be complex and challenging to navigate. By continuing to learn about conflict resolution strategies and practicing them in real-world situations, you can build the skills necessary to achieve success. Remember that progress takes time, and with persistence and a willingness to learn and adapt, you can achieve your goals.<br>When facing an interpersonal conflict, it's important to listen actively, remain calm, and try to see the situation from the other person's perspective. Finding common ground and compromising on a solution can also be helpful. When dealing with intrapersonal conflict, it's important to take the time to reflect on your thoughts and feelings. Writing down your concerns and speaking to a trusted colleague or mentor can also help. Consider seeking professional support if the conflict is affecting your mental health. <br>When dealing with organizational conflict, it's important to involve all relevant parties in the conflict resolution process. Seeking the help of a neutral third-party mediator can also be helpful. Addressing the underlying issues that led to the conflict and implementing changes to prevent similar conflicts in the future is also important. When dealing with community conflict, it's important to listen to all sides and work towards finding a solution that benefits everyone. Building relationships and trust between community members and stakeholders can also be helpful. Consider seeking the help of a neutral third-party mediator to facilitate the resolution process. <br>When dealing with cross-cultural conflict, it's important to be respectful of cultural differences and to avoid making assumptions or stereotypes. Taking the time to learn about different cultures and communication styles can also be helpful. Building relationships and trust between individuals from different cultural backgrounds can also be beneficial. </span ></p> ";
           } else if (averageScore > 0.4 && averageScore <= 0.7) {
-            result = "<span id='blink' style='text-align: center;'>Intermediate</span><br><span id='rdes'>Good one, your level demonstrates a good understanding of the basics of conflict resolution, and with continued practice and refinement of your skills, you can become even more effective at managing conflicts. Take time to reflect on your strengths and areas for improvement and plan to continue developing your skills. Remember that conflicts can be opportunities for growth and learning, and with a positive attitude and commitment to improvement, you can achieve success.<br>When facing an interpersonal conflict, it's important to listen actively, remain calm, and try to see the situation from the other person's perspective. Finding common ground and compromising on a solution can also be helpful. When dealing with intrapersonal conflict, it's important to take the time to reflect on your thoughts and feelings. Writing down your concerns and speaking to a trusted colleague or mentor can also help. Consider seeking professional support if the conflict is affecting your mental health.<br>When dealing with organizational conflict, it's important to involve all relevant parties in the conflict resolution process. Seeking the help of a neutral third-party mediator can also be helpful. Addressing the underlying issues that led to the conflict and implementing changes to prevent similar conflicts in the future is also important. When dealing with community conflict, it's important to listen to all sides and work towards finding a solution that benefits everyone. Building relationships and trust between community members and stakeholders can also be helpful. Consider seeking the help of a neutral third-party mediator to facilitate the resolution process. <br>When dealing with cross-cultural conflict, it's important to be respectful of cultural differences and to avoid making assumptions or stereotypes. Taking the time to learn about different cultures and communication styles can also be helpful. Building relationships and trust between individuals from different cultural backgrounds can also be beneficial. </span>";
+            result = "<p class='blink2'><span id='blink' style='color:#00CC00;'>Intermediate</span><br><span id='rdes'>Good one, your level demonstrates a good understanding of the basics of conflict resolution, and with continued practice and refinement of your skills, you can become even more effective at managing conflicts. Take time to reflect on your strengths and areas for improvement and plan to continue developing your skills. Remember that conflicts can be opportunities for growth and learning, and with a positive attitude and commitment to improvement, you can achieve success.<br>When facing an interpersonal conflict, it's important to listen actively, remain calm, and try to see the situation from the other person's perspective. Finding common ground and compromising on a solution can also be helpful. When dealing with intrapersonal conflict, it's important to take the time to reflect on your thoughts and feelings. Writing down your concerns and speaking to a trusted colleague or mentor can also help. Consider seeking professional support if the conflict is affecting your mental health.<br>When dealing with organizational conflict, it's important to involve all relevant parties in the conflict resolution process. Seeking the help of a neutral third-party mediator can also be helpful. Addressing the underlying issues that led to the conflict and implementing changes to prevent similar conflicts in the future is also important. When dealing with community conflict, it's important to listen to all sides and work towards finding a solution that benefits everyone. Building relationships and trust between community members and stakeholders can also be helpful. Consider seeking the help of a neutral third-party mediator to facilitate the resolution process. <br>When dealing with cross-cultural conflict, it's important to be respectful of cultural differences and to avoid making assumptions or stereotypes. Taking the time to learn about different cultures and communication styles can also be helpful. Building relationships and trust between individuals from different cultural backgrounds can also be beneficial. </span></p>";
           } else if (averageScore > 0.7 && averageScore <= 0.9) {
-            result = "<span id='blink' style='text-align: center;'>Advanced</span><br><span id='rdes'>Great job, you indicate a strong understanding of conflict resolution principles and a clear aptitude for these skills. With continued effort and focus on areas for refinement, you have the potential to achieve even greater success. Keep up the great work, and don't be afraid to challenge yourself to take your skills to the next level. Remember that practice makes perfect, and with continued dedication and effort, you can achieve your goals.<br>When facing an interpersonal conflict, it's important to listen actively, remain calm, and try to see the situation from the other person's perspective. Finding common ground and compromising on a solution can also be helpful. When dealing with intrapersonal conflict, it's important to take the time to reflect on your thoughts and feelings. Writing down your concerns and speaking to a trusted colleague or mentor can also help. Consider seeking professional support if the conflict is affecting your mental health. <br>When dealing with organizational conflict, it's important to involve all relevant parties in the conflict resolution process. Seeking the help of a neutral third-party mediator can also be helpful. Addressing the underlying issues that led to the conflict and implementing changes to prevent similar conflicts in the future is also important. When dealing with community conflict, it's important to listen to all sides and work towards finding a solution that benefits everyone. Building relationships and trust between community members and stakeholders can also be helpful. Consider seeking the help of a neutral third-party mediator to facilitate the resolution process. <br>When dealing with cross-cultural conflict, it's important to be respectful of cultural differences and to avoid making assumptions or stereotypes. Taking the time to learn about different cultures and communication styles can also be helpful. Building relationships and trust between individuals from different cultural backgrounds can also be beneficial. </span>";
+            result = "<p class='blink3'><span id='blink' style='color:#009900;'>Advanced</span><br><span id='rdes'>Great job, you indicate a strong understanding of conflict resolution principles and a clear aptitude for these skills. With continued effort and focus on areas for refinement, you have the potential to achieve even greater success. Keep up the great work, and don't be afraid to challenge yourself to take your skills to the next level. Remember that practice makes perfect, and with continued dedication and effort, you can achieve your goals.<br>When facing an interpersonal conflict, it's important to listen actively, remain calm, and try to see the situation from the other person's perspective. Finding common ground and compromising on a solution can also be helpful. When dealing with intrapersonal conflict, it's important to take the time to reflect on your thoughts and feelings. Writing down your concerns and speaking to a trusted colleague or mentor can also help. Consider seeking professional support if the conflict is affecting your mental health. <br>When dealing with organizational conflict, it's important to involve all relevant parties in the conflict resolution process. Seeking the help of a neutral third-party mediator can also be helpful. Addressing the underlying issues that led to the conflict and implementing changes to prevent similar conflicts in the future is also important. When dealing with community conflict, it's important to listen to all sides and work towards finding a solution that benefits everyone. Building relationships and trust between community members and stakeholders can also be helpful. Consider seeking the help of a neutral third-party mediator to facilitate the resolution process. <br>When dealing with cross-cultural conflict, it's important to be respectful of cultural differences and to avoid making assumptions or stereotypes. Taking the time to learn about different cultures and communication styles can also be helpful. Building relationships and trust between individuals from different cultural backgrounds can also be beneficial. </span></p>";
           }
           else if (averageScore > 0.9 && averageScore <= 1) {
-            result = "<span id='blink' style='text-align: center;'>Expert</span><br><span id='rdes'>Congratulations, your understanding of conflict resolution principles is exceptional, and your commitment to improvement is evident. You have a great foundation to build upon and the potential to achieve tremendous success in this area. Keep up the fantastic work, and don't be afraid to share your knowledge and skills with others to help them achieve success as well. Remember that there is always room for growth and improvement, so continue to challenge yourself to learn and develop new skills.<br>When facing an interpersonal conflict, it's important to listen actively, remain calm, and try to see the situation from the other person's perspective. Finding common ground and compromising on a solution can also be helpful. When dealing with intrapersonal conflict, it's important to take the time to reflect on your thoughts and feelings. Writing down your concerns and speaking to a trusted colleague or mentor can also help. Consider seeking professional support if the conflict is affecting your mental health. <br>When dealing with organizational conflict, it's important to involve all relevant parties in the conflict resolution process. Seeking the help of a neutral third-party mediator can also be helpful. Addressing the underlying issues that led to the conflict and implementing changes to prevent similar conflicts in the future is also important. When dealing with community conflict, it's important to listen to all sides and work towards finding a solution that benefits everyone. Building relationships and trust between community members and stakeholders can also be helpful. Consider seeking the help of a neutral third-party mediator to facilitate the resolution process. <br>When dealing with cross-cultural conflict, it's important to be respectful of cultural differences and to avoid making assumptions or stereotypes. Taking the time to learn about different cultures and communication styles can also be helpful. Building relationships and trust between individuals from different cultural backgrounds can also be beneficial.</span>";
+            result = "<p class='blink4'><span id='blink' style='color: #006600;'>Expert</span><br><span id='rdes'>Congratulations, your understanding of conflict resolution principles is exceptional, and your commitment to improvement is evident. You have a great foundation to build upon and the potential to achieve tremendous success in this area. Keep up the fantastic work, and don't be afraid to share your knowledge and skills with others to help them achieve success as well. Remember that there is always room for growth and improvement, so continue to challenge yourself to learn and develop new skills.<br>When facing an interpersonal conflict, it's important to listen actively, remain calm, and try to see the situation from the other person's perspective. Finding common ground and compromising on a solution can also be helpful. When dealing with intrapersonal conflict, it's important to take the time to reflect on your thoughts and feelings. Writing down your concerns and speaking to a trusted colleague or mentor can also help. Consider seeking professional support if the conflict is affecting your mental health. <br>When dealing with organizational conflict, it's important to involve all relevant parties in the conflict resolution process. Seeking the help of a neutral third-party mediator can also be helpful. Addressing the underlying issues that led to the conflict and implementing changes to prevent similar conflicts in the future is also important. When dealing with community conflict, it's important to listen to all sides and work towards finding a solution that benefits everyone. Building relationships and trust between community members and stakeholders can also be helpful. Consider seeking the help of a neutral third-party mediator to facilitate the resolution process. <br>When dealing with cross-cultural conflict, it's important to be respectful of cultural differences and to avoid making assumptions or stereotypes. Taking the time to learn about different cultures and communication styles can also be helpful. Building relationships and trust between individuals from different cultural backgrounds can also be beneficial.</span></p>";
           }
-
-
 
           userScore.innerHTML = "" + result;
 
@@ -878,9 +1107,9 @@
         div.appendChild(question_DIV);
         //options
         div.innerHTML += `
-<button class="option-div" onclick="checker(this)">${i.options[0]}</button>
- <button class="option-div" onclick="checker(this)">${i.options[1]}</button>
-  <button class="option-div" onclick="checker(this)">${i.options[2]}</button>
+<label class="option-div" onclick="checker(this)">${i.options[0]}</label>
+<label class="option-div" onclick="checker(this)">${i.options[1]}</label>
+<label class="option-div" onclick="checker(this)">${i.options[2]}</label>
   
 `;
         quizContainer.appendChild(div);

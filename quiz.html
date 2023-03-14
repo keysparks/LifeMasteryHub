@@ -11,7 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
     rel="stylesheet">
 
-    <link rel="icon" type="icon"  href="./assets/images/new-mini-logo.png">
+  <link rel="icon" type="icon" href="./assets/images/new-mini-logo.png">
   <title>Life Skill Portal</title>
 
   <!-- Bootstrap core CSS -->
@@ -39,8 +39,7 @@
       font-family: "Poppins", sans-serif;
     }
 
-    .start-screen,
-    .score-container {
+    .start-screen {
 
       top: 40%;
       width: 100%;
@@ -48,8 +47,24 @@
       left: 50%;
       display: flex;
       flex-direction: column;
+      text-align: center;
       align-items: center;
       justify-content: center;
+    }
+
+    .score-container {
+      background-color: #fff;
+      top: 40%;
+      width: 100%;
+      height: 100%;
+      left: 50%;
+      /* display: flex; */
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+      border-radius: 20px;
+
     }
 
     button {
@@ -61,12 +76,16 @@
     #start-button,
     #restart {
       font-size: 1.3em;
-      padding: 0.5em 1.8em;
+      padding: 0.5em 0.8em;
       border-radius: 0.2em;
+      background-color: #ff695f;
+      color: #fff;
     }
 
+
     #restart {
-      margin-top: 0.9em;
+      margin-top: 15px;
+      margin-bottom: 10px;
     }
 
     .header {
@@ -103,11 +122,13 @@
       background: transparent;
       border: 1px solid #c0bfd2;
       border-radius: 0.3em;
+      font-weight: normal;
+      cursor: pointer;
     }
 
     .option-div:disabled {
       color: #000000;
-      cursor: not-allowed;
+      /* cursor: not-allowed; */
     }
 
     #next-button {
@@ -118,7 +139,7 @@
       padding: 0.7em 1.8em;
       border-radius: 0.3em;
       float: right;
-      width: 20%;
+      width: 15%;
     }
 
     #pre-button {
@@ -129,24 +150,12 @@
       padding: 0.7em 1.8em;
       border-radius: 0.3em;
       float: left;
-      width: 20%;
+      width: 15%;
     }
 
     .hide {
       display: none;
     }
-
-    /* .incorrect {
-      background-color: #ffdde0;
-      color: #d32f2f;
-      border-color: #d32f2f;
-    }
-
-    .correct {
-      background-color: #e7f6d5;
-      color: #689f38;
-      border-color: #689f38;
-    } */
 
     #user-score {
       font-size: 1.5em;
@@ -160,15 +169,19 @@
     }
 
     .question-box {
+      background-image: url(./assets/images/quizStart.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      box-shadow: 0px 0px 15px #ff695f;
       width: 80%;
       height: 35rem;
-      background-color: #ff695f;
+      /* background-color: #ff695f; */
       display: flex;
       justify-content: center;
       align-items: center;
       border-radius: 10px;
       /* border-bottom-right-radius: 30px; */
-      padding: 5px;
+      padding: 0px;
 
       margin-top: 60px;
 
@@ -193,52 +206,284 @@
     }
 
     #user-score {
+
       font-size: 1em;
-      color: #ffffff;
-      text-align: center;
-      padding: 30px;
-      margin: auto;
+      color: black;
+      /* text-align: center; */
+      /* padding: 30px; */
+      /* margin: auto; */
       animation: none;
-      /* overflow: auto; */
-      /* remove any animation applied previously */
     }
 
     #blink {
       animation: blinker 1.5s linear infinite;
-      color: rgb(255, 255, 255);
+      /* color: yellowgreen; */
       font-family: sans-serif;
-      font-size: larger;
+      font-size: 28px;
       font-weight: bolder;
       text-align: center;
       margin: auto;
+      -webkit-text-stroke: 0.5px black;
     }
+
+    .blink1 {
+      position: relative;
+      isolation: isolate;
+      padding:50px 20px 170px 20px ;
+    }
+
+    .blink1::after {
+      background-image: url(./assets/images/quizScore.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      opacity: 0.2;
+      content: '';
+      position: absolute;
+      z-index: -1;
+      inset: 0;
+
+
+    }
+
+    .blink2 {
+      position: relative;
+      isolation: isolate;
+      padding:50px 20px 170px 20px ;
+    }
+
+    .blink2::after {
+      background-image: url(./assets/images/intermidiate-quiz.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      opacity: 0.2;
+      content: '';
+      position: absolute;
+      z-index: -1;
+      inset: 0;
+
+    }
+
+    .blink3 {
+      position: relative;
+      isolation: isolate;
+      padding:50px 20px 170px 20px ;
+    }
+
+    .blink3::after {
+      background-image: url(./assets/images/advance-levelQuiz.jfif);
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      opacity: 0.2;
+      content: '';
+      position: absolute;
+      z-index: -1;
+      inset: 0;
+
+    }
+
+    .blink4 {
+      position: relative;
+      isolation: isolate;
+      padding:50px 20px 170px 20px ;
+    }
+
+    .blink4::after {
+      background-image: url(./assets/images/expert-blue-quiz.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      opacity: 0.2;
+      content: '';
+      position: absolute;
+      z-index: -1;
+      inset: 0;
+
+    }
+
+    .blink1,
+    .blink2,
+    .blink3,
+    .blink4 {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      /* padding: 10px 20px; */
+      font-weight: 500;
+    }
+
+    .blink1 #rdes,
+    .blink2 #rdes,
+    .blink3 #rdes,
+    .blink4 #rdes {
+      text-align: left;
+      margin-top: 20px;
+    }
+
+
+
     @keyframes blinker {
       50% {
         opacity: 0;
       }
     }
+
     @media (min-width:1500px) {
-      .question-box{
-        width:80%;
+      .question-box {
+        width: 80%;
         height: 33rem;
       }
-     
+
+
     }
+
+    @media (max-width:1500px) {
+
+      .blink1 {
+        padding:50px 20px 170px 20px ;
+      }
+
+      .blink2 {
+        padding:50px 20px 170px 20px;
+      }
+
+      .blink3 {
+        padding:50px 20px 170px 20px;
+      }
+
+      .blink4 {
+        padding:50px 20px 170px 20px;
+      }
+
+    }
+
+    @media (max-width:1399px) {
+
+      .blink1 {
+        padding:50px 20px 170px 20px;
+      }
+
+      .blink2 {
+        padding:50px 20px 170px 20px;
+      }
+
+      .blink3 {
+        padding:50px 20px 170px 20px;
+      }
+
+      .blink4 {
+        padding:50px 20px 170px 20px;
+      }
+
+    }
+    
+    @media (max-width:1200px) {
+
+.blink1 {
+  padding: 50px 20px 140px 20px;
+}
+
+.blink2 {
+  padding: 50px 20px 140px 20px;
+}
+
+.blink3 {
+  padding: 50px 20px 140px 20px;
+}
+
+.blink4 {
+  padding: 50px 20px 140px 20px;
+}
+
+}
+
     @media (max-width:767px) {
-      .question-box{
-        width:auto;
+      .question-box {
+        width: auto;
         height: 39rem;
       }
-      #next-button, #pre-button{
-        width:30%;
+
+      #next-button,
+      #pre-button {
+        width: 30%;
+      }
+
+      .blink1 {
+        padding: 100px 20px ;
+      }
+
+      .blink2 {
+        padding: 100px 20px ;
+      }
+
+      .blink3 {
+        padding: 100px 20px ;
+      }
+
+      .blink4 {
+        padding: 100px 20px ;
       }
     }
-    @media (max-width:500px) {
-      .question-box{
-        width:auto;
+
+    @media (max-width:992px) {
+
+      #next-button,
+      #pre-button {
+        width: 25%;
+      }
+
+      /* .restart {
+        margin-bottom: 40px;
+      } */
+
+      .blink1 {
+        padding: 65px 20px;
+      }
+
+      .blink2 {
+        padding: 65px 20px;
+      }
+
+      .blink3 {
+        padding: 65px 20px;
+      }
+
+      .blink4 {
+        padding: 65px 20px;
+      }
+
+    }
+
+    @media (max-width:568px) {
+      .question-box {
+        width: auto;
         height: 40rem;
       }
-     
+
+      #next-button,
+      #pre-button {
+        width: 30%;
+      }
+
+      .blink1 {
+        padding: 60px 20px ;
+      }
+
+      .blink2 {
+        padding: 60px 20px ;
+      }
+
+      .blink3 {
+        padding: 60px 20px ;
+      }
+
+      .blink4 {
+        padding: 60px 20px ;
+      }
+
     }
 
     /* The Modal (background) */
@@ -504,6 +749,8 @@
                     <li><a href="courses.html">Problem Solving</a></li>
                     <li><a href="courses3.html">Decision making</a></li>
                     <li><a href="courses4.html">Conflict management</a></li>
+                    <li><a href="courses5.html">Communication</a></li>
+                    <li><a href="courses6.html">Performance optimization</a></li>
 
                   </ul>
                 </div>
@@ -656,6 +903,8 @@
               <li><a href="courses.html">Problem-Solving</a></li>
               <li><a href="courses3.html">Decision Making</a></li>
               <li><a href="courses4.html">Conflict Management</a></li>
+              <li><a href="courses5.html">Communication</a></li>
+              <li><a href="courses6.html">Performance optimization</a></li>
             </ul>
           </div>
         </div>
@@ -663,7 +912,7 @@
           <div class="copyright">
             <p>Copyright © 2023 rqlik. All Rights Reserved.
               <br>
-              Designed by <a rel="nofollow" href="https://keysparks.com" title="KeySparks Technologies">KeySparks
+              Designed by <a rel="nofollow" href="https://keysparks.com" title="Key Sparks Technologies">Key Sparks
                 Technologies</a>
             </p>
           </div>
@@ -704,93 +953,93 @@
       {
         id: "1",
         question: "What is the first step in the problem-solving process?",
-        options: ["<input type='radio' name='q1' value='option1'>Generating possible solutions", "<input type='radio' name='q1' value='option1'>Identifying the problem", "<input type='radio' name='q1' value='option1'>Evaluating the solution", "<input type='radio' name='q1' value='option1'>Implementing the solution"],
+        options: ["<label><input type='radio' name='q1' value='option1'>Generating possible solutions</label>", "<label><input type='radio' name='q1' value='option1'>Identifying the problem</label>", "<label><input type='radio' name='q1' value='option1'>Evaluating the solution</label>", "<label><input type='radio' name='q1' value='option1'>Implementing the solution</label>"],
         correct: "Identifying the problem",
       },
       {
         id: "2",
         question: "Which of the following is NOT a problem-solving technique?",
-        options: ["<input type='radio' name='q2' value='option1'>Brainstorming", "<input type='radio' name='q2' value='option1'>Mind Mapping", "<input type='radio' name='q2' value='option1'>Guessing", "<input type='radio' name='q2' value='option1'>Root Cause Analysis"],
+        options: ["<label><input type='radio' name='q2' value='option1'>Brainstorming</label>", "<label><input type='radio' name='q2' value='option1'>Mind Mapping</label>", "<label><input type='radio' name='q2' value='option1'>Guessing</label>", "<label><input type='radio' name='q2' value='option1'>Root Cause Analysis</label>"],
         correct: "Guessing",
       },
       {
         id: "3",
         question: "Which problem-solving technique involves breaking down a problem into its components and examining their relationships?",
-        options: ["<input type='radio' name='q1' value='option1'>Mind Mapping", "<input type='radio' name='q3' value='option1'>Chunking", "<input type='radio' name='q3' value='option1'>Root Cause Analysis", "<input type='radio' name='q3' value='option1'>Decision Matrix"],
+        options: ["<label><input type='radio' name='q1' value='option1'>Mind Mapping</label>", "<label><input type='radio' name='q3' value='option1'>Chunking</label>", "<label><input type='radio' name='q3' value='option1'>Root Cause Analysis</label>", "<label><input type='radio' name='q3' value='option1'>Decision Matrix</label>"],
         correct: "Root Cause Analysis",
       },
 
       {
         id: "4",
         question: "What is the purpose of brainstorming in problem-solving?",
-        options: ["<input type='radio' name='q1' value='option1'>To generate possible solutions", "<input type='radio' name='q4' value='option1'>To evaluate solutions", "<input type='radio' name='q4' value='option1'>To implement solutions", "<input type='radio' name='q4' value='option1'>To identify the problem"],
+        options: ["<label><input type='radio' name='q1' value='option1'>To generate possible solutions</label>", "<label><input type='radio' name='q4' value='option1'>To evaluate solutions</label>", "<label><input type='radio' name='q4' value='option1'>To implement solutions</label>", "<label><input type='radio' name='q4' value='option1'>To identify the problem</label>"],
         correct: "To generate possible solutions",
       },
       {
         id: "5",
         question: "Which of the following is a barrier to problem-solving?",
-        options: ["<input type='radio' name='q5' value='option1'>Creativity", "<input type='radio' name='q5' value='option1'>Open-mindedness", "<input type='radio' name='q5' value='option1'>Limited knowledge", "<input type='radio' name='q5' value='option1'>Willingness to take risks"],
+        options: ["<label><input type='radio' name='q5' value='option1'>Creativity</label>", "<label><input type='radio' name='q5' value='option1'>Open-mindedness</label>", "<label><input type='radio' name='q5' value='option1'>Limited knowledge</label>", "<label><input type='radio' name='q5' value='option1'>Willingness to take risks</label>"],
         correct: "Limited knowledge",
       },
       {
         id: "6",
         question: "Which problem-solving technique involves listing the advantages and disadvantages of a solution?",
-        options: ["<input type='radio' name='q6' value='option1'>Decision Matrix", "<input type='radio' name='q6' value='option1'>Fishbone Diagram", "<input type='radio' name='q6' value='option1'>SWOT Analysis", "<input type='radio' name='q6' value='option1'>Root Cause Analysis"],
+        options: ["<label><input type='radio' name='q6' value='option1'>Decision Matrix</label>", "<label><input type='radio' name='q6' value='option1'>Fishbone Diagram</label>", "<label><input type='radio' name='q6' value='option1'>SWOT Analysis</label>", "<label><input type='radio' name='q6' value='option1'>Root Cause Analysis</label>"],
         correct: "Decision Matrix",
       },
       {
         id: "7",
         question: " Which of the following is a characteristic of an effective problem solver?",
-        options: ["<input type='radio' name='q7' value='option1'>Quick decision-making", "<input type='radio' name='q7' value='option1'>Inflexibility", "<input type='radio' name='q7' value='option1'>Lack of curiosity", "<input type='radio' name='q7' value='option1'>Persistence"],
+        options: ["<label><input type='radio' name='q7' value='option1'>Quick decision-making</label>", "<label><input type='radio' name='q7' value='option1'>Inflexibility</label>", "<label><input type='radio' name='q7' value='option1'>Lack of curiosity</label>", "<label><input type='radio' name='q7' value='option1'>Persistence</label>"],
         correct: "Persistence",
       },
       {
         id: "8",
         question: "Which of the following is NOT a problem-solving technique?",
-        options: ["<input type='radio' name='q8' value='option1'>To identify the problem", "<input type='radio' name='q8' value='option1'>To evaluate solutions", "<input type='radio' name='q8' value='option1'>To generate possible causes", "<input type='radio' name='q8' value='option1'>To prioritize tasks"],
+        options: ["<label><input type='radio' name='q8' value='option1'>To identify the problem</label>", "<label><input type='radio' name='q8' value='option1'>To evaluate solutions</label>", "<label><input type='radio' name='q8' value='option1'>To generate possible causes</label>", "<label><input type='radio' name='q8' value='option1'>To prioritize tasks</label>"],
         correct: "To generate possible causes",
       },
       {
         id: "9",
         question: "Which problem-solving technique involves considering the worst-case scenario and preparing contingency plans?",
-        options: ["<input type='radio' name='q9' value='option1'>Risk Analysis", "<input type='radio' name='q9' value='option1'>Mind Mapping", "<input type='radio' name='q9' value='option1'>Six Thinking Hats", "<input type='radio' name='q9' value='option1'>Root Cause Analysis"],
+        options: ["<label><input type='radio' name='q9' value='option1'>Risk Analysis </label>", "<label><input type='radio' name='q9' value='option1'>Mind Mapping</label>", "<label><input type='radio' name='q9' value='option1'>Six Thinking Hats</label>", "<label><input type='radio' name='q9' value='option1'>Root Cause Analysis</label>"],
         correct: "Risk Analysis",
       },
 
       {
         id: "10",
         question: "Which of the following is NOT a step in the decision-making process?",
-        options: ["<input type='radio' name='q10' value='option1'>Identifying the problem", "<input type='radio' name='q10' value='option1'>Generating alternatives", "<input type='radio' name='q10' value='option1'>Evaluating alternatives", "<input type='radio' name='q10' value='option1'>Implementing the solution"],
+        options: ["<label><input type='radio' name='q10' value='option1'>Identifying the problem</label>", "<label><input type='radio' name='q10' value='option1'>Generating alternatives</label>", "<label><input type='radio' name='q10' value='option1'>Evaluating alternatives</label>", "<label><input type='radio' name='q10' value='option1'>Implementing the solution</label>"],
         correct: "Implementing the solution",
       },
       {
         id: "11",
         question: "Which problem-solving technique involves examining a problem from different perspectives?",
-        options: ["<input type='radio' name='q11' value='option1'>Six Thinking Hats", "<input type='radio' name='q11' value='option1'>Fishbone Diagram", "<input type='radio' name='q11' value='option1'>Root Cause Analysis", "<input type='radio' name='q11' value='option1'>Decision Matrix"],
+        options: ["<label><input type='radio' name='q11' value='option1'>Six Thinking Hats</label>", "<label><input type='radio' name='q11' value='option1'>Fishbone Diagram</label>", "<label><input type='radio' name='q11' value='option1'>Root Cause Analysis</label>", "<label><input type='radio' name='q11' value='option1'>Decision Matrix</label>"],
         correct: "Six Thinking Hats",
       },
       {
         id: "12",
         question: "Which of the following is a critical thinking skill necessary for problem-solving?",
-        options: ["<input type='radio' name='q12' value='option1'>Memorization", "<input type='radio' name='q12' value='option1'>Deductive reasoning", "<input type='radio' name='q12' value='option1'>Active listening", "<input type='radio' name='q12' value='option1'>Perseverance"],
+        options: ["<label><input type='radio' name='q12' value='option1'>Memorization</label>", "<label><input type='radio' name='q12' value='option1'>Deductive reasoning</label>", "<label><input type='radio' name='q12' value='option1'>Active listening</label>", "<label><input type='radio' name='q12' value='option1'>Perseverance</label>"],
         correct: "Deductive reasoning",
       },
       {
         id: "13",
         question: "Which problem-solving technique involves identifying the underlying causes of a problem? ",
-        options: ["<input type='radio' name='q13' value='option1'>Root Cause Analysis", "<input type='radio' name='q13' value='option1'>Mind Mapping", "<input type='radio' name='q13' value='option1'>Six Thinking Hats", "<input type='radio' name='q13' value='option1'>Chunking"],
+        options: ["<label><input type='radio' name='q13' value='option1'>Root Cause Analysis</label>", "<label><input type='radio' name='q13' value='option1'>Mind Mapping</label>", "<label><input type='radio' name='q13' value='option1'>Six Thinking Hats</label>", "<label><input type='radio' name='q13' value='option1'>Chunking</label>"],
         correct: "Chunking",
       },
       {
         id: "14",
         question: "What is the purpose of the decision matrix in problem-solving?",
-        options: ["<input type='radio' name='q14' value='option1'>To generate possible solutions", "<input type='radio' name='q14' value='option1'>To evaluate solutions", "<input type='radio' name='q14' value='option1'>To identify the problem", "<input type='radio' name='q14' value='option1'>To prioritize tasks"],
+        options: ["<label><input type='radio' name='q14' value='option1'>To generate possible solutions</label>", "<label><input type='radio' name='q14' value='option1'>To evaluate solutions</label>", "<label><input type='radio' name='q14' value='option1'>To identify the problem</label>", "<label><input type='radio' name='q14' value='option1'>To prioritize tasks</label>"],
         correct: "To evaluate solutions",
       },
       {
         id: "15",
         question: "Which of the following is a common mistake in problem-solving?",
-        options: ["<input type='radio' name='q15' value='option1'>Identifying the problem too quickly", "<input type='radio' name='q15' value='option1'>Gathering too much information", "<input type='radio' name='q15' value='option1'>Considering too many alternatives", "<input type='radio' name='q15' value='option1'>Implementing the first solution that comes to mind"],
+        options: ["<label><input type='radio' name='q15' value='option1'>Identifying the problem too quickly</label>", "<label><input type='radio' name='q15' value='option1'>Gathering too much information</label>", "<label><input type='radio' name='q15' value='option1'>Considering too many alternatives</label>", "<label><input type='radio' name='q15' value='option1'>Implementing the first solution that comes to mind</label>"],
         correct: "Implementing the first solution that comes to mind",
       },
 
@@ -807,7 +1056,7 @@
     preBtn.addEventListener("click", () => {
       preBtn.disabled = false;
       questionCount -= 1;
-      nextBtn.disabled=false;
+      nextBtn.disabled = false;
       // check if user is going back to the first question
       if (questionCount === 0) {
         preBtn.hidden = true; // hide the pre-button again
@@ -854,13 +1103,13 @@
 
 
           if (averageScore > 0 && averageScore <= 0.4) {
-            result = "<span id='blink' style='text-align: center;'>Beginner</span><br><span id='rdes'>Great job on taking the quiz and identifying areas where you may need to improve your critical thinking and problem-solving skills. It takes courage to acknowledge where we need to grow and develop, and you're on the right track! To improve your problem-solving skills, try to focus on practicing critical thinking, analysing information, questioning assumptions, and evaluating evidence. Remember, problem-solving is a skill that can be developed with practice and dedication, and every effort you make to improve will help you become a better problem solver.</span>";
+            result = "<p class='blink1'><span id='blink' style='color:#66FF66;'>Beginner</span><br><span id='rdes'>Great job on taking the quiz and identifying areas where you may need to improve your critical thinking and problem-solving skills. It takes courage to acknowledge where we need to grow and develop, and you're on the right track! To improve your problem-solving skills, try to focus on practicing critical thinking, analysing information, questioning assumptions, and evaluating evidence. Remember, problem-solving is a skill that can be developed with practice and dedication, and every effort you make to improve will help you become a better problem solver.</span></p>";
           } else if (averageScore > 0.5 && averageScore <= 0.7) {
-            result = "<span id='blink' style='text-align: center;'>Intermediate</span><br><span id='rdes'>Good effort, you have a good foundation of problem-solving skills and a desire to improve. To continue developing your skills, it's recommended that you focus on building your knowledge and expanding your creativity. You can do this by exposing yourself to new and different ideas and looking for opportunities to learn new things. Additionally, you can work on developing your creativity by practicing brainstorming and generating new ideas. Remember, problem-solving requires both knowledge and creativity, so it's important to work on both aspects to improve your skills.</span>";
+            result = "<p class='blink2'><span id='blink' style='color:#00CC00;'>Intermediate</span><br><span id='rdes'>Good effort, you have a good foundation of problem-solving skills and a desire to improve. To continue developing your skills, it's recommended that you focus on building your knowledge and expanding your creativity. You can do this by exposing yourself to new and different ideas and looking for opportunities to learn new things. Additionally, you can work on developing your creativity by practicing brainstorming and generating new ideas. Remember, problem-solving requires both knowledge and creativity, so it's important to work on both aspects to improve your skills.</span></p>";
           } else if (averageScore > 0.7 && averageScore <= 0.9) {
-            result = "<span id='blink' style='text-align: center;'>Advanced</span><br><span id='rdes'>Great job, You have a solid understanding of problem-solving techniques and can apply them effectively in many situations. To continue improving your problem-solving skills, it's recommended that you focus on developing your communication and collaboration abilities. These skills will help you work effectively with others to solve complex problems. Additionally, you can work on developing your resilience, so that you can persevere in the face of challenges and setbacks. Remember, problem-solving is a team effort, so it's important to work on building strong relationships with others.</span>";
+            result = "<p class='blink3'><span id='blink' style='color:#009900;'>Advanced</span><br><span id='rdes'>Great job, You have a solid understanding of problem-solving techniques and can apply them effectively in many situations. To continue improving your problem-solving skills, it's recommended that you focus on developing your communication and collaboration abilities. These skills will help you work effectively with others to solve complex problems. Additionally, you can work on developing your resilience, so that you can persevere in the face of challenges and setbacks. Remember, problem-solving is a team effort, so it's important to work on building strong relationships with others.</span></p>";
           } else if (averageScore > 0.9 && averageScore <= 1) {
-            result = "<span id='blink' style='text-align: center;'>Expert</span><br><span id='rdes'>Congratulations! You have strong problem-solving skills and can effectively apply a variety of techniques to solve complex problems. To continue developing your skills, it's recommended that you focus on developing your leadership abilities. As a problem solver, you can take on a leadership role in your organization or team and help guide others through the problem-solving process. Additionally, you can work on developing your adaptability, so that you can adjust to changing circumstances and handle unexpected challenges. Remember, problem-solving is a lifelong journey, and there is always room for growth and improvement. Keep up the great work!</span>";
+            result = "<p class='blink4'><span id='blink' style='color: #006600;'>Expert</span><br><span id='rdes'>Congratulations! You have strong problem-solving skills and can effectively apply a variety of techniques to solve complex problems. To continue developing your skills, it's recommended that you focus on developing your leadership abilities. As a problem solver, you can take on a leadership role in your organization or team and help guide others through the problem-solving process. Additionally, you can work on developing your adaptability, so that you can adjust to changing circumstances and handle unexpected challenges. Remember, problem-solving is a lifelong journey, and there is always room for growth and improvement. Keep up the great work!</span></p>";
           }
 
 
@@ -925,10 +1174,10 @@
         div.appendChild(question_DIV);
         //options
         div.innerHTML += `
-    <button class="option-div" onclick="checker(this)">${i.options[0]}</button>
-     <button class="option-div" onclick="checker(this)">${i.options[1]}</button>
-      <button class="option-div" onclick="checker(this)">${i.options[2]}</button>
-       <button class="option-div" onclick="checker(this)">${i.options[3]}</button>
+    <label class="option-div" onclick="checker(this)">${i.options[0]}</label>
+    <label class="option-div" onclick="checker(this)">${i.options[1]}</label>
+    <label class="option-div" onclick="checker(this)">${i.options[2]}</label>
+    <label class="option-div" onclick="checker(this)">${i.options[3]}</label>
     `;
         quizContainer.appendChild(div);
       }
@@ -962,7 +1211,7 @@
       //disable all options
       options.forEach((element) => {
         element.disabled = true;
-        nextBtn.disabled =false;
+        nextBtn.disabled = false;
         preBtn.disabled = false;
       });
     }
@@ -1019,7 +1268,7 @@
     }
 
 
-   
+
 
 
     for (i = 0; i < modal_btn_multi.length; i++) {

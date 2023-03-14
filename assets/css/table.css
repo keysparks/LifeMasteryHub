@@ -1,0 +1,185 @@
+.course_table {
+  font-weight: normal;
+  font-size: 16px;
+  padding-top: 20px;
+  text-align: justify;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  background-color: transparent;
+  color: #212529;
+  border-radius: 10px !important;
+}
+
+.table_maindata {
+  vertical-align: middle;
+}
+
+table th,
+table td {
+  padding: 5px 40px 10px 40px;
+  vertical-align: middle;
+  /* border-top: 1px solid #dee2e6; */
+  border-top: 1px solid #eee;
+  border-left: 1px solid #eee !important;
+  border-right: 1px solid #eee !important;
+  border-bottom: 1px solid #eee;
+}
+
+table th:first-child,
+table td:first-child {
+  border-left: none;
+}
+
+table th:last-child,
+table td:last-child {
+  border-right: none;
+}
+
+table th {
+  font-weight: bold;
+  text-align: inherit;
+  text-align: center;
+  background-color: #fafafa;
+}
+
+table tbody+tbody {
+  border-top: 2px solid #dee2e6;
+}
+
+td ol li {
+  list-style: lower-alpha;
+  padding-top: 10px;
+}
+
+td ul li {
+  list-style: none;
+  padding-left: 0px;
+  padding-top: 10px;
+}
+
+.experience-time_border {
+  border-bottom: none;
+  margin-bottom: 20px;
+}
+
+/* .table_column2{
+ vertical-align: top;
+} */
+.table_columnspace {
+  padding-top: 10px;
+}
+
+.course_table p {
+  padding-top: 10px;
+}
+
+@media (max-width: 767px) {
+  .course_table {
+    font-size: 14px;
+  }
+  .course_table p {
+    font-size: 14px;
+  padding-top: 10px;
+}
+
+  table th,
+  table td {
+    padding: 5px;
+  }
+
+  td ol li {
+    padding-top: 5px;
+  }
+
+  td ul li {
+    padding-top: 5px;
+  }
+
+  .experience-time_border {
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .course_table {
+    font-size: 15px;
+  }
+  .course_table p {
+    font-size: 15px;
+  padding-top: 10px;
+  font-weight: normal;
+}
+
+  table th,
+  table td {
+    padding: 5px 20px 10px 20px;
+  }
+
+  td ol li {
+    padding-top: 5px;
+  }
+
+  td ul li {
+    padding-top: 5px;
+  }
+
+  .experience-time_border {
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 992px) {
+  .course_table {
+    font-size: 14px;
+  }
+  .course_table p {
+    font-size: 14px;
+  padding-top: 10px;
+}
+
+  table th,
+  table td {
+    padding: 7px;
+  }
+
+  td ol li {
+    padding-top: 5px;
+  }
+
+  td ul li {
+    padding-top: 5px;
+  }
+
+  .experience-time_border {
+    margin-bottom: 10px;
+  }
+}
+@media (max-width: 567px) {
+  .course_table {
+    font-size: 12px;
+  }
+  .course_table p {
+  padding-top: 10px;
+  font-size: 12px;
+}
+
+  table th,
+  table td {
+    padding: 5px 20px 10px 20px;
+  }
+
+  td ol li {
+    padding-top: 5px;
+  }
+
+  td ul li {
+    padding-top: 5px;
+  }
+
+  .experience-time_border {
+    margin-bottom: 10px;
+  }
+}

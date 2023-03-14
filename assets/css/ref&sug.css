@@ -2,14 +2,16 @@
   padding-bottom: 20px;
   margin-top: 30px;
 }
-.reference_suggestion_section{
+/* .reference_suggestion_section{
   border-bottom: 1px solid #eee;
-  /* padding: 20px; */
-}
+  padding: 20px;
+} */
 .ref_sug_page_button{
   padding-top: 20px;
   text-align: center;
-  margin-bottom: 100px;
+  /* margin-bottom: 50px; */
+  border-top: 1px solid #eee;
+
 }
 .reference_suggestion .reference_suggestion-left-dec img {
   width: 300px;
@@ -106,6 +108,12 @@ reference page
   padding-top: 20px;
   gap: 0px;
 }
+.reference_links_list h5 span {
+  color: #ff695f;
+  text-align: left;
+  font-size: 28px;
+}
+
 .reference_links_list i{
   color: #ff695f;
 }
@@ -157,6 +165,7 @@ suggestion page
     padding-bottom: 20px;
     /* background: #fff; */
     width: 100%;
+    margin-bottom: 50px;
   }
   
   .sgheader {
