@@ -22,15 +22,16 @@ table td {
   padding: 5px 40px 10px 40px;
   vertical-align: middle;
   /* border-top: 1px solid #dee2e6; */
-  border-top: 1px solid #eee;
-  border-left: 1px solid #eee !important;
-  border-right: 1px solid #eee !important;
-  border-bottom: 1px solid #eee;
+  border-top: 1px solid #9ea0a3;
+  border-left: 1px solid #9ea0a3 !important;
+  border-right: 1px solid #9ea0a3 !important;
+  border-bottom: 1px solid #9ea0a3;
 }
 
 table th:first-child,
 table td:first-child {
   border-left: none;
+  text-align: center;
 }
 
 table th:last-child,
@@ -80,14 +81,11 @@ td ul li {
   .course_table {
     font-size: 14px;
   }
-  .course_table p {
-    font-size: 14px;
-  padding-top: 10px;
-}
+
 
   table th,
   table td {
-    padding: 5px;
+    padding: 5px 20px 10px 20px;
   }
 
   td ol li {
@@ -107,11 +105,7 @@ td ul li {
   .course_table {
     font-size: 15px;
   }
-  .course_table p {
-    font-size: 15px;
-  padding-top: 10px;
-  font-weight: normal;
-}
+ 
 
   table th,
   table td {
@@ -134,37 +128,10 @@ td ul li {
 @media (max-width: 992px) {
   .course_table {
     font-size: 14px;
-  }
-  .course_table p {
-    font-size: 14px;
-  padding-top: 10px;
-}
-
-  table th,
-  table td {
-    padding: 7px;
+    overflow: hidden;
+    overflow-x: scroll;
   }
 
-  td ol li {
-    padding-top: 5px;
-  }
-
-  td ul li {
-    padding-top: 5px;
-  }
-
-  .experience-time_border {
-    margin-bottom: 10px;
-  }
-}
-@media (max-width: 567px) {
-  .course_table {
-    font-size: 12px;
-  }
-  .course_table p {
-  padding-top: 10px;
-  font-size: 12px;
-}
 
   table th,
   table td {
@@ -183,3 +150,101 @@ td ul li {
     margin-bottom: 10px;
   }
 }
+@media (max-width: 567px) {
+  .course_table {
+    font-size: 12px;
+    overflow: hidden;
+    overflow-x: scroll;
+  }
+
+  table th,
+  table td {
+    padding: 5px 20px 10px 20px;
+  }
+
+  td ol li {
+    padding-top: 5px;
+  }
+
+  td ul li {
+    padding-top: 5px;
+  }
+
+  .experience-time_border {
+    margin-bottom: 10px;
+  }
+}
+
+/* @media (max-width:567px){
+  .course_table {
+    font-size: 12px;
+    padding-top: 10px;
+    text-align: justify;
+  }
+  
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    background-color: transparent;
+    color: #212529;
+    border-radius: 10px !important;
+  }
+  
+  .table_maindata {
+    vertical-align: middle;
+  }
+  
+  table th,
+  table td {
+    padding: 5px;
+
+   
+  }
+  
+  table th:first-child,
+  table td:first-child {
+    border-left: none;
+    text-align: center;
+  }
+  
+  table th:last-child,
+  table td:last-child {
+    border-right: none;
+  }
+  
+  table th {
+    font-weight: bold;
+    text-align: inherit;
+    text-align: center;
+    background-color: #fafafa;
+  }
+  
+  table tbody+tbody {
+    border-top: 2px solid #dee2e6;
+  }
+  
+  td ol li {
+    list-style: lower-alpha;
+    padding-top: 5px;
+  }
+  
+  td ul li {
+    list-style: none;
+    padding-left: 0px;
+    padding-top: 5px;
+  }
+  
+  .experience-time_border {
+    border-bottom: none;
+    margin-bottom: 10px;
+  }
+  
+  .table_columnspace {
+    padding-top: 5px;
+  }
+  
+  .course_table p {
+    padding-top: 5px;
+  }
+  
+} */

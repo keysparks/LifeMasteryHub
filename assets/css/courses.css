@@ -300,18 +300,18 @@
     margin-top: 20px !important;
     /* padding-top: 20px;
     padding-bottom: 20px; */
-    width: 80%;
-    height: 500px;
+    width: 60%;
+    /* height: 500px; */
     display: block;
     margin: 0 auto;
     border: 2px solid #ddd;
     border-radius: 4px;
     padding: 5px;
-    transition: 0.5s;
+    /* transition: 0.5s; */
 }
-.content-img:hover{
+/* .content-img:hover{
     transform: scale(1.08);
-}
+} */
 
 .intro_content {
     padding: 30px;

@@ -5,13 +5,13 @@ protips
 */
 .protips_content .protips-img {
   /* padding: 30px; */
-  width: 80%;
+  width: 60%;
   /* height: 500px; */
   display: block;
   margin: 0 auto;
   /* padding-top: 10px;
   padding-bottom: 10px; */
-  transition: 0.5s;
+  /* transition: 0.5s; */
   border: 2px solid rgba(0, 0, 0, 0.153);
   border-radius: 4px;
   padding: 5px;
@@ -21,9 +21,9 @@ protips
   padding-top: 20px;
 }
 
-.protips-img:hover {
+/* .protips-img:hover {
   transform: scale(1.08);
-}
+} */
 
 .protips {
   /* text-align: center; */

@@ -44,12 +44,12 @@
 
 .experience-time .experience-img {
   /* Padding-top: 20px; */
-  height: 500px;
+  /* height: 500px; */
   /* Padding-bottom: 10px; */
-  width: 70%;
+  width: 60%;
   display: block;
   margin: 0 auto;
-  transition: 0.5s;
+  /* transition: 0.5s; */
   border: 2px solid rgba(0, 0, 0, 0.153);
   border-radius: 4px;
   padding: 5px;
@@ -57,9 +57,9 @@
 .experience_img_content {
   padding-top: 20px;
 }
-.experience-img:hover{
+/* .experience-img:hover{
   transform: scale(1.08); 
-}
+} */
 .experience-time {
   text-align: left;
   /* padding-left: 50px; */
@@ -276,4 +276,8 @@ color: #ff695f !important;
   .experience-time .experience-img{
     height: 280px;
   }
+}
+.bullet_point{
+  margin-left: 20px;
+  display:list-item; 
 }

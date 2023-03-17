@@ -89,18 +89,18 @@ Real time experience content
 .experience-img{
   /* padding-top: 10px;
   padding-bottom: 10px; */
-  width: 80%;
-  height: 500px;
+  width: 60%;
+  /* height: 500px; */
   display: block;
   margin: 0 auto;
-  transition: 0.5s;
+  /* transition: 0.5s; */
   border: 2px solid rgba(0, 0, 0, 0.153);
   border-radius: 4px;
   padding: 5px;
 }
-.experience-img:hover {
+/* .experience-img:hover {
   transform: scale(1.08);
-}
+} */
 .experience_img_content{
   padding-top: 20px;
 }

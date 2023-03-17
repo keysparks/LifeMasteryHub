@@ -61,7 +61,7 @@
       text-align: center;
       align-items: center;
       justify-content: center;
-      border-radius: 20px;
+      border-radius: 5px;
 
     }
 
@@ -167,23 +167,35 @@
     }
 
     .question-box {
-      background-image: url(./assets/images/quizStart.png);
-      background-repeat: no-repeat;
-      background-size: cover;
-      box-shadow: 0px 0px 15px #ff695f;
-      width: 80%;
-      height: 35rem;
-      /* background-color: #ff695f; */
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      border-radius: 10px;
-      /* border-bottom-right-radius: 30px; */
-      padding: 0px;
 
-      margin-top: 60px;
+box-shadow: 0px 0px 15px #ff695f;
+width: 80%;
+height: 35rem;
+/* background-color: #ff695f; */
+display: flex;
+justify-content: center;
+align-items: center;
+border-radius: 5px;
+/* border-bottom-right-radius: 30px; */
+padding: 0px;
 
-    }
+margin-top: 60px;
+position: relative;
+isolation: isolate;
+
+}
+
+.question-box::after {
+background-image: url(./assets/images/quiz-home-1.png);
+background-repeat: no-repeat;
+background-position: center center;
+background-size: cover;
+content: '';
+opacity: 0.2;
+position: absolute;
+z-index: -1;
+inset: 0;
+}
 
     #display-container {
       background-color: #ffffff;
@@ -211,6 +223,7 @@
       /* padding: 30px; */
       /* margin: auto; */
       animation: none;
+      border-radius: 5px;
     }
 
     #blink {
@@ -227,11 +240,11 @@
     .blink1 {
       position: relative;
       isolation: isolate;
-      padding: 50px 20px 170px 20px;
+      padding: 50px 20px 140px 20px;
     }
 
     .blink1::after {
-      background-image: url(./assets/images/quizScore.jpg);
+      background-image: url(./assets/images/quiz-beginner.png);
       background-repeat: no-repeat;
       background-size: cover;
       opacity: 0.2;
@@ -246,11 +259,11 @@
     .blink2 {
       position: relative;
       isolation: isolate;
-      padding: 50px 20px 170px 20px;
+      padding: 50px 20px 140px 20px;
     }
 
     .blink2::after {
-      background-image: url(./assets/images/intermidiate-quiz.png);
+      background-image: url(./assets/images/quiz-intermediate.png);
       background-repeat: no-repeat;
       background-size: cover;
 
@@ -265,11 +278,11 @@
     .blink3 {
       position: relative;
       isolation: isolate;
-      padding: 50px 20px 170px 20px;
+      padding: 50px 20px 140px 20px;
     }
 
     .blink3::after {
-      background-image: url(./assets/images/advance-levelQuiz.jfif);
+      background-image: url(./assets/images/quiz-advanced.png);
       background-repeat: no-repeat;
       background-size: cover;
 
@@ -284,11 +297,11 @@
     .blink4 {
       position: relative;
       isolation: isolate;
-      padding: 50px 20px 170px 20px;
+      padding: 50px 20px 140px 20px;
     }
 
     .blink4::after {
-      background-image: url(./assets/images/expert-blue-quiz.jpg);
+      background-image: url(./assets/images/quiz-expert.png);
       background-repeat: no-repeat;
       background-size: cover;
 
@@ -341,19 +354,19 @@
     @media (max-width:1500px) {
 
       .blink1 {
-        padding: 50px 20px 170px 20px;
+        padding: 50px 20px 140px 20px;
       }
 
       .blink2 {
-        padding: 50px 20px 170px 20px;
+        padding: 50px 20px 140px 20px;
       }
 
       .blink3 {
-        padding: 50px 20px 170px 20px;
+        padding: 50px 20px 140px 20px;
       }
 
       .blink4 {
-        padding: 50px 20px 170px 20px;
+        padding: 50px 20px 140px 20px;
       }
 
     }
@@ -361,19 +374,19 @@
     @media (max-width:1399px) {
 
       .blink1 {
-        padding: 50px 20px 170px 20px;
+        padding: 50px 20px 140px 20px;
       }
 
       .blink2 {
-        padding: 50px 20px 170px 20px;
+        padding: 50px 20px 140px 20px;
       }
 
       .blink3 {
-        padding: 50px 20px 170px 20px;
+        padding: 50px 20px 140px 20px;
       }
 
       .blink4 {
-        padding: 50px 20px 170px 20px;
+        padding: 50px 20px 140px 20px;
       }
 
     }
@@ -381,19 +394,19 @@
     @media (max-width:1200px) {
 
       .blink1 {
-        padding: 50px 20px 140px 20px;
+        padding: 50px 20px 120px 20px;
       }
 
       .blink2 {
-        padding: 50px 20px 140px 20px;
+        padding: 50px 20px 120px 20px;
       }
 
       .blink3 {
-        padding: 50px 20px 140px 20px;
+        padding: 50px 20px 120px 20px;
       }
 
       .blink4 {
-        padding: 50px 20px 140px 20px;
+        padding: 50px 20px 120px 20px;
       }
 
     }
@@ -438,19 +451,19 @@
       } */
 
       .blink1 {
-        padding: 65px 20px;
+        padding: 50px 20px;
       }
 
       .blink2 {
-        padding: 65px 20px;
+        padding: 50px 20px;
       }
 
       .blink3 {
-        padding: 65px 20px;
+        padding: 50px 20px;
       }
 
       .blink4 {
-        padding: 65px 20px;
+        padding: 50px 20px;
       }
 
     }
@@ -729,12 +742,12 @@
                 <li class="scroll-to-section"><a href="#services">Training Module</a></li>
                 <div>
                   <ul class="dropdown-menu">
-                    <li><a href="courses1.html">Self-journey</a></li>
-                    <li><a href="courses.html">Problem Solving</a></li>
-                    <li><a href="courses3.html">Decision making</a></li>
-                    <li><a href="courses4.html">Conflict management</a></li>
-                    <li><a href="courses5.html">Communication</a></li>
-                    <li><a href="courses6.html">Performance optimization</a></li>
+                    <li><a href="sj.html">Self-journey</a></li>
+                    <li><a href="ps.html">Problem Solving</a></li>
+                    <li><a href="dm.html">Decision making</a></li>
+                    <li><a href="conflict.html">Conflict management</a></li>
+                    <li><a href="com.html">Communication</a></li>
+                    <li><a href="po.html">Performance optimization</a></li>
                   </ul>
                 </div>
               </div>
@@ -879,52 +892,52 @@
           the, enhance their life skills and achieve their goals. </p>
 
         <div class="home_activity">
-          <span><i class="bi bi-activity"></i> Pro Tips: <span
+          <span>💡Pro Tips: <span
               style="color:black; font-weight: normal; font-size: 16px;">Add Values to your Daily routine:</span>
           </span>
         </div>
         <div class="img_box">
-          <img class="home_activity_img" src="./assets/images/2-home-dailyroutine.png">
+          <img class="home_activity_img" src="./assets/images/2-home-dailyroutine.png" height="500">
         </div>
         <div class="home_activity">
           <div class="subheading2_indent">
 
-            <p><span><i class="bi bi-check-all"></i> Mindful morning routine: </span>Start your day with
+            <p><span> Mindful morning routine: </span>Start your day with
               mindfulness practices, such as meditation or deep breathing, to cultivate a calm and
 
               centred mindset.</p>
 
 
 
-            <p><span><i class="bi bi-check-all"></i> Physical activity: </span>Incorporate physical activity
+            <p><span> Physical activity: </span>Incorporate physical activity
               into your morning routine, such as yoga, running, or a workout, to boost
               energy, improve mood, and promote overall health. </p>
 
 
-            <p><span><i class="bi bi-check-all"></i> Learning time: </span>Set aside time every day to learn
+            <p><span> Learning time: </span>Set aside time every day to learn
               something new, such as reading a book, watching talk show, listening to
               podcast, or taking an online course, to cultivate curiosity and stimulate personal growth.
             </p>
 
 
-            <p><span><i class="bi bi-check-all"></i> Gratitude practice: </span>Practice gratitude by
+            <p><span> Gratitude practice: </span>Practice gratitude by
               writing down three things you're thankful for every morning to cultivate a positive
 
               mindset and appreciation for the good things in life. </p>
 
 
 
-            <p><span><i class="bi bi-check-all"></i> Connection time: </span>Spend time connecting with
+            <p><span> Connection time: </span>Spend time connecting with
               loved ones, colleagues, or community members to cultivate social skills, empathy, and a sense of
               belonging. </p>
 
-            <p><span><i class="bi bi-check-all"></i> Time management: </span>Prioritize and plan your tasks
+            <p><span> Time management: </span>Prioritize and plan your tasks
               for the day to stay organized, focused, and productive, while also allowing for flexibility and self-care.
             </p>
-            <p><span><i class="bi bi-check-all"></i> Creativity time: </span>Set aside time for creative
+            <p><span> Creativity time: </span>Set aside time for creative
               activities, such as painting, writing, or playing music, to cultivate creativity, self-expression, and a
               sense of purpose.</p>
-            <p><span><i class="bi bi-check-all"></i> Wind down routine: </span>Establish a relaxing bedtime
+            <p><span> Wind down routine: </span>Establish a relaxing bedtime
               routine, such as reading a book, taking a bath, or listening to calming music, to promote restful sleep
               and overall well-being.</p>
 
@@ -995,21 +1008,19 @@
       <!-- <div class="services-left-dec">
         <img src="./assets/images/services-left-dec.png" alt="">
       </div> -->
-      <div class="row">
-        <div class="col-lg-6">
-          <div class="section-heading quiz_intro_content">
-            <h1>Training Module</h1>
 
-          </div>
-        </div>
+      <div class="section-heading quiz_intro_content">
+        <h1>Training Module</h1>
+
       </div>
 
-      <div class="row">
-        <div class="col-lg-12">
+
+      <div class="row ">
+        <div class="col-lg-12 col-md-12 col-12">
           <div class="owl-carousel owl-services">
 
             <div class="item">
-              <a href="courses1.html">
+              <a href="sj.html">
                 <h4>Self-journey</h4>
                 <div class="icon"><img src="./assets/images/service-icon-01.png" alt=""></div>
                 <p>A course designed to guide individuals through a journey of self-understand, providing practical
@@ -1019,7 +1030,7 @@
             </div>
 
             <div class="item">
-              <a href="courses.html">
+              <a href="ps.html">
                 <h4>Problem Solving</h4>
                 <div class="icon"><img src="./assets/images/service-icon-02.png" alt=""></div>
                 <p>Learn practical strategies, tools, and techniques to effectively identify and solve problems in all
@@ -1028,7 +1039,7 @@
             </div>
 
             <div class="item">
-              <a href="courses3.html">
+              <a href="dm.html">
                 <h4>Decision making</h4>
                 <div class="icon"><img src="./assets/images/service-icon-03.png" alt=""></div>
                 <p>You will learn practical tools and techniques to improve your ability to make effective and informed
@@ -1038,11 +1049,32 @@
             </div>
 
             <div class="item">
-              <a href="courses4.html">
+              <a href="conflict.html">
                 <h4> Conflict management</h4>
                 <div class="icon"><img src="./assets/images/service-icon-04.png" alt=""></div>
                 <p>Course to develop essential skills and strategies to effectively manage and resolve conflicts in your
                   personal and professional life</p>
+              </a>
+            </div>
+
+            <div class="item">
+              <a href="com.html">
+                <h4> Communication</h4>
+                <div class="icon"><img src="./assets/images/service-icon-04.png" alt=""></div>
+                <p>Communication is not just about the words you say, but also the way you say them. By mastering the
+                  art of communication, you can effectively express yourself and understand the perspectives of others,
+                  leading to better collaboration and greater success. </p>
+              </a>
+            </div>
+
+            <div class="item">
+              <a href="po.html">
+                <h4>Performance optimization</h4>
+                <div class="icon"><img src="./assets/images/service-icon-04.png" alt=""></div>
+                <p>Individuals requires effort, dedication, and a commitment to improvement and is considered as the
+                  path to performance optimization. There is always room for improvement when it comes to performance
+                  optimization. The key to success lies in maximizing your strengths and identifying areas for growth.
+                </p>
               </a>
             </div>
           </div>
@@ -1050,6 +1082,7 @@
       </div>
     </div>
   </div>
+
 
   <div class="footer-dec">
     <img src="./assets/images/footer-dec.png" alt="">
@@ -1101,12 +1134,12 @@
           <div class="subscribe-newsletters footer-item">
             <h4>Courses</h4>
             <ul>
-              <li><a href="courses1.html">Self-journey</a></li>
-              <li><a href="courses.html">Problem Solving</a></li>
-              <li><a href="courses3.html">Decision making</a></li>
-              <li><a href="courses4.html">Conflict management</a></li>
-              <li><a href="courses5.html">Communication</a></li>
-              <li><a href="courses6.html">Performance optimization</a></li>
+              <li><a href="sj.html">Self-journey</a></li>
+              <li><a href="ps.html">Problem Solving</a></li>
+              <li><a href="dm.html">Decision making</a></li>
+              <li><a href="conflict.html">Conflict management</a></li>
+              <li><a href="com.html">Communication</a></li>
+              <li><a href="po.html">Performance optimization</a></li>
             </ul>
           </div>
         </div>
@@ -1285,8 +1318,9 @@
     //Restart Quiz
     restart.addEventListener("click", () => {
       initial();
-      displayContainer.classList.remove("hide");
+      displayContainer.classList.add("hide");
       scoreContainer.classList.add("hide");
+      startScreen.classList.remove("hide");
     });
 
     //Previous Button
@@ -1343,13 +1377,13 @@
 
 
           if (averageScore >= 0 && averageScore <= 0.4) {
-            result = "<p class='blink1'><span id='blink' style='color:#66FF66;'>Beginner</span><br><span id='rdes'>Good work, it's important to remember that everyone has strengths and weaknesses. Let's work together to identify areas where you can improve and come up with a plan to help you succeed. It's important to remember that everyone has room for improvement. Consider seeking out resources such as online courses or workshops to develop soft skills such as communication, time management, and problem-solving. Focusing on these skills can lead to personal growth and increased success in both personal and professional settings.</span></p>";
+            result = "<p class='blink1'><span id='blink' style='color:#66FF66;'>Beginner</span><br><span id='rdes'>    <span style='font-weight:700'>Starting out strong, keep going!</span> <br>        Good work, it's important to remember that everyone has strengths and weaknesses. Let's work together to identify areas where you can improve and come up with a plan to help you succeed. It's important to remember that everyone has room for improvement. Consider seeking out resources such as online courses or workshops to develop soft skills such as communication, time management, and problem-solving. Focusing on these skills can lead to personal growth and increased success in both personal and professional settings.</span></p>";
           } else if (averageScore > 0.4 && averageScore <= 0.7) {
-            result = "<p class='blink2'><span id='blink' style='color:#00CC00;'>Intermediate</span><br><span id='rdes'>Great job, you’ve done a solid job and have demonstrated a good understanding of the life skills. Let's review the areas where you lost marks and see if there are any gaps in your knowledge that we can address. It's important to remember that everyone has room for improvement. Consider seeking out resources such as online courses or workshops to develop soft skills such as communication, time management, and problem-solving. Focusing on these skills can lead to personal growth and increased success in both personal and professional settings.</span></p>";
+            result = "<p class='blink2'><span id='blink' style='color:#00CC00;'>Intermediate</span><br><span id='rdes'><span style='font-weight:700'>You're getting there, keep pushing!</span> <br>     Great job, you’ve done a solid job and have demonstrated a good understanding of the life skills. Let's review the areas where you lost marks and see if there are any gaps in your knowledge that we can address. It's important to remember that everyone has room for improvement. Consider seeking out resources such as online courses or workshops to develop soft skills such as communication, time management, and problem-solving. Focusing on these skills can lead to personal growth and increased success in both personal and professional settings.</span></p>";
           } else if (averageScore > 0.7 && averageScore <= 0.9) {
-            result = "<p class='blink3'><span id='blink' style='color:#009900;'>Advanced</span><br><span id='rdes'>Congratulations, your mark shows that you have a strong grasp of the essential skills and have put in a lot of effort. Let's go over the areas where you did well and see if there are any opportunities for further improvement. There is always room for improvement. Continue to refine and develop these skills through consistent practice and seeking out new learning opportunities. Consider working on areas such as leadership, adaptability, and critical thinking, which are highly valued in today's job market.</span></p>";
+            result = "<p class='blink3'><span id='blink' style='color:#009900;'>Advanced</span><br><span id='rdes'>    <span style='font-weight:700'>Impressive skills, keep excelling!</span> <br>      Congratulations, your mark shows that you have a strong grasp of the essential skills and have put in a lot of effort. Let's go over the areas where you did well and see if there are any opportunities for further improvement. There is always room for improvement. Continue to refine and develop these skills through consistent practice and seeking out new learning opportunities. Consider working on areas such as leadership, adaptability, and critical thinking, which are highly valued in today's job market.</span></p>";
           } else if (averageScore > 0.9 && averageScore <= 1) {
-            result = "<p class='blink4'><span id='blink' style='color: #006600;'>Expert</span><br><span id='rdes'>Fantastic work, you should be proud of yourself! You have a deep understanding on life skill and have put in a lot of hard work. Let's discuss ways to build on this success and continue to challenge yourself. Keep up the good work and continue to seek out opportunities to improve and refine these skills. Consider mentoring others or volunteering in leadership roles to help develop these skills further and make a positive impact in the community.</span></p>";
+            result = "<p class='blink4'><span id='blink' style='color: #006600;'>Expert</span><br><span id='rdes'>     <span style='font-weight:700'>The pinnacle of mastery, keep inspiring!</span><br> Fantastic work, you should be proud of yourself! You have a deep understanding on life skill and have put in a lot of hard work. Let's discuss ways to build on this success and continue to challenge yourself. Keep up the good work and continue to seek out opportunities to improve and refine these skills. Consider mentoring others or volunteering in leadership roles to help develop these skills further and make a positive impact in the community.</span></p>";
           }
 
 

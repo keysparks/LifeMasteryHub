@@ -133,7 +133,7 @@
     padding-top: 40px;
     padding-bottom: 20px;
     /* background: #fff; */
-    width: 100%;
+    width: 80%;
 }
 
 .ccheader {
@@ -181,7 +181,8 @@ padding-bottom: 13px;
     background: #FFFFFF;
     border: none;
     padding: 15.5px;
-    width: 91.9%;
+    /* width: 91.9%; */
+    width: 100%;
     display: block;
     font-size: 14px;
     margin-bottom: 30px;

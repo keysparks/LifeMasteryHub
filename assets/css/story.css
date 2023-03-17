@@ -46,20 +46,20 @@ story content
 
 .story-time .story-img {
   /* padding: 40px; */
-  width: 80%;
-  height: 500px;
+  width: 60%;
+  /* height: 500px; */
   display: block;
   margin: 0 auto;
   /* padding-top: 10px;
   padding-bottom: 10px; */
-  transition: 0.5s;
+  /* transition: 0.5s; */
   border: 2px solid rgba(0, 0, 0, 0.153);
   border-radius: 4px;
   padding: 5px;
 }
-.story-img:hover{
+/* .story-img:hover{
   transform: scale(1.08);
-}
+} */
 .story_img_content{
   padding-top: 20px;
 }

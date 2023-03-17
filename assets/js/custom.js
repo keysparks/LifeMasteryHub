@@ -43,9 +43,9 @@
         items:4,
         loop:true,
         dots: true,
-        nav: false,
+        nav: true,
         autoplay: true,
-        margin:5,
+        margin:30,
           responsive:{
               0:{
                   items:1

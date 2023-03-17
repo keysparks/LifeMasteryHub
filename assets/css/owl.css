@@ -184,3 +184,11 @@
   z-index: 1;
   height: 100%;
   width: 100%; }
+  .owl-carousel .owl-nav button.owl-prev{
+    float: left;
+    font-size: 50px;
+  }
+  .owl-carousel .owl-nav button.owl-next{
+    float: right;
+    font-size: 50px;
+  }
