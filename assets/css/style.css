@@ -716,7 +716,20 @@ header
 
 .header-area.header-sticky {
   min-height: 80px;
-  position: sticky;
+  position: fixed;
+}
+
+#top {
+  padding-top: 100px;
+}
+#top1{
+  padding-top: 110px;
+}
+#top2{
+  padding-top: 170px;
+}
+#top3{
+  padding-top: 80px;
 }
 
 .header-area .nav {
@@ -1203,7 +1216,7 @@ Services Style
 */
 
 section {
-  padding-top: 140px;
+  padding-top: 60px;
   margin-bottom: 20px;
 }
 
@@ -1248,7 +1261,7 @@ section {
 .our-services .item {
   text-align: center;
   margin: 15px 0px;
-  height: 600px;
+  height: 550px;
   border-radius: 20px;
   background-color: #f2f2f2;
   padding: 20px;
@@ -1275,7 +1288,7 @@ section {
 }
 
 .our-services .item p {
-  margin-top: 35px;
+  /* margin-top: 35px; */
   padding-top: 30px;
   border-top: 1px solid #eee;
 }
@@ -1764,7 +1777,7 @@ Video
 
 .overall_video_container {
   padding-top: 30px;
-  width: 90%;
+  width: 100%;
   margin: auto;
 
 }
@@ -1802,7 +1815,7 @@ Video
   color: #000000;
   background: #ffffff;
   /* background-color: #fafafa; */
-  padding: 10px 20px;
+  padding: 20px 20px;
 }
 
 .our-videos .naccs .menu div.active .thumb .inner-content h4 {
@@ -1905,9 +1918,11 @@ Video
   top: 0;
   padding: 5px;
   transition: all 0.3s;
-  margin-top: 35px;
+  margin-top: 40px;
+  /* height: 25vh; */
   /* margin-bottom: 30vh; */
 }
+
 
 .our-videos .menu .thumb .inner-content h4 {
   font-size: 20px;
@@ -2530,6 +2545,7 @@ responsive
   .our-videos ul.nacc {
     margin-bottom: 30px;
     margin-top: 30px;
+    margin-left: 10px;
   }
 
   .our-videos .naccs .menu div img {
@@ -2836,24 +2852,25 @@ padding-bottom: 20px !important; */
   padding: 0px;
 }
 
-@media (max-width:768px) {
+@media (max-width:767px) {
   .our-services .item {
-    height: 500px;
+    height: 400px;
   }
+  
 
 }
 
 @media (max-width:1399px) {
   .our-services .item {
-    height: 500px;
+    height: 460px;
   }
 
 }
 
 @media(max-width:570px) {
-  .our-services .item {
+  /* .our-services .item {
     height: 420px;
-  }
+  } */
 
   .home_page_image {
     width: 100%;
@@ -2862,7 +2879,7 @@ padding-bottom: 20px !important; */
 
 @media (max-width:992px) {
   .our-services .item {
-    height: 680px;
+    height: 450px;
   }
 
 }
@@ -2873,9 +2890,7 @@ padding-bottom: 20px !important; */
     padding-top: 150px;
   }
 
-  .our-services .item {
-    height: 600px;
-  }
+ 
 }
 
 @media (max-width:1399px) {

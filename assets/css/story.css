@@ -1,7 +1,6 @@
 /* ---------------breadcrumbs-------------- */
 .courses_breadcrumbs {
   padding: 10px 48px;
-  /* box-shadow: 0 4px 30px -10px rgba(0,0,0,0.2); */
   width: fit-content;
 }
 
@@ -11,7 +10,7 @@
   align-items: center;
   padding: 0;
   margin: 0;
-  gap: 0;
+  gap: 8px;
 }
 
 .courses_breadcrumbs ul i {
@@ -36,7 +35,6 @@
 .courses_breadcrumbs ul li.course_breadcrumbs_arrow i {
   width: 18px;
 }
-
 
 /* 
 ---------------------------------------------
@@ -157,6 +155,7 @@ story content
   padding-top: 30px;
   margin-bottom: 20vh;
   width: 100%;
+  margin-top: 30px;
 }
 
 .story-content .item {
