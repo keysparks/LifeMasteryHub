@@ -1202,6 +1202,11 @@ Services Style
 --------------------------------------------- 
 */
 
+section {
+  padding-top: 140px;
+  margin-bottom: 20px;
+}
+
 .our-services .services-left-dec img {
   width: 387px;
   height: 638px;
@@ -1726,6 +1731,10 @@ Video
 .video_prop iframe {
   height: 20rem !important;
   box-shadow: 0px 0px 15px #ff695f;
+}
+
+.video_section {
+  padding-left: 0px;
 }
 
 .video_section_title {
@@ -2736,7 +2745,7 @@ padding-bottom: 20px !important; */
 
 .home_activity_img {
   width: 50%;
- /* height: 40ch; */
+  /* height: 40ch; */
   /* height: 500px; */
   display: block;
   margin: 0 auto;
@@ -2745,10 +2754,12 @@ padding-bottom: 20px !important; */
   border-radius: 4px;
   padding: 5px;
 }
-.img_box{
+
+.img_box {
   padding-top: 20px;
   /* transition: 0.5s; */
 }
+
 /* .img_box:hover{
   transform: scale(1.08);
 } */
@@ -2796,7 +2807,7 @@ padding-bottom: 20px !important; */
   /* text-indent: 5%; */
   text-align: justify;
   padding-left: 5%;
-/* padding-right: 5%; */
+  /* padding-right: 5%; */
 }
 
 

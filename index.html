@@ -168,34 +168,34 @@
 
     .question-box {
 
-box-shadow: 0px 0px 15px #ff695f;
-width: 80%;
-height: 35rem;
-/* background-color: #ff695f; */
-display: flex;
-justify-content: center;
-align-items: center;
-border-radius: 5px;
-/* border-bottom-right-radius: 30px; */
-padding: 0px;
+      box-shadow: 0px 0px 15px #ff695f;
+      width: 80%;
+      height: 35rem;
+      /* background-color: #ff695f; */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 5px;
+      /* border-bottom-right-radius: 30px; */
+      padding: 0px;
 
-margin-top: 60px;
-position: relative;
-isolation: isolate;
+      margin-top: 60px;
+      position: relative;
+      isolation: isolate;
 
-}
+    }
 
-.question-box::after {
-background-image: url(./assets/images/quiz-home-1.png);
-background-repeat: no-repeat;
-background-position: center center;
-background-size: cover;
-content: '';
-opacity: 0.2;
-position: absolute;
-z-index: -1;
-inset: 0;
-}
+    .question-box::after {
+      background-image: url(./assets/images/quiz-home-1.png);
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      content: '';
+      opacity: 0.2;
+      position: absolute;
+      z-index: -1;
+      inset: 0;
+    }
 
     #display-container {
       background-color: #ffffff;
@@ -737,9 +737,9 @@ inset: 0;
             <!-- ***** Logo End ***** -->
             <!-- ***** Menu Start ***** -->
             <ul class="nav">
-              <li class="scroll-to-section"><a href="index.html" class="active">Home</a></li>
+              <li ><a href="index.html" class="active">Home</a></li>
               <div class="dropdown">
-                <li class="scroll-to-section"><a href="#services">Training Module</a></li>
+                <li ><a href="#services">Training Module</a></li>
                 <div>
                   <ul class="dropdown-menu">
                     <li><a href="sj.html">Self-journey</a></li>
@@ -751,9 +751,9 @@ inset: 0;
                   </ul>
                 </div>
               </div>
-              <li class="scroll-to-section"><a href="about.html">About Us</a></li>
-              <!-- <li class="scroll-to-section"><a href="#">Contact Us </a></li> -->
-              <li class="scroll-to-section">
+              <li ><a href="about.html">About Us</a></li>
+              <!-- <li ><a href="#">Contact Us </a></li> -->
+              <li >
                 <div><a href="contact.html">Contact Us</a></div>
               </li>
             </ul>
@@ -819,7 +819,7 @@ inset: 0;
         <div class="naccs">
           <div class="grid">
             <div class="row">
-              <div class="col-lg-6">
+              <div class="col-lg-6 ">
                 <div class="menu">
                   <div class="active">
                     <div class="thumb">
@@ -839,7 +839,7 @@ inset: 0;
                   </div>
                 </div>
               </div>
-              <div class="col-lg-6">
+              <div class="col-lg-6 video_section">
                 <ul class="nacc">
                   <li class="active">
                     <div class="video_container">
@@ -892,8 +892,8 @@ inset: 0;
           the, enhance their life skills and achieve their goals. </p>
 
         <div class="home_activity">
-          <span>💡Pro Tips: <span
-              style="color:black; font-weight: normal; font-size: 16px;">Add Values to your Daily routine:</span>
+          <span>💡Pro Tips: <span style="color:black; font-weight: normal; font-size: 16px;">Add Values to your Daily
+              routine:</span>
           </span>
         </div>
         <div class="img_box">
@@ -999,8 +999,8 @@ inset: 0;
     </div>
   </div>
   <!-- --------------------------End of quiz section--------------------------------------- -->
-
-  <div id="services" class="our-services section">
+<section id="services">
+  <div  class="our-services section">
     <div class="services-right-dec">
       <img src="./assets/images/services-right-dec.png" alt="">
     </div>
@@ -1082,7 +1082,7 @@ inset: 0;
       </div>
     </div>
   </div>
-
+</section>
 
   <div class="footer-dec">
     <img src="./assets/images/footer-dec.png" alt="">
@@ -1332,6 +1332,10 @@ inset: 0;
       if (questionCount === 0) {
         preBtn.hidden = true; // hide the pre-button again
       }
+      // check if the user has answered the current question
+     let currentQuestion = document.getElementsByClassName("container-mid")[questionCount];
+     let selectedOption = currentQuestion.querySelector(".option-div.selected");
+      nextBtn.disabled = selectedOption === null;
 
       if (questionCount == quizArray.length) {
         //hide question container and display score
@@ -1360,6 +1364,7 @@ inset: 0;
         // check if user is on the second question 
         if (questionCount === 1) {
           preBtn.hidden = false; // show the pre-button 
+
         }
 
 
@@ -1448,10 +1453,10 @@ inset: 0;
         div.appendChild(question_DIV);
         //options
         div.innerHTML += `
-<label  class="option-div " onclick="checker(this)">${i.options[0]}</label>
-<label  class="option-div " onclick="checker(this)">${i.options[1]}</label>
-<label  class="option-div " onclick="checker(this)">${i.options[2]}</label>
-<label  class="option-div " onclick="checker(this)">${i.options[3]}</label>
+<label  class="option-div selected" onclick="checker(this)">${i.options[0]}</label>
+<label  class="option-div selected" onclick="checker(this)">${i.options[1]}</label>
+<label  class="option-div selected" onclick="checker(this)">${i.options[2]}</label>
+<label  class="option-div selected" onclick="checker(this)">${i.options[3]}</label>
 `;
         quizContainer.appendChild(div);
       }
@@ -1476,6 +1481,7 @@ inset: 0;
         options.forEach((element) => {
           if (element.innerText == quizArray[questionCount]) {
             element.classList.add("correct");
+
           }
         });
       }
