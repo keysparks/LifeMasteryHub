@@ -2494,7 +2494,7 @@ responsive
     height: 526px;
   } */
   .our-videos .menu .thumb .inner-content {
-    margin-top: 10px;
+    margin-top: 20px;
   }
 
 
@@ -2555,6 +2555,7 @@ responsive
   .our-videos .menu .thumb .inner-content {
     /* border-top-left-radius: 50px;
     border-bottom-right-radius: 50px; */
+    margin-top: 50px;
   }
 
   .contact-us .section-heading h2 {
