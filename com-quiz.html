@@ -23,152 +23,12 @@
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/contact.css">
   <link rel="stylesheet" href="assets/css/courses.css">
-  <link rel="stylesheet" href="assets/css/ref&sug.css">
+  <!-- <link rel="stylesheet" href="assets/css/ref&sug.css"> -->
   <link rel="stylesheet" href="assets/css/protips.css ">
   <link rel="stylesheet" href="assets/css/quiz.css">
   <style>
-    #form-container {
-      display: none;
-    }
-
-    * {
-      padding: 0;
-      margin: 0;
-      box-sizing: border-box;
-      font-family: "Poppins", sans-serif;
-    }
-
-    .start-screen {
-
-      top: 40%;
-      width: 100%;
-      height: 100%;
-      left: 50%;
-      display: flex;
-      flex-direction: column;
-      text-align: center;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .score-container {
-      background-color: #fff;
-      top: 40%;
-      width: 100%;
-      height: 100%;
-      left: 50%;
-      /* display: flex; */
-      flex-direction: column;
-      text-align: center;
-      align-items: center;
-      justify-content: center;
-      border-radius: 20px;
-
-    }
-
-    button {
-      border: none;
-      outline: none;
-      cursor: pointer;
-    }
-
-    #start-button,
-    #restart {
-      font-size: 1.3em;
-      padding: 0.5em 0.8em;
-      border-radius: 0.2em;
-      background-color: #ff695f;
-      color: #fff;
-    }
-
-
-    #restart {
-      margin-top: 15px;
-      margin-bottom: 10px;
-    }
-
-    .header {
-      /* margin-bottom: 1.8em; */
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding-bottom: 0.6em;
-      border-bottom: 0.1em solid #c0bfd2;
-    }
-
-    .timer-div {
-      background-color: #e1f5fe;
-      width: 7.5em;
-      border-radius: 1.8em;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0.7em 1.8em;
-    }
-
-    .question {
-      margin-bottom: 1.25em;
-      font-weight: 600;
-    }
-
-    .option-div {
-      font-size: 0.9em;
-      width: 100%;
-      padding: 7px;
-      margin: 0.3em 0;
-      text-align: left;
-      outline: none;
-      background: transparent;
-      border: 1px solid #c0bfd2;
-      border-radius: 0.3em;
-      font-weight: normal;
-      cursor: pointer;
-    }
-
-    .option-div:disabled {
-      color: #000000;
-      /* cursor: not-allowed; */
-    }
-
-    #next-button {
-      font-size: 1em;
-      margin-top: 1.5em;
-      background-color: #0a69ed;
-      color: #ffffff;
-      padding: 0.7em 1.8em;
-      border-radius: 0.3em;
-      float: right;
-      width: 15%;
-    }
-
-    #pre-button {
-      font-size: 1em;
-      margin-top: 1.5em;
-      background-color: #0a69ed;
-      color: #ffffff;
-      padding: 0.7em 1.8em;
-      border-radius: 0.3em;
-      float: left;
-      width: 15%;
-    }
-
-    .hide {
-      display: none;
-    }
-
-    #user-score {
-      font-size: 1.5em;
-      color: #ffffff;
-    }
-
-    .quiz_frame {
-      display: flex;
-      flex-wrap: wrap;
-      padding-top: 30px;
-    }
 
     .question-box {
-
       box-shadow: 0px 0px 15px #ff695f;
       width: 80%;
       height: 35rem;
@@ -179,7 +39,6 @@
       border-radius: 10px;
       /* border-bottom-right-radius: 30px; */
       padding: 0px;
-
       margin-top: 60px;
       position: relative;
       isolation: isolate;
@@ -196,34 +55,6 @@
       position: absolute;
       z-index: -1;
       inset: 0;
-    }
-
-    #display-container {
-      background-color: #ffffff;
-      padding: 3.1em 1.8em;
-      width: 100%;
-      /* max-width: 37.5em; */
-      /* margin: 1.5em auto; */
-      border-radius: 5px;
-      height: 100%;
-    }
-
-    .question_page_button {
-      text-align: center;
-      padding-top: 30px;
-      border-top: 1px solid #eee;
-      /* width: 60%; */
-      margin: auto;
-    }
-
-    #user-score {
-
-      font-size: 1em;
-      color: black;
-      /* text-align: center; */
-      /* padding: 30px; */
-      /* margin: auto; */
-      animation: none;
     }
 
     #blink {
@@ -297,7 +128,7 @@
     .blink4 {
       position: relative;
       isolation: isolate;
-      padding: 50px 20px 170px 20px;
+      padding: 50px 20px 110px 20px;
     }
 
     .blink4::after {
@@ -366,7 +197,7 @@
       }
 
       .blink4 {
-        padding: 50px 20px 170px 20px;
+        padding: 50px 20px 110px 20px;
       }
 
     }
@@ -386,7 +217,7 @@
       }
 
       .blink4 {
-        padding: 50px 20px 170px 20px;
+        padding: 50px 20px 110px 20px;
       }
 
     }
@@ -435,7 +266,7 @@
       }
 
       .blink4 {
-        padding: 100px 20px;
+        padding: 20px 20px;
       }
     }
 
@@ -463,7 +294,7 @@
       }
 
       .blink4 {
-        padding: 65px 20px;
+        padding:20px 20px;
       }
 
     }
@@ -473,7 +304,11 @@
         width: auto;
         height: 40rem;
       }
-
+      .blink4 #rdes {
+      text-align: left;
+      /* margin-top: 20px; */
+      font-size: 14px;
+    }
       #next-button,
       #pre-button {
         width: 30%;
@@ -492,7 +327,7 @@
       }
 
       .blink4 {
-        padding: 60px 20px;
+        padding: 20px 20px 1px 20px;
       }
 
     }
@@ -654,9 +489,6 @@
         and tools you gain into your daily life and continue to practice and refine them over time. </p>
 
       <br>
-
-
-
 
     </div>
   </div>
@@ -864,7 +696,7 @@
   </div>
 
   <!-- -----------------------footer------------------------ -->
-  <footer>
+  <footer style="margin-top: 15vh;">
     <div class="container">
       <div class="row">
         <div class="col-lg-3">
@@ -936,9 +768,8 @@
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/js/owl-carousel.js"></script>
-  <script src="assets/js/animation.js"></script>
-  <script src="assets/js/imagesloaded.js"></script>
   <script src="assets/js/custom.js"></script>
+  <script src="assets/js/privacy.js"></script>
 
   <script>
     //quiz 
@@ -955,10 +786,10 @@
     let userScore = document.getElementById("user-score");
     let startScreen = document.querySelector(".start-screen");
     let startButton = document.getElementById("start-button");
-    let questionCount;
+    // let questionCount;
     let scoreCount = 0;
-    let count = 11;
-    let countdown;
+    // let count = 11;
+    // let countdown;
 
     //Questions and Options array
 
@@ -1038,7 +869,7 @@
     preBtn.addEventListener("click", () => {
       preBtn.disabled = false;
       questionCount -= 1;
-      nextBtn.disabled = false;
+      // nextBtn.disabled = false;
       // check if user is going back to the first question
       if (questionCount === 0) {
         preBtn.hidden = true; // hide the pre-button again
@@ -1054,26 +885,38 @@
           questionCount + 1 + " of " + quizArray.length + " Question";
         //display quiz
         quizDisplay(questionCount);
-        count = 11;
-        clearInterval(countdown);
-        timerDisplay();
+        // count = 11;
+        // clearInterval(countdown);
+        // timerDisplay();
       }
     });
     //Next Button
-    nextBtn.addEventListener(
-      "click",
-      (displayNext = () => {
-        //increment questionCount
-        nextBtn.disabled = true;
-        questionCount += 1;
-        // check if user is on the second question 
-        if (questionCount === 1) {
-          preBtn.hidden = false; // show the pre-button 
-        }
-        //if last question
-        if (questionCount == quizArray.length) {
-          //hide question container and display score
-          displayContainer.classList.add("hide");
+    nextBtn.onclick = function () {
+
+const question = document.getElementsByClassName("container-mid")[questionCount];
+const options = question.querySelectorAll("input[type='radio']");
+let isOptionSelected = false;
+
+// Check if an option is selected
+for (let i = 0; i < options.length; i++) {
+
+  if (options[i].checked) {
+
+    isOptionSelected = true;
+    break;
+
+  }
+}
+
+// If an option is selected, move to the next question
+if (isOptionSelected) {
+  // Check if user is on the last question
+  if (questionCount === quizArray.length - 1) {
+    // Hide the next-button and show the submit-button instead
+    nextBtn.hidden = true;
+    preBtn.hidden=true;
+    //hide question container and display score
+    displayContainer.classList.add("hide");
           scoreContainer.classList.remove("hide");
           //user score
           userScore.innerHTML =
@@ -1097,33 +940,53 @@
 
 
           userScore.innerHTML = "" + result;
+  }
 
-        }
+  // Update the question count display
+  questionCount += 1;
+  countOfQuestion.innerHTML = questionCount + 1 + " of " + quizArray.length + " Question";
+  preBtn.hidden=false;
+  preBtn.disabled = false;
+  // Display the next question
+  quizDisplay(questionCount);
 
-        else {
+  // Check if an option is selected for the current question
+  const currentOptions = document.querySelectorAll(`.container-mid:nth-child(${questionCount}) input[type='radio']`);
+  let isCurrentOptionSelected = false;
 
-          countOfQuestion.innerHTML =
-            questionCount + 1 + " of " + quizArray.length + " Question";
-          //display quiz
-          quizDisplay(questionCount);
-          count = 11;
-          clearInterval(countdown);
-          timerDisplay();
-        }
-      })
-    );
+  for (let i = 0; i < currentOptions.length; i++) {
 
+    if (currentOptions[i].checked) {
+      isCurrentOptionSelected = true;
+      break;
+    }
+  }
+
+  // If an option is not selected for the current question, prevent moving to the next question
+  if (!isCurrentOptionSelected) {
+    alert("Please select an option to proceed");
+    questionCount -= 1;
+    countOfQuestion.innerHTML = questionCount + 1 + " of " + quizArray.length + " Question";
+    quizDisplay(questionCount);
+  }
+
+}
+//  else {
+//   // Display an error message if an option is not selected
+//   alert("Please select an option to proceed");
+// }
+}
     //Timer
-    const timerDisplay = () => {
-      countdown = setInterval(() => {
-        count--;
-        timeLeft.innerHTML = `${count}s`;
-        if (count == 0) {
-          clearInterval(countdown);
-          displayNext();
-        }
-      }, 1000);
-    };
+    // const timerDisplay = () => {
+    //   countdown = setInterval(() => {
+    //     count--;
+    //     timeLeft.innerHTML = `${count}s`;
+    //     if (count == 0) {
+    //       clearInterval(countdown);
+    //       displayNext();
+    //     }
+    //   }, 1000);
+    // };
 
     //Display quiz
     const quizDisplay = (questionCount) => {
@@ -1189,7 +1052,7 @@
       }
 
       //clear interval(stop timer)
-      clearInterval(countdown);
+      // clearInterval(countdown);
       //disable all options
       options.forEach((element) => {
         element.disabled = true;
@@ -1203,13 +1066,14 @@
       quizContainer.innerHTML = "";
       questionCount = 0;
       scoreCount = 0;
-      count = 11;
-      clearInterval(countdown);
-      nextBtn.disabled = true;
+      // count = 11;
+      // clearInterval(countdown);
+      // nextBtn.disabled = true;
       // preBtn.disabled = true;
       quizCreator();
       quizDisplay(questionCount);
       preBtn.hidden = true;
+      nextBtn.hidden=false;
     }
 
     //when user click on start button
@@ -1225,110 +1089,6 @@
       displayContainer.classList.add("hide");
       setDataIndex();
     };
-
-
-
-    // Get the modal
-
-    var modalparent = document.getElementsByClassName("modal_multi");
-
-    // Get the button that opens the modal
-
-    var modal_btn_multi = document.getElementsByClassName("myBtn_multi");
-
-    // Get the <span> element that closes the modal
-    var span_close_multi = document.getElementsByClassName("close_multi");
-
-    // When the user clicks the button, open the modal
-    function setDataIndex() {
-
-      for (i = 0; i < modal_btn_multi.length; i++) {
-        modal_btn_multi[i].setAttribute('data-index', i);
-        modalparent[i].setAttribute('data-index', i);
-        span_close_multi[i].setAttribute('data-index', i);
-      }
-    }
-
-
-
-
-
-    for (i = 0; i < modal_btn_multi.length; i++) {
-      modal_btn_multi[i].onclick = function () {
-        var ElementIndex = this.getAttribute('data-index');
-        modalparent[ElementIndex].style.display = "block";
-      };
-
-      // When the user clicks on <span> (x), close the modal
-      span_close_multi[i].onclick = function () {
-        var ElementIndex = this.getAttribute('data-index');
-        modalparent[ElementIndex].style.display = "none";
-      };
-
-    }
-
-    //window.onload = function() {
-    //
-    //setDataIndex();
-    //};
-
-    window.onclick = function (event) {
-      if (event.target === modalparent[event.target.getAttribute('data-index')]) {
-        modalparent[event.target.getAttribute('data-index')].style.display = "none";
-      }
-
-      // OLD CODE
-      if (event.target === modal) {
-        modal.style.display = "none";
-      }
-    };
-
-    //XXXXXXXXXXXXXXXXXXXXXXX    Modified old code    XXXXXXXXXXXXXXXXXXXXXXXXXX
-
-    // Get the modal
-
-    var modal = document.getElementById('myModal');
-
-    // Get the button that opens the modal
-    var btn = document.getElementById("myBtn");
-
-    // Get the <span> element that closes the modal
-    var span = modal.getElementsByClassName("close")[0]; // Modified by dsones uk
-
-    // When the user clicks on the button, open the modal
-
-    btn.onclick = function () {
-
-      modal.style.display = "block";
-    }
-
-    // When the user clicks on <span> (x), close the modal
-    span.onclick = function () {
-      modal.style.display = "none";
-    }
-    // Acc
-    $(document).on("click", ".naccs .menu div", function () {
-      var numberIndex = $(this).index();
-
-      if (!$(this).is("active")) {
-        $(".naccs .menu div").removeClass("active");
-        $(".naccs ul li").removeClass("active");
-
-        $(this).addClass("active");
-        $(".naccs ul").find("li:eq(" + numberIndex + ")").addClass("active");
-
-        var listItemHeight = $(".naccs ul")
-          .find("li:eq(" + numberIndex + ")")
-          .innerHeight();
-        $(".naccs ul").height(listItemHeight + "px");
-      }
-    });
-
-
-
-    if (event.target === modalparent[event.target.getAttribute('data-index')]) {
-      modalparent[event.target.getAttribute('data-index')].style.display = "none";
-    }
 
 
   </script>

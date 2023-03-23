@@ -13,6 +13,35 @@
   border-top: 1px solid #eee;
 
 }
+.page_button button {
+  margin: 10px 0;
+  /* width: 25%; */
+  display: inline-block;
+  background-color: #ff695f;
+  font-size: 16px;
+  font-weight: 400;
+  color: #fff;
+  text-transform: capitalize;
+  padding: 12px 25px;
+  border-radius: 23px;
+  letter-spacing: 0.25px;
+  transition: all .1s;
+  border: none;
+}
+
+.page_button button:hover {
+  font-weight: bold;
+  border: 2px solid #03a4ed;
+}
+
+.page_button i {
+  font-size: 18px;
+}
+
+.page_button a {
+  text-decoration: none;
+  color: #fff;
+}
 .reference_suggestion .reference_suggestion-left-dec img {
   width: 300px;
   height: 738px;
@@ -198,9 +227,9 @@ suggestion page
     text-align: center;
     padding-bottom: 3px;
   }
-  .sgform-addon2{
+  /* .sgform-addon2{
     margin-left: 5px;
-  }
+  } */
   .sgformfield {
     color: #000000;
     background: #FFFFFF;

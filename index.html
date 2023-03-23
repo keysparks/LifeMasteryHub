@@ -22,152 +22,16 @@
   <!-- Additional CSS Files -->
   <link rel="stylesheet" href="assets/css/fontawesome.css">
   <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/contact.css">
+  <link rel="stylesheet" href="assets/css/courses.css">
+  <!-- <link rel="stylesheet" href="assets/css/ref%26sug.css"> -->
+  <link rel="stylesheet" href="assets/css/protips.css">
+  <link rel="stylesheet" href="assets/css/quiz.css">
   <link rel="stylesheet" href="assets/css/animated.css">
   <link rel="stylesheet" href="assets/css/owl.css">
 
   <style>
-    #form-container {
-      display: none;
-    }
-
-    * {
-      padding: 0;
-      margin: 0;
-      box-sizing: border-box;
-      font-family: "Poppins", sans-serif;
-    }
-
-    .start-screen {
-
-      top: 40%;
-      width: 100%;
-      height: 100%;
-      left: 50%;
-      display: flex;
-      flex-direction: column;
-      text-align: center;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .score-container {
-      background-color: #fff;
-      top: 40%;
-      width: 100%;
-      height: 100%;
-      left: 50%;
-      /* display: flex; */
-      flex-direction: column;
-      text-align: center;
-      align-items: center;
-      justify-content: center;
-      border-radius: 5px;
-
-    }
-
-    button {
-      border: none;
-      outline: none;
-      cursor: pointer;
-    }
-
-    #start-button,
-    #restart {
-      font-size: 1.3em;
-      padding: 0.5em 0.8em;
-      border-radius: 0.2em;
-      background-color: #ff695f;
-      color: #fff;
-    }
-
-
-    #restart {
-      margin-top: 15px;
-      margin-bottom: 10px;
-    }
-
-    .header {
-      /* margin-bottom: 1.8em; */
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding-bottom: 0.6em;
-      border-bottom: 0.1em solid #c0bfd2;
-    }
-
-    .timer-div {
-      background-color: #e1f5fe;
-      width: 7.5em;
-      border-radius: 1.8em;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0.7em 1.8em;
-    }
-
-    .question {
-      margin-bottom: 1.25em;
-      font-weight: 600;
-    }
-
-    .option-div {
-      font-size: 0.9em;
-      width: 100%;
-      padding: 7px;
-      margin: 0.3em 0;
-      text-align: left;
-      outline: none;
-      background: transparent;
-      border: 1px solid #c0bfd2;
-      border-radius: 0.3em;
-      font-weight: normal;
-      cursor: pointer;
-    }
-
-    .option-div:disabled {
-      color: #000000;
-      /* cursor: not-allowed; */
-    }
-
-    #next-button {
-      font-size: 1em;
-      margin-top: 1.5em;
-      background-color: #0a69ed;
-      color: #ffffff;
-      padding: 0.7em 1.8em;
-      border-radius: 0.3em;
-      float: right;
-      width: 15%;
-    }
-
-    #pre-button {
-      font-size: 1em;
-      margin-top: 1.5em;
-      background-color: #0a69ed;
-      color: #ffffff;
-      padding: 0.7em 1.8em;
-      border-radius: 0.3em;
-      float: left;
-      width: 15%;
-    }
-
-    .hide {
-      display: none;
-    }
-
-    #user-score {
-      font-size: 1.5em;
-      color: #ffffff;
-    }
-
-    .quiz_frame {
-      display: flex;
-      flex-wrap: wrap;
-      padding-top: 30px;
-    }
-
     .question-box {
-
       box-shadow: 0px 0px 15px #ff695f;
       width: 80%;
       height: 35rem;
@@ -178,7 +42,6 @@
       border-radius: 5px;
       /* border-bottom-right-radius: 30px; */
       padding: 0px;
-
       margin-top: 60px;
       position: relative;
       isolation: isolate;
@@ -197,34 +60,6 @@
       inset: 0;
     }
 
-    #display-container {
-      background-color: #ffffff;
-      padding: 3.1em 1.8em;
-      width: 100%;
-      /* max-width: 37.5em; */
-      /* margin: 1.5em auto; */
-      border-radius: 5px;
-      height: 100%;
-    }
-
-    .question_page_button {
-      text-align: center;
-      padding-top: 30px;
-      border-top: 1px solid #eee;
-      /* width: 60%; */
-      margin: auto;
-    }
-
-    #user-score {
-
-      font-size: 1em;
-      color: black;
-      /* text-align: center; */
-      /* padding: 30px; */
-      /* margin: auto; */
-      animation: none;
-      border-radius: 5px;
-    }
 
     #blink {
       animation: blinker 1.5s linear infinite;
@@ -737,9 +572,9 @@
             <!-- ***** Logo End ***** -->
             <!-- ***** Menu Start ***** -->
             <ul class="nav">
-              <li ><a href="index.html" class="active">Home</a></li>
+              <li><a href="index.html" class="active">Home</a></li>
               <div class="dropdown">
-                <li ><a href="#services">Training Module</a></li>
+                <li><a href="#services">Training Module</a></li>
                 <div>
                   <ul class="dropdown-menu">
                     <li><a href="sj.html">Self-journey</a></li>
@@ -751,9 +586,9 @@
                   </ul>
                 </div>
               </div>
-              <li ><a href="about.html">About Us</a></li>
+              <li><a href="about.html">About Us</a></li>
               <!-- <li ><a href="#">Contact Us </a></li> -->
-              <li >
+              <li>
                 <div><a href="contact.html">Contact Us</a></div>
               </li>
             </ul>
@@ -999,90 +834,93 @@
     </div>
   </div>
   <!-- --------------------------End of quiz section--------------------------------------- -->
-<section id="services">
-  <div  class="our-services section">
-    <div class="services-right-dec">
-      <img src="./assets/images/services-right-dec.png" alt="">
-    </div>
-    <div class="container">
-      <!-- <div class="services-left-dec">
+  <section id="services">
+    <div class="our-services section">
+      <div class="services-right-dec">
+        <img src="./assets/images/services-right-dec.png" alt="">
+      </div>
+      <div class="container">
+        <!-- <div class="services-left-dec">
         <img src="./assets/images/services-left-dec.png" alt="">
       </div> -->
 
-      <div class="section-heading quiz_intro_content">
-        <h1>Training Module</h1>
+        <div class="section-heading quiz_intro_content">
+          <h1>Training Module</h1>
 
-      </div>
+        </div>
 
 
-      <div class="row ">
-        <div class="col-lg-12 col-md-12 col-12">
-          <div class="owl-carousel owl-services">
+        <div class="row ">
+          <div class="col-lg-12 col-md-12 col-12">
+            <div class="owl-carousel owl-services">
 
-            <div class="item">
-              <a href="sj.html">
-                <h4>Self-journey</h4>
-                <div class="icon"><img src="./assets/images/service-icon-01.png" alt=""></div>
-                <p>A course designed to guide individuals through a journey of self-understand, providing practical
-                  tools
-                  and exercises to gain greater insight into personal identity and life path. </p>
-              </a>
-            </div>
+              <div class="item">
+                <a href="sj.html">
+                  <h4>Self-journey</h4>
+                  <div class="icon"><img src="./assets/images/service-icon-01.png" alt=""></div>
+                  <p>A course designed to guide individuals through a journey of self-understand, providing practical
+                    tools
+                    and exercises to gain greater insight into personal identity and life path. </p>
+                </a>
+              </div>
 
-            <div class="item">
-              <a href="ps.html">
-                <h4>Problem Solving</h4>
-                <div class="icon"><img src="./assets/images/service-icon-02.png" alt=""></div>
-                <p>Learn practical strategies, tools, and techniques to effectively identify and solve problems in all
-                  areas of your life.</p>
-              </a>
-            </div>
+              <div class="item">
+                <a href="ps.html">
+                  <h4>Problem Solving</h4>
+                  <div class="icon"><img src="./assets/images/service-icon-02.png" alt=""></div>
+                  <p>Learn practical strategies, tools, and techniques to effectively identify and solve problems in all
+                    areas of your life.</p>
+                </a>
+              </div>
 
-            <div class="item">
-              <a href="dm.html">
-                <h4>Decision making</h4>
-                <div class="icon"><img src="./assets/images/service-icon-03.png" alt=""></div>
-                <p>You will learn practical tools and techniques to improve your ability to make effective and informed
-                  decisions, empowering you to achieve your goals and succeed in all areas of life."</p>
-              </a>
+              <div class="item">
+                <a href="dm.html">
+                  <h4>Decision making</h4>
+                  <div class="icon"><img src="./assets/images/service-icon-03.png" alt=""></div>
+                  <p>You will learn practical tools and techniques to improve your ability to make effective and
+                    informed
+                    decisions, empowering you to achieve your goals and succeed in all areas of life."</p>
+                </a>
 
-            </div>
+              </div>
 
-            <div class="item">
-              <a href="conflict.html">
-                <h4> Conflict management</h4>
-                <div class="icon"><img src="./assets/images/service-icon-04.png" alt=""></div>
-                <p>Course to develop essential skills and strategies to effectively manage and resolve conflicts in your
-                  personal and professional life</p>
-              </a>
-            </div>
+              <div class="item">
+                <a href="conflict.html">
+                  <h4> Conflict management</h4>
+                  <div class="icon"><img src="./assets/images/service-icon-04.png" alt=""></div>
+                  <p>Course to develop essential skills and strategies to effectively manage and resolve conflicts in
+                    your
+                    personal and professional life</p>
+                </a>
+              </div>
 
-            <div class="item">
-              <a href="com.html">
-                <h4> Communication</h4>
-                <div class="icon"><img src="./assets/images/tm-com-service.png" alt=""></div>
-                <p>Communication is not just about the words you say, but also the way you say them. By mastering the
-                  art of communication, you can effectively express yourself and understand the perspectives of others,
-                  leading to better collaboration and greater success. </p>
-              </a>
-            </div>
+              <div class="item">
+                <a href="com.html">
+                  <h4> Communication</h4>
+                  <div class="icon"><img src="./assets/images/tm-com-service.png" alt=""></div>
+                  <p>Communication is not just about the words you say, but also the way you say them. By mastering the
+                    art of communication, you can effectively express yourself and understand the perspectives of
+                    others,
+                    leading to better collaboration and greater success. </p>
+                </a>
+              </div>
 
-            <div class="item">
-              <a href="po.html">
-                <h4>Performance optimization</h4>
-                <div class="icon"><img src="./assets/images/tm-po-service.png" alt=""></div>
-                <p>Individuals requires effort, dedication, and a commitment to improvement and is considered as the
-                  path to performance optimization. There is always room for improvement when it comes to performance
-                  optimization. The key to success lies in maximizing your strengths and identifying areas for growth.
-                </p>
-              </a>
+              <div class="item">
+                <a href="po.html">
+                  <h4>Performance optimization</h4>
+                  <div class="icon"><img src="./assets/images/tm-po-service.png" alt=""></div>
+                  <p>Individuals requires effort, dedication, and a commitment to improvement and is considered as the
+                    path to performance optimization. There is always room for improvement when it comes to performance
+                    optimization. The key to success lies in maximizing your strengths and identifying areas for growth.
+                  </p>
+                </a>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
   <div class="footer-dec">
     <img src="./assets/images/footer-dec.png" alt="">
@@ -1161,29 +999,8 @@
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/js/owl-carousel.js"></script>
-  <script src="assets/js/animation.js"></script>
-  <script src="assets/js/imagesloaded.js"></script>
   <script src="assets/js/custom.js"></script>
-  <script src="assets/js/sandbox.js"></script>
-  <script>
-    // Acc
-    $(document).on("click", ".naccs .menu div", function () {
-      var numberIndex = $(this).index();
-
-      if (!$(this).is("active")) {
-        $(".naccs .menu div").removeClass("active");
-        $(".naccs ul li").removeClass("active");
-
-        $(this).addClass("active");
-        $(".naccs ul").find("li:eq(" + numberIndex + ")").addClass("active");
-
-        var listItemHeight = $(".naccs ul")
-          .find("li:eq(" + numberIndex + ")")
-          .innerHeight();
-        $(".naccs ul").height(listItemHeight + "px");
-      }
-    });
-  </script>
+  <script src="assets/js/privacy.js"></script>
 
   <script>
     //quiz 
@@ -1201,10 +1018,10 @@
     //let resultDisplay = document.getElementById("user-score");
     let startScreen = document.querySelector(".start-screen");
     let startButton = document.getElementById("start-button");
-    let questionCount;
+    // let questionCount;
     let scoreCount = 0;
-    let count = 11;
-    let countdown;
+    // let count = 11;
+    // let countdown;
 
     //Questions and Options array
 
@@ -1213,42 +1030,48 @@
         id: "1",
         question: "What is the definition of financial literacy?",
         options: ['<label ><input type="radio" name="q1" value="option1"> The ability to manage personal finances effectively </label>', '<label><input type="radio" name="q1" value="option2"> The ability to analyse financial statements and make investment decisions</label>', '<label><input type="radio" name="q1" value="option3"> The ability to market financial products and services</label>', '<label><input type="radio" name="q1" value="option4"> The ability to negotiate contracts and agreements</label>'],
-        correct: "The ability to manage personal finances effectively "
+        correct: "The ability to manage personal finances effectively ",
+        isOptionSelected: true,
       },
 
       {
         id: "2",
         question: "Which of the following is an essential leadership skill?  ",
         options: ['<label><input type="radio" name="q2" value="option1">Time Management </label>', '<label><input type="radio" name="q2" value="option2">Conflict Resolution </label>', '<label><input type="radio" name="q2" value="option3">Emotional Intelligence  </label>', '<label><input type="radio" name="q2" value="option4"> Project Management  </label>'],
-        correct: "Conflict Resolution "
+        correct: "Conflict Resolution ",
+        isOptionSelected: true,
       },
 
       {
         id: "3",
         question: "What does critical thinking refer to?  ",
         options: ['<label><input type="radio" name="q3" value="option1">The ability to think creatively and outside the box  </label>', '<label><input type="radio" name="q3" value="option2">The ability to solve complex problems using logic and reasoning  </label>', '<label><input type="radio" name="q3" value="option3">The ability to communicate ideas effectively  </label>', '<label><input type="radio" name="q3" value="option4">The ability to work collaboratively with others  </label>'],
-        correct: "The ability to solve complex problems using logic and reasoning "
+        correct: "The ability to solve complex problems using logic and reasoning ",
+        isOptionSelected: true,
       },
 
       {
         id: "4",
         question: "What is the definition of adaptability? ",
         options: ['<label><input type="radio" name="q4" value="option1">The ability to work with others to achieve a common goal </label>', '<label><input type="radio" name="q4" value="option2">The ability to learn quickly and apply new information effectively  </label>', '<label><input type="radio" name="q4" value="option3">The ability to change ones approach in response to changing circumstances </label>', '<label><input type="radio" name="q4" value="option4">The ability to manage stress and maintain a positive attitude </label>'],
-        correct: "The ability to change one's approach in response to changing circumstances "
+        correct: "The ability to change one's approach in response to changing circumstances ",
+        isOptionSelected: true,
       },
 
       {
         id: "5",
         question: "In 2010, a 16-year-old girl named Abby Sunderland attempted to sail solo around the world, but her journey was cut short due to a storm. Which life skill did she display during this experience?  ",
         options: ['<label><input type="radio" name="q5" value="option1">Time management  </label>', '<label><input type="radio" name="q5" value="option2"> Resilience  </label>', '<label><input type="radio" name="q5" value="option3">Cooking  </label>', '<label><input type="radio" name="q5" value="option4">technical writing  </label>'],
-        correct: "Resilience  "
+        correct: "Resilience  ",
+        isOptionSelected: true,
       },
 
       {
         id: "6",
         question: " In 2020, during the COVID-19 pandemic, many individuals had to adapt to working from home. Which life skill was most essential for successfully working from home?   ",
         options: ['<label><input type="radio" name="q6" value="option1">Active listening    </label>', '<label><input type="radio" name="q6" value="option2"> Time management   </label>', '<label><input type="radio" name="q5" value="option3">Drawing   </label>', '<label><input type="radio" name="q6" value="option4"> Cooking   </label>'],
-        correct: "Time management   "
+        correct: "Time management   ",
+        isOptionSelected: true,
       },
 
       {
@@ -1256,6 +1079,7 @@
         question: "In 2018, a group of Thai soccer players and their coach were trapped in a cave for over two weeks. Which life skill did they display during this experience?  ",
         options: ['<label><input type="radio" name="q7" value="option1">Critical thinking</label>', '<label><input type="radio" name="q7" value="option2">Public speaking</label>', '<label><input type="radio" name="q7" value="option3">Graphic design</label>', '<label><input type="radio" name="q7" value="option4">Empathy</label>'],
         correct: "Critical thinking",
+        isOptionSelected: true,
       },
 
       {
@@ -1263,6 +1087,7 @@
         question: "In 2013, a man named Antoinette Tuff prevented a school shooting by using her life skills. What life skill did she display during this experience?  ",
         options: ['<label><input type="radio" name="q8" value="option1">Empathy</label>', '<label><input type="radio" name="q8" value="option2">Technical writing</label>', '<label><input type="radio" name="q8" value="option3">Cooking</label>', '<label><input type="radio" name="q8" value="option4">Graphic design</label>'],
         correct: "Empathy",
+        isOptionSelected: true,
       },
 
       {
@@ -1270,6 +1095,7 @@
         question: "In 2014, Malala Yousafzai, a young activist for girls' education, won the Nobel Peace Prize. Which life skill did she display during her activism?  ",
         options: ['<label><input type="radio" name="q9" value="option1">Leadership</label>', '<label><input type="radio" name="q9" value="option2">Knitting</label>', '<label><input type="radio" name="q9" value="option3">Time management</label>', '<label><input type="radio" name="q9" value="option4">Drawing</label>'],
         correct: "Leadership",
+        isOptionSelected: true,
       },
 
       {
@@ -1277,6 +1103,7 @@
         question: "How do you respond to criticism or negative feedback? ",
         options: ['<label><input type="radio" name="q10" value="option1">Get defensive and argue with the person giving the feedback</label>', '<label><input type="radio" name="q10" value="option2">Listen to the feedback and try to understand the other persons perspective</label>', '<label><input type="radio" name="q10" value="option3">Ignore the feedback and continue doing things your own way</label>', '<label><input type="radio" name="q10" value="option4">Respond negatively to the person giving the feedback</label>'],
         correct: "Listen to the feedback and try to understand the other person's perspective",
+        isOptionSelected: true,
       },
 
       {
@@ -1284,6 +1111,7 @@
         question: "How do you handle a situation where you don't have all the information you need to make a decision?",
         options: ['<label><input type="radio" name="q11" value="option1">Make a decision based on your intuition</label>', '<label><input type="radio" name="q11" value="option2">Delay the decision until you have all the information</label>', '<label><input type="radio" name="q11" value="option3">Make a decision based on the information you have available</label>', '<label><input type="radio" name="q11" value="option4">Ask someone else to make the decision for you</label>'],
         correct: "Delay the decision until you have all the information",
+        isOptionSelected: true,
       },
 
       {
@@ -1291,6 +1119,7 @@
         question: "How do you approach a new project or task that you have never done before? ",
         options: ['<label><input type="radio" name="q12" value="option1">Research and gather information before starting the project</label>', '<label><input type="radio" name="q12" value="option2">Jump right in and learn as you go</label>', '<label><input type="radio" name="q12" value="option3">Ask for help from someone who has experience with the task</label>', '<label><input type="radio" name="q12" value="option4">Ignore the project or task until you are more comfortable</label>'],
         correct: "Research and gather information before starting the project",
+        isOptionSelected: true,
       },
 
       {
@@ -1298,6 +1127,7 @@
         question: "How do you handle a situation where a team member is consistently not meeting deadlines?",
         options: ['<label><input type="radio" name="q13" value="option1">Confront the team member in front of everyone and demand they improve</label>', '<label><input type="radio" name="q13" value="option2">Talk to the team member privately and ask if they need any help or support</label>', '<label><input type="radio" name="q13" value="option3">Ignore the situation and hope it resolves itself</label>', '<label><input type="radio" name="q13" value="option4">Blame the team member for the projects failure</label>'],
         correct: "Talk to the team member privately and ask if they need any help or support",
+        isOptionSelected: true,
       },
 
       {
@@ -1305,6 +1135,7 @@
         question: "How do you manage your time effectively when working on multiple projects or tasks?",
         options: ['<label><input type="radio" name="q14" value="option1">Focus on one task at a time until it is complete</label>', '<label><input type="radio" name="q14" value="option2">Prioritize tasks based on urgency and importance</label>', '<label><input type="radio" name="q14" value="option1">Work on multiple tasks simultaneously to save time</label>', '<label><input type="radio" name="q14" value="option4">Delay starting any tasks until there enough time to focus on all of them at once</label>'],
         correct: "Prioritize tasks based on urgency and importance",
+        isOptionSelected: true,
       },
 
       {
@@ -1312,6 +1143,7 @@
         question: "How do you handle a situation where a team member is not communicating effectively? ",
         options: ['<label><input type="radio" name="q15" value="option1">Ignore the situation and hope it resolves itself</label>', '<label><input type="radio" name="q15" value="option2">Confront the team member in front of everyone and demand they improve</label>', '<label><input type="radio" name="q15" value="option3">Talk to the team member privately and ask if there is anything you can do to help them communicate better</label>', '<label><input type="radio" name="q15" value="option4">Avoid working with the team member altogether</label>'],
         correct: "Talk to the team member privately and ask if there is anything you can do to help them communicate better",
+        isOptionSelected: true,
       },
 
     ];
@@ -1327,15 +1159,15 @@
     preBtn.addEventListener("click", () => {
       preBtn.disabled = false;
       questionCount -= 1;
-      nextBtn.disabled = false;
+      // nextBtn.disabled = false;
       // check if user is going back to the first question
       if (questionCount === 0) {
         preBtn.hidden = true; // hide the pre-button again
       }
       // check if the user has answered the current question
-    //  let currentQuestion = document.getElementsByClassName("container-mid")[questionCount];
-    //  let selectedOption = currentQuestion.querySelector(".option-div.selected");
-    //   nextBtn.disabled = selectedOption === null;
+      //  let currentQuestion = document.getElementsByClassName("container-mid")[questionCount];
+      //  let selectedOption = currentQuestion.querySelector(".option-div.selected");
+      //   nextBtn.disabled = selectedOption === null;
 
       if (questionCount == quizArray.length) {
         //hide question container and display score
@@ -1348,28 +1180,37 @@
           questionCount + 1 + " of " + quizArray.length + " Question";
         //display quiz
         quizDisplay(questionCount);
-        count = 11;
-        clearInterval(countdown);
-        timerDisplay();
+        // count = 11;
+        // clearInterval(countdown);
+        // timerDisplay();
       }
     });
 
     //Next Button
-    nextBtn.addEventListener(
-      "click",
-      (displayNext = () => {
-        //increment questionCount
-        nextBtn.disabled = true;
-        questionCount += 1;
-        // check if user is on the second question 
-        if (questionCount === 1) {
-          preBtn.hidden = false; // show the pre-button 
+    nextBtn.onclick = function () {
+
+      const question = document.getElementsByClassName("container-mid")[questionCount];
+      const options = question.querySelectorAll("input[type='radio']");
+      let isOptionSelected = false;
+
+      // Check if an option is selected
+      for (let i = 0; i < options.length; i++) {
+
+        if (options[i].checked) {
+
+          isOptionSelected = true;
+          break;
 
         }
+      }
 
-
-        //if last question
-        if (questionCount == quizArray.length) {
+      // If an option is selected, move to the next question
+      if (isOptionSelected) {
+        // Check if user is on the last question
+        if (questionCount === quizArray.length - 1) {
+          // Hide the next-button and show the submit-button instead
+          nextBtn.hidden = true;
+          preBtn.hidden = true;
           //hide question container and display score
           displayContainer.classList.add("hide");
           scoreContainer.classList.remove("hide");
@@ -1379,6 +1220,7 @@
           //Display result
           let averageScore = scoreCount / questionCount;
           let result = "";
+
 
 
           if (averageScore >= 0 && averageScore <= 0.4) {
@@ -1391,32 +1233,56 @@
             result = "<p class='blink4'><span id='blink' style='color: #006600;'>Expert</span><br><span id='rdes'>     <span style='font-weight:700'>The pinnacle of mastery, keep inspiring!</span><br> Fantastic work, you should be proud of yourself! You have a deep understanding on life skill and have put in a lot of hard work. Let's discuss ways to build on this success and continue to challenge yourself. Keep up the good work and continue to seek out opportunities to improve and refine these skills. Consider mentoring others or volunteering in leadership roles to help develop these skills further and make a positive impact in the community.</span></p>";
           }
 
-          userScore.innerHTML = "" + result;
 
-        } else {
-          //display questionCount
-          countOfQuestion.innerHTML =
-            questionCount + 1 + " of " + quizArray.length + " Question";
-          //display quiz
-          quizDisplay(questionCount);
-          count = 11;
-          clearInterval(countdown);
-          timerDisplay();
+          userScore.innerHTML = "" + result;
         }
-      })
-    );
+
+        // Update the question count display
+        questionCount += 1;
+        countOfQuestion.innerHTML = questionCount + 1 + " of " + quizArray.length + " Question";
+        preBtn.hidden = false;
+        preBtn.disabled = false;
+        // Display the next question
+        quizDisplay(questionCount);
+
+        // Check if an option is selected for the current question
+        const currentOptions = document.querySelectorAll(`.container-mid:nth-child(${questionCount}) input[type='radio']`);
+        let isCurrentOptionSelected = false;
+
+        for (let i = 0; i < currentOptions.length; i++) {
+
+          if (currentOptions[i].checked) {
+            isCurrentOptionSelected = true;
+            break;
+          }
+        }
+
+        // If an option is not selected for the current question, prevent moving to the next question
+        if (!isCurrentOptionSelected) {
+          alert("Please select an option to proceed");
+          questionCount -= 1;
+          countOfQuestion.innerHTML = questionCount + 1 + " of " + quizArray.length + " Question";
+          quizDisplay(questionCount);
+        }
+
+      } 
+      // else {
+      //   // Display an error message if an option is not selected
+      //   // alert("Please select an option to proceed");
+      // }
+    }
 
     //Timer
-    const timerDisplay = () => {
-      countdown = setInterval(() => {
-        count--;
-        timeLeft.innerHTML = `${count}s`;
-        if (count == 0) {
-          clearInterval(countdown);
-          displayNext();
-        }
-      }, 1000);
-    };
+    // const timerDisplay = () => {
+    //   countdown = setInterval(() => {
+    //     count--;
+    //     timeLeft.innerHTML = `${count}s`;
+    //     if (count == 0) {
+    //       clearInterval(countdown);
+    //       displayNext();
+    //     }
+    //   }, 1000);
+    // };
 
     //Display quiz
     const quizDisplay = (questionCount) => {
@@ -1449,10 +1315,10 @@
         div.appendChild(question_DIV);
         //options
         div.innerHTML += `
-<label  class="option-div selected" onclick="checker(this)">${i.options[0]}</label>
-<label  class="option-div selected" onclick="checker(this)">${i.options[1]}</label>
-<label  class="option-div selected" onclick="checker(this)">${i.options[2]}</label>
-<label  class="option-div selected" onclick="checker(this)">${i.options[3]}</label>
+<label  class="option-div " onclick="checker(this)">${i.options[0]}</label>
+<label  class="option-div " onclick="checker(this)">${i.options[1]}</label>
+<label  class="option-div " onclick="checker(this)">${i.options[2]}</label>
+<label  class="option-div " onclick="checker(this)">${i.options[3]}</label>
 `;
         quizContainer.appendChild(div);
       }
@@ -1460,12 +1326,18 @@
 
     //Checker Function to check if option is correct or not
     function checker(userOption) {
-      let userSolution = userOption.innerText;
+      let userSolution = userOption;
       let question =
         document.getElementsByClassName("container-mid")[questionCount];
       let options = question.querySelectorAll(".option-div");
-      let selectedOption = question.querySelectorAll(".option-div.selected");
-      nextBtn.disabled = selectedOption === null;
+      // let selectedOption = question.querySelectorAll("selected");
+      // nextBtn.disabled = selectedOption === null;
+
+      // check if the user has answered the current question
+      //  let currentQuestion = document.getElementsByClassName("container-mid")[questionCount];
+      //  let selectedOption = currentQuestion.querySelector(".option-div.selected");
+      //   nextBtn.disabled = selectedOption === null;
+
 
       //if user clicked answer == correct option stored in object
       if (userSolution === quizArray[questionCount].correct) {
@@ -1477,7 +1349,7 @@
         userOption.classList.add("incorrect");
         //For marking the correct option
         options.forEach((element) => {
-          if (element.innerText == quizArray[questionCount]) {
+          if (element == quizArray[questionCount]) {
             element.classList.add("correct");
 
           }
@@ -1485,7 +1357,7 @@
       }
 
       //clear interval(stop timer)
-      clearInterval(countdown);
+      // clearInterval(countdown);
       //disable all options
       options.forEach((element) => {
         element.disabled = true;
@@ -1500,13 +1372,14 @@
       quizContainer.innerHTML = "";
       questionCount = 0;
       scoreCount = 0;
-      count = 11;
-      clearInterval(countdown);
-      nextBtn.disabled = true;
+      // count = 11;
+      // clearInterval(countdown);
+      // nextBtn.disabled = false;
       // preBtn.disabled = true;
       quizCreator();
       quizDisplay(questionCount);
       preBtn.hidden = true;
+      nextBtn.hidden = false;
     }
 
 
@@ -1523,88 +1396,6 @@
       displayContainer.classList.add("hide");
       setDataIndex();
     };
-
-
-
-
-    // Get the modal
-
-    var modalparent = document.getElementsByClassName("modal_multi");
-
-    // Get the button that opens the modal
-
-    var modal_btn_multi = document.getElementsByClassName("myBtn_multi");
-
-    // Get the <span> element that closes the modal
-    var span_close_multi = document.getElementsByClassName("close_multi");
-
-    // When the user clicks the button, open the modal
-    function setDataIndex() {
-
-      for (i = 0; i < modal_btn_multi.length; i++) {
-        modal_btn_multi[i].setAttribute('data-index', i);
-        modalparent[i].setAttribute('data-index', i);
-        span_close_multi[i].setAttribute('data-index', i);
-      }
-    }
-
-
-
-    for (i = 0; i < modal_btn_multi.length; i++) {
-      modal_btn_multi[i].onclick = function () {
-        var ElementIndex = this.getAttribute('data-index');
-        modalparent[ElementIndex].style.display = "block";
-      };
-
-      // When the user clicks on <span> (x), close the modal
-      span_close_multi[i].onclick = function () {
-        var ElementIndex = this.getAttribute('data-index');
-        modalparent[ElementIndex].style.display = "none";
-      };
-
-    }
-
-    //window.onload = function() {
-    //
-    //setDataIndex();
-    //};
-
-    window.onclick = function (event) {
-      if (event.target === modalparent[event.target.getAttribute('data-index')]) {
-        modalparent[event.target.getAttribute('data-index')].style.display = "none";
-      }
-
-      // OLD CODE
-      if (event.target === modal) {
-        modal.style.display = "none";
-      }
-    };
-
-    //XXXXXXXXXXXXXXXXXXXXXXX    Modified old code    XXXXXXXXXXXXXXXXXXXXXXXXXX
-
-    // Get the modal
-
-    var modal = document.getElementById('myModal');
-
-    // Get the button that opens the modal
-    var btn = document.getElementById("myBtn");
-
-    // Get the <span> element that closes the modal
-    var span = modal.getElementsByClassName("close")[0]; // Modified by dsones uk
-
-    // When the user clicks on the button, open the modal
-
-    btn.onclick = function () {
-
-      modal.style.display = "block";
-    }
-
-    // When the user clicks on <span> (x), close the modal
-    span.onclick = function () {
-      modal.style.display = "none";
-    }
-
-
   </script>
 
 </body>

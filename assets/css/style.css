@@ -293,7 +293,7 @@ body {
   opacity: 0.15;
 }
 
-.main-blue-button a {
+/* .main-blue-button a {
   display: inline-block;
   background-color: #03a4ed;
   font-size: 15px;
@@ -361,7 +361,7 @@ body {
   padding: 12px 25px;
   border-radius: 23px;
   letter-spacing: 0.25px;
-}
+} */
 
 /* 
 ---------------------------------------------
@@ -525,7 +525,7 @@ header
   opacity: 1;
 }
 
-.header-area .main-nav .nav li.submenu {
+/* .header-area .main-nav .nav li.submenu {
   position: relative;
   padding-right: 30px;
 }
@@ -597,7 +597,9 @@ header
   z-index: 1;
   transform: translateY(0%);
   transition-delay: 0s, 0s, 0.3s;
-}
+} */
+
+/* ------mobile version------ */
 
 .header-area .main-nav .menu-trigger {
   cursor: pointer;
@@ -646,10 +648,10 @@ header
   background-color: #1e1e1e;
   display: block;
   position: absolute;
-  width: 30px;
+  /* width: 30px; */
   height: 2px;
   left: 0;
-  width: 75%;
+  width: 100%;
 }
 
 .background-header .main-nav .menu-trigger span:before,
@@ -825,7 +827,7 @@ header
 
   .header-area {
     background-color: #f7f7f7;
-    padding: 0px 15px;
+    /* padding: 0px 0px; */
     height: 100px;
     box-shadow: none;
     text-align: center;
@@ -986,7 +988,7 @@ preloader
 --------------------------------------------- 
 */
 
-.js-preloader {
+/* .js-preloader {
   position: fixed;
   top: 0;
   left: 0;
@@ -1079,7 +1081,7 @@ preloader
   background: #ff695f;
   border-radius: 50%;
 }
-
+ */
 
 
 /* 
@@ -1426,7 +1428,7 @@ Portfolio
 --------------------------------------------- 
 */
 
-.our-portfolio .portfolio-left-dec img {
+/* .our-portfolio .portfolio-left-dec img {
   width: 342px;
   height: 311px;
   left: 45px;
@@ -1526,7 +1528,7 @@ Portfolio
   opacity: 1;
   width: 10px;
   height: 10px;
-}
+} */
 
 /* 
 ---------------------------------------------
@@ -1534,7 +1536,7 @@ Pricing
 --------------------------------------------- 
 */
 
-.pricing-tables .tables-left-dec img {
+/* .pricing-tables .tables-left-dec img {
   width: 418px;
   height: 851px;
   left: 0;
@@ -1632,7 +1634,7 @@ Pricing
 .pricing-tables .third-item {
   background-image: url(../images/third-plan-bg.png);
 }
-
+ */
 
 /* 
 ---------------------------------------------
@@ -1640,7 +1642,7 @@ Subscribe
 --------------------------------------------- 
 */
 
-.subscribe {
+/* .subscribe {
   margin-top: 120px;
 }
 
@@ -1722,7 +1724,7 @@ Subscribe
 .subscribe .inner-content form button:hover {
   background-color: #ff695f;
 }
-
+ */
 
 /* 
 ---------------------------------------------
@@ -1998,14 +2000,22 @@ brief content
 }
 
 
-/* 
----------------------------------------------
+ 
+/* ---------------------------------------------
 quiz section
---------------------------------------------- 
-*/
-.quiz_que {
+---------------------------------------------  */
+
+.quiz_intro_content h1 {
+  text-align: left;
+  color: #0f3e7b;
+  padding-bottom: 20px;
+} 
+
+
+
+/* .quiz_que { */
   /* text-align: center; */
-  margin: 10px;
+  /* margin: 10px;
   background: rgba(255, 144, 104, 1);
   border: 10px solid transparent;
   border-top-left-radius: 30px;
@@ -2047,31 +2057,27 @@ quiz section
 .quiz_box_start_button button:hover {
   border: 1px solid skyblue;
   font-weight: 600;
-}
-
-.quiz_intro_content h1 {
-  /* text-align: center; */
-  color: #0f3e7b;
-  padding-bottom: 20px;
-}
+/* } */
 
 
-.quiz_intro_content p {
-  text-align: left;
+
+
+/* .quiz_intro_content p { */
+  /* text-align: left; */
   /* margin-top: 250px; */
-}
+/* } */
 
-.quiz_intro_content_Score {
+/* .quiz_intro_content_Score {
   margin-left: 150px;
 
 }
 
 .quiz_intro_content_Score img {
   margin-left: 40px;
-}
+} */
 
 
-.quiz {
+/* .quiz {
   margin-top: 0px;
   padding-top: 120px;
 }
@@ -2115,10 +2121,10 @@ quiz section
   padding-top: 15px;
   border-top: 1px solid #eee;
   text-align: center;
-}
+} */
 
 /* Quiz form */
-#quiz-form {
+/* #quiz-form {
 
 
 
@@ -2130,9 +2136,9 @@ quiz section
   margin: 50px auto;
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-}
+} */
 
-.btnframe {
+/* .btnframe {
 
 
 
@@ -2144,16 +2150,16 @@ quiz section
   margin: 50px auto;
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-}
+} */
 
 /* Answer options */
-.form-check {
+/* .form-check {
   margin-bottom: 10px;
-}
+} */
 
 
 /* Buttons */
-.btn {
+/* .btn {
   background: #17A2B8;
   color: white;
   border: none;
@@ -2161,13 +2167,13 @@ quiz section
   padding: 9px 15px;
   margin: 0px 10px;
   display: none;
-}
+} */
 
-input {
+/* input {
   margin: 10px 5px;
   cursor: pointer;
-}
-
+} */
+/* 
 .submit-button {
   background: #FFC107;
   color: white;
@@ -2203,19 +2209,19 @@ input {
   border-radius: 5px;
   padding: 9px 15px;
 
-}
+} */
 
 
 /* Responsive styles */
-@media (max-width: 767px) {
+/* @media (max-width: 767px) {
 
   /* Quiz form */
-  #quiz-form {
+  /* #quiz-form {
     max-width: none;
     padding: 0 20px;
-  }
-}
-
+  } */
+/* } */ 
+ 
 
 /*
 ---------------------------------------------
@@ -2521,15 +2527,15 @@ responsive
     margin-right: 0px;
   }
 
-  .fact-item {
+  /* .fact-item {
     text-align: center;
   }
 
   .fact-item .icon {
     margin: 0 auto;
-  }
+  } */
 
-  .our-portfolio .section-heading h2,
+  /* .our-portfolio .section-heading h2,
   .pricing-tables .section-heading h2 {
     margin: 0px;
   }
@@ -2540,7 +2546,7 @@ responsive
 
   .subscribe .inner-content {
     padding: 60px 30px;
-  }
+  } */
 
   .our-videos ul.nacc {
     margin-bottom: 30px;
@@ -2585,9 +2591,9 @@ responsive
     margin-bottom: 45px;
   }
 
-  .subscribe-newsletters {
+  /* .subscribe-newsletters {
     margin-bottom: 0px;
-  }
+  } */
 
   .our-services .services-left-dec img {
     display: none;
@@ -2608,7 +2614,7 @@ responsive
     margin-left: 0px;
   }
 
-  .subscribe .inner-content:after {
+  /* .subscribe .inner-content:after {
     z-index: -1;
   }
 
@@ -2624,7 +2630,7 @@ responsive
     width: 100%;
     background-color: #ff695f;
     margin-top: 30px;
-  }
+  } */
 
   .our-videos ul.nacc li {
     transform: translateX(0px);
