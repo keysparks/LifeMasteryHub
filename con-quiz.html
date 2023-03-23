@@ -819,7 +819,7 @@
     let userScore = document.getElementById("user-score");
     let startScreen = document.querySelector(".start-screen");
     let startButton = document.getElementById("start-button");
-    let questionCount;
+    // let questionCount;
     let scoreCount = 0;
     // let count = 11;
     // let countdown;
@@ -876,7 +876,7 @@
     preBtn.addEventListener("click", () => {
       preBtn.disabled = false;
       questionCount -= 1;
-      nextBtn.disabled = false;
+      // nextBtn.disabled = false;
       
       // check if user is going back to the first question
       if (questionCount === 0) {
@@ -900,26 +900,40 @@
     });
 
     //Next Button
-    nextBtn.addEventListener(
-      "click",
-      (displayNext = () => {
-        //increment questionCount
-        nextBtn.disabled = true;
-        questionCount += 1;
-        // check if user is on the second question 
-        if (questionCount === 1) {
-          preBtn.hidden = false; // show the pre-button 
-        }
-        //if last question
-        if (questionCount == quizArray.length) {
-          //hide question container and display score
-          displayContainer.classList.add("hide");
+    nextBtn.onclick = function () {
+
+const question = document.getElementsByClassName("container-mid")[questionCount];
+const options = question.querySelectorAll("input[type='radio']");
+let isOptionSelected = false;
+
+// Check if an option is selected
+for (let i = 0; i < options.length; i++) {
+
+  if (options[i].checked) {
+
+    isOptionSelected = true;
+    break;
+
+  }
+}
+
+// If an option is selected, move to the next question
+if (isOptionSelected) {
+  // Check if user is on the last question
+  if (questionCount === quizArray.length - 1) {
+    // Hide the next-button and show the submit-button instead
+    nextBtn.hidden = true;
+    preBtn.hidden=true;
+    //hide question container and display score
+    displayContainer.classList.add("hide");
           scoreContainer.classList.remove("hide");
           //user score
           userScore.innerHTML =
             "Your score is " + scoreCount + " out of " + questionCount;
+          //Display result
           let averageScore = scoreCount / questionCount;
           let result = "";
+
 
           if (averageScore > 0 && averageScore <= 0.4) {
             result = "<p class='blink1'><span id='blink' style='color:#66FF66;'>Beginner</span><br><span id='rdes'>     <span style='font-weight:700'>Starting out strong, keep going!</span> <br>       Good effort, but it is important to recognize that conflicts can be complex and challenging to navigate. By continuing to learn about conflict resolution strategies and practicing them in real-world situations, you can build the skills necessary to achieve success. Remember that progress takes time, and with persistence and a willingness to learn and adapt, you can achieve your goals.<br>When facing an interpersonal conflict, it's important to listen actively, remain calm, and try to see the situation from the other person's perspective. Finding common ground and compromising on a solution can also be helpful. When dealing with intrapersonal conflict, it's important to take the time to reflect on your thoughts and feelings. Writing down your concerns and speaking to a trusted colleague or mentor can also help. Consider seeking professional support if the conflict is affecting your mental health. <br>When dealing with organizational conflict, it's important to involve all relevant parties in the conflict resolution process. Seeking the help of a neutral third-party mediator can also be helpful. Addressing the underlying issues that led to the conflict and implementing changes to prevent similar conflicts in the future is also important. When dealing with community conflict, it's important to listen to all sides and work towards finding a solution that benefits everyone. Building relationships and trust between community members and stakeholders can also be helpful. Consider seeking the help of a neutral third-party mediator to facilitate the resolution process. <br>When dealing with cross-cultural conflict, it's important to be respectful of cultural differences and to avoid making assumptions or stereotypes. Taking the time to learn about different cultures and communication styles can also be helpful. Building relationships and trust between individuals from different cultural backgrounds can also be beneficial. </span ></p> ";
@@ -933,20 +947,42 @@
           }
 
           userScore.innerHTML = "" + result;
+  }
 
-        } else {
-          //display questionCount
-          countOfQuestion.innerHTML =
-            questionCount + 1 + " of " + quizArray.length + " Question";
-          //display quiz
-          quizDisplay(questionCount);
-          // count = 11;
-          // clearInterval(countdown);
-          // timerDisplay();
-        }
-      })
-    );
+  // Update the question count display
+  questionCount += 1;
+  countOfQuestion.innerHTML = questionCount + 1 + " of " + quizArray.length + " Question";
+  preBtn.hidden=false;
+  preBtn.disabled = false;
+  // Display the next question
+  quizDisplay(questionCount);
 
+  // Check if an option is selected for the current question
+  const currentOptions = document.querySelectorAll(`.container-mid:nth-child(${questionCount}) input[type='radio']`);
+  let isCurrentOptionSelected = false;
+
+  for (let i = 0; i < currentOptions.length; i++) {
+
+    if (currentOptions[i].checked) {
+      isCurrentOptionSelected = true;
+      break;
+    }
+  }
+
+  // If an option is not selected for the current question, prevent moving to the next question
+  if (!isCurrentOptionSelected) {
+    alert("Please select an option to proceed");
+    questionCount -= 1;
+    countOfQuestion.innerHTML = questionCount + 1 + " of " + quizArray.length + " Question";
+    quizDisplay(questionCount);
+  }
+
+}
+//  else {
+//   // Display an error message if an option is not selected
+//   alert("Please select an option to proceed");
+// }
+}
     //Timer
     // const timerDisplay = () => {
     //   countdown = setInterval(() => {
@@ -1040,11 +1076,12 @@
       scoreCount = 0;
       // count = 11;
       // clearInterval(countdown);
-      nextBtn.disabled = true;
+      // nextBtn.disabled = true;
       // preBtn.disabled = true;
       quizCreator();
       quizDisplay(questionCount);
       preBtn.hidden = true;
+      nextBtn.hidden=false;
     }
 
     //when user click on start button
